@@ -1,0 +1,16 @@
+﻿
+GEO_SVA = {
+	provinces = { xD1A8AF }
+
+	ai_will_do = { always = no }
+}
+GEO_MIN = {
+	provinces = { x40D001 }
+
+	ai_will_do = { always = no }
+}
+ABK = {
+	provinces = { x73A639 }
+
+	ai_will_do = { always = no }
+}

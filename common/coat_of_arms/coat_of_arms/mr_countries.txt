@@ -1,0 +1,60 @@
+# MOTHER RUSSIA COAT OF ARMS DEFINITIONS #
+# Vanilla entries are overwritten here to minimize vanilla file overwrites
+
+####################
+
+# The following are copied from the vanilla file:
+@semy = 0.25
+@third = @[1/3]
+@fifth = @[1/5]
+@sixth = @[1/6]
+
+@canton_scale_cross_x = @[ ( 333 / 768 ) + 0.001 ]
+@canton_scale_cross_y = @[ ( 205 / 512 ) + 0.001 ]
+
+@canton_scale_sweden_x = @[ ( 255 / 768 ) + 0.001 ]
+@canton_scale_sweden_y = @[ ( 204 / 512 ) + 0.001 ]
+
+@uru_canton_height = 0.556
+@NZL_coa_offset = @[3/16]
+@sm_fra = 0.16
+
+####################
+
+ABK = { # Principality of Abkhazia Flag
+
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_scimitar.dds"
+		color1 = "white"
+		instance = { scale = { 1.1 1.1 } position = { 0.5 0.5 } }
+	}
+
+}
+GEO_SVA = { # Principality of Svaneti Flag
+
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_scimitar.dds"
+		color1 = "white"
+		instance = { scale = { 1.1 1.1 } position = { 0.5 0.5 } }
+	}
+
+}
+GEO_MIN = { # Principality of Mingrelia Flag
+
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_scimitar.dds"
+		color1 = "white"
+		instance = { scale = { 1.1 1.1 } position = { 0.5 0.5 } }
+	}
+
+}
+

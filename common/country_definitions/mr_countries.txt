@@ -1,0 +1,44 @@
+﻿# Important note: Only use capital letters and numbers for tags, or else you may get weird bugs in civil wars
+
+
+############################
+# Georgian principalities
+############################
+
+ABK = { # Abkhazia
+	color = { 92 188 73 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { north_caucasian } # Abkhazian
+
+	capital = STATE_GREATER_CAUCASUS
+}
+
+GEO_SVA = { # Principality of Svantali
+	color = { 193  39  39 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { georgian }
+
+	capital = STATE_GREATER_CAUCASUS
+}
+
+GEO_MIN = { # Principality of Mingalia
+	color = { 172 37 87 }
+
+	country_type = recognized
+
+	tier = principality
+
+	cultures = { georgian }
+
+	capital = STATE_GREATER_CAUCASUS
+}
+
+
