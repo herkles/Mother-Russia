@@ -1,0 +1,23 @@
+{
+  "name" : "Mother Russia",
+  "id" : "",
+  "version" : "0.0.1",
+  "supported_game_version" : "1.12.*",
+  "short_description" : "",
+  "tags" : [
+    "1.12"
+  ],
+  "relationships" : [
+    {
+      "rel_type" : "dependency",
+      "id" : "com.github.Victoria-3-Modding-Co-op.Community-Mod-Framework",
+      "display_name" : "Community Mod Framework",
+      "resource_type" : "mod",
+      "version" : "1.*"
+    }
+  ],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}
+
