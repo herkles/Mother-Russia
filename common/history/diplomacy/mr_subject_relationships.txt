@@ -1,5 +1,5 @@
 ﻿DIPLOMACY = {
-	c:RUS ?= {
+	c:RUS ?= {# Russian puppets in the Caucases
 		create_diplomatic_pact = {
 			country = c:GEO_SVA
 			type = protectorate
@@ -12,6 +12,14 @@
 			country = c:ABK
 			type = protectorate
 		}
+		create_diplomatic_pact = {
+			country = c:AZB_ELI
+			type = protectorate
+		}
+		create_diplomatic_pact = {
+			country = c:DAG_TAR
+			type = protectorate
+		}		
 	}
 
 
@@ -23,6 +31,12 @@
 		add_liberty_desire = 10
 	}
 	c:ABK ?= {
+		add_liberty_desire = 10
+	}
+	c:AZB_ELI ?= {
+		add_liberty_desire = 10
+	}
+	c:DAG_TAR ?= {
 		add_liberty_desire = 10
 	}
 

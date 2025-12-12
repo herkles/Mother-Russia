@@ -67,4 +67,34 @@
 			}							
 		}
 	}
+	# Moving Azerbajani pops into Azerbjani polities
+	s:STATE_ELIZAVETPOL = {
+		region_state:RUS = {
+			every_scope_pop = {
+				limit = {
+					has_pop_culture = azerbaijani
+				}
+				move_partial_pop = {
+					state = s:STATE_GREATER_CAUCASUS.region_state:AZB_ELI
+					population_ratio = 0.1
+				}
+			}		
+		}
+	}
+	# Moving North Caucasian pops into the Shamkhalate of Tarki
+	s:STATE_DAGESTAN = {
+		region_state:RUS = {
+			every_scope_pop = {
+				limit = {
+					has_pop_culture = north_caucasian
+				}
+				move_partial_pop = {
+					state = s:STATE_GREATER_CAUCASUS.region_state:DAG_TAR
+					population_ratio = 0.8
+				}
+			}							
+		}
+	}
+
+
 }

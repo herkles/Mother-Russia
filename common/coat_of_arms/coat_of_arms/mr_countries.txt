@@ -70,3 +70,37 @@ GEO_MIN = { # Principality of Mingrelia Flag
 	}
 
 }
+
+DAG_TAR = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow_light"
+	color2 = "red_light"
+	color3 = "blue_light"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color2
+		color2 = color3
+	}
+}
+AZB_ELI = {
+	# 1992 Islamic state, a bit simplified
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "red"
+		color2 = "white"
+	}
+	colored_emblem = {
+		texture = "ce_shahada_02.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 0.8 0.9 } position = { 0.5 0.5 } }
+	}
+}
+
+
+

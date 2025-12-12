@@ -1,0 +1,7 @@
+﻿CHARACTERS = {
+	c:AZB_ELI ?= {
+		create_character = {
+			template = AZB_ELI_daniyal_bek
+		}
+	}
+}

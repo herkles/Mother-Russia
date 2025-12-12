@@ -13,7 +13,6 @@
 		activate_law = law_type:law_traditionalism
 		activate_law = law_type:law_peasant_levies
 		activate_law = law_type:law_censorship
-		activate_law = law_type:law_women_own_property
 		
 	}
 	c:GEO_MIN ?= {# Principality of Mingrelia
@@ -30,7 +29,6 @@
 		activate_law = law_type:law_traditionalism
 		activate_law = law_type:law_peasant_levies
 		activate_law = law_type:law_censorship
-		activate_law = law_type:law_women_own_property
 		
 	}
 	c:ABK ?= {# Principality of Abkhazia
@@ -47,7 +45,6 @@
 		activate_law = law_type:law_traditionalism
 		activate_law = law_type:law_peasant_levies
 		activate_law = law_type:law_censorship
-		activate_law = law_type:law_women_own_property
 		
 	}
 }

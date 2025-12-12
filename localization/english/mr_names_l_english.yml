@@ -1,5 +1,12 @@
 ﻿l_english:
   # Georgian Names
-  Dadishkeliani:0 "Dadishkeliani"
-  Sharvashidze:0 "Sharvashidze"
+  Dadishkeliani: "Dadishkeliani"
+  Sharvashidze: "Sharvashidze"
 
+  # Dagastani Names
+  abumuslim_khan: "Abumuslim Khan"
+  Tarkovsky: "Tarkovsky"
+
+  # Azerbjani Names
+  Daniyal: "Daniyal"
+  Bek: "Bek"

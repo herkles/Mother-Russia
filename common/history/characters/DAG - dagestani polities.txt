@@ -1,0 +1,7 @@
+﻿CHARACTERS = {
+	c:DAG_TAR ?= {
+		create_character = {
+			template = DAG_TAR_abumuslim_khan_tarkovsky
+		}
+	}
+}

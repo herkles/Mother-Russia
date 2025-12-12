@@ -7,5 +7,10 @@
   GEO_MIN_ADJ: "Mingrelian"
 
   # Caucasian Polities
+  DAG_TAR: "Tarki"
+  DAG_TAR_ADJ: "Tarkian"
+
+  AZB_ELI: "Elisu"
+  AZB_ELI_ADJ: "Elisu"
 
   # Other Russian Polities

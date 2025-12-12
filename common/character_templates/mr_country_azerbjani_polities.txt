@@ -1,0 +1,25 @@
+﻿### Russia character template file ###
+
+### Princes of Svantali
+
+AZB_ELI_daniyal_bek = {# Daniyal Bek
+	first_name = Daniyal
+	last_name = Bek
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	ruler = yes
+	birth_date = 1814.1.9
+	traits = {
+		honorable #  
+		brave # engaged in battles with shamil's raiders
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+
+	}
+}
+

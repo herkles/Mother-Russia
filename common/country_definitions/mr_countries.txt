@@ -5,7 +5,7 @@
 # Georgian principalities
 ############################
 
-REPLACE:ABK = { # Abkhazia
+REPLACE:ABK = {# Abkhazia
 	color = { 92 188 73 }
 
 	country_type = recognized
@@ -17,7 +17,7 @@ REPLACE:ABK = { # Abkhazia
 	capital = STATE_GREATER_CAUCASUS
 }
 
-GEO_SVA = { # Principality of Svantali
+GEO_SVA = {# Principality of Svantali
 	color = { 193  39  39 }
 
 	country_type = recognized
@@ -29,7 +29,7 @@ GEO_SVA = { # Principality of Svantali
 	capital = STATE_GREATER_CAUCASUS
 }
 
-GEO_MIN = { # Principality of Mingalia
+GEO_MIN = {# Principality of Mingalia
 	color = { 172 37 87 }
 
 	country_type = recognized
@@ -40,5 +40,35 @@ GEO_MIN = { # Principality of Mingalia
 
 	capital = STATE_GREATER_CAUCASUS
 }
+############################
+# Dagestani polities
+############################
+DAG_TAR = {# Shamkhalate of Tarki
+	color = { 149 179 50 }
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { north_caucasian } # Kumyk
+
+	capital = STATE_DAGESTAN
+}
+
+############################
+# Azerbjani polities
+############################
+AZB_ELI = {# Sultanate of Elisu
+	color = { 93 212 236 }
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { azerbaijani }
+
+	capital = STATE_ELIZAVETPOL
+}
+
 
 

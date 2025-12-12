@@ -1,0 +1,25 @@
+﻿### Russia character template file ###
+
+### Princes of Svantali
+
+DAG_TAR_abumuslim_khan_tarkovsky = {# abumuslim khan tarkovsky
+	first_name = abumuslim_khan
+	last_name = Tarkovsky
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	ruler = yes
+	birth_date = 1814.1.1
+	traits = {
+		tactful 
+		pillager
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+
+	}
+}
+
