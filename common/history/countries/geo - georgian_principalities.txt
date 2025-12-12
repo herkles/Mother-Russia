@@ -35,7 +35,7 @@
 	}
 	c:ABK ?= {# Principality of Abkhazia
 		effect_starting_technology_tier_3_tech = yes
-		
+		set_state_religion = rel:orthodox
 		# Laws 
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_autocracy
@@ -50,5 +50,4 @@
 		activate_law = law_type:law_women_own_property
 		
 	}
-
 }

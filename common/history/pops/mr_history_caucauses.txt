@@ -1,0 +1,70 @@
+﻿POPS = {
+	# Moving Abkhazian pops into abkazhia
+	s:STATE_GREATER_CAUCASUS = {
+		region_state:RUS = {
+			every_scope_pop = {
+				limit = {
+					AND = {
+						has_pop_culture = north_caucasian
+						has_pop_religion = orthodox
+					}
+
+				}
+				move_pop = s:STATE_GREATER_CAUCASUS.region_state:ABK
+			}
+		}
+	}
+	s:STATE_GREATER_CAUCASUS = {
+		region_state:RUS = {
+			every_scope_pop = {
+				limit = {
+					AND = {
+						has_pop_culture = north_caucasian
+						NOT = { has_pop_religion = orthodox }
+					}
+
+				}
+				move_partial_pop = {
+					state = s:STATE_GREATER_CAUCASUS.region_state:ABK
+					population_ratio = 0.6
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					AND = {
+						has_pop_culture = north_caucasian
+						NOT = { has_pop_religion = orthodox }
+					}
+
+				}
+				move_partial_pop = {
+					state = s:STATE_GREATER_CAUCASUS.region_state:GEO_MIN
+					population_ratio = 0.4
+				}
+			}			
+		}
+	}
+	# Moving Georgian pops into the Principality
+	s:STATE_GREATER_CAUCASUS = {
+		region_state:RUS = {
+			every_scope_pop = {
+				limit = {
+					has_pop_culture = georgian
+				}
+				move_partial_pop = {
+					state = s:STATE_GREATER_CAUCASUS.region_state:GEO_MIN
+					population_ratio = 0.13
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					has_pop_culture = georgian
+				}
+				move_partial_pop = {
+					state = s:STATE_GREATER_CAUCASUS.region_state:GEO_SVA
+					population_ratio = 0.05
+				}
+			}							
+		}
+	}
+}
