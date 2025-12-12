@@ -24,12 +24,12 @@
 ABK = { # Principality of Abkhazia Flag
 
 	pattern = "pattern_solid.tga"
-	color1 = "red"
+	color1 = "blue"
 
 	colored_emblem = {
-		texture = "ce_scimitar.dds"
-		color1 = "white"
-		instance = { scale = { 1.1 1.1 } position = { 0.5 0.5 } }
+		texture = "ce_stripe_bottom_nkp.dds"
+		color1 = "green"
+		color2 = "green"
 	}
 
 }
@@ -48,13 +48,25 @@ GEO_SVA = { # Principality of Svaneti Flag
 GEO_MIN = { # Principality of Mingrelia Flag
 
 	pattern = "pattern_solid.tga"
-	color1 = "red"
+	color1 = "white"
 
 	colored_emblem = {
-		texture = "ce_scimitar.dds"
-		color1 = "white"
-		instance = { scale = { 1.1 1.1 } position = { 0.5 0.5 } }
+		texture = "ce_falcon.dds"
+		color1 = "grey"
+		color2 = "orange"
+		color3 = "black"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_star_06.dds"
+		color1 = "grey"
+		color2 = "black"
+		
+		instance = { scale = { 0.25 0.25 } position = { 0.15 0.2 } }
+		instance = { scale = { 0.25 0.25 } position = { 0.85 0.2 } }
+		instance = { scale = { 0.25 0.25 } position = { 0.15 0.8 } }
+		instance = { scale = { 0.25 0.25 } position = { 0.85 0.8 } }
+
 	}
 
 }
-

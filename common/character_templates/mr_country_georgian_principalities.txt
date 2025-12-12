@@ -1,0 +1,91 @@
+﻿### Russia character template file ###
+
+### Princes of Svantali
+
+GEO_SVA_mikheil_dadishkeliani = {# Mikheil Dadishkeliani
+	first_name = Mikheil
+	last_name = Dadishkeliani
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	ruler = yes
+	birth_date = 1814.1.1
+	traits = {
+		brave # Earned positions in the Russian army for his military service
+		pious # Was known to sponsor missionaries in his principality
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+
+	}
+}
+
+### Princes of Abkhazia
+
+GEO_ABK_mikheil_sharvashidze = {# Mikheil Sharvashidze
+	first_name = Mikheil
+	last_name = Sharvashidze
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	ruler = yes
+	birth_date = 1806.7.6
+	traits = {
+		experienced_diplomat # in 1838 he would help to negotiate between some of the principalities
+		brave # Lead a number of raids against highlanders resisting the Russians
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+
+	}
+}
+
+### Princes of Mingalia
+
+GEO_MIN_levan_v = {# Levan V
+	first_name = Levan
+	last_name = Dadiani
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	ruler = yes
+	birth_date = 1793.1.1
+	traits = {
+		compliant # He largely let others rule so he could hunt.
+		hedonist # he cared for hunting primarily
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+
+	}
+}
+GEO_MIN_david_dadiani = {# David Dadiani, Levan's eldest son who takes over in 1840
+	first_name = David
+	last_name = Dadiani
+	historical = yes
+	heir = yes
+	culture = primary_culture
+	interest_group = ig_landowners
+	ideology = ideology_reformer
+	ruler = yes
+	birth_date = 1813.1.23
+	traits = {
+        ambitious # He had quite the ambitions for his principality
+        imperious # He was rather heavy handed in his reforms
+    }
+	on_created = {
+
+    }
+	trait_generation = {
+
+	}
+}

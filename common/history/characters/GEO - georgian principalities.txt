@@ -1,0 +1,17 @@
+﻿CHARACTERS = {
+	c:GEO_SVA ?= {
+		create_character = {
+			template = GEO_SVA_mikheil_dadishkeliani
+		}
+	}
+	c:GEO_MIN ?= {
+		create_character = {
+			template = GEO_MIN_levan_v
+		}
+	}
+	c:ABK ?= {
+		create_character = {
+			template = GEO_ABK_mikheil_sharvashidze
+		}
+	}
+}

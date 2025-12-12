@@ -5,7 +5,7 @@
 # Georgian principalities
 ############################
 
-ABK = { # Abkhazia
+REPLACE:ABK = { # Abkhazia
 	color = { 92 188 73 }
 
 	country_type = recognized
