@@ -1,0 +1,16 @@
+﻿
+GEO = {# Georgian Principalities can form Georgia if they hold georgia
+	states = {
+		STATE_GREATER_CAUCASUS
+	}
+
+	required_states_fraction = 1.0
+
+	ai_will_do = { always = yes }
+		possible = {
+		OR = {
+			country_has_primary_culture = cu:georgian
+		}
+		has_technology_researched = nationalism
+	}
+}
