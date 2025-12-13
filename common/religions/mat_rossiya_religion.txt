@@ -1,0 +1,7 @@
+﻿old_believers = {# Covers Old Believers and Old Ritualists
+	icon = "gfx/interface/icons/religion_icons/old_believers.dds"
+	heritage = heritage_christian
+	color = { 102 0 102 }
+}
+
+

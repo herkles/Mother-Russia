@@ -1,0 +1,24 @@
+#########################
+# Mother Russia Effects
+#########################
+
+# This file contains technical scripted effects meant to run in history or outside of content modules
+
+mat_rossiya_old_believers_pops_effect = {
+	every_scope_pop = {
+		limit = {
+			has_pop_culture = russian
+			has_pop_religion = orthodox
+			NOR = {# Governmental officials shouldn't be old believers
+				is_pop_type = aristocrats
+				is_pop_type = academics
+				is_pop_type = bureaucrats
+				is_pop_type = officers
+			}
+		}
+		change_pop_religion = {
+			target = rel:old_believers
+			value = 0.4
+		}
+	}
+}
