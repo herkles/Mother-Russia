@@ -1,0 +1,58 @@
+﻿#####################################
+# Monarchies
+#####################################
+gov_shamkhalate_tarki = {# Shamkhalate of Tarki
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_SHAMKHAL"
+	female_ruler = "RULER_TITLE_SHAMKHAL"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_monarchy
+		c:DAG_TAR ?= this
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+gov_elisu_sultanate = {# Sultanate of Elisu
+	transfer_of_power = hereditary
+
+	male_ruler = "RULER_TITLE_SULTAN"
+	female_ruler = "RULER_TITLE_SULTANA"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_monarchy
+		c:AZB_ELI ?= this
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+#####################################
+# Theocracies
+#####################################
+
+#####################################
+# Republics
+#####################################
+
+#####################################
+# Council Republics
+#####################################

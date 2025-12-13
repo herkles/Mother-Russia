@@ -1,0 +1,14 @@
+﻿l_english:
+
+  # Descriptions
+  gov_shamkhalate_tarki: "Shamkhalate"
+  gov_shamkhalate_tarki_desc: "This is a [concept_government_type] where the power rests with the [Concept('concept_ruler','$RULER_TITLE_SHAMKHAL$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+  gov_elisu_sultanate: "Sultanate"
+  gov_elisu_sultanate_desc: "This is a [concept_government_type] where the power rests with the [Concept('concept_ruler','$RULER_TITLE_SULTAN$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+
+  # Titles
+  RULER_TITLE_SHAMKHAL: "Shamkhal"
+
+

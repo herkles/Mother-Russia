@@ -1,8 +1,8 @@
 ﻿# Why do some state entries have quote marks around them, when others don't?
 # It's because of differing methods of editing throughout the production of the game. Quote marks are unnecessary, but harmless if present.
 
-STATES = {# Georgia
-	s:STATE_GREATER_CAUCASUS = {
+STATES = {
+	s:STATE_GREATER_CAUCASUS = {# Georgia
 		create_state = {
 			country = c:ABK
 			owned_provinces = { x73A639 }
@@ -18,18 +18,12 @@ STATES = {# Georgia
 		# add_homeland = cu:georgian
 		# add_homeland = cu:armenian
 	}
-}
-
-STATES = {# Elizavetpol
 	s:STATE_ELIZAVETPOL = {
 		create_state = {
 			country = c:AZB_ELI
 			owned_provinces = { xB7DDE5 }
 		}			
 	}
-}
-
-STATES = {# Dagestan
 	s:STATE_DAGESTAN = {
 		create_state = {
 			country = c:DAG_TAR
@@ -37,3 +31,4 @@ STATES = {# Dagestan
 		}			
 	}
 }
+
