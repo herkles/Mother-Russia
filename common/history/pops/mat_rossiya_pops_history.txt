@@ -1,6 +1,6 @@
 ﻿POPS = {
-	# Moving Abkhazian pops into abkazhia
-	s:STATE_GREATER_CAUCASUS = {
+	# creating Abkhazians
+	s:STATE_GREATER_CAUCASUS = {# First convert them
 		region_state:RUS = {
 			every_scope_pop = {
 				limit = {
@@ -9,10 +9,37 @@
 						has_pop_religion = orthodox
 					}
 				}
+				change_pop_culture = {
+					target = cu:abkhazian
+					value = 0.9
+				}
+
+
+			}
+		}
+	}
+	s:STATE_GREATER_CAUCASUS = {# Then move them
+		region_state:RUS = {
+			every_scope_pop = {
+				limit = {
+					AND = {
+						has_pop_culture = abkhazian
+						has_pop_religion = orthodox
+					}
+				}
 				move_pop = s:STATE_GREATER_CAUCASUS.region_state:ABK
 			}
 		}
 	}
+	s:STATE_NORTH_CAUCASUS = {# Create the Abkhazians
+		region_state:CIR = {
+			create_pop = {
+				culture = abkhazian
+				size = 10370
+				religion = orthodox
+			}
+		}
+	}	
 	s:STATE_GREATER_CAUCASUS = {
 		region_state:RUS = {
 			every_scope_pop = {

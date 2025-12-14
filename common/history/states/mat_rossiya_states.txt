@@ -15,7 +15,7 @@ STATES = {
 			country = c:GEO_MIN
 			owned_provinces = { x40D001 }
 		}				
-		# add_homeland = cu:georgian
+		add_homeland = cu:abkhazian
 		# add_homeland = cu:armenian
 	}
 	s:STATE_ELIZAVETPOL = {

@@ -1,0 +1,7 @@
+﻿# Caucasian Languages
+
+language_abkhaz = {
+	type = language
+	trait_group = language_group_circassic
+}
+

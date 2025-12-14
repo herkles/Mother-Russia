@@ -8,3 +8,34 @@ old_believers_standard_of_living_modifier_negative = {
 	state_old_believers_standard_of_living_add = 1
 }
 
+
+
+
+abkhazian_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_abkhazian_standard_of_living_add = 1
+}
+
+abkhazian_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_abkhazian_standard_of_living_add = 1
+}
+abkhazian_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_abkhazian_cultural_acceptance_add = 1
+}
+
+abkhazian_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_abkhazian_cultural_acceptance_add = 1
+}
+
+abkhazian_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_abkhazian_add = 1
+}
+
+abkhazian_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_abkhazian_add = 1
+}

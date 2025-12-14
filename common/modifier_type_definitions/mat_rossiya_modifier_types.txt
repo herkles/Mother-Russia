@@ -5,3 +5,25 @@
 		ai_value=0
 	}
 }
+
+country_fervor_target_abkhazian_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_abkhazian_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+state_abkhazian_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}

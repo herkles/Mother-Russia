@@ -1,0 +1,216 @@
+﻿###################################
+# Caucauses Cultures
+###################################
+abkhazian = {
+	color = { 219 200 74 }
+	religion = orthodox
+	heritage = heritage_north_caucasian
+	language = language_abkhaz
+
+	obsessions = {
+		wine
+	}
+
+	traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Abga
+		Adamer
+		Adamur 
+		Adamyr 
+		Adgur
+		Ajir
+		Akhmat
+		Abkhaz
+		Akhra
+		Akhrik
+		Alkhas
+		Almasbei
+		Alyksandr 
+		Anatolii
+		Arut
+		Arutan
+		Arzadin
+		Astamur
+		Astamyr
+		Astan
+		Bactor
+		Baga
+		Bagapsh
+		Bagir
+		Bagrat
+		Batal
+		Besik
+		Beslan
+		Biqtor
+		Chincha
+		Dach
+		Daur
+		Dawet
+		Deviz
+		Dyrmit
+		Dzamal
+		Eberham
+		Fardawes
+		Gazia
+		Gozar
+		Gudisa
+		Gumshvia
+		Iurii
+		Jomamah
+		Kama
+		Khasik
+		Khatsa
+		Kualdzi
+		Kuits
+		Levarsa 
+		Levter
+		Mamser
+		Matzis
+		Mishva
+		Nugzar 
+		Nuri
+		Ovanes
+		Ruden
+		Satbei
+		Sejed
+		Setrak
+		Shuarakh 
+		Sokrat
+		Talikh
+		Tamaz
+		Tamshugh
+		Temyr
+		Tengiz
+		Uazha
+		Valerii
+		Warba
+		Yaozar
+	}
+	female_common_first_names = {
+		Eriwara
+		Rarira
+		Amra 
+		Amza
+		Apsa
+		Apswana
+		Asida
+		Asna
+		Atana
+		Ayshat
+		Berfenka
+		Bashnukh
+		Birphin
+		Dzikut
+		Dzirkui
+		Esma
+		Guelbaz
+		Gunda
+		Hanem
+		Kachich
+		Karua
+		Khapara
+		Khibla
+		Khimra
+		Khishkuaka
+		Kuarasa
+		Makhu
+		Mramza
+		Naala
+		Pheldish
+		Qarasa
+		Rasats
+		Safrahanem
+		Tsguna
+		Turna
+	}
+	noble_last_names = {
+		Akhalaia
+		Bedzba
+		Beria
+		Berulava
+		Daneliya
+		Ebeznow
+		Gabelia
+		Gabunia
+		Ganaba
+		Gelashvili
+		Gogia
+		Gogokhia
+		Gogua
+		Gotsiridze
+		Janashia
+		Jeladze
+		Jojua
+		Kebraa
+		Kakulia
+		Kharaishvili
+		Khurtsilava
+		Kvaratskhelia
+		Lobjanidze
+		Lomidze
+		Maisuradze
+		Melashvili
+		Metreveli
+		Nizharadze
+		Papava
+		Pipia
+		Rekhviashvili
+		Shelia
+		Shengelia
+		Svanidze
+		Tchanturia
+		Todua
+		Tsaava
+		Tsurtsumia
+		Ugrekhelidze
+		Zeka
+	}
+	common_last_names = {
+		Akhalaia
+		Bedzba
+		Beria
+		Berulava
+		Daneliya
+		Ebeznow
+		Gabelia
+		Gabunia
+		Ganaba
+		Gelashvili
+		Gogia
+		Gogokhia
+		Gogua
+		Gotsiridze
+		Janashia
+		Jeladze
+		Jojua
+		Kebraa
+		Kakulia
+		Kharaishvili
+		Khurtsilava
+		Kvaratskhelia
+		Lobjanidze
+		Lomidze
+		Maisuradze
+		Melashvili
+		Metreveli
+		Nizharadze
+		Papava
+		Pipia
+		Rekhviashvili
+		Shelia
+		Shengelia
+		Svanidze
+		Tchanturia
+		Todua
+		Tsaava
+		Tsurtsumia
+		Ugrekhelidze
+		Zeka
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = european
+}
+
+
