@@ -13,8 +13,6 @@
 					target = cu:abkhazian
 					value = 0.9
 				}
-
-
 			}
 		}
 	}
@@ -112,6 +110,81 @@
 			}
 		}
 	}
+
+	# Creating Nogai Pops
+	s:STATE_STAVROPOL = {
+		region_state:RUS = {
+			create_pop = {
+				culture = nogai
+				size = 19772
+			}
+		}
+	}
+	s:STATE_KUBAN = {
+		region_state:CIR = {
+			create_pop = {
+				culture = nogai
+				size = 5746
+			}
+		}
+	}
+	s:STATE_DAGESTAN = {
+		region_state:DAG_TAR = {
+			create_pop = {
+				culture = nogai
+				size = 5908
+			}
+		}
+		region_state:RUS = {
+			create_pop = {
+				culture = nogai
+				size = 31650
+			}
+		}
+	}
+
+	# Creating Ossetian Pops
+	s:STATE_GREATER_CAUCASUS = {
+		region_state:RUS = {
+			create_pop = {
+				culture = osetian
+				size = 67517
+			}
+		}
+	}
+	s:STATE_NORTH_CAUCASUS = {
+		region_state:RUS = {
+			create_pop = {
+				culture = osetian
+				size = 88265
+			}
+		}
+	}
+
+	# Breaking up the North Caucases	
+	# Dagestan - Tarki
+	# Dagestan - Imamate
+	# Dagestan - Russian
+	# Stavropol
+	# Kuban - Russian
+	# Kuban - Circassian
+	# North Caucauses - Circassian
+	# North Caucauses - Russian
+	# North Caucauses - Imamate
+	# Baku
+	# Elizavetpol - Elisu
+	# Elizavetpol - Russian
+	# Tifilis - Abkhazia
+	# Tifilis - Mingalia
+	# Tifilis - Svanti
+	# Tifilis - Russian
+
+
+
+
+
+
+	
 
 	# Old Believer Pops for the Russian Empire
 	c:RUS = {

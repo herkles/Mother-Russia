@@ -5,3 +5,23 @@ language_abkhaz = {
 	trait_group = language_group_circassic
 }
 
+language_dargin = {
+	type = language
+	trait_group = language_group_caucasic
+}
+language_ossetian = {
+	type = language
+	trait_group = language_group_ossetian
+}
+language_kumyk = {
+	type = language
+	trait_group = language_group_turkic
+}
+language_karachay = {
+	type = language
+	trait_group = language_group_turkic
+}
+language_nogai = {
+	type = language
+	trait_group = language_group_turkic
+}

@@ -27,3 +27,175 @@ state_abkhazian_standard_of_living_add={
 		ai_value=0
 	}
 }
+
+country_fervor_target_avar_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_avar_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+state_avar_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_dargin_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_dargin_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+state_dargin_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_osetian_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_osetian_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+state_osetian_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_ingush_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_ingush_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+state_ingush_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_kumyk_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_kumyk_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+state_kumyk_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_karachay_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_karachay_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+state_karachay_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+country_fervor_target_nogai_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_nogai_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+state_nogai_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

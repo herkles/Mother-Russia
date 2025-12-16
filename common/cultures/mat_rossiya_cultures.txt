@@ -1,7 +1,7 @@
 ﻿###################################
 # Caucauses Cultures
 ###################################
-abkhazian = {
+abkhazian = {# Abkhazian
 	color = { 219 200 74 }
 	religion = orthodox
 	heritage = heritage_north_caucasian
@@ -212,5 +212,895 @@ abkhazian = {
 	}
 	graphics = european
 }
+avar = {# Avar
+	color= hsv{ 0.17 0.26 0.99 }
+	religion = sunni
+	heritage = heritage_north_caucasian
+	language = language_avaric
+	traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Aslan
+		Hamza
+		Jamal_al-Din
+		Mansur
+		Mohammad
+		Murad
+		Ruslan
+		Shamil
+		Soferbi
+		Zamudin
+	}
+	female_common_first_names = {
+		Albina
+		Irina
+		Jilfidan
+		Maria
+		Melek
+		Nadia
+		Svetlana
+		Tamara
+	}
+	noble_last_names = {
+		Cherkassky
+		Chetao
+		Dipsheu
+		Kuadzhe
+		Tkhaghapseu
+	}
+	common_last_names = {
+		Bek
+		Chemiakin
+		Guchev
+		Mollah
+		Nafash
+		Natkho
+		Shaaban
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = european
+}
+dargin = {# Dargin
+	color = { 249 201 185 }
+	religion = sunni
+	heritage = heritage_north_caucasian
+	language = language_dargin
+	traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Abdusalam
+		Ahmadkhan
+		Akhmedkhan
+		Alibek
+		Bagomed
+		Gabib
+		Gadzhi
+		Gadzhimurad
+		Gamzat
+		Gasan
+		Khabib
+		Kurban
+		Magomedali
+		Magomedsalam
+		Magomedshapi
+		Mahammadali
+		Mahammadshapi
+		Makhammad
+		Rabadan
+		Shapi
+		Shakhnavaz
+		Rasulov
+		Ramazanov
+		Rabadanov
+		Kurban
+		Bagomed
+		Aziz
+	}
+	female_common_first_names = {
+		Abidat
+		Aminat
+		Muminat
+		Muslimat
+		Dagestani
+		Patimat
+		Soltanat
+		Zumrud
+	}
+	noble_last_names = {
+		Abakarov
+		Azizov
+		Bagomedov
+		Bagomedova
+		Gadzhieva
+		Isaev
+		Kurbanov
+		Rabadanov
+		Rabadanova
+		Ramazanova
+		Rasulov
+		Shanavazov
+		Shapiev
+	}
+	common_last_names = {
+		Abakarov
+		Azizov
+		Bagomedov
+		Bagomedova
+		Gadzhieva
+		Isaev
+		Kurbanov
+		Rabadanov
+		Rabadanova
+		Ramazanova
+		Rasulov
+		Shanavazov
+		Shapiev
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = european
+}
+osetian = {# Ossetian
+	color = { 217 211 62 }
+	religion = orthodox
+	heritage = heritage_north_caucasian
+	language = language_ossetian
+	traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Abrek
+		Afako
+		Russian
+		Akhsar
+		Akhsarbek
+		Akhsartag
+		Alan
+		Alibek
+		Alimbeg
+		Alyksandr
+		Amur
+		Amurkhan
+		Aslaenbeg
+		Aslanbeg
+		Asma
+		Astan
+		Atsamaz
+		Bakhva
+		Barysbi
+		Batradz
+		Batyradz
+		Baxva
+		Bega
+		Bekyzae 
+		Chera
+		Dauyt
+		Dimitr
+		Dudar
+		Dzakhot
+		Dzambeg
+		Dzambolat
+		Dzankhot
+		Dzaug
+		Dzhambulad
+		Elbazduko
+		Elbrus
+		Fedyr
+		Gaemaet
+		Gaito
+		Garri
+		Ossetian
+		Geuaergi
+		Giuaergi
+		Irbeg
+		Irbek
+		Isaq
+		Kaurbek
+		Kazbek
+		Khadzhimurat
+		Khazbi
+		Khetag
+		Kuydzaeg
+		Lazaer
+		Makharbeg
+		Makharbek
+		Mikhal
+		Misost
+		Maekhidoni
+		Mushtaefa
+		Nikala
+		Nikhala
+		Phaule
+		Qambolat
+		Saermaet
+		Sakhandzheri 
+		Sarmat
+		Sauarmag
+		Seqa
+		Soslaenbeg
+		Soslaenbek
+		Soslanbek
+		Sozyryqo
+		Taimuraz
+		Torez
+		Totradz
+		Totraz
+		Tsaera 
+		Tsomak
+		Tsomaq
+		Tsotsoko
+		Tugan
+		Uruzbek
+		Uyryzmag
+		Vano
+		Zhamiraet 
+		Znaur 
+	}
+	female_common_first_names = {
+		Agunda
+		Allae 
+		Arianae
+		Atsyrukhs
+		Ayshat
+		Delyara
+		Dzera
+		Dzerassa
+		Elenae
+		Fatimae
+		Irinae
+		Lira 
+		Mariae
+		Mariamae
+		Maryamae
+		Meryemae
+		Monikae
+		Nataliae
+		Olgae
+		Orzeta
+		Roksalana
+		Rushana
+		Sarae
+		Svetlanae 
+		Veronikae 
+		Zalina
+		Zinae
+	}
+	noble_last_names = {
+		Aehuyzarty
+		Aguzarova 
+		Feminine
+		Alborty
+		Bazzaty
+		Bestauty
+		Bibylty
+		Bitarty 
+		Bombi
+		Caegolti 
+		Dzadtiaty 
+		Dzhioty
+		gaezaemae
+		Gabaraty 
+		Gazdanty
+		Kharebaty
+		Maerzojtae
+		Melykkatae
+		Najfontae
+		Qaebaelotae
+		Taboltae
+		Tmenaty 
+		Xaemicatae
+		Zaendziaty
+		Zolojtae
+		Zaegoyty
+	}
+	common_last_names = {
+		Aehuyzarty
+		Aguzarova 
+		Feminine
+		Alborty
+		Bazzaty
+		Bestauty
+		Bibylty
+		Bitarty 
+		Bombi
+		Caegolti 
+		Dzadtiaty 
+		Dzhioty
+		gaezaemae
+		Gabaraty 
+		Gazdanty
+		Kharebaty
+		Maerzojtae
+		Melykkatae
+		Najfontae
+		Qaebaelotae
+		Taboltae
+		Tmenaty 
+		Xaemicatae
+		Zaendziaty
+		Zolojtae
+		Zaegoyty
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = european
+}
+ingush = {# Ingush
+	color = { 53 107 89 }
+	religion = sunni
+	heritage = heritage_north_caucasian
+	language = language_vainakh
+	traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Abdula
+		Abdulkhamid
+		Abrek
+		Abukar
+		Ael
+		Ahmadkhan
+		Akhmed
+		Akhmedkhan
+		Alaudin
+		Amurkhan
+		Apti
+		Arbi
+		Bekkhan
+		Beslan
+		Djamaldin
+		Dzhamaldin
+		Gadzhimurad
+		Ilez
+		Israil
+		Israpil
+		Isrofil
+		Khadzhimurat
+		Khasbulat
+		Khavazh
+		Khazhbikar
+		Khizir 
+		Khuseyn
+		Khusseyn
+		Maksharip
+		Malsag
+		Movsar
+		Nazyr
+		Rakhim
+		Sulambek
+		Sulombek
+		Surkho
+		Tarkhan
+		Umala
+		Zelimxan
+	}
+	female_common_first_names = {	
+		Aedalkha
+		Aminat
+		Ayshet
+		Aza
+		Iriza
+		Kaypa
+		Khadi
+		Khyadi
+		Makka
+		Marem
+		Maret
+		Pyatimat
+		Rabiat
+		Tanzila
+		Xava
+		Zalina
+		Zarema
+		Zaydat
+	}
+	noble_last_names = {
+		Aushev
+		Bekov
+		Bulguchev
+		Dzarakhov
+		Evloev
+		Gandaloev
+		Gazdiev
+		Ghoandaloy
+		Ilyasov
+		Lolokhoev
+		Malsagnaqan
+		Malsagov
+		Mamilov
+		Muradov
+		Ozdoev
+		Pliev
+		Torshkhoev
+		Tsechoev
+		Tsechoy
+		Tumgoev
+		Uzhakhov
+		Vadelov
+	}
+	common_last_names = {
+		Aushev
+		Bekov
+		Bulguchev
+		Dzarakhov
+		Evloev
+		Gandaloev
+		Gazdiev
+		Ghoandaloy
+		Ilyasov
+		Lolokhoev
+		Malsagnaqan
+		Malsagov
+		Mamilov
+		Muradov
+		Ozdoev
+		Pliev
+		Torshkhoev
+		Tsechoev
+		Tsechoy
+		Tumgoev
+		Uzhakhov
+		Vadelov
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = arabic
+}
+kumyk = {# Kumayks
+	color = { 73 149 205 }
+	religion = sunni
+	heritage = heritage_north_caucasian
+	language = language_kumyk
+	traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Abdula
+		Abdulatip
+		Alibek
+		Alimsultan
+		Edilkhan
+		Gadzhi
+		Gamzat
+		Gasan
+		Gaydar
+		Khaybulla 
+		Mahammat
+		Mahammatshapi
+		Nariman
+		Taymaskhan
+		Tymerlan
+	}
+	female_common_first_names = {
+		Abidat
+		Aminat
+		Balakhanum 
+		Khaybulla 
+		Muminat
+		Muslimat
+		Patimat
+		Sakinat
+		Soltanat
+	}
+	noble_last_names = {
+		Alibekov 
+		Eldarova
+		Gadzhieva 
+		Israpilov 
+		Kurbanov
+		Ramazanova
+		Daidbekov 
+		Kaplan
+		Bammate
+		Kaplanov
+		Korkmasov
+		Eldarova
+		Gazikumuki
+		Kantemir
+		Endirey
+		Ismailov
+		Khasayev
+		Absaidov
+		Abushev
+	}
+	common_last_names = {
+		Alibekov 
+		Eldarova
+		Gadzhieva 
+		Israpilov 
+		Kurbanov
+		Ramazanova
+		Daidbekov 
+		Kaplan
+		Bammate
+		Kaplanov
+		Korkmasov
+		Eldarova
+		Gazikumuki
+		Kantemir
+		Endirey
+		Ismailov
+		Khasayev
+		Absaidov
+		Abushev
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = european
+}
+karachay = {# Karachay
+	color = { 133 82 137 }
+	religion = sunni
+	heritage = heritage_north_caucasian
+	language = language_karachay
 
+	traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Alibek
+		Aliy
+		Aniuar
+		Aslanbiy
+		Batyras
+		Beslan
+		Bibert
+		Canibek
+		Casaw
+		Casciq
+		Caubedek
+		Caukas
+		Ceraslan
+		Cermen
+		Cetul
+		Chomay
+		Cikku
+		Cohar
+		Colan
+		Comart
+		Conger
+		Cotai
+		Cotuu
+		Cugu
+		Cugutur
+		Cumakku
+		Cumariq
+		Cumuq
+		Daut
+		Dolkhat
+		Ebekku
+		Egiz
+		Elcaruqa
+		Ersi
+		Hacibiy
+		Hacimuhammat
+		Haciqasim
+		Halin
+		Hasanbiy
+		Hirha
+		Hiylar
+		Horlam
+		Hosay
+		Kerim
+		Kertibiy
+		Khadzhimurat
+		Khazhbi
+		Khuseyn
+		Khusseyn
+		Khyzyr
+		Kicibatir
+		Kicik
+		Kisi
+		Kokkoz
+		Kucuk
+		Lalas
+		Leuan
+		Magaruf
+		Mahsut
+		Mahti
+		Mamucar
+		Mamuray
+		Maraucu
+		Masaq
+		Mashut
+		Mastafa
+		Mijege
+		Mincaq
+		Molekey
+		Mukharbiy
+		Naniq
+		Noriy
+		Nur
+		Nurahmat
+		Nurali
+		Ogurbiy
+		Ogurcan
+		Oliy
+		Olmez
+		Oqub
+		Orman
+		Ortay
+		Qachan
+		Qadir
+		Qantemir
+		Qarabas
+		Qarabatir
+		Qarabiy
+		Qaraciq
+		Qarakisi
+		Qaya
+		Qazaq
+		Qilic
+		Qilicbiy
+		Qonaq
+		Qoycu
+		Qozu
+		Sabatuq
+		Safarbiy
+		Sagaban
+		Sagit
+		Sahburan
+		Sahlan
+		Salauat
+		Samge Шамге
+		Sarakku
+		Saribiy
+		Saubar
+		Sauraq
+		Seypul
+		Shyrdan
+		Silpagar
+		Soltanmurat
+		Sulemen
+		Suley
+		Tana
+		Taubek
+		Taubiy
+		Taulan
+		Taulu
+		Tauqan
+		Temiraliy
+		Temircan
+		Temirqan
+		Tiri
+		Toguzaq
+		Toqlu
+		Toqmaq
+		Tulpar
+		Tuugan
+		Ulaq
+		Unus
+		Uzeir
+		Zabit
+		Zakkiy
+		Zigitci
+		Uslu
+		Usta
+		Zakhira
+		Zalina
+		Zaydat
+		Zubay
+		Zulihat
+		Zuliy
+		Zumurat
+	}
+	female_common_first_names = {
+		Abiy
+		Alakoz
+		Alclu
+		Alimat
+		Altlnay
+		Altlncac
+		Altlncan
+		Altlnqlz
+		Aminat
+		Anaykoz
+		Anisat
+		Aqbiyce
+		Aqboun
+		Aqclq
+		Aqqlz
+		Aqtamaq
+		Ariucan
+		Ariuka
+		Ariw
+		Aseney
+		Asllhaniy
+		Aycayaq
+		Ayclq
+		Ayke
+		Aykerek
+		Aymolek
+		Ayqlz
+		Aysat
+		Ayshat
+		Aysurat
+		Aytuugan
+		Balbu
+		Balhaniy
+		Baliy
+		Baliyat
+		Balqlz
+		Baltuz
+		Bappahan
+		Baqlyat
+		Cactlu
+		Canay
+		Canclq
+		Cangosa
+		Cani
+		Cansuer
+		Cansurat
+		Carlq
+		Caubedek
+		Cauharat
+		Cezsan
+		Cibek
+		Cille
+		Clmmaq
+		Culduz
+		Cumarlq
+		Cumus
+		Cuztuyme
+		Dariko
+		Dlgllen
+		Dilyara
+		Dugum
+		Duppus
+		Egiz
+		Elsuer
+		Ersi
+		Esli
+		Fatimat
+		Fazilyat
+		Genca
+		Gokka
+		Gosa
+		Gulqlz
+		Habiy
+		Haciyat
+		Hafisat
+		Hanbilek
+		Hanmolek
+		Haylrqlz
+		Horasan
+		Hura
+		Janay
+		Jandet
+		Juzum
+		Kence
+		Kerimat
+		Kertiqlz
+		Kogala
+		Kogurcun
+		Kozbau
+		Kulsun
+		Kumus
+		Kunqlz
+		Kyausar
+		Leylya
+		Lyalliu
+		Mamuq
+		Marcan
+		Mariyat
+		Molek
+		Nafisat
+		Nalmaz
+		Napisat
+		Naqut
+		Nur
+		Nurcan
+		Nurlu
+		Oqa
+		Patiy
+		Perdaus
+		Qaraqlz
+		Qarasuu
+		Qlmsat
+		Qlrgly
+		Qumulhan
+		Raglybat
+		Raziyat
+		Sahidat
+		Sahiy
+		Sahmolek
+		Sahriza
+		Sama
+		Samarlu
+		Samdariy
+		Samqlz
+		Samsiyat
+		Sayidat
+		Serifat
+		Slrma
+		Slyllqlz
+		Suylu
+		Suyunc
+		Tatll
+		Tatuu
+		Taucan
+		Tuyme
+		Urdu
+		Uslu
+		Usta
+		Zakhira
+		Zalina
+		Zaydat
+		Zubay
+		Zulihat
+		Zuliy
+		Zumurat
+		Zumurat
 
+	}
+	noble_last_names = {
+		Balkarov
+		Bayzulovin
+		Beppalany
+		Bostanov
+		Chabdarlany 
+		Chechenov
+		Cherkesov
+		Gettuylany
+		Malkanudev
+		Ulbashlany
+		Uyanalany
+		Zumakulany
+	}
+	common_last_names = {
+
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = european
+}
+nogai = {# Nogais
+	color = { 99 209 255 }
+	religion = sunni
+	heritage = heritage_north_caucasian
+	language = language_nogai
+	traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Asaf
+		Baqi
+		Bekbulat
+		Fatxelbayan
+		Galiaskar
+		Ismail
+		Iskander
+		Makhmut
+		Mullanur
+		Musa
+		Rizaeddin
+		Rustam
+		Xosayen
+		Yadegar
+		Yusuf
+	}
+	female_common_first_names = {
+		Masrura
+		Riza
+		Zeyneb
+	}
+	noble_last_names = {
+		Mamleeva
+	}
+	common_last_names = {
+		Amirkhanov
+		Agumov
+		Borhan
+		Faysi
+		Gizzat
+		Ibragimov
+		Ibrahim
+		Kamal
+		Khusainov
+		Sultan-Galiev
+		Tinchurin
+		Tukay
+		Waxitov
+		Yanbayev
+		Yamasev
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = european
+}

@@ -2,6 +2,24 @@
 
   # Caucausian Cultures
   abkhazian: "Abkhazian"
+  avar: "Avar"
+  dargin: "Darganti"
+  osetian: "Ossetian"
+  ingush: "Ingush"
+  kumyk: "Kumyk"
+  karachay: "Karachay"
+  nogai: "Nogai"
 
   # Caucausian Languages
   language_abkhaz: "Abkhaz"
+  language_kumyk: "Kumyk"
+  language_dargin: "Dargwa"
+  language_ossetian: "Ossetian"
+  language_group_ossetian: "Ossetian"
+  language_karachay: "Karachay"
+  language_nogai: "Nogai"
+
+
+
+
+
