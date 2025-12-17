@@ -1,5 +1,5 @@
 ﻿#########################
-# Mother Russia Effects
+# Start Up Effects to avoid errors
 #########################
 
 # This file contains technical scripted effects meant to run in history or outside of content modules
@@ -22,3 +22,4 @@ mat_rossiya_old_believers_pops_effect = {
 		}
 	}
 }
+

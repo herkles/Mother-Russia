@@ -1,0 +1,32 @@
+﻿
+
+on_game_started = {
+	on_actions = {
+		mat_rossiya_map_startup_on_action
+	}
+}
+
+
+mat_rossiya_map_startup_on_action = {
+	effect = {
+		s:STATE_LESSER_POLAND = {
+			set_owner_of_provinces = {# Congress Poland
+				country = c:POL
+				provinces = { xF73169 }
+			}	
+		}
+		s:STATE_GREATER_POLAND = {
+			set_owner_of_provinces = {# Congress Poland
+				country = c:POL
+				provinces = { xDE06BA }
+			}	
+		}
+		s:STATE_MAZOVIA = {
+			set_owner_of_provinces = {# Congress Poland
+				country = c:POL
+				provinces = { x0087C9 }
+			}	
+		}
+	}
+}
+

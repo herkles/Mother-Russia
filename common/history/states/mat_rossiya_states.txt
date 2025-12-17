@@ -36,6 +36,12 @@ STATES = {
 	# Central Asian States #
 	
 	s:STATE_URALSK = {
+		set_owner_of_provinces = {
+				country = c:RUS
+				provinces = {
+					xB8A7BC xDCDFB1 xC1E0B1 xB4BA02 x820B82 x505B56 xEFFD2B x736584 xC2D1FD x77E944 x0A5203 x999C2F xDF5085 xDB54E0 xF55425 x6B8061 xC0703B x3DF767
+				}
+			}
 		region_state:RUS = {
 			set_state_type = unincorporated
 		}		
@@ -54,7 +60,29 @@ STATES = {
 	# Russian Core
 
 	# Poland
-
-
+	s:STATE_LESSER_POLAND = {
+		set_owner_of_provinces = {# Congress Poland
+			country = c:POL
+			provinces = {
+				x40DF20 x4161A0 x44ACBB x46B950 x496950 x51A0E0 x9444C9 xAEB9A5 xB491B1 xE0BB00 xEB0783 
+			}
+		}	
+	}
+	s:STATE_GREATER_POLAND = {
+		set_owner_of_provinces = {# Congress Poland
+			country = c:POL
+			provinces = {
+				x0E40DA x1CB894 x1F6F99 x24BBED x29408F x2F0D92 x471A61 x577EE4 x57A53D x5FF022 x6000DF x738072 x8FE2DB x955F09 x9FEDC5 xA03316 xA3A3A9 xA7B86B xAB3C62 xC02B8C xC061A0 xC0E0A0 xD0A0E0
+			}
+		}	
+	}
+	s:STATE_MAZOVIA = {
+		set_owner_of_provinces = {# Congress Poland
+			country = c:POL
+			provinces = {
+				x009F60 x1AA8FB x46B451  x4F022C x802161 x809F60 xC17590 xDC58D0 xE165F5 xF8C8F6 xDE551D x117AE1 x4969E4 xC06121 
+			}
+		}	
+	}	
 }
 

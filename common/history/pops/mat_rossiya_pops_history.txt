@@ -32,7 +32,6 @@
 			percent = 1
 		}
 	}
-
 	### Creating Pops ###
 	# Dagestan - Tarki
 	s:STATE_DAGESTAN = {
@@ -157,12 +156,6 @@
 	}
 	
 	### Moving Pops ###
-	s:STATE_GREATER_CAUCASUS = {# Moving pops into Abkhazia
-		region_state:RUS = {
-
-
-		}
-	}
 	s:STATE_GREATER_CAUCASUS = {# Moving Georgian pops into the Principality
 		region_state:RUS = {
 			every_scope_pop = {
@@ -289,5 +282,26 @@
 			}
 		}
 	}	
-
+	# Moving Pops into the Congress Poland
+	s:STATE_MAZOVIA = {
+		region_state:RUS = {
+			every_scope_pop = {
+				move_pop = s:STATE_MAZOVIA.region_state:POL
+			}
+		}
+	}
+	s:STATE_GREATER_POLAND = {
+		region_state:RUS = {
+			every_scope_pop = {
+				move_pop = s:STATE_GREATER_POLAND.region_state:POL
+			}
+		}
+	}
+	s:STATE_LESSER_POLAND = {
+		region_state:RUS = {
+			every_scope_pop = {
+				move_pop = s:STATE_LESSER_POLAND.region_state:POL
+			}
+		}
+	}
 }

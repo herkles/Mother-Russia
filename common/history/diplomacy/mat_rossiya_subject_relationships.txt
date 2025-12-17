@@ -24,6 +24,10 @@
 			country = c:KAZ_BUK
 			type = protectorate
 		}		
+		create_diplomatic_pact = {
+			country = c:POL
+			type = personal_union
+		}
 	}
 
 
@@ -44,6 +48,9 @@
 		add_liberty_desire = 10
 	}
 	c:KAZ_BUK ?= {
+		add_liberty_desire = 10
+	}
+	c:POL ?= {
 		add_liberty_desire = 10
 	}
 }
