@@ -225,15 +225,7 @@
 		every_scope_pop = {
 			move_partial_pop = {
 				state = s:STATE_URALSK.region_state:KAZ_BUK
-				population_ratio = 0.95
-			}
-		}
-	}
-	s:STATE_URALSK.region_state:KZH = {# Moving Pops into Burkey Horde
-		every_scope_pop = {
-			move_partial_pop = {
-				state = s:STATE_URALSK.region_state:KAZ_BUK
-				population_ratio = 0.5
+				population_ratio = 0.9
 			}
 		}
 	}

@@ -19,4 +19,8 @@
 		effect_starting_pop_wealth_medium = yes
 		effect_starting_pop_literacy_very_low = yes
 	}
+	c:KAZ_BUK ?= {
+		effect_starting_pop_wealth_medium = yes
+		effect_starting_pop_literacy_very_low = yes
+	}
 }
