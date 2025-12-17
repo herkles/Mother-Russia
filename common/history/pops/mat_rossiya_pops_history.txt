@@ -1,5 +1,8 @@
 ﻿POPS = {
-	# creating Abkhazians
+	
+
+
+	### Converting Pops ###
 	s:STATE_GREATER_CAUCASUS = {# First convert them
 		region_state:RUS = {
 			every_scope_pop = {
@@ -11,65 +14,156 @@
 				}
 				change_pop_culture = {
 					target = cu:abkhazian
-					value = 0.9
+					value = 1
 				}
 			}
 		}
 	}
-	s:STATE_GREATER_CAUCASUS = {# Then move them
+	c:RUS = {# Old Believer Pops for the Russian Empire
+		every_state = {
+			mat_rossiya_old_believers_pops_effect = yes
+		}
+	}	
+
+	### Killing Pops ###
+	every_state = {# Killing North Caucasian Pops
+		kill_population_percent_in_state = {
+			culture = cu:north_caucasian
+			percent = 1
+		}
+	}
+
+	### Creating Pops ###
+	# Dagestan - Tarki
+	s:STATE_DAGESTAN = {
+		region_state:DAG_TAR = {# Dagestan - Tarki
+			create_pop = {# Avar
+				culture = avar
+				size = 29505
+			}
+			create_pop = {# Dargins
+				culture = dargin
+				size = 42910
+			}	
+			create_pop = {# Kumyks
+				culture = kumyk
+				size = 76873
+			}
+			create_pop = {# Nogai
+				culture = nogai
+				size = 5908
+			}					
+		}
+		region_state:CHC = {# Dagestan - Imamate
+			create_pop = {# Avar
+				culture = avar
+				size = 142504
+			}
+			create_pop = {# Dargins
+				culture = dargin
+				size = 77556
+			}			
+		}
 		region_state:RUS = {
-			every_scope_pop = {
-				limit = {
-					AND = {
-						has_pop_culture = abkhazian
-						has_pop_religion = orthodox
-					}
-				}
-				move_pop = s:STATE_GREATER_CAUCASUS.region_state:ABK
+			create_pop = {# Nogai
+				culture = nogai
+				size = 31650
 			}
 		}
 	}
-	s:STATE_NORTH_CAUCASUS = {# Create the Abkhazians
-		region_state:CIR = {
-			create_pop = {
+	# Stavropol
+	s:STATE_STAVROPOL = {# Stavropol
+		region_state:RUS = {
+			create_pop = {# Avar
+				culture = avar
+				size = 1374
+			}
+			create_pop = {# Nogai
+				culture = nogai
+				size = 19772
+			}
+		}		
+	}
+	s:STATE_KUBAN = {# Kuban
+		region_state:RUS = {# Kuban - Russian
+					
+		}
+		region_state:CIR = {# Kuban - Circassian
+			create_pop = {# Nogai
+				culture = nogai
+				size = 5746
+			}
+		}
+	}
+	s:STATE_NORTH_CAUCASUS = {# North Caucasus
+		region_state:RUS = {# North Caucasus - Russian
+			create_pop = {# Avar
+				culture = avar
+				size = 1374
+			}					
+		}
+		region_state:CIR = {# North Caucasus - Imamate
+			create_pop = {# Ingush
+				culture = ingush
+				size = 88265
+			}
+			create_pop = {# Kumyk
+				culture = kumyk
+				size = 4279
+			}
+			create_pop = {# Abkhazian
 				culture = abkhazian
 				size = 10370
 				religion = orthodox
-			}
-		}
-	}	
-	s:STATE_GREATER_CAUCASUS = {
-		region_state:RUS = {
-			every_scope_pop = {
-				limit = {
-					AND = {
-						has_pop_culture = north_caucasian
-						NOT = { has_pop_religion = orthodox }
-					}
-
-				}
-				move_partial_pop = {
-					state = s:STATE_GREATER_CAUCASUS.region_state:ABK
-					population_ratio = 0.6
-				}
-			}
-			every_scope_pop = {
-				limit = {
-					AND = {
-						has_pop_culture = north_caucasian
-						NOT = { has_pop_religion = orthodox }
-					}
-
-				}
-				move_partial_pop = {
-					state = s:STATE_GREATER_CAUCASUS.region_state:GEO_MIN
-					population_ratio = 0.4
-				}
 			}			
 		}
+		region_state:CIR = {# North Caucasus - Circassian
+			create_pop = {# Karachay
+				culture = karachay
+				size = 26867
+			}
+			create_pop = {# Ossetian
+				culture = osetian
+				size = 88265
+			}			
+		}		
 	}
-	# Moving Georgian pops into the Principality
-	s:STATE_GREATER_CAUCASUS = {
+	# Baku
+	
+	# Elizavetpol
+	s:STATE_ELIZAVETPOL = {# Elizavetpol
+		region_state:AZB_ELI = {# Elizavetpol - Elisu
+			create_pop = {# Avar
+				culture = avar
+				size = 1772
+			}		
+		}
+	}	
+	s:STATE_GREATER_CAUCASUS = {# Tifilis
+		region_state:RUS = {# Tifilis - Russian
+			create_pop = {# dargin
+				culture = dargin
+				size = 7441
+			}
+			create_pop = {# Avar
+				culture = avar
+				size = 7441
+			}	
+			create_pop = {# Ossetian
+				culture = osetian
+				size = 67517
+			}	
+		}
+	}
+	
+	### Moving Pops ###
+	s:STATE_GREATER_CAUCASUS = {# Moving pops into Abkhazia
+		region_state:RUS = {
+
+
+		}
+	}
+	s:STATE_GREATER_CAUCASUS = {# Moving Georgian pops into the Principality
 		region_state:RUS = {
 			every_scope_pop = {
 				limit = {
@@ -91,105 +185,117 @@
 			}							
 		}
 	}
-	# Moving Azerbajani pops into Azerbjani polities
-	s:STATE_ELIZAVETPOL.region_state:RUS = {
+	s:STATE_ELIZAVETPOL.region_state:RUS = {# Moving pops into Elisu
 		every_scope_pop = {
 			limit = { has_pop_culture = azerbaijani }
 			move_partial_pop = {
 				state = s:STATE_ELIZAVETPOL.region_state:AZB_ELI
-				population_ratio = 0.8
+				population_ratio = 0.6
+			}
+		}
+		every_scope_pop = {
+			limit = { NOT = { has_pop_culture = azerbaijani } }
+			move_partial_pop = {
+				state = s:STATE_ELIZAVETPOL.region_state:AZB_ELI
+				population_ratio = 0.1
 			}
 		}
 	}
-	# Moving North Caucasian pops into the Shamkhalate of Tarki
-	s:STATE_DAGESTAN.region_state:RUS = {
+	s:STATE_DAGESTAN.region_state:RUS = {# Moving Pops into Shamkhalate of Tarki
 		every_scope_pop = {
+			limit = {
+				NOR = {
+					has_pop_culture = abkhazian
+					has_pop_culture = avar
+					has_pop_culture = dargin
+					has_pop_culture = osetian
+					has_pop_culture = ingush
+					has_pop_culture = kumyk
+					has_pop_culture = karachay
+					has_pop_culture = nogai
+				}
+			}
 			move_partial_pop = {
 				state = s:STATE_DAGESTAN.region_state:DAG_TAR
-				population_ratio = 0.8
+				population_ratio = 0.3
 			}
 		}
 	}
-
-	# Creating Nogai Pops
-	s:STATE_STAVROPOL = {
-		region_state:RUS = {
-			create_pop = {
-				culture = nogai
-				size = 19772
+	s:STATE_URALSK.region_state:RUS = {# Moving Pops into Burkey Horde
+		every_scope_pop = {
+			move_partial_pop = {
+				state = s:STATE_URALSK.region_state:KAZ_BUK
+				population_ratio = 0.95
 			}
 		}
 	}
-	s:STATE_KUBAN = {
-		region_state:CIR = {
-			create_pop = {
-				culture = nogai
-				size = 5746
+	s:STATE_URALSK.region_state:KZH = {# Moving Pops into Burkey Horde
+		every_scope_pop = {
+			move_partial_pop = {
+				state = s:STATE_URALSK.region_state:KAZ_BUK
+				population_ratio = 0.5
 			}
 		}
 	}
-	s:STATE_DAGESTAN = {
-		region_state:DAG_TAR = {
-			create_pop = {
-				culture = nogai
-				size = 5908
+	s:STATE_GREATER_CAUCASUS.region_state:RUS = {# Moving Pops into Principality Mingalia 
+		every_scope_pop = {# Move the Georgian Pops into Svantai
+			limit = {
+				has_pop_culture = georgian
+			}
+			move_partial_pop = {
+				state = s:STATE_GREATER_CAUCASUS.region_state:GEO_MIN
+				population_ratio = 0.13
 			}
 		}
-		region_state:RUS = {
-			create_pop = {
-				culture = nogai
-				size = 31650
+		every_scope_pop = {
+			limit = {
+				AND = {
+					has_pop_culture = abkhazian
+					has_pop_religion = orthodox
+				}
+			}
+			move_partial_pop = {
+				state = s:STATE_GREATER_CAUCASUS.region_state:GEO_MIN
+				population_ratio = 0.6
+			}
+		}
+	}	
+	s:STATE_GREATER_CAUCASUS.region_state:RUS = {# Moving Pops into the Principality of Svantai
+		every_scope_pop = {
+			limit = {
+				has_pop_culture = georgian
+			}
+			move_partial_pop = {
+				state = s:STATE_GREATER_CAUCASUS.region_state:GEO_SVA
+				population_ratio = 0.05
 			}
 		}
 	}
-
-	# Creating Ossetian Pops
-	s:STATE_GREATER_CAUCASUS = {
-		region_state:RUS = {
-			create_pop = {
-				culture = osetian
-				size = 67517
+	s:STATE_GREATER_CAUCASUS.region_state:RUS = {# Moving Pops into Abkhazia
+		every_scope_pop = {# Abkhazian Pops
+			limit = {
+				AND = {
+					has_pop_culture = abkhazian
+					has_pop_religion = orthodox
+				}
+			}
+			move_partial_pop = {
+				state = s:STATE_GREATER_CAUCASUS.region_state:ABK
+				population_ratio = 0.6
 			}
 		}
-	}
-	s:STATE_NORTH_CAUCASUS = {
-		region_state:RUS = {
-			create_pop = {
-				culture = osetian
-				size = 88265
+		every_scope_pop = {# Non - Abkhazian Pops
+			limit = {
+				NOT = {
+					has_pop_culture = abkhazian
+					has_pop_religion = orthodox
+				}
+			}
+			move_partial_pop = {
+				state = s:STATE_GREATER_CAUCASUS.region_state:ABK
+				population_ratio = 0.1
 			}
 		}
-	}
+	}	
 
-	# Breaking up the North Caucases	
-	# Dagestan - Tarki
-	# Dagestan - Imamate
-	# Dagestan - Russian
-	# Stavropol
-	# Kuban - Russian
-	# Kuban - Circassian
-	# North Caucauses - Circassian
-	# North Caucauses - Russian
-	# North Caucauses - Imamate
-	# Baku
-	# Elizavetpol - Elisu
-	# Elizavetpol - Russian
-	# Tifilis - Abkhazia
-	# Tifilis - Mingalia
-	# Tifilis - Svanti
-	# Tifilis - Russian
-
-
-
-
-
-
-	
-
-	# Old Believer Pops for the Russian Empire
-	c:RUS = {
-		every_state = {
-			mat_rossiya_old_believers_pops_effect = yes
-		}
-	}
 }

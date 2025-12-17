@@ -1,5 +1,5 @@
 ﻿COUNTRIES = {
-	c:AZB_ELI ?= {# Sultanate of Elisu
+	c:KAZ_BUK ?= {# Bukey Horde
 		effect_starting_technology_tier_3_tech = yes
 		set_state_religion = rel:sunni # they were a sunni polity
 

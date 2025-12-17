@@ -838,7 +838,7 @@ karachay = {# Karachay
 		Sahburan
 		Sahlan
 		Salauat
-		Samge Шамге
+		Samge
 		Sarakku
 		Saribiy
 		Saubar
