@@ -1,43 +1,43 @@
-﻿mat_rossyia_caucasian_war_escalation_progress_bar = {
-	name = "eqfm_balkans_escalation_progress_bar"
-	desc = "eqfm_balkans_escalation_progress_bar_desc"
+﻿# mat_rossyia_caucasian_war_escalation_progress_bar = {
+# 	name = "eqfm_balkans_escalation_progress_bar"
+# 	desc = "eqfm_balkans_escalation_progress_bar_desc"
 	
-	default_bad = yes
+# 	default_bad = yes
 	
-	start_value = 0
-	min_value = 0
-	max_value = 500
-}
+# 	start_value = 0
+# 	min_value = 0
+# 	max_value = 500
+# }
 
-mat_rossyia_caucasian_war_deescalation_progress_bar = {
-	name = "eqfm_balkans_deescalation_progress_bar"
-	desc = "eqfm_balkans_deescalation_progress_bar_desc"
+# mat_rossyia_caucasian_war_deescalation_progress_bar = {
+# 	name = "eqfm_balkans_deescalation_progress_bar"
+# 	desc = "eqfm_balkans_deescalation_progress_bar_desc"
 	
-	default = yes
+# 	default = yes
 	
-	start_value = 0
-	min_value = 0
-	max_value = 500
-}
+# 	start_value = 0
+# 	min_value = 0
+# 	max_value = 500
+# }
 
-mat_rossyia_caucasian_riot_progress_bar = {
-	name = "eqfm_riot_progress_bar"
-	desc = "eqfm_riot_progress_bar_desc"
+# mat_rossyia_caucasian_riot_progress_bar = {
+# 	name = "eqfm_riot_progress_bar"
+# 	desc = "eqfm_riot_progress_bar_desc"
 	
-	default_bad = yes
+# 	default_bad = yes
 	
-	start_value = 50
-	min_value = 0
-	max_value = 100
-}
+# 	start_value = 50
+# 	min_value = 0
+# 	max_value = 100
+# }
 
-mat_rossyia_caucasian_war_crisis_progress_bar = {
-	name = "eqfm_balkans_crisis_progress_bar"
-	desc = "eqfm_balkans_crisis_progress_bar_desc"
+# mat_rossyia_caucasian_war_crisis_progress_bar = {
+# 	name = "eqfm_balkans_crisis_progress_bar"
+# 	desc = "eqfm_balkans_crisis_progress_bar_desc"
 	
-	double_sided_bad = yes
+# 	double_sided_bad = yes
 	
-	start_value = 250
-	min_value = 0
-	max_value = 250 # Tied to control_eastern_crisis_upper_bound
-}
+# 	start_value = 250
+# 	min_value = 0
+# 	max_value = 250 # Tied to control_eastern_crisis_upper_bound
+# }

@@ -1,27 +1,7 @@
-je_mat_rossyia_caucasian_war_situation = {# The revamped Caucasian War
+﻿je_mat_rossyia_caucasian_war = {
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
 	group = je_group_global_international_situations
-	icon = "gfx/interface/icons/invention_icons/nationalism.dds"
-	weight = 10000
-
-	should_be_pinned_by_default = yes
-	can_revolution_inherit = yes
-	transferable = no
-	can_deactivate = no
-
-	is_shown_in_lobby = {
-		any_scope_state = {
-			region = sr:region_caucasus
-		}
-	}
-
-	scripted_progress_bar = mat_rossyia_caucasian_war_escalation_progress_bar
-	scripted_progress_bar = mat_rossyia_caucasian_war_deescalation_progress_bar
-	scripted_progress_bar = mat_rossyia_caucasian_war_crisis_progress_bar
-
-	scripted_button = mat_rossyia_caucasian_war_accelerate_tensions_button
-	scripted_button = mat_rossyia_caucasian_war_decelerate_tensions_button
-	scripted_button = mat_rossyia_caucasian_war_declare_disloyalty_button
-	scripted_button = mat_rossyia_caucasian_war_declare_loyalty_button
 
 	should_be_involved = {
 		mat_rossyia_caucasian_war_should_be_involved_trigger = yes
@@ -32,24 +12,26 @@ je_mat_rossyia_caucasian_war_situation = {# The revamped Caucasian War
 	}
 
 	immediate = {
-		# mat_rossiya_assign_dlc_icon_effect = yes
-		mat_rossyia_caucasian_war_initialize_variables_effect = yes
-		c:RUS ?= {
-			save_scope_as = russia_caucausus_war_scope
-			add_modifier = modifier_mat_rossyia_caucasian_war_stable_phase
-		}
-		scope:journal_entry = {
-			set_variable = com_double_bad_gold_bar
-			set_variable = {
-				name = russia_caucausus_war_scope
-				value = scope:russia_caucausus_war_scope
-			}
-			save_scope_as = mat_rossyia_caucasian_war_situation
-		}
-		set_global_variable = {
-			name = mat_rossyia_caucasian_war_situation
-			value = scope:mat_rossyia_caucasian_war_situation
-		}
+        set_global_variable = caucasian_war_happened
+        c:CIR ?= {
+            save_scope_as = circassia_scope
+        }
+        c:CHC ?= {
+            save_scope_as = imamate_scope
+        }
+        c:RUS ?= {
+            save_scope_as = russia_scope
+        }
+        every_scope_state = {
+            limit = {
+                OR = {
+                    state_region = s:STATE_KUBAN
+                    state_region = s:STATE_NORTH_CAUCASUS
+                    state_region = s:STATE_DAGESTAN
+                }
+            }
+            add_modifier = caucasus_war_attacker
+        }
 	}
 
 	immediate_all_involved = {
@@ -76,154 +58,195 @@ je_mat_rossyia_caucasian_war_situation = {# The revamped Caucasian War
 				c:CHC ?= this
 			}
 			trigger_event = {
-				id = mat_rossyia_caucasian_war.003 # The Imamate defense
+				id = mat_rossyia_caucasian_war.003 # The Peoples of the Empire
 				days = 5
 			}
-		}
+		}                    
 		else = {
 			trigger_event = {
-				id = mat_rossyia_caucasian_war.004 # The Caucasian Conflict
+				id = mat_rossyia_caucasian_war.004 # The Eastern Question
 				days = 5
 			}
-		}
-	}
-	
-	on_become_involved_after_activation = {
-		if = {
-			limit = {
-				NOT = {
-					has_variable = mat_rossyia_caucasian_war_started
-				}
-			}
-			trigger_event = {
-				id = mat_rossyia_caucasian_war.004 # The Caucasian Conflict
-				days = 5
-			}
-		}
-		else = {
-			post_notification = notitication_mat_rossyia_caucasian_war_involved
 		}
 	}
 
-	modifiers_while_active = {
+
+	on_monthly_pulse = {
+		effect = {
+			scope:journal_entry ?= {
+				if = {
+					limit = {
+						c:RUS ?= {
+							government_legitimacy >= 50
+						}
+					}
+					change_global_variable = {
+						name = mat_rossyia_caucasian_war_var
+						add = 1
+					}
+				}
+			}
+		}
 	}
+
+    scripted_button = russia_escalate_caucasian_war
+
+    status_desc = {
+        first_valid = {
+            triggered_desc = {
+                desc = caucasian_war_milyutin_loc
+                trigger = {
+                    has_variable = milyutin_memorandum_accepted
+                }
+            }
+            triggered_desc = {
+                desc = caucasian_war_escalated_loc
+                trigger = {
+                    OR = {
+                        has_variable = escalated_caucasian_war
+                        NAND = {
+                           c:CHC ?= {
+                                has_truce_with = c:RUS
+                            }
+                            c:CIR ?= {
+                                has_truce_with = c:RUS
+                            }
+                        }
+                    }
+                }
+            }
+            triggered_desc = {
+                desc = caucasian_war_non_escalated_loc
+                trigger = {
+                    c:CHC ?= {
+                        has_truce_with = root
+                    }
+                    c:CIR ?= {
+                        has_truce_with = root
+                    }
+                }
+            }
+        }
+    }
+
+	custom_completion_header = je_mat_rossyia_caucasian_war_russian_victory
 
 	complete = {
+		scope:journal_entry = { is_goal_complete = yes }
 		c:RUS ?= {
-			legitimacy >= 80
-			radical_fraction = {
-				value < 0.20
-			}
-			NOT = {
-				any_interest_group = {
-					OR = {
-						is_insurrectionary = yes
-						is_revolutionary = yes
-					}
-				}
-			}
 			is_at_war = no
 		}
-	}
-
-	on_complete = {
-		set_global_variable = mat_rossyia_caucasian_war_situation_resolved
-		remove_global_variable = russia_caucausus_war_scope
-	}
-	
-	on_complete_all_involved = {
-		mat_rossyia_caucasian_war_cleanup_situation_effect = yes
-		trigger_event = {
-			id = mat_rossyia_caucasian_war.010 # Dominion Over the Caucasus
-		}
-	}
-	
-	fail = {
-		custom_tooltip = {
-			text = je_mat_rossyia_caucasian_war_situation_fail_1
-			exists = c:RUS
-			sr:region_caucasus = {
-				NOT = {
-					any_scope_state = {
-						owner = c:RUS
-					}
+        custom_tooltip = {
+            text = caucasus_secured_tt
+            NOT = {
+                exists = c:CIR
+                exists = c:CHC
+            }
+        }
+		s:STATE_KUBAN = {
+			trigger_if = {
+				limit = {
+					NOT = { root = { has_state_in_state_region = STATE_KUBAN } }
 				}
+				root = { has_state_in_state_region = STATE_KUBAN }
+			}
+			region_state:RUS ?= {
+				turmoil <= 0.25
+				is_split_state = no
 			}
 		}
-		hidden_trigger = {
-			c:RUS ?= {
-				has_any_secessionists_broken_out = no
-				has_any_secessionists_growing = no
-				is_at_war = no
-				has_revolution = no
+		s:STATE_DAGESTAN = {
+			trigger_if = {
+				limit = {
+					NOT = { root = { has_state_in_state_region = STATE_DAGESTAN } }
+				}
+				root = { has_state_in_state_region = STATE_DAGESTAN }
+			}
+			region_state:RUS ?= {
+				turmoil <= 0.25
+				is_split_state = no
+			}
+		}
+		s:STATE_NORTH_CAUCASUS = {
+			trigger_if = {
+				limit = {
+					NOT = { root = { has_state_in_state_region = STATE_NORTH_CAUCASUS } }
+				}
+				root = { has_state_in_state_region = STATE_NORTH_CAUCASUS }
+			}
+			region_state:RUS ?= {
+				turmoil <= 0.25
+				is_split_state = no
 			}
 		}
 	}
 
-	on_fail = {
-		set_global_variable = mat_rossyia_caucasian_war_situation_resolved
-		remove_global_variable = russia_caucausus_war_scope
-	}
-	
-	on_fail_all_involved = {
-		mat_rossyia_caucasian_war_cleanup_situation_effect = yes
+	custom_on_completion_header = je_mat_rossyia_caucasian_war_on_russian_victory
+    on_complete = {
+        set_global_variable = caucasus_consolidated_var
+        if = {
+            limit = {
+                NOT = {
+                    has_variable = imamate_defeated
+                }
+            }
+            trigger_event = { id = caucasuswar_end.3 }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_variable = circassia_defeated
+                }
+            }
+            trigger_event = { id = caucasuswar_end.1 }
+        }
+    }
+
+	on_complete_all_involved = {
+		# mat_rossyia_caucasian_war_cleanup_effect = yes
 		trigger_event = {
-			id = mat_rossyia_caucasian_war.011 # Caucausus Lost
+			id = mat_rossyia_caucasian_war.010 # Dominion Over the Caucausus
+		}
+	}
+
+	custom_failure_header = je_mat_rossyia_caucasian_war_rebel_victory
+
+	fail = {# Failure means Russia has lost control
+        custom_tooltip = {
+            text = caucasus_lost_tt
+            NOT = {
+                any_scope_state = {
+                    state_region = s:STATE_DAGESTAN
+                }
+                any_scope_state = {
+                    state_region = s:STATE_KUBAN
+                }
+                any_scope_state = {
+                    state_region = s:STATE_NORTH_CAUCASUS
+                }
+            }
+        }
+	}
+
+	custom_on_failure_header = je_mat_rossyia_caucasian_war_on_rebel_victory
+
+	on_fail_all_involved = {
+		# mat_rossyia_caucasian_war_cleanup_effect = yes
+		trigger_event = {
+			id = mat_rossyia_caucasian_war.011 # The Caucausus are Lost
 		}
 	}
 
 	invalid = {
-		custom_tooltip = {
-			text = je_mat_rossyia_caucasian_war_situation_invalid
-			NOT = {
-				exists = c:TUR
-			}
+		NOT = {
+			exists = c:RUS
 		}
 	}
 
-	on_invalid = {
-		set_global_variable = mat_rossyia_caucasian_war_situation_resolved
-		remove_global_variable = russia_caucausus_war_scope
-	}
-	
-	on_invalid_all_involved = {
-		mat_rossyia_caucasian_war_cleanup_situation_effect = yes
-	}
-	
-	on_no_longer_involved = {
-		mat_rossyia_caucasian_war_cleanup_situation_effect = yes
-		post_notification = notification_mat_rossyia_caucasian_war_not_involved
-	}
+	progressbar = yes
 
-	on_weekly_pulse = {
-		effect = {
-			mat_rossyia_caucasian_war_calculate_situation_variables_effect = yes
-			mat_rossyia_caucasian_war_check_situation_phase_effect = yes
-		}
-	}
+	weight = 10000
 
-	on_monthly_pulse = {
-		effect = {
-			mat_rossyia_caucasian_war_validate_involvement = yes
-			mat_rossyia_caucasian_war_advance_situation_variables_effect = yes
-		}
-	}
-
-	status_desc = {
-		triggered_desc = {
-			desc = je_mat_rossyia_caucasian_war_situation_status
-			trigger = {
-				has_global_variable = mat_rossyia_caucasian_war_situation
-			}
-		}
-		triggered_desc = {
-			desc = je_mat_rossyia_caucasian_war_situation_crisis_status
-			trigger = {
-				scope:journal_entry ?= {
-					var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_crisis
-				}
-			}
-		}
-	}
+	should_be_pinned_by_default = yes
 }
 

@@ -1,0 +1,4 @@
+GLOBAL = {
+	### Open Global Journals
+	add_contextless_journal_entry = je_mat_rossyia_caucasian_war
+}
