@@ -102,18 +102,31 @@ AZB_ELI = {
 	}
 }
 
-KAZ_BUK = {# The Kazakh Flag as I couldn't find a banner for the Bukey Horde
+KAZ_BUK = {# Based on their coat of arms went with the Black bow, arrow and axe for uniqueness
 	pattern = "pattern_border_of_3.dds"
-	color1 = "blue_light"
-	color2 = "red"
+	color1 = "black"
+	color2 = "white"
 
 	colored_emblem = {
-		texture = "ce_eternal_knot.dds"
+		texture = "ce_bow_single.dds"
 		color1 = "white"
 		color2 = "white"
-        instance = { position = { 0.45 0.5 } scale = { 0.7 0.7 } }
+        instance = { position = { 0.5 0.5 }  scale = { 1 1 } }
+	}
+	colored_emblem = {
+		texture = "ce_arrow.dds"
+		color1 = "white"
+		color2 = "white"
+        instance = { position = { 0.5 0.4 } rotation = 135 scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_axe_long.dds"
+		color1 = "white"
+		color2 = "white"
+        instance = { position = { 0.5 0.4 } rotation = -45 scale = { 0.7 0.7 } }
 	}
 }
+
 
 
 
