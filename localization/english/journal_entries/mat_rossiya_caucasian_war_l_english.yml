@@ -1,0 +1,18 @@
+﻿l_english:
+ # Journal Entries
+  je_mat_rossyia_caucasian_war: "The Caucasian War"
+  je_mat_rossyia_caucasian_war_reason: "Our territorial ambitions in the Caucasus Mountains are being set back by fierce local resistance. We must crush all remaining resistance in order to secure our Southern border, and open the territories up for settlement.\n\nOnce the #bold Rifling#! and #bold Logistics#! technologies are researched, it will be possible to #bold escalate the war#!, and launch a full-scale invasion of the rebellious states."
+
+  je_mat_rossyia_caucasian_war_goal: "[SCOPE.sCountry('russia_scope').GetNameNoFlag] successfully conquered the Caucasus."
+
+  je_mat_rossyia_caucasian_war_russian_victory: "To achieve a #b Russian#! victory:\n"
+  je_mat_rossyia_caucasian_war_on_russian_victory: "On a #b Russian#! victory:\n$EFFECT$"
+
+  je_mat_rossyia_caucasian_war_rebel_victory: "To achieve a #b Rebel#! victory:\n"
+  je_mat_rossyia_caucasian_war_on_rebel_victory: "On a #b Rebel#! victory:\n$EFFECT$"
+
+  mat_rossyia_caucasian_war_should_be_involved_trigger: "[ROOT.GetCountry.GetNameNoFlag] is involved in the $je_mat_rossyia_caucasian_war$"
+  mat_rossyia_caucasian_war_interloper_trigger: "[ROOT.GetCountry.GetNameNoFlag] is an interloper in the $je_mat_rossyia_caucasian_war$"
+  mat_rossyia_caucasian_war_uninvolved_trigger: "[ROOT.GetCountry.GetNameNoFlag] is uninvolved in the $je_mat_rossyia_caucasian_war$"
+
+

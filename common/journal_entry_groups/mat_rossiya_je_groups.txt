@@ -1,0 +1,7 @@
+﻿
+# Technical Journal Entry Groups:
+je_group_mat_rossiya_hidden = {
+	context = country
+}
+
+# Flavor Journal Entry Groups:

@@ -8,7 +8,9 @@ REPLACE:je_caucasian_war = {
 		always = no
 	}
 
-	on_complete = {}
+	on_complete = {
+		trigger_event = { id = caucasuswar_end.4 }
+	}
 
 	invalid = {
 		NOT = {

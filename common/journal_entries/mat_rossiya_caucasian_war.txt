@@ -22,16 +22,21 @@
         c:RUS ?= {
             save_scope_as = russia_scope
         }
-        every_scope_state = {
-            limit = {
-                OR = {
-                    state_region = s:STATE_KUBAN
-                    state_region = s:STATE_NORTH_CAUCASUS
-                    state_region = s:STATE_DAGESTAN
-                }
-            }
-            add_modifier = caucasus_war_attacker
-        }
+		s:STATE_KUBAN = {# Kuban
+			region_state:RUS = {# Kuban - Russian
+				add_modifier = caucasus_war_attacker	
+			}
+		}
+		s:STATE_NORTH_CAUCASUS = {# Kuban
+			region_state:RUS = {# Kuban - Russian
+				add_modifier = caucasus_war_attacker	
+			}
+		}		
+		s:STATE_DAGESTAN = {# Kuban
+			region_state:RUS = {# Kuban - Russian
+				add_modifier = caucasus_war_attacker	
+			}
+		}
 	}
 
 	immediate_all_involved = {
@@ -73,19 +78,7 @@
 
 	on_monthly_pulse = {
 		effect = {
-			scope:journal_entry ?= {
-				if = {
-					limit = {
-						c:RUS ?= {
-							government_legitimacy >= 50
-						}
-					}
-					change_global_variable = {
-						name = mat_rossyia_caucasian_war_var
-						add = 1
-					}
-				}
-			}
+
 		}
 	}
 
@@ -96,14 +89,14 @@
             triggered_desc = {
                 desc = caucasian_war_milyutin_loc
                 trigger = {
-                    has_variable = milyutin_memorandum_accepted
+                    has_global_variable = milyutin_memorandum_accepted
                 }
             }
             triggered_desc = {
                 desc = caucasian_war_escalated_loc
                 trigger = {
                     OR = {
-                        has_variable = escalated_caucasian_war
+                        has_global_variable = escalated_caucasian_war
                         NAND = {
                            c:CHC ?= {
                                 has_truce_with = c:RUS
@@ -119,10 +112,10 @@
                 desc = caucasian_war_non_escalated_loc
                 trigger = {
                     c:CHC ?= {
-                        has_truce_with = root
+                        has_truce_with = c:RUS
                     }
                     c:CIR ?= {
-                        has_truce_with = root
+                        has_truce_with = c:RUS
                     }
                 }
             }
@@ -145,10 +138,11 @@
         }
 		s:STATE_KUBAN = {
 			trigger_if = {
+
 				limit = {
-					NOT = { root = { has_state_in_state_region = STATE_KUBAN } }
+					NOT = { c:RUS = { has_state_in_state_region = STATE_KUBAN } }
 				}
-				root = { has_state_in_state_region = STATE_KUBAN }
+				c:RUS = { has_state_in_state_region = STATE_KUBAN }
 			}
 			region_state:RUS ?= {
 				turmoil <= 0.25
@@ -158,9 +152,9 @@
 		s:STATE_DAGESTAN = {
 			trigger_if = {
 				limit = {
-					NOT = { root = { has_state_in_state_region = STATE_DAGESTAN } }
+					NOT = { c:RUS = { has_state_in_state_region = STATE_DAGESTAN } }
 				}
-				root = { has_state_in_state_region = STATE_DAGESTAN }
+				c:RUS = { has_state_in_state_region = STATE_DAGESTAN }
 			}
 			region_state:RUS ?= {
 				turmoil <= 0.25
@@ -170,9 +164,9 @@
 		s:STATE_NORTH_CAUCASUS = {
 			trigger_if = {
 				limit = {
-					NOT = { root = { has_state_in_state_region = STATE_NORTH_CAUCASUS } }
+					NOT = { c:RUS = { has_state_in_state_region = STATE_NORTH_CAUCASUS } }
 				}
-				root = { has_state_in_state_region = STATE_NORTH_CAUCASUS }
+				c:RUS = { has_state_in_state_region = STATE_NORTH_CAUCASUS }
 			}
 			region_state:RUS ?= {
 				turmoil <= 0.25
@@ -187,7 +181,7 @@
         if = {
             limit = {
                 NOT = {
-                    has_variable = imamate_defeated
+                    has_global_variable = imamate_defeated
                 }
             }
             trigger_event = { id = caucasuswar_end.3 }
@@ -195,7 +189,7 @@
         if = {
             limit = {
                 NOT = {
-                    has_variable = circassia_defeated
+                    has_global_variable = circassia_defeated
                 }
             }
             trigger_event = { id = caucasuswar_end.1 }
@@ -215,15 +209,17 @@
         custom_tooltip = {
             text = caucasus_lost_tt
             NOT = {
-                any_scope_state = {
-                    state_region = s:STATE_DAGESTAN
-                }
-                any_scope_state = {
-                    state_region = s:STATE_KUBAN
-                }
-                any_scope_state = {
-                    state_region = s:STATE_NORTH_CAUCASUS
-                }
+				c:RUS = {
+					any_scope_state = {
+						state_region = s:STATE_DAGESTAN
+					}
+					any_scope_state = {
+						state_region = s:STATE_KUBAN
+					}
+					any_scope_state = {
+						state_region = s:STATE_NORTH_CAUCASUS
+					}
+				}
             }
         }
 	}
