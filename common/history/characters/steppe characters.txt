@@ -1,0 +1,7 @@
+﻿CHARACTERS = {
+	c:KAZ_BUK ?= {
+		create_character = {
+			template = KAZ_BUK_janger_khan
+		}
+	}
+}

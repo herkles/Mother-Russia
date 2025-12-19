@@ -1,0 +1,27 @@
+﻿l_english:
+
+  # Starting Events
+    mat_rossyia_caucasian_war.001.t: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.001.d: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.001.a: "PLACEHOLDER"
+
+    mat_rossyia_caucasian_war.002.t: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.002.d: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.002.a: "PLACEHOLDER"
+
+    mat_rossyia_caucasian_war.003.t: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.003.d: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.003.a: "PLACEHOLDER"
+
+    mat_rossyia_caucasian_war.004.t: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.004.d: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.004.a: "PLACEHOLDER"
+  # Ending Events
+    mat_rossyia_caucasian_war.010.t: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.010.d: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.010.a: "PLACEHOLDER"
+
+    mat_rossyia_caucasian_war.011.t: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.011.d: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.011.a: "PLACEHOLDER"
+

@@ -1,0 +1,229 @@
+je_mat_rossyia_caucasian_war_situation = {# The revamped Caucasian War
+	group = je_group_global_international_situations
+	icon = "gfx/interface/icons/invention_icons/nationalism.dds"
+	weight = 10000
+
+	should_be_pinned_by_default = yes
+	can_revolution_inherit = yes
+	transferable = no
+	can_deactivate = no
+
+	is_shown_in_lobby = {
+		any_scope_state = {
+			region = sr:region_caucasus
+		}
+	}
+
+	scripted_progress_bar = mat_rossyia_caucasian_war_escalation_progress_bar
+	scripted_progress_bar = mat_rossyia_caucasian_war_deescalation_progress_bar
+	scripted_progress_bar = mat_rossyia_caucasian_war_crisis_progress_bar
+
+	scripted_button = mat_rossyia_caucasian_war_accelerate_tensions_button
+	scripted_button = mat_rossyia_caucasian_war_decelerate_tensions_button
+	scripted_button = mat_rossyia_caucasian_war_declare_disloyalty_button
+	scripted_button = mat_rossyia_caucasian_war_declare_loyalty_button
+
+	should_be_involved = {
+		mat_rossyia_caucasian_war_should_be_involved_trigger = yes
+	}
+
+	should_show_when_not_involved = {
+		mat_rossyia_caucasian_war_interloper_trigger = yes
+	}
+
+	immediate = {
+		# mat_rossiya_assign_dlc_icon_effect = yes
+		mat_rossyia_caucasian_war_initialize_variables_effect = yes
+		c:RUS ?= {
+			save_scope_as = russia_caucausus_war_scope
+			add_modifier = modifier_mat_rossyia_caucasian_war_stable_phase
+		}
+		scope:journal_entry = {
+			set_variable = com_double_bad_gold_bar
+			set_variable = {
+				name = russia_caucausus_war_scope
+				value = scope:russia_caucausus_war_scope
+			}
+			save_scope_as = mat_rossyia_caucasian_war_situation
+		}
+		set_global_variable = {
+			name = mat_rossyia_caucasian_war_situation
+			value = scope:mat_rossyia_caucasian_war_situation
+		}
+	}
+
+	immediate_all_involved = {
+		if = {
+			limit = {
+				c:RUS ?= this
+			}
+			trigger_event = {
+				id = mat_rossyia_caucasian_war.001 # Conquering the Caucasus
+				days = 5
+			}
+		}
+		if = {
+			limit = {
+				c:CIR ?= this
+			}
+			trigger_event = {
+				id = mat_rossyia_caucasian_war.002 # The Russian Invansion
+				days = 5
+			}
+		}
+		if = {
+			limit = {
+				c:CHC ?= this
+			}
+			trigger_event = {
+				id = mat_rossyia_caucasian_war.003 # The Imamate defense
+				days = 5
+			}
+		}
+		else = {
+			trigger_event = {
+				id = mat_rossyia_caucasian_war.004 # The Caucasian Conflict
+				days = 5
+			}
+		}
+	}
+	
+	on_become_involved_after_activation = {
+		if = {
+			limit = {
+				NOT = {
+					has_variable = mat_rossyia_caucasian_war_started
+				}
+			}
+			trigger_event = {
+				id = mat_rossyia_caucasian_war.004 # The Caucasian Conflict
+				days = 5
+			}
+		}
+		else = {
+			post_notification = notitication_mat_rossyia_caucasian_war_involved
+		}
+	}
+
+	modifiers_while_active = {
+	}
+
+	complete = {
+		c:RUS ?= {
+			legitimacy >= 80
+			radical_fraction = {
+				value < 0.20
+			}
+			NOT = {
+				any_interest_group = {
+					OR = {
+						is_insurrectionary = yes
+						is_revolutionary = yes
+					}
+				}
+			}
+			is_at_war = no
+		}
+	}
+
+	on_complete = {
+		set_global_variable = mat_rossyia_caucasian_war_situation_resolved
+		remove_global_variable = russia_caucausus_war_scope
+	}
+	
+	on_complete_all_involved = {
+		mat_rossyia_caucasian_war_cleanup_situation_effect = yes
+		trigger_event = {
+			id = mat_rossyia_caucasian_war.010 # Dominion Over the Caucasus
+		}
+	}
+	
+	fail = {
+		custom_tooltip = {
+			text = je_mat_rossyia_caucasian_war_situation_fail_1
+			exists = c:RUS
+			sr:region_caucasus = {
+				NOT = {
+					any_scope_state = {
+						owner = c:RUS
+					}
+				}
+			}
+		}
+		hidden_trigger = {
+			c:RUS ?= {
+				has_any_secessionists_broken_out = no
+				has_any_secessionists_growing = no
+				is_at_war = no
+				has_revolution = no
+			}
+		}
+	}
+
+	on_fail = {
+		set_global_variable = mat_rossyia_caucasian_war_situation_resolved
+		remove_global_variable = russia_caucausus_war_scope
+	}
+	
+	on_fail_all_involved = {
+		mat_rossyia_caucasian_war_cleanup_situation_effect = yes
+		trigger_event = {
+			id = mat_rossyia_caucasian_war.011 # Caucausus Lost
+		}
+	}
+
+	invalid = {
+		custom_tooltip = {
+			text = je_mat_rossyia_caucasian_war_situation_invalid
+			NOT = {
+				exists = c:TUR
+			}
+		}
+	}
+
+	on_invalid = {
+		set_global_variable = mat_rossyia_caucasian_war_situation_resolved
+		remove_global_variable = russia_caucausus_war_scope
+	}
+	
+	on_invalid_all_involved = {
+		mat_rossyia_caucasian_war_cleanup_situation_effect = yes
+	}
+	
+	on_no_longer_involved = {
+		mat_rossyia_caucasian_war_cleanup_situation_effect = yes
+		post_notification = notification_mat_rossyia_caucasian_war_not_involved
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			mat_rossyia_caucasian_war_calculate_situation_variables_effect = yes
+			mat_rossyia_caucasian_war_check_situation_phase_effect = yes
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			mat_rossyia_caucasian_war_validate_involvement = yes
+			mat_rossyia_caucasian_war_advance_situation_variables_effect = yes
+		}
+	}
+
+	status_desc = {
+		triggered_desc = {
+			desc = je_mat_rossyia_caucasian_war_situation_status
+			trigger = {
+				has_global_variable = mat_rossyia_caucasian_war_situation
+			}
+		}
+		triggered_desc = {
+			desc = je_mat_rossyia_caucasian_war_situation_crisis_status
+			trigger = {
+				scope:journal_entry ?= {
+					var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_crisis
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,73 @@
+﻿#### State Region Triggers
+
+#### Strategic Region Triggers
+
+
+#### Religion Triggers
+
+## Culture Triggers
+
+## Diplomacy Triggers
+mat_rossiya_has_alliance_trigger = {
+	any_scope_treaty = {
+		binds = root
+		binds = $country$
+		any_scope_article = {
+			has_type = alliance
+		}
+	}
+}
+
+mat_rossiya_has_defensive_pact_trigger = {
+	any_scope_treaty = {
+		binds = root
+		binds = $country$
+		any_scope_article = {
+			has_type = defensive_pact
+		}
+	}
+}
+
+mat_rossiya_has_military_assistance_trigger = {
+	any_scope_treaty = {
+		binds = root
+		binds = $country$
+		any_scope_article = {
+			has_type = military_assistance
+		}
+	}
+}
+
+mat_rossiya_has_rivalry_trigger = {
+	has_diplomatic_pact = {
+		who = $country$
+		type = rivalry
+	}
+}
+
+mat_rossiya_has_embargo_trigger = {
+	has_diplomatic_pact = {
+		who = $country$
+		type = embargo
+	}
+}
+
+## State Triggers
+mat_rossiya_capital_is_in_state_region_trigger = {
+	capital ?= {
+		state_region = {
+			s:$STATE_REGION$ = this
+		}
+	}
+}
+
+mat_rossiya_capital_is_in_entire_state_region_trigger = {
+	capital ?= {
+		state_region = {
+			s:$STATE_REGION$ = this
+		}
+		is_split_state = no
+	}
+}
+
+####----------- COA Triggers -----------####

@@ -1,0 +1,341 @@
+﻿mat_rossyia_caucasian_war_stable_phase_trigger = {
+	custom_tooltip = { 
+		text = mat_rossyia_caucasian_war_stable_phase_trigger
+		global_var:mat_rossyia_caucasian_war_situation = {
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_stable
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_unrest_phase_trigger = {
+	custom_tooltip = {
+		text = mat_rossyia_caucasian_war_unrest_phase_trigger
+		global_var:mat_rossyia_caucasian_war_situation = {
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_unrest
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_hostility_phase_trigger = {
+	custom_tooltip = {
+		text = mat_rossyia_caucasian_war_hostility_phase_trigger
+		global_var:mat_rossyia_caucasian_war_situation = {
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_hostility
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_deconfliction_phase_trigger = {
+	custom_tooltip = {
+		text = mat_rossyia_caucasian_war_deconfliction_phase_trigger
+		global_var:mat_rossyia_caucasian_war_situation = {
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_deconfliction
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_crisis_phase_trigger = {
+	custom_tooltip = {
+		text = mat_rossyia_caucasian_war_crisis_phase_trigger
+		global_var:mat_rossyia_caucasian_war_situation = {
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_crisis
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_should_be_involved_trigger = {
+	custom_tooltip = {
+		text = mat_rossyia_caucasian_war_should_be_involved_trigger
+		OR = {
+			c:RUS ?= this
+			AND = {
+				is_subject_of = c:RUS
+				capital ?= {
+					region = sr:region_caucasus
+				}
+			}
+			any_scope_state = {
+				region = sr:region_caucasus
+				is_capital = yes
+			}
+			mat_rossiya_has_alliance_trigger = {
+				country = c:RUS
+			}
+			mat_rossiya_has_defensive_pact_trigger = {
+				country = c:RUS
+			}
+			mat_rossiya_has_military_assistance_trigger = {
+				country = c:RUS
+			}
+			mat_rossiya_has_rivalry_trigger = {
+				country = c:RUS
+			}
+			mat_rossiya_has_embargo_trigger = {
+				country = c:RUS
+			}
+			AND = {
+				country_rank >= rank_value:great_power
+				has_interest_marker_in_region = region_caucasus
+			}
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_interloper_trigger = {
+	custom_tooltip = {
+		text = mat_rossyia_caucasian_war_interloper_trigger
+		mat_rossyia_caucasian_war_should_be_involved_trigger = no
+		OR = {
+			has_diplomatic_relevance = c:RUS
+			any_scope_state = {
+				region = sr:region_caucasus
+			}
+			any_subject_or_below = {
+				capital = {
+					region = sr:region_caucasus
+				}
+			}
+			AND = {
+				is_subject_of = c:RUS
+				capital ?= {
+					region != sr:region_caucasus
+				}
+			}
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_uninvolved_trigger = {
+	custom_tooltip = {
+		text = mat_rossyia_caucasian_war_uninvolved_trigger
+		mat_rossyia_caucasian_war_should_be_involved_trigger = no
+		mat_rossyia_caucasian_war_interloper_trigger = no
+	}
+}
+
+mat_rossyia_caucasian_war_party_trigger = {
+	OR = {
+		is_involved_in_journal_entry = je_mat_rossyia_caucasian_war_situation
+		mat_rossyia_caucasian_war_interloper_trigger = yes
+	}
+}
+
+mat_rossyia_caucasian_war_neutral_events_trigger = {
+	NOT = {
+		has_global_variable = mat_rossyia_caucasian_war_cooldown_var
+	}
+	global_var:mat_rossyia_caucasian_war_situation = {
+		OR = {
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_stable
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_unrest
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_hostility
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_crisis
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_unrest_events_trigger = {
+	NOT = {
+		has_global_variable = mat_rossyia_caucasian_war_cooldown_var
+	}
+	global_var:mat_rossyia_caucasian_war_situation = {
+		OR = {
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_unrest
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_hostility
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_crisis
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_hostility_events_trigger = {
+	NOT = {
+		has_global_variable = mat_rossyia_caucasian_war_cooldown_var
+	}
+	global_var:mat_rossyia_caucasian_war_situation = {
+		var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_hostility
+	}
+}
+
+mat_rossyia_caucasian_war_deconfliction_events_trigger = {
+	NOT = {
+		has_global_variable = mat_rossyia_caucasian_war_cooldown_var
+	}
+	global_var:mat_rossyia_caucasian_war_situation = {
+		OR = {
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_stable
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_unrest
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_hostility
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_deconfliction
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_crisis_events_trigger = {
+	NOT = {
+		has_global_variable = mat_rossyia_caucasian_war_cooldown_var
+	}
+	global_var:mat_rossyia_caucasian_war_situation = {
+		var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_crisis
+	}
+}
+
+mat_rossyia_caucasian_war_can_escalate_tension_trigger = {
+	global_var:mat_rossyia_caucasian_war_situation = {
+		OR = {
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_stable
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_unrest
+			AND = {
+				var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_hostility
+				mat_rossyia_caucasian_war_crisis_possible_trigger = yes
+			}
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_deconfliction
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_can_deescalate_tension_trigger = {
+	global_var:mat_rossyia_caucasian_war_situation = {
+		OR = {
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_unrest
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_hostility
+			AND = {
+				var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_crisis
+				c:RUS ?= {
+					has_any_secessionists_broken_out = no
+					has_any_secessionists_growing = no
+					is_at_war = no
+				}
+			}
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_crisis_possible_trigger = {
+	has_dlc_feature = ip3_content # National Awakening
+	c:RUS ?= {
+		has_technology_researched = nationalism
+	}
+}
+
+mat_rossyia_caucasian_war_crisis_participant_trigger = { # Excludes TUR
+	OR = {
+		has_variable = mat_rossyia_caucasian_war_crisis_attacker
+		has_variable = mat_rossyia_caucasian_war_crisis_defender
+	}
+}
+
+mat_rossyia_caucasian_war_crisis_party_trigger = { # Excludes TUR
+	OR = {
+		has_variable = mat_rossyia_caucasian_war_crisis_attacker
+		has_variable = mat_rossyia_caucasian_war_crisis_defender
+		has_variable = mat_rossyia_caucasian_war_crisis_deconflicted
+	}
+}
+
+mat_rossyia_caucasian_war_crisis_deconfliction_trigger = {
+	has_variable = mat_rossyia_caucasian_war_crisis_attacker
+	trigger_if = {
+		limit = {
+			c:GBR ?= this
+		}
+		OR = {
+			c:RUS ?= {
+				owns_entire_state_region = STATE_CYPRUS
+			}
+			c:CYP ?= {
+				is_subject_of = c:RUS
+			}
+		}
+	}
+	trigger_if = {
+		limit = {
+			c:FRA ?= this
+		}
+		OR = {
+			c:RUS ?= {
+				owns_entire_state_region = STATE_TUNISIA
+			}
+			c:TUN ?= {
+				is_subject_of = c:RUS
+			}
+		}
+	}
+	trigger_if = {
+		limit = {
+			c:RUS ?= this
+		}
+		c:RUS ?= {
+			owns_entire_state_region = STATE_DOBRUDJA
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_revolt_mechanics_trigger = {
+	owner = {
+		c:RUS ?= this
+		is_involved_in_journal_entry = je_mat_rossyia_caucasian_war_situation
+	}
+}
+
+mat_rossyia_caucasian_war_minority_revolt_possible_trigger = {
+	owner = {
+		c:RUS ?= this
+		is_involved_in_journal_entry = je_mat_rossyia_caucasian_war_situation
+	}
+	global_var:mat_rossyia_caucasian_war_situation = {
+		OR = {
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_hostility
+			var:mat_rossyia_caucasian_war_phase_var ?= flag:mat_rossyia_caucasian_war_crisis
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_eligible_minority_movement_trigger = {
+	OR = {
+		is_political_movement_type = movement_cultural_minority
+		is_political_movement_type = movement_religious_minority
+	}
+	mat_rossiya_balkans_culture_trigger = yes
+}
+
+mat_rossyia_caucasian_war_cultural_minority_movement_trigger = {
+	is_political_movement_type = movement_cultural_minority
+	mat_rossiya_balkans_culture_trigger = yes
+}
+
+mat_rossyia_caucasian_war_religious_minority_movement_trigger = {
+	is_political_movement_type = movement_religious_minority
+	OR = {
+		religion = rel:sunni
+		religion = rel:oriental_orthodox
+		religion = rel:shiite
+
+	}
+}
+
+mat_rossyia_caucasian_war_situation_porte_side_trigger = {
+	OR = {
+		root != c:RUS
+		mat_rossiya_has_alliance_trigger = {
+			country = c:RUS
+		}
+		mat_rossiya_has_defensive_pact_trigger = {
+			country = c:RUS
+		}
+		mat_rossiya_has_military_assistance_trigger = {
+			country = c:RUS
+		}
+	}
+}
+
+mat_rossyia_caucasian_war_situation_balkan_side_trigger = {
+	OR = {
+		root != c:RUS
+		mat_rossiya_has_rivalry_trigger = {
+			country = c:RUS
+		}
+		mat_rossiya_has_embargo_trigger = {
+			country = c:RUS
+		}
+	}
+}

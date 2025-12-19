@@ -1,0 +1,24 @@
+﻿### Russia character template file ###
+
+### Bukey Khans
+
+KAZ_BUK_janger_khan = {# Jangir Keri Khan
+	first_name = jangir_keri
+	last_name = khan
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_landowners
+	ideology = ideology_reformer
+	ruler = yes
+	birth_date = 1801.1.1 # year is known
+	traits = {
+		imperious # A major element of his reforms was to center power around himself. 
+		erudite # was a scholar and a major element of his reforms was modernizing education
+	}
+	on_created = {
+		set_variable = is_married
+	}
+	trait_generation = {
+
+	}
+}

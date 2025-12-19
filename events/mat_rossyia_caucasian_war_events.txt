@@ -1,0 +1,233 @@
+#########################################
+#										#	
+#	      The Caucasian War 			#
+#										#
+#########################################
+
+# 
+
+####################
+
+namespace = mat_rossyia_caucasian_war
+
+####################
+
+#########################################
+#	       Starting Events 				#
+#########################################
+
+mat_rossyia_caucasian_war.001 = {# Conquering the Caucasus
+	type = country_event
+	placement = root
+
+	title = mat_rossyia_caucasian_war.001.t
+	desc = mat_rossyia_caucasian_war.001.d
+	flavor = mat_rossyia_caucasian_war.001.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/ep1_cossacks.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	#dlc = dlc_grefm
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.001.a
+		default_option = yes
+	}
+}
+mat_rossyia_caucasian_war.002 = {# The Russian Invansion
+	type = country_event
+	placement = root
+
+	title = mat_rossyia_caucasian_war.002.t
+	desc = mat_rossyia_caucasian_war.002.d
+	flavor = mat_rossyia_caucasian_war.002.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/ep1_cossacks.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	#dlc = dlc_grefm
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.002.a
+		default_option = yes
+	}
+}
+mat_rossyia_caucasian_war.003 = {# The Imamate defense
+	type = country_event
+	placement = root
+
+	title = mat_rossyia_caucasian_war.003.t
+	desc = mat_rossyia_caucasian_war.003.d
+	flavor = mat_rossyia_caucasian_war.003.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/ep1_cossacks.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	#dlc = dlc_grefm
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.003.a
+		default_option = yes
+	}
+}
+mat_rossyia_caucasian_war.004 = {# The Caucasian Conflict
+	type = country_event
+	placement = root
+
+	title = mat_rossyia_caucasian_war.004.t
+	desc = mat_rossyia_caucasian_war.004.d
+	flavor = mat_rossyia_caucasian_war.004.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/ep1_cossacks.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	#dlc = dlc_grefm
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.004.a
+		default_option = yes
+	}
+}
+
+#########################################
+#	       Ending Events 				#
+#########################################
+
+mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus
+	type = country_event
+	placement = root
+
+	title = mat_rossyia_caucasian_war.010.t
+	desc = mat_rossyia_caucasian_war.010.d
+	flavor = mat_rossyia_caucasian_war.010.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/ep1_cossacks.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	#dlc = dlc_grefm
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.010.a
+		default_option = yes
+	}
+}
+mat_rossyia_caucasian_war.011 = {# Caucausus Lost
+	type = country_event
+	placement = root
+
+	title = mat_rossyia_caucasian_war.011.t
+	desc = mat_rossyia_caucasian_war.011.d
+	flavor = mat_rossyia_caucasian_war.011.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/ep1_cossacks.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	#dlc = dlc_grefm
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.011.a
+		default_option = yes
+	}
+}
+
+#########################################
+#	       General Events 				#
+#########################################
+
+
