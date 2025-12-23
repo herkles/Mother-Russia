@@ -83,7 +83,7 @@
 	}
 
     scripted_button = russia_escalate_caucasian_war
-
+	
     status_desc = {
         first_valid = {
             triggered_desc = {

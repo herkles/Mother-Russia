@@ -283,10 +283,11 @@
 		}
 	}	
 	# Moving Pops into the Congress Poland
-	s:STATE_MAZOVIA = {
-		region_state:RUS = {
-			every_scope_pop = {
-				move_pop = s:STATE_MAZOVIA.region_state:POL
+	s:STATE_MAZOVIA.region_state:RUS = {# Moving Pops into Burkey Horde
+		every_scope_pop = {
+			move_partial_pop = {
+				state = s:STATE_MAZOVIA.region_state:POL
+				population_ratio = 0.9
 			}
 		}
 	}

@@ -1,5 +1,6 @@
 ﻿DIPLOMACY = {
-	c:RUS ?= {# Russian puppets
+	c:RUS ?= {
+		# Russian protectorates
 		create_diplomatic_pact = {
 			country = c:GEO_SVA
 			type = protectorate
@@ -23,10 +24,15 @@
 		create_diplomatic_pact = {
 			country = c:KAZ_BUK
 			type = protectorate
-		}		
+		}
+		# Russian Crownland territory, somewhat autonomous regions		
 		create_diplomatic_pact = {
 			country = c:POL
-			type = personal_union
+			type = crown_land
+		}				
+		create_diplomatic_pact = {
+			country = c:UBD
+			type = crown_land
 		}
 	}
 
@@ -48,9 +54,9 @@
 		add_liberty_desire = 10
 	}
 	c:KAZ_BUK ?= {
-		add_liberty_desire = 10
+		add_liberty_desire = -10
 	}
 	c:POL ?= {
-		add_liberty_desire = 10
+		add_liberty_desire = -10
 	}
 }

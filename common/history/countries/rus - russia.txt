@@ -4,10 +4,9 @@
 		add_technology_researched = napoleonic_warfare
 		add_technology_researched = stock_exchange
 		add_technology_researched = corporate_charters
-		add_technology_researched = fractional_distillation #beet producer
-		
+		add_technology_researched = fractional_distillation #beet producer		
 		set_tax_level = low # pre-Kankrin reform tax system
-
+		
 		# Laws 
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_autocracy

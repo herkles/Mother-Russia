@@ -1,11 +1,11 @@
 ﻿BUILDINGS={
 	# Removing Buildings
-	s:STATE_MAZOVIA={
-		region_state:RUS={
-			remove_building = building_rye_farm
-			remove_building = building_logging_camp
-		}
-	}
+	# s:STATE_MAZOVIA={
+	# 	region_state:RUS={
+	# 		remove_building = building_rye_farm
+	# 		remove_building = building_logging_camp
+	# 	}
+	# }
 	s:STATE_GREATER_POLAND={
 		region_state:RUS={
 			remove_building = building_textile_mill

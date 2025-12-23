@@ -6,7 +6,7 @@
 		add_technology_researched = corporate_charters
 		add_technology_researched = fractional_distillation #beet producer
 		
-		set_tax_level = low # pre-Kankrin reform tax system
+		set_capital = STATE_GREATER_POLAND # Capital was Warsaw
 
 		# Laws 
 		activate_law = law_type:law_monarchy
@@ -21,7 +21,11 @@
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_women_own_property
 		
-		add_taxed_goods = g:liquor
+		# Russification Policies
+		set_state_religion = rel:orthodox # reflecting russification
+		add_primary_culture = cu:russian # Reflecting russification
+		remove_primary_culture = cu:polish # to reflect the russification
+
 
 	}
 }

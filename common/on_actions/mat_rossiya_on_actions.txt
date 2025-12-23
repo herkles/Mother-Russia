@@ -8,6 +8,7 @@ on_game_started = {
 
 
 mat_rossiya_map_startup_on_action = {
+	# Making Congress Poland
 	effect = {
 		s:STATE_LESSER_POLAND = {
 			set_owner_of_provinces = {# Congress Poland
@@ -19,12 +20,6 @@ mat_rossiya_map_startup_on_action = {
 			set_owner_of_provinces = {# Congress Poland
 				country = c:POL
 				provinces = { xDE06BA }
-			}	
-		}
-		s:STATE_MAZOVIA = {
-			set_owner_of_provinces = {# Congress Poland
-				country = c:POL
-				provinces = { x0087C9 }
 			}	
 		}
 	}

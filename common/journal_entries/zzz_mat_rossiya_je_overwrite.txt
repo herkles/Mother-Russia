@@ -3,7 +3,8 @@ REPLACE:je_caucasian_war = {
 	# Overridden for AI strats
 	group = je_group_mat_rossiya_hidden
 	weight = 0
-
+	should_be_pinned_by_default = yes
+	
 	complete = {
 		always = no
 	}

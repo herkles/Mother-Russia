@@ -1,32 +1,33 @@
 ﻿l_english:
 
   # Starting Events
-    mat_rossyia_caucasian_war.001.t: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.001.d: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.001.t: "Conquering the Caucasus"
+    mat_rossyia_caucasian_war.001.d: "There are numerous tribes and people of the Caucauses. Some have accepted our rule, others have turned to banditry and begun to raid our caravans and attack our forts. The tribes that live there shall learn that this land belongs to the Russian Empire."
     mat_rossyia_caucasian_war.001.f: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.001.a: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.001.a: "We shall subdue the savages"
 
-    mat_rossyia_caucasian_war.002.t: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.002.d: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.002.f: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.002.a: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.002.t: "The Russian Invansion"
+    mat_rossyia_caucasian_war.002.d: "The Russians have laid claims to all of the Caucasus. They claim our homes, they demand that we obey their laws, and that we are uncivilized people that need their protection. And they burn our lands if we dare to resist. Well we shall resist. We shall defend our home from these vile invaders."
+    mat_rossyia_caucasian_war.002.f: ""Even if we lose many of our brave warriors, we have men and young boys to replace them! Worst case, we will be unable to use our rifles because we have no gunpowder and ammo. Even so, we will fight with swords and daggers in hand! We will never obey the enemies! Even if the whole world abandons us and we are cornered to the last point of our homeland, it will still be seen what the Adyghe are capable of. If necessary, we will have to mercifully take the lives of our women and children with our own hands so that they do not fall into the hands of the enemy and be met by various worse pains. And then, to avenge them, we too must perish.""
+    mat_rossyia_caucasian_war.002.a: "Honor and Life"
 
-    mat_rossyia_caucasian_war.003.t: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.003.d: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.003.f: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.003.a: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.003.t: "In Defense of Islam"
+    mat_rossyia_caucasian_war.003.d: "The members of the Ulema have declared a gazawat, a holy war against the Russian orthodox invaders. We must rally all the people faithful to the Almighty in the mountains and valleys against the invaders. With God on our side we shall defend our homes from the invaders!"
+    mat_rossyia_caucasian_war.003.f: "“People! Know that as long as our land is trampled under the feet of the Russians, we will have no happiness; the sun will scorch our fields, not irrigated by heavenly moisture, we ourselves will die like flies, and when we appear before the judgment of the Almighty, what will we say to him in our defense? I have been sent by God to save you. So, in His name, I call you to battle with the infidels. Ghazawat to the Russians! Ghazawat to all who forget the faith and the holy Sharia! Do not spare yourself, your children, or your property; we cannot be defeated. From this moment on, we begin a holy war, and I will be your ghazi. Get ready!"
+    mat_rossyia_caucasian_war.003.a: "La ilaha ila Allah!"
 
-    mat_rossyia_caucasian_war.004.t: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.004.d: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.004.f: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.004.a: "PLACEHOLDER"
-  # Ending Events
-    mat_rossyia_caucasian_war.010.t: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.004.t: "The Caucasian Conflict"
+    mat_rossyia_caucasian_war.004.d: "The lands of the Caucasus mountains are awash in violence. The local peoples of the region are fighting for their tribe against other tribes. Some have decided to ally with the Russians, others have raised their banner in revolt or have joined the Imamate. What shall the Russians do, we will have to wait and see. "
+    mat_rossyia_caucasian_war.004.f: ""In the village, on their doorsteps, Circassians are sitting idle. The sons of the Caucasus say About abusive, disastrous alarms, On the beauty of their horses, About enjoying the wild bliss; Remembers the old days compelling raids, Artful deceptions Uzdenov, Beats checkers their cruel, And Accuracy inevitable arrows, And the ashes of ruined villages, And caresses prisoners chernookih""
+    mat_rossyia_caucasian_war.004.a: "What shall become of the Caucausus?"
+  
+# Ending Events
+    mat_rossyia_caucasian_war.010.t: "Dominion Over the Caucasus"
     mat_rossyia_caucasian_war.010.d: "PLACEHOLDER"
     mat_rossyia_caucasian_war.010.f: "PLACEHOLDER"
     mat_rossyia_caucasian_war.010.a: "PLACEHOLDER"
 
-    mat_rossyia_caucasian_war.011.t: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.011.t: "Caucausus Lost"
     mat_rossyia_caucasian_war.011.d: "PLACEHOLDER"
     mat_rossyia_caucasian_war.011.f: "PLACEHOLDER"
     mat_rossyia_caucasian_war.011.a: "PLACEHOLDER"
