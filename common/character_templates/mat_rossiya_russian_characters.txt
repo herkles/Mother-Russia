@@ -1,0 +1,21 @@
+﻿### Russia character template file ###
+# This covers all new characters; country_rus covers pre-exisiting russian characters that vanilla has.
+
+### Generals
+
+RUS_christopher_stegeman = {# Christopher Osipovich Stegman
+	is_general = yes
+	first_name = Christopher
+	last_name = Stegmann
+	historical = yes
+	culture = cu:russian
+	female = no
+	ideology = ideology_royalist
+	commander_rank = commander_rank_2
+	interest_group = ig_armed_forces
+	hq = region_poland
+	birth_date = 1782.1.1
+	traits = {
+		plains_commander
+	}
+}

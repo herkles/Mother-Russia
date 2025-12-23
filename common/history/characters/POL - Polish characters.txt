@@ -1,6 +1,6 @@
 ﻿CHARACTERS = {
 	c:POL ?= {
-		create_character = {
+		create_character = {# Ivan Paskevich is viceroyal of Poland
 			template = RUS_ivan_paskevich
 		}
 	}

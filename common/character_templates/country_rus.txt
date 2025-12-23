@@ -1176,7 +1176,7 @@ RUS_aleksandr_chernyshyov = { # General
 	}
 }
 
-RUS_ivan_paskevich = {
+RUS_ivan_paskevich = {# Made a ruler as he is the viceroyal of Poland at start
 	is_general = yes
 	first_name = Ivan
 	last_name = Paskevich
@@ -1186,8 +1186,7 @@ RUS_ivan_paskevich = {
 	age = 54
 	interest_group = ig_landowners
 	ideology = ideology_royalist
-	hq = region_poland
-	traits = {
+    traits = {
 		brave
 		reckless
 	}
@@ -1223,6 +1222,8 @@ RUS_nikolay_muravyov_karsky = {
 		persistent
 	}
 }
+
+
 
 RUS_pavel_grabbe = {
 	is_general = yes
