@@ -1,4 +1,10 @@
 ﻿GLOBAL = {
 	### Open Global Journals
 	add_contextless_journal_entry = je_mat_rossyia_caucasian_war
+
+	## Hiding the secret Borscht
+	com_hide_journal_entry_group = {
+		name = je_group_mat_rossiya_hidden
+	}
+
 }
