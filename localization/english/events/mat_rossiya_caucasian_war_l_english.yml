@@ -3,7 +3,7 @@
   # Starting Events
     mat_rossyia_caucasian_war.001.t: "Conquering the Caucasus"
     mat_rossyia_caucasian_war.001.d: "There are numerous tribes and people of the Caucauses. Some have accepted our rule, others have turned to banditry and begun to raid our caravans and attack our forts. The tribes that live there shall learn that this land belongs to the Russian Empire."
-    mat_rossyia_caucasian_war.001.f: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.001.f: ""In the village, on their doorsteps, Circassians are sitting idle. The sons of the Caucasus say About abusive, disastrous alarms, On the beauty of their horses, About enjoying the wild bliss; Remembers the old days compelling raids, Artful deceptions Uzdenov, Beats checkers their cruel, And Accuracy inevitable arrows, And the ashes of ruined villages, And caresses prisoners chernookih""
     mat_rossyia_caucasian_war.001.a: "We shall subdue the savages"
 
     mat_rossyia_caucasian_war.002.t: "The Russian Invansion"
@@ -23,12 +23,19 @@
   
 # Ending Events
     mat_rossyia_caucasian_war.010.t: "Dominion Over the Caucasus"
-    mat_rossyia_caucasian_war.010.d: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.010.f: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.010.a: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.010.d: "Despite the immense challenges in the Caucasus, and a bandit holy man declaring a holy war on Russia. The forces of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] have succeeded in destroying and subduing tribal warlords who would oppose the Russian Empire. "
+    mat_rossyia_caucasian_war.010.f: ""So Muse, easy one Dreams, For Asia the limits of flying And plucked the wreath itself Caucasian wild flowers. Her outfit captivated harsh tribes, increased during the war, And often in this new clothes""
+    mat_rossyia_caucasian_war.010.a: "Glory to Russia!"
 
     mat_rossyia_caucasian_war.011.t: "Caucausus Lost"
-    mat_rossyia_caucasian_war.011.d: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.011.f: "PLACEHOLDER"
-    mat_rossyia_caucasian_war.011.a: "PLACEHOLDER"
+    mat_rossyia_caucasian_war.011.d: "The collapse of our rule in the [SCOPE.sState('kuban_state').GetStateRegion.GetName] and [SCOPE.sState('dagestan_state').GetStateRegion.GetName] regions has led to the severance of the Georgian Military Highway, and the end of the ability of the [ROOT.GetCountry.GetAdjective] state to exert power in the southern Caucasus."
+    mat_rossyia_caucasian_war.011.f: "There is nothing left for us in these forsaken mountains but to be trapped between the Turks and the highlanders. Nothing is with us, any longer - God is high above, and the Tsar is far away."
+    mat_rossyia_caucasian_war.011.a: "Militarize the remaining garrisons, and hold at all costs!"
+    mat_rossyia_caucasian_war.011.b: "Leave the region to the local warlords' mercy."
+    mat_rossyia_caucasian_war.011.c: "Withdraw in the face of the nascent Caucasian states."
+    mat_rossyia_caucasian_war.011.e: "Abandon the mountains to the Transcaucasian intelligentsia."
+    caucasuswar_end_4b_tt: "The #bold Caucasus#! will be split between various claimants to the legacy of its historical kingdoms."
+    caucasuswar_end_4c_tt: "The national aspirations of the #bold Caucasian#! peoples will be realized, as separate states."
+    caucasuswar_end_4e_tt: "The #bold Caucasian#! peoples will seize independence from [ROOT.GetCountry.GetName] as a unified #bold Transcaucasian#! states."
+
 

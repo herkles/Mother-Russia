@@ -13,12 +13,6 @@
 				region = sr:region_caucasus
 				is_capital = yes
 			}
-			mat_rossiya_has_alliance_trigger = {
-				country = c:RUS
-			}
-			mat_rossiya_has_defensive_pact_trigger = {
-				country = c:RUS
-			}
 			mat_rossiya_has_military_assistance_trigger = {
 				country = c:RUS
 			}

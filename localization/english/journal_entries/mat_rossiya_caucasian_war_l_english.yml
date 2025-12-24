@@ -4,6 +4,7 @@
   je_mat_rossyia_caucasian_war_reason: "Our territorial ambitions in the Caucasus Mountains are being set back by fierce local resistance. We must crush all remaining resistance in order to secure our Southern border, and open the territories up for settlement.\n\nOnce the #bold Rifling#! and #bold Logistics#! technologies are researched, it will be possible to #bold escalate the war#!, and launch a full-scale invasion of the rebellious states."
 
   je_mat_rossyia_caucasian_war_goal: "[SCOPE.sCountry('russia_scope').GetNameNoFlag] successfully conquered the Caucasus."
+  je_mat_rossyia_caucasian_war_russian_victory_tt: "No independent Caucasian nation exists in the Caucasus region."
 
   je_mat_rossyia_caucasian_war_russian_victory: "To achieve a #b Russian#! victory:\n"
   je_mat_rossyia_caucasian_war_on_russian_victory: "On a #b Russian#! victory:\n$EFFECT$"

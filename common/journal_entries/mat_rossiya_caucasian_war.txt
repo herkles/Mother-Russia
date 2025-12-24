@@ -130,7 +130,7 @@
 			is_at_war = no
 		}
         custom_tooltip = {
-            text = caucasus_secured_tt
+            text = je_mat_rossyia_caucasian_war_russian_victory_tt
             NOT = {
                 exists = c:CIR
                 exists = c:CHC
