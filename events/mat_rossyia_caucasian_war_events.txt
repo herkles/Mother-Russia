@@ -30,7 +30,7 @@ mat_rossyia_caucasian_war.001 = {# Conquering the Caucasus
 
 	duration = 3
 
-	#dlc = dlc_grefm
+	
 
 	trigger = {
 		
@@ -64,7 +64,7 @@ mat_rossyia_caucasian_war.002 = {# The Russian Invansion
 
 	duration = 3
 
-	#dlc = dlc_grefm
+	
 
 	trigger = {
 		
@@ -98,7 +98,7 @@ mat_rossyia_caucasian_war.003 = {# The Imamate defense
 
 	duration = 3
 
-	#dlc = dlc_grefm
+	
 
 	trigger = {
 		
@@ -132,7 +132,7 @@ mat_rossyia_caucasian_war.004 = {# The Caucasian Conflict
 
 	duration = 3
 
-	#dlc = dlc_grefm
+	
 
 	trigger = {
 		
@@ -151,7 +151,7 @@ mat_rossyia_caucasian_war.004 = {# The Caucasian Conflict
 #	       Ending Events 				#
 #########################################
 
-mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus
+mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 	type = country_event
 	placement = root
 
@@ -171,7 +171,7 @@ mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus
 
 	duration = 3
 
-	#dlc = dlc_grefm
+	
 
 	trigger = {
 		
@@ -185,9 +185,9 @@ mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus
 		default_option = yes
 	}
 }
-mat_rossyia_caucasian_war.011 = {# Caucausus Lost
+mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
 	type = country_event
-	placement = root
+	placement = scope:georgia_state
 
 	title = mat_rossyia_caucasian_war.011.t
 	desc = mat_rossyia_caucasian_war.011.d
@@ -196,38 +196,1021 @@ mat_rossyia_caucasian_war.011 = {# Caucausus Lost
 	gui_window = event_window_widescreen_newspaper
 
 	event_image = {
-		video = "gfx/event_pictures/ep1_cossacks.bk2"
+		video = "gfx/event_pictures/unspecific_devastation.bk2"
 	}
 
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	duration = 3
 
-	#dlc = dlc_grefm
+	cooldown = { days = very_long_modifier_time }
 
 	trigger = {
 		
 	}
 
 	immediate = {
+		if = {# Get Georgia
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_GREATER_CAUCASUS
+				}
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_GREATER_CAUCASUS
+				}
+				save_scope_as = georgia_state
+			}
+		}
+		if = {# Get Azerbaijan
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_AZERBAIJAN
+				}
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_AZERBAIJAN
+				}
+				save_scope_as = azerbaijan_state
+			}
+		}
+		if = {# Get Armenia
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_ARMENIA
+				}
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_ARMENIA
+				}
+				save_scope_as = armenia_state
+			}
+		}
+		if = {# Get Kuban
+			limit = {
+				any_state = {
+					state_region = s:STATE_KUBAN
+				}
+			}
+			random_state = {
+				limit = {
+					state_region = s:STATE_KUBAN
+				}
+				save_scope_as = kuban_state
+			}
+		}
+		if = {# Get Dagestan
+			limit = {
+				any_state = {
+					state_region = s:STATE_DAGESTAN
+				}
+			}
+			random_state = {
+				limit = {
+					state_region = s:STATE_DAGESTAN
+				}
+				save_scope_as = dagestan_state
+			}
+		}
 	}
 
-	option = {
-		name = mat_rossyia_caucasian_war.011.a
+	option = {# Militarize the garrisons
+		name = caucasuswar_end.4.a
 		default_option = yes
+		add_loyalists = {
+			value = medium_radicals
+			pop_type = officers
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_GREATER_CAUCASUS
+			}
+			add_radicals_in_state = {
+				value = 0.8
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_AZERBAIJAN
+			}
+			add_radicals_in_state = {
+				value = 0.8
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_ELIZAVETPOL
+			}
+			add_radicals_in_state = {
+				value = 0.8
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_ARMENIA
+			}
+			add_radicals_in_state = {
+				value = 0.8
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_KARS
+			}
+			add_radicals_in_state = {
+				value = 0.8
+			}
+		}
+	}
+	option = {# Leave the region to the locals
+		name = caucasuswar_end.4.b
+		custom_tooltip = {
+			text = mat_rossyia_caucasian_war_011b_tt
+			if = {# The Georgian Principalities come back!
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_GREATER_CAUCASUS
+					}
+				}
+				create_country = {# Imereti!
+					tag = GEO_IME
+					origin = this
+					province = p:xD65AC8
+					on_created = {
+						set_country_type = unrecognized
+						s:STATE_GREATER_CAUCASUS = {
+							set_owner_of_provinces = {
+								country = c:GEO_IME
+								provinces = { 
+									xD65AC8
+									x85DCE4
+									x801000
+									x74A861
+									xC27075
+								}
+							}
+						}
+					}
+				}
+				create_country = {# Guria
+					tag = GEO_GUR
+					origin = this
+					province = p:x011141
+					on_created = {
+						set_country_type = unrecognized
+						s:STATE_GREATER_CAUCASUS = {
+							set_owner_of_provinces = {
+								country = c:GEO_GUR
+								provinces = { 
+									xC9B445
+								}
+							}
+						}
+					}
+				}
+				create_country = {# Kakheti
+					tag = GEO_KAK
+					origin = this
+					province = p:xD15CBD
+					on_created = {
+						set_country_type = unrecognized
+						s:STATE_GREATER_CAUCASUS = {
+							set_owner_of_provinces = {
+								country = c:GEO_KAK
+								provinces = { 
+									xFB38B0						
+									xD62036
+									xC0CF80
+									x3537D5
+								}
+							}
+						}
+						s:STATE_ARMENIA = {
+								set_owner_of_provinces = {
+									country = c:GEO_KAK
+									provinces = { 
+										xDC0812
+										x16A02D
+									}
+								}
+							}
+						}
+				}
+				create_country = {# Kartli
+					tag = GEO_KAR
+					origin = this
+					province = p:x4A4DF9
+					on_created = {
+						set_country_type = unrecognized
+						s:STATE_GREATER_CAUCASUS = {
+							set_owner_of_provinces = {
+								country = c:GEO_KAR
+								provinces = {
+									xF0E0DF
+									x9BC69B
+									xFB53B8
+								}
+							}
+						}
+						s:STATE_ELIZAVETPOL = {
+							set_owner_of_provinces = {
+								country = c:GEO_KAR
+								provinces = {
+									xDFB2B0
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {# The Azerbaijani Khanates return!
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_AZERBAIJAN
+					}
+				}
+				create_country = {# Baku
+					tag = AZB_BAK
+					origin = this
+					province = p:x0E8C3E
+					on_created = {
+						set_country_type = unrecognized
+						s:STATE_AZERBAIJAN = {
+							set_owner_of_provinces = {
+								country = c:AZB_BAK
+								provinces = {
+									x6EB08E
+								}
+							}
+						}
+					}
+				}
+				create_country = {# Quba
+					tag = AZB_QUB
+					origin = this
+					province = p:xBFD159
+					on_created = {
+						set_country_type = unrecognized
+						s:STATE_AZERBAIJAN = {
+							set_owner_of_provinces = {
+								country = c:AZB_QUB
+								provinces = {
+									xD77566
+									x69FE0D
+								}
+							}
+						}
+					}
+				}
+				create_country = {# Shiravan
+					tag = AZB_SHI
+					origin = this
+					province = p:x0467D5
+					on_created = {
+						set_country_type = unrecognized
+						s:STATE_AZERBAIJAN = {
+							set_owner_of_provinces = {
+								country = c:AZB_SHI
+								provinces = {
+									x007060
+									x008FBF
+									x493F0B
+									x0B74ED
+									xE7B07C
+								}
+							}
+						}
+					}
+				}
+				create_country = {# Karabakh
+					tag = AZB_KAR
+					origin = this
+					province = p:x747318
+					on_created = {
+						set_country_type = unrecognized
+						s:STATE_ELIZAVETPOL = {
+							set_owner_of_provinces = {
+								country = c:AZB_KAR
+								provinces = {
+									x809040
+									x0E70E4
+									x80D041
+									x2F7A57
+									x9195D4
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {# Armenia breaks free
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_ARMENIA
+					}
+				}
+				create_country = {
+					tag = ARM
+					origin = this
+					state = scope:armenia_state
+					on_created = {
+						set_country_type = unrecognized
+						if = {
+							limit = {
+								any_state = {
+									state_region = s:STATE_KARS
+									owner ?= c:RUS
+								}
+							}
+							random_state = {
+								limit = {
+									owner ?= c:RUS
+									state_region = s:STATE_KARS
+								}
+								set_state_owner = c:ARM
+							}
+						}
+					}
+				}
+				s:STATE_AZERBAIJAN = {
+					if = {
+						limit = {
+							exists = c:ARM
+						}
+						set_owner_of_provinces = {
+							country = c:ARM
+							provinces = { x809040 }
+						}
+					}
+					if = {
+						limit = {
+							exists = c:GEO
+						}
+						set_owner_of_provinces = {
+							country = c:GEO
+							provinces = { x16A02D xDC0812 x005000 }
+						}
+					}
+				}
+			}
+			if = {# if Elisu exists it gets territory
+				limit = {
+					exists = c:AZB_ELI
+				}
+				s:STATE_ELIZAVETPOL = {
+					set_owner_of_provinces = {# Congress Poland
+						country = c:AZB_ELI
+						provinces = {
+							xEE1A87
+							x404F5B
+							x8090BF
+						}
+					}	
+				}
+			}
+			if = {# If Elisu doesn't exist recreate it
+				limit = {
+					NOT = {	exists = c:AZB_ELI }
+				}
+				create_country = {# Quba
+					tag = AZB_ELI
+					origin = this
+					province = p:xEE1A87
+					on_created = {
+						set_country_type = unrecognized
+						s:STATE_ELIZAVETPOL = {
+							set_owner_of_provinces = {
+								country = c:AZB_ELI
+								provinces = {
+									x404F5B
+									x8090BF
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {# Withdraw in the face of the nascent states
+		name = caucasuswar_end.4.c
+		trigger = {
+			has_technology_researched = nationalism
+		}
+		custom_tooltip = {
+			text = mat_rossyia_caucasian_war_011c_tt
+			if = {# Georgia - if no principalities exist
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_GREATER_CAUCASUS
+					}
+					AND = {
+						NOT = { exists = c:GEO_SVA }
+						NOT = { exists = c:GEO_MIN }
+						NOT = { exists = c:ABK }
+					}
+				}
+				create_country = {
+					tag = GEO
+					origin = this
+					state = scope:georgia_state
+				}
+			}
+			if = {# Georgia - if principalities exist
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_GREATER_CAUCASUS
+					}
+					OR = {
+						exists = c:GEO_SVA 
+						exists = c:GEO_MIN 
+						exists = c:ABK 
+					}
+				}
+				if = {# if Svanati is player make it Georgia
+					limit = {
+						exists = c:GEO_SVA 
+						c:GEO_SVA ?= {
+							is_player = yes
+						}
+					}
+					c:GEO_SVA ?= { change_tag = GEO	}
+					c:GEO ?= {
+						annex_with_incorporation = c:GEO_MIN
+						annex_with_incorporation = c:ABK
+					}
+					random_state = {
+						limit = {
+							owner ?= c:RUS
+							state_region = s:STATE_GREATER_CAUCASUS
+						}
+						set_state_owner = c:GEO
+					}										
+				}
+				if = {# if Mingalia is player make it Georgia
+					limit = {
+						exists = c:GEO_MIN 
+						c:GEO_MIN ?= {
+							is_player = yes
+						}
+					}
+					c:GEO_MIN ?= { change_tag = GEO	}
+					c:GEO ?= {
+						annex_with_incorporation = c:GEO_SVA
+						annex_with_incorporation = c:ABK
+					}					
+					random_state = {
+						limit = {
+							owner ?= c:RUS
+							state_region = s:STATE_GREATER_CAUCASUS
+						}
+						set_state_owner = c:GEO
+					}					
+				}
+				if = {# if Abkhazia is player make it Georgia
+					limit = {
+						exists = c:ABK 
+						c:ABK ?= {
+							is_player = yes
+						}
+					}
+					c:ABK ?= { change_tag = GEO	}
+					c:GEO ?= {
+						annex_with_incorporation = c:GEO_MIN
+						annex_with_incorporation = c:GEO_SVA
+					}
+					random_state = {
+						limit = {
+							owner ?= c:RUS
+							state_region = s:STATE_GREATER_CAUCASUS
+						}
+						set_state_owner = c:GEO
+					}					
+
+				}
+				if = {# be random
+					limit = {
+						NOR = {
+							c:ABK ?= { is_player = yes }
+							c:GEO_MIN ?= { is_player = yes }
+							c:GEO_SVA ?= { is_player = yes }
+						}
+					}
+					random_list = {
+						50 = {# Abkhazia gets it
+							c:ABK ?= { change_tag = GEO	}
+							c:GEO ?= {
+								annex_with_incorporation = c:GEO_MIN
+								annex_with_incorporation = c:GEO_SVA
+							}
+							random_state = {
+								limit = {
+									owner ?= c:RUS
+									state_region = s:STATE_GREATER_CAUCASUS
+								}
+								set_state_owner = c:GEO
+							}
+							
+						}
+						50 = {# Svanati gets it
+							c:GEO_SVA ?= { change_tag = GEO	}
+							c:GEO ?= {
+								annex_with_incorporation = c:GEO_MIN
+								annex_with_incorporation = c:ABK
+							}
+							random_state = {
+								limit = {
+									owner ?= c:RUS
+									state_region = s:STATE_GREATER_CAUCASUS
+								}
+								set_state_owner = c:GEO
+							}
+						}
+						50 = {# Mingalia gets it
+							c:GEO_MIN ?= { change_tag = GEO	}
+							c:GEO ?= {
+								annex_with_incorporation = c:GEO_SVA
+								annex_with_incorporation = c:ABK
+							}
+							random_state = {
+								limit = {
+									owner ?= c:RUS
+									state_region = s:STATE_GREATER_CAUCASUS
+								}
+								set_state_owner = c:GEO
+							}
+						}
+					}					
+				}
+			}
+			if = {# Armenia
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_ARMENIA
+					}
+				}
+				create_country = {
+					tag = ARM
+					origin = this
+					state = scope:armenia_state
+					on_created = {
+						if = {
+							limit = {
+								any_state = {
+									state_region = s:STATE_KARS
+									owner ?= c:RUS
+								}
+							}
+							random_state = {
+								limit = {
+									owner ?= c:RUS
+									state_region = s:STATE_KARS
+								}
+								set_state_owner = c:ARM
+							}
+						}
+					}
+				}
+			}			
+			if = {# Azerbaijan - Elisu doesn't exists 
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_AZERBAIJAN
+					}
+					NOT = { exists = c:AZB_ELI }
+				}
+				create_country = {
+					tag = AZB
+					origin = this
+					state = scope:azerbaijan_state
+				}
+				random_list = {
+					50 = {
+						random_state = {
+							limit = {
+								state_region = s:STATE_ELIZAVETPOL
+							}
+							set_state_owner = c:ARM
+						}
+					}
+					50 = {
+						random_state = {
+							limit = {
+								state_region = s:STATE_ELIZAVETPOL
+							}
+							set_state_owner = c:AZB
+						}
+					}
+				}				
+			}
+			if = {# Azerbaijan - Elisu does exists 
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_AZERBAIJAN
+					}
+					exists = c:AZB_ELI 
+				}
+				c:AZB_ELI ?= { change_tag = AZB	}
+				c:AZB = { set_capital = STATE_AZERBAIJAN }
+				random_state = {
+					limit = {
+						owner ?= c:RUS
+						state_region = s:STATE_AZERBAIJAN
+					}
+					set_state_owner = c:AZB
+				}
+				s:STATE_ELIZAVETPOL = {
+					set_owner_of_provinces = {# Azerbaijani's claim
+					country = c:AZB
+						provinces = {
+							xEE1A87
+							x404F5B
+							x8090BF
+							x80D041
+							x0E70E4
+							x747318
+						}
+					}
+					set_owner_of_provinces = {# Armenia's claim
+					country = c:ARM
+						provinces = {
+							xDFB2B0
+							x9195D4
+							x2F7A57
+							x809040
+						}
+					}					
+				}
+			}
+		}
+	}
+	option = {# Abandon the mountains to Intelligentsia
+		name = caucasuswar_end.4.e
+		trigger = {
+			has_technology_researched = pan-nationalism
+			AND = {
+				owns_entire_state_region = STATE_GREATER_CAUCASUS
+				owns_entire_state_region = STATE_AZERBAIJAN
+				owns_entire_state_region = STATE_ARMENIA
+			}
+		}
+		custom_tooltip = {
+			text = mat_rossyia_caucasian_war_011e_tt
+			create_country = {
+				tag = CAU
+				origin = this
+				state = scope:georgia_state
+				on_created = {
+					if = {
+						limit = {
+							any_state = {
+								state_region = s:STATE_ARMENIA
+								owner ?= c:RUS
+							}
+						}
+						random_state = {
+							limit = {
+								owner ?= c:RUS
+								state_region = s:STATE_ARMENIA
+							}
+							set_state_owner = c:CAU
+						}
+					}
+					if = {
+						limit = {
+							any_state = {
+								state_region = s:STATE_AZERBAIJAN
+								owner ?= c:RUS
+							}
+						}
+						random_state = {
+							limit = {
+								owner ?= c:RUS
+								state_region = s:STATE_AZERBAIJAN
+							}
+							set_state_owner = c:CAU
+						}
+					}
+					if = {
+						limit = {
+							any_state = {
+								state_region = s:STATE_ELIZAVETPOL
+								owner ?= c:RUS
+							}
+						}
+						random_state = {
+							limit = {
+								owner ?= c:RUS
+								state_region = s:STATE_ELIZAVETPOL
+							}
+							set_state_owner = c:CAU
+						}
+					}
+					if = {
+						limit = {
+							any_state = {
+								state_region = s:STATE_KARS
+								owner ?= c:RUS
+							}
+						}
+						random_state = {
+							limit = {
+								owner ?= c:RUS
+								state_region = s:STATE_KARS
+							}
+							set_state_owner = c:CAU
+						}
+					}
+					activate_law = law_type:law_presidential_republic
+					set_ruling_interest_groups = { ig_intelligentsia }
+				}
+			}
+		}
 	}
 }
 
+
+# mat_rossyia_caucasian_war.012 = {# Dominion Over the Caucasus - Other views
+# 	type = country_event
+# 	placement = root
+
+# 	title = mat_rossyia_caucasian_war.010.t
+# 	desc = mat_rossyia_caucasian_war.010.d
+# 	flavor = mat_rossyia_caucasian_war.010.f
+
+# 	gui_window = event_window_widescreen_newspaper
+
+# 	event_image = {
+# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
+# 	}
+
+# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	duration = 3
+
+	
+
+# 	trigger = {
+		
+# 	}
+
+# 	immediate = {
+# 	}
+
+# 	option = {
+# 		name = mat_rossyia_caucasian_war.010.a
+# 		default_option = yes
+# 	}
+# }
+# mat_rossyia_caucasian_war.013 = {# Caucausus Lost - Other View
+# 	type = country_event
+# 	placement = root
+
+# 	title = mat_rossyia_caucasian_war.010.t
+# 	desc = mat_rossyia_caucasian_war.010.d
+# 	flavor = mat_rossyia_caucasian_war.010.f
+
+# 	gui_window = event_window_widescreen_newspaper
+
+# 	event_image = {
+# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
+# 	}
+
+# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	duration = 3
+
+	
+
+# 	trigger = {
+		
+# 	}
+
+# 	immediate = {
+# 	}
+
+# 	option = {
+# 		name = mat_rossyia_caucasian_war.010.a
+# 		default_option = yes
+# 	}
+# }
+# mat_rossyia_caucasian_war.014 = {# Rewarding Elisu(Player Reward)
+# 	type = country_event
+# 	placement = root
+
+# 	title = mat_rossyia_caucasian_war.010.t
+# 	desc = mat_rossyia_caucasian_war.010.d
+# 	flavor = mat_rossyia_caucasian_war.010.f
+
+# 	gui_window = event_window_widescreen_newspaper
+
+# 	event_image = {
+# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
+# 	}
+
+# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	duration = 3
+
+	
+
+# 	trigger = {
+		
+# 	}
+
+# 	immediate = {
+# 	}
+
+# 	option = {
+# 		name = mat_rossyia_caucasian_war.010.a
+# 		default_option = yes
+# 	}
+# }
+# mat_rossyia_caucasian_war.015 = {# Rewarding Georgia(Player Reward)
+# 	type = country_event
+# 	placement = root
+
+# 	title = mat_rossyia_caucasian_war.010.t
+# 	desc = mat_rossyia_caucasian_war.010.d
+# 	flavor = mat_rossyia_caucasian_war.010.f
+
+# 	gui_window = event_window_widescreen_newspaper
+
+# 	event_image = {
+# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
+# 	}
+
+# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	duration = 3
+
+	
+
+# 	trigger = {
+		
+# 	}
+
+# 	immediate = {
+# 	}
+
+# 	option = {
+# 		name = mat_rossyia_caucasian_war.010.a
+# 		default_option = yes
+# 	}
+# }
+# mat_rossyia_caucasian_war.016 = {# Rewarding Tarki(Player Reward)
+# 	type = country_event
+# 	placement = root
+
+# 	title = mat_rossyia_caucasian_war.010.t
+# 	desc = mat_rossyia_caucasian_war.010.d
+# 	flavor = mat_rossyia_caucasian_war.010.f
+
+# 	gui_window = event_window_widescreen_newspaper
+
+# 	event_image = {
+# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
+# 	}
+
+# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	duration = 3
+
+	
+
+# 	trigger = {
+		
+# 	}
+
+# 	immediate = {
+# 	}
+
+# 	option = {
+# 		name = mat_rossyia_caucasian_war.010.a
+# 		default_option = yes
+# 	}
+# }
+
 #########################################
-#	       General Events 				#
+#	       Historical Events			#
+#########################################
+# mat_rossyia_caucasian_war.020 = {# The Tsar visits the front
+# 	type = country_event
+# 	placement = root
+
+# 	title = mat_rossyia_caucasian_war.020.t
+# 	desc = mat_rossyia_caucasian_war.020.d
+# 	flavor = mat_rossyia_caucasian_war.020.f
+
+# 	gui_window = event_window_widescreen_newspaper
+
+# 	event_image = {
+# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
+# 	}
+
+# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	duration = 3
+
+# 	trigger = {
+		
+# 	}
+
+# 	immediate = {
+# 	}
+
+# 	option = {# replace the General
+# 		name = mat_rossyia_caucasian_war.020.a
+# 		default_option = yes
+# 	}
+# }
+# mat_rossyia_caucasian_war.021 = {# The Kangaroo Expedition
+# 	type = country_event
+# 	placement = root
+
+# 	title = mat_rossyia_caucasian_war.001.t
+# 	desc = mat_rossyia_caucasian_war.001.d
+# 	flavor = mat_rossyia_caucasian_war.001.f
+
+# 	event_image = {
+# 		video = "gfx/event_pictures/ep1_redcoats.bk2"
+# 	}
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+# 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+# 	duration = 3
+
+
+# 	option = {
+# 		name = mat_rossyia_caucasian_war.001.a
+# 		default_option = yes
+# 	}
+# }
+# mat_rossyia_caucasian_war.022 = {# The Milyutin Memorandum
+# 	type = country_event
+# 	placement = root
+
+# 	title = mat_rossyia_caucasian_war.001.t
+# 	desc = mat_rossyia_caucasian_war.001.d
+# 	flavor = mat_rossyia_caucasian_war.001.f
+
+# 	gui_window = event_window_widescreen_newspaper
+
+# 	event_image = {
+# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
+# 	}
+
+# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+# 	duration = 3
+
+	
+
+# 	trigger = {
+		
+# 	}
+
+# 	immediate = {
+# 	}
+
+# 	option = {
+# 		name = mat_rossyia_caucasian_war.001.a
+# 		default_option = yes
+# 	}
+# }
+#########################################
+#	       Scripted Events				#
 #########################################
 
 #########################################
-#	       General Events 				#
+#	       Monthly Events 				#
 #########################################
 
+#########################################
+#	       Yearly Events 				#
+#########################################
 
+#########################################
+#	       Other Events 				#
+#########################################
 
 

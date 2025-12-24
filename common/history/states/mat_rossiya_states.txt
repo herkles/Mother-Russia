@@ -37,11 +37,11 @@ STATES = {
 	
 	s:STATE_URALSK = {
 		set_owner_of_provinces = {
-				country = c:RUS
-				provinces = {
-					xB8A7BC xDCDFB1 xC1E0B1 xB4BA02 x820B82 x505B56 xEFFD2B x736584 xC2D1FD x77E944 x0A5203 x999C2F xDF5085 xDB54E0 xF55425 x6B8061 xC0703B x3DF767
-				}
+			country = c:RUS
+			provinces = {
+				xB8A7BC xDCDFB1 xC1E0B1 xB4BA02 x820B82 x505B56 xEFFD2B x736584 xC2D1FD x77E944 x0A5203 x999C2F xDF5085 xDB54E0 xF55425 x6B8061 xC0703B x3DF767
 			}
+		}
 		region_state:RUS = {
 			set_state_type = unincorporated
 		}		

@@ -34,8 +34,9 @@
     mat_rossyia_caucasian_war.011.b: "Leave the region to the local warlords' mercy."
     mat_rossyia_caucasian_war.011.c: "Withdraw in the face of the nascent Caucasian states."
     mat_rossyia_caucasian_war.011.e: "Abandon the mountains to the Transcaucasian intelligentsia."
-    caucasuswar_end_4b_tt: "The #bold Caucasus#! will be split between various claimants to the legacy of its historical kingdoms."
-    caucasuswar_end_4c_tt: "The national aspirations of the #bold Caucasian#! peoples will be realized, as separate states."
-    caucasuswar_end_4e_tt: "The #bold Caucasian#! peoples will seize independence from [ROOT.GetCountry.GetName] as a unified #bold Transcaucasian#! states."
+
+    mat_rossyia_caucasian_war_011b_tt: "The #bold Caucasus#! will be split between various claimants to the legacy of its historical kingdoms."
+    mat_rossyia_caucasian_war_011c_tt: "The national aspirations of the #bold Caucasian#! peoples will be realized, as separate states."
+    mat_rossyia_caucasian_war_011e_tt: "The #bold Caucasian#! peoples will seize independence from [ROOT.GetCountry.GetName] as a unified #bold Transcaucasian#! states."
 
 

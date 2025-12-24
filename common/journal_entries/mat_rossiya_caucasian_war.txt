@@ -184,7 +184,7 @@
                     has_global_variable = imamate_defeated
                 }
             }
-            trigger_event = { id = caucasuswar_end.3 }
+			c:RUS = { trigger_event = { id = caucasuswar_end.3 } }
         }
         if = {
             limit = {
@@ -192,15 +192,13 @@
                     has_global_variable = circassia_defeated
                 }
             }
-            trigger_event = { id = caucasuswar_end.1 }
+			c:RUS = { trigger_event = { id = caucasuswar_end.1 } }
         }
+		c:RUS = { trigger_event = { id = mat_rossyia_caucasian_war.010 } }
     }
 
 	on_complete_all_involved = {
 		# mat_rossyia_caucasian_war_cleanup_effect = yes
-		trigger_event = {
-			id = mat_rossyia_caucasian_war.010 # Dominion Over the Caucausus
-		}
 	}
 
 	custom_failure_header = je_mat_rossyia_caucasian_war_rebel_victory
@@ -226,11 +224,12 @@
 
 	custom_on_failure_header = je_mat_rossyia_caucasian_war_on_rebel_victory
 
+	on_fail = {
+		c:RUS = { trigger_event = { id = mat_rossyia_caucasian_war.011 } }
+	}
+
 	on_fail_all_involved = {
 		# mat_rossyia_caucasian_war_cleanup_effect = yes
-		trigger_event = {
-			id = mat_rossyia_caucasian_war.011 # The Caucausus are Lost
-		}
 	}
 
 	invalid = {

@@ -6,12 +6,37 @@
   GEO_MIN: "Mingrelia"
   GEO_MIN_ADJ: "Mingrelian"
 
+
+  GEO_IME: "Imereti"
+  GEO_IME_ADJ: "Imeretian"
+
+  GEO_GUR: "Guria"
+  GEO_GUR_ADJ: "Gurian"
+
+  GEO_KAK: "Kakheti"
+  GEO_KAK_ADJ: "Kakhetian"
+
+  GEO_KAR: "Kartli"
+  GEO_KAR_ADJ: "Kartlian"
+
   # Caucasian Polities
   DAG_TAR: "Tarki"
   DAG_TAR_ADJ: "Tarkian"
 
   AZB_ELI: "Elisu"
   AZB_ELI_ADJ: "Elisu"
+
+  AZB_BAK: "Baku"
+  AZB_BAK_ADJ: "Bakuvian"
+
+  AZB_QUB: "Quba"
+  AZB_QUB_ADJ: "Quban"
+
+  AZB_SHI: "Shiravan"
+  AZB_SHI_ADJ: "Shiravan"
+
+  AZB_KAR: "Karabakh"
+  AZB_KAR_ADJ: "Karabakh"
 
   # Other Russian Polities
   KAZ_BUK: "Bukey Horde"
