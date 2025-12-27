@@ -352,6 +352,9 @@ mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
 									x801000
 									x74A861
 									xC27075
+									xD15CBD
+									xD62036
+									xC0CF80
 								}
 							}
 						}
@@ -373,59 +376,42 @@ mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
 						}
 					}
 				}
-				create_country = {# Kakheti
+				create_country = {# Kakheti-Kartli
 					tag = GEO_KAK
 					origin = this
-					province = p:xD15CBD
+					province = p:xFB38B0
 					on_created = {
 						set_country_type = unrecognized
 						s:STATE_GREATER_CAUCASUS = {
 							set_owner_of_provinces = {
 								country = c:GEO_KAK
 								provinces = { 
-									xFB38B0						
-									xD62036
-									xC0CF80
 									x3537D5
+									x4A4DF9
+									xF0E0DF
+									x9BC69B
+									xFB53B8									
 								}
 							}
 						}
 						s:STATE_ARMENIA = {
-								set_owner_of_provinces = {
-									country = c:GEO_KAK
-									provinces = { 
-										xDC0812
-										x16A02D
-									}
-								}
-							}
-						}
-				}
-				create_country = {# Kartli
-					tag = GEO_KAR
-					origin = this
-					province = p:x4A4DF9
-					on_created = {
-						set_country_type = unrecognized
-						s:STATE_GREATER_CAUCASUS = {
 							set_owner_of_provinces = {
-								country = c:GEO_KAR
-								provinces = {
-									xF0E0DF
-									x9BC69B
-									xFB53B8
+								country = c:GEO_KAK
+								provinces = { 
+									xDC0812
+									x16A02D
 								}
 							}
 						}
 						s:STATE_ELIZAVETPOL = {
 							set_owner_of_provinces = {
-								country = c:GEO_KAR
+								country = c:GEO_KAK
 								provinces = {
 									xDFB2B0
 								}
 							}
 						}
-					}
+					}	
 				}
 			}
 			if = {# The Azerbaijani Khanates return!

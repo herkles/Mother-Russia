@@ -21,7 +21,8 @@
 
 ####################
 
-ABK = { # Principality of Abkhazia Flag
+# Georgian Polities
+ABK = { # Principality of Abkhazia
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -33,7 +34,7 @@ ABK = { # Principality of Abkhazia Flag
 	}
 
 }
-GEO_SVA = { # Principality of Svaneti Flag
+GEO_SVA = { # Principality of Svaneti
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -45,7 +46,7 @@ GEO_SVA = { # Principality of Svaneti Flag
 	}
 
 }
-GEO_MIN = { # Principality of Mingrelia Flag
+GEO_MIN = { # Principality of Mingrelia
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -71,20 +72,56 @@ GEO_MIN = { # Principality of Mingrelia Flag
 
 }
 
-DAG_TAR = {
+GEO_IME = { # Principality of Imereti
+
 	pattern = "pattern_solid.tga"
-	color1 = "yellow_light"
-	color2 = "red_light"
-	color3 = "blue_light"
+	color1 = "blue_dark"
 
 	colored_emblem = {
-		texture = "ce_tricolor_horizontal.dds"
-		color1 = color2
-		color2 = color3
+		texture = "ce_seal_pictorial_central_goat.dds"
+		color1 = "yellow"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_wheat_garb.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.5 0.5 } rotation = 270 position = { 0.5 0.4 } }
+
+	}
+
+}
+GEO_GUR = { # Principality of Guria
+
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_stag.dds"
+		color1 = "yellow"
+		color2 = "black"
+		color3 = "yellow"
+		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "red"
+		instance = { scale = { 0.25 0.25 } position = { 0.5 0.1 } }
+	}
+
+}
+GEO_KAK = { # Principality of Kakheti
+	# I couldn't find a flag for Kakheti-Kartali so just using Kakheti's flag
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_mount_fleurdelisé.dds"
+		color1 = "red"
+		instance = { scale = { 0.7 0.7 } position = { 0.3 0.5 } }
 	}
 }
-AZB_ELI = {
-	# 1992 Islamic state, a bit simplified
+# Azerbaijaini Polities
+AZB_ELI = {# Sultanate of Elisu
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "white"
@@ -101,7 +138,111 @@ AZB_ELI = {
 		instance = { scale = { 0.8 0.9 } position = { 0.5 0.5 } }
 	}
 }
+AZB_BAK = {# Khanate of Baku
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+	color2 = "white"
 
+	colored_emblem = {
+		texture = "pb_crescent.dds"
+		color1 = "yellow"
+		color2 = "white"
+		instance = { scale = { 1.5 1.5 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.8 0.8 } position = { 0.7 0.5 } }
+	}
+}
+AZB_QUB = {# Khanate of Quba
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+
+	colored_emblem = {
+		texture = "ce_shirvan_gerb.dds"
+		color1 = "yellow"
+		color2 = "black"
+        instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 }  }
+	}
+}
+AZB_SHI = {# Khanate of Shiravan
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_shirvan_gerb.dds"
+		color1 = "yellow"
+		color2 = "black"
+        instance = { scale = { 0.85 0.85 } position = { 0.5 0.5 }  }
+	}
+}
+AZB_KAR = {# Khanate of Karabakh
+
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "green"
+
+	colored_emblem = {
+		texture = "ce_lion_persia_01.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		color3 = "white"
+		instance = { scale = { 0.55 0.55 } position = { 0.49 0.51 } }
+	}
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "red"
+		color2 = "orange"
+		color3 = "white"
+		instance = { scale = { 1.1 1.1 } position = { 0 0 } }
+		instance = { scale = { 1.1 1.1 } position = { 1 0 } }
+		instance = { scale = { 1.1 1.1 } position = { 0 1 } }
+		instance = { scale = { 1.1 1.1 } position = { 1 1 } }
+	}
+	colored_emblem = {
+		texture = "ce_shahada.dds"
+		color1 = "white"
+		color2 = "black"
+		instance = { scale = { 0.3 0.3 } rotation = 135 position = { 0.2 0.2 } }
+		instance = { scale = { 0.3 0.3 } rotation = 45 position = { 0.85 0.2 } }
+		instance = { scale = { 0.3 0.3 } rotation = 225 position = { 0.2 0.85 } }
+		instance = { scale = { 0.3 0.3 } rotation = 315 position = { 0.85 0.85 } }
+	}
+}
+
+ARM_monarchist_dragon = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		instance = { scale = { 1.0 0.2 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_hammer_sickle_star_ussr.dds"
+		color1 = color2
+		color2 = color2
+        instance = { scale = { 0.4 0.4 } position = { 0.16 0.215 }  }
+	}
+}
+
+# Dagestani Polities
+DAG_TAR = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow_light"
+	color2 = "red_light"
+	color3 = "blue_light"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color2
+		color2 = color3
+	}
+}
+# Kazakh Polities
 KAZ_BUK = {# Based on their coat of arms went with the Black bow, arrow and axe for uniqueness
 	pattern = "pattern_border_of_3.dds"
 	color1 = "black"
