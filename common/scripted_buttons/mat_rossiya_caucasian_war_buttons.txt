@@ -1,331 +1,359 @@
-﻿# mat_rossyia_caucasian_war_accelerate_tensions_button = {
-# 	name = mat_rossyia_caucasian_war_accelerate_tensions_button
-# 	desc = mat_rossyia_caucasian_war_accelerate_tensions_button_desc
+﻿# all the buttons are going to be here
 
-# 	visible = {
-# 		is_player = yes
-# 	}
-# 	selected = {
-# 		has_diplomatic_pact = {
-# 			who = c:RUS
-# 			type = russiafm_accelerate_tensions
-# 		}
-# 	}
-# 	possible = {
-# 		is_involved_in_journal_entry = je_mat_rossyia_caucasian_war_situation
-# 		country_rank >= rank_value:great_power
-# 		trigger_if = {
-# 			limit = {
-# 				NOT = {
-# 					has_diplomatic_pact = {
-# 						who = c:RUS
-# 						type = russiafm_accelerate_tensions
-# 					}
-# 				}
-# 			}
-# 			NOR = {
-# 				gbbf_has_alliance_trigger = {
-# 					country = c:RUS
-# 				}
-# 				gbbf_has_defensive_pact_trigger = {
-# 					country = c:RUS
-# 				}
-# 			}
-# 			c:RUS.relations:root <= relations_threshold:poor
-# 		}
-# 		custom_tooltip = {
-# 			text = mat_rossyia_caucasian_war_tension_button_cooldown_trigger
-# 			NOT = {
-# 				has_variable = mat_rossyia_caucasian_war_tension_button_cooldown_var
-# 			}
-# 		}
-# 	}
-# 	effect = {
-# 		if = {
-# 			limit = {
-# 				has_diplomatic_pact = {
-# 					who = c:RUS
-# 					type = russiafm_accelerate_tensions
-# 				}
-# 			}
-# 			remove_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_accelerate_tensions
-# 			}
-# 		}
-# 		else = {
-# 			create_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_accelerate_tensions
-# 			}
-# 			custom_tooltip = {
-# 				text = mat_rossyia_caucasian_war_tension_button_effect
-# 				set_variable = {
-# 					name = mat_rossyia_caucasian_war_tension_button_cooldown_var
-# 					years = 2
-# 				}
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				has_diplomatic_pact = {
-# 					who = c:RUS
-# 					type = russiafm_decelerate_tensions
-# 				}
-# 			}
-# 			remove_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_decelerate_tensions
-# 			}
-# 		}
-# 	}
-# 	ai_chance = {
-# 		value = -1000 # This is handled via decision
-# 	}
-# }
+### Russian Empire Buttons
+mat_rossiya_russia_escalate_caucasian_war = {
+	name = "russia_escalate_caucasian_war"
+	desc = "russia_escalate_caucasian_war_desc"
+	visible = {
+		c:RUS ?= this # Got to be Russia
+		is_subject = no
+		NOT = {# can't have already conquered the regions
+			owns_entire_state_region = STATE_KUBAN
+			owns_entire_state_region = STATE_NORTH_CAUCASUS
+			owns_entire_state_region = STATE_DAGESTAN
+		}
+		AND = {
+			any_scope_state = {
+				state_region = s:STATE_KUBAN
+			}
+			any_scope_state = {
+				state_region = s:STATE_NORTH_CAUCASUS
+			}
+			any_scope_state = {
+				state_region = s:STATE_DAGESTAN
+			}
+		}
+		OR = {
+			AND = {
+				exists = c:CHC
+				has_truce_with = c:CHC
+			}
+			AND = {
+				exists = c:CIR
+				has_truce_with = c:CIR
+			}
+		}
+        NOT = {# Can't escalate more then once
+        	has_variable = escalated_caucasian_war
+        }
+	}
 
-# mat_rossyia_caucasian_war_decelerate_tensions_button = {
-# 	name = mat_rossyia_caucasian_war_decelerate_tensions_button
-# 	desc = mat_rossyia_caucasian_war_decelerate_tensions_button_desc
+	possible = {
+		c:RUS ?= {# Russia must be a great power
+			country_rank >= rank_value:great_power
+		}
+		custom_tooltip = {# got to be in a particularly conflict time and not 
+			text = progressbar_above_50_tt
+			je:je_mat_rossyia_caucasian_war = {
+				"scripted_bar_progress(je_mat_rossyia_caucasian_war_progressbar)" >= 50
+			}
+		}
+		OR = {
+			s:STATE_KUBAN = {
+				any_scope_state = {
+					OR = {# Kuban is owned by either Circassia or Imamate
+						AND = {
+							exists = c:CIR
+							owner = c:CIR
+						}
+						AND = {
+							exists = c:CHC
+							owner = c:CHC
+						}
+					}
+				}
+			}
+			s:STATE_DAGESTAN = {
+				any_scope_state = {
+					OR = {
+						AND = {
+							exists = c:CIR
+							owner = c:CIR
+						}
+						AND = {
+							exists = c:CHC
+							owner = c:CHC
+						}
+					}
+				}
+			}
+			s:STATE_NORTH_CAUCASUS = {
+				any_scope_state = {
+					OR = {
+						AND = {
+							exists = c:CIR
+							owner = c:CIR
+						}
+						AND = {
+							exists = c:CHC
+							owner = c:CHC
+						}
+					}
+				}
+			}
+		}
+		has_technology_researched = rifling
+		has_technology_researched = logistics
+	}
 
-# 	visible = {
-# 		NOT = {# Russia can't decelerate, they want to conquer
-# 			c:RUS ?= this
-# 		}
-# 		is_player = yes
-# 	}
-# 	selected = {
-# 		has_diplomatic_pact = {
-# 			who = c:RUS
-# 			type = russiafm_decelerate_tensions
-# 		}
-# 	}
-# 	possible = {
-# 		is_involved_in_journal_entry = je_mat_rossyia_caucasian_war_situation
-# 		country_rank >= rank_value:great_power
-# 		trigger_if = {
-# 			limit = {
-# 				NOT = {
-# 					has_diplomatic_pact = {
-# 						who = c:RUS
-# 						type = russiafm_decelerate_tensions
-# 					}
-# 				}
-# 			}
-# 			NOR = {
-# 				has_diplomatic_pact = {
-# 					who = c:RUS
-# 					type = rivalry
-# 				}
-# 				has_diplomatic_pact = {
-# 					who = c:RUS
-# 					type = embargo
-# 				}
-# 			}
-# 			c:RUS.relations:root >= relations_threshold:cordial
-# 		}
-# 		custom_tooltip = {
-# 			text = mat_rossyia_caucasian_war_tension_button_cooldown_trigger
-# 			NOT = {
-# 				has_variable = mat_rossyia_caucasian_war_tension_button_cooldown_var
-# 			}
-# 		}
-# 	}
-# 	effect = {
-# 		if = {
-# 			limit = {
-# 				has_diplomatic_pact = {
-# 					who = c:RUS
-# 					type = russiafm_decelerate_tensions
-# 				}
-# 			}
-# 			remove_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_decelerate_tensions
-# 			}
-# 		}
-# 		else = {
-# 			create_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_decelerate_tensions
-# 			}
-# 			custom_tooltip = {
-# 				text = mat_rossyia_caucasian_war_tension_button_effect
-# 				set_variable = {
-# 					name = mat_rossyia_caucasian_war_tension_button_cooldown_var
-# 					years = 2
-# 				}
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				has_diplomatic_pact = {
-# 					who = c:RUS
-# 					type = russiafm_accelerate_tensions
-# 				}
-# 			}
-# 			remove_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_accelerate_tensions
-# 			}
-# 		}
-# 	}
-# 	ai_chance = {
-# 		value = -1000 # This is handled via decision
-# 	}
-# }
+	effect = {
+		set_variable = escalated_caucasian_war
+		end_truce = c:CHC
+		end_truce = c:CIR
+	}
 
-# mat_rossyia_caucasian_war_declare_disloyalty_button = {
-# 	name = "mat_rossyia_caucasian_war_declare_disloyalty_button"
-# 	desc = "mat_rossyia_caucasian_war_declare_disloyalty_button_desc"
+	ai_chance = {
+		value = 15
+	}
+}
+### Circassian Buttons
+mat_rossiya_circassia_rally_tribes = {
+	name = "mat_rossiya_circassia_rally_tribes"
+	desc = "mat_rossiya_circassia_rally_tribes_desc"
+	visible = {
+		c:CIR ?= this # Got to be Circassia
+		is_subject = no
+		c:CIR ?= {# Check to ensure they are involved with the Caucasian War
+			is_involved_in_journal_entry = je_mat_rossyia_caucasian_war
+		}
+		NOT = {# Can't have rallied the Tribes in a while
+			has_variable = sent_muhammad_amin_var
+		}
+	}
 
-# 	visible = {
-# 		is_player = yes
-# 		is_subject_of = c:RUS
-# 	}
-# 	selected = {
-# 		has_diplomatic_pact = {
-# 			who = c:RUS
-# 			type = russiafm_disloyal_subject
-# 		}
-# 	}
-# 	possible = {
-# 		trigger_if = {
-# 			limit = {
-# 				NOT = {
-# 					has_diplomatic_pact = {
-# 						who = c:RUS
-# 						type = russiafm_disloyal_subject
-# 					}
-# 				}
-# 			}
-# 			c:RUS.relations:root <= relations_threshold:poor
-# 		}
-# 		custom_tooltip = {
-# 			text = mat_rossyia_caucasian_war_loyalty_button_cooldown_trigger
-# 			NOT = {
-# 				has_variable = mat_rossyia_caucasian_war_tension_button_cooldown_var
-# 			}
-# 		}
-# 	}
-# 	effect = {
-# 		if = {
-# 			limit = {
-# 				has_diplomatic_pact = {
-# 					who = c:RUS
-# 					type = russiafm_disloyal_subject
-# 				}
-# 			}
-# 			remove_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_disloyal_subject
-# 			}
-# 		}
-# 		else = {
-# 			create_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_disloyal_subject
-# 			}
-# 			custom_tooltip = {
-# 				text = mat_rossyia_caucasian_war_loyalty_button_effect
-# 				set_variable = {
-# 					name = mat_rossyia_caucasian_war_tension_button_cooldown_var
-# 					years = 2
-# 				}
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				has_diplomatic_pact = {
-# 					who = c:RUS
-# 					type = russiafm_loyal_subject
-# 				}
-# 			}
-# 			remove_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_loyal_subject
-# 			}
-# 		}
-# 	}
-# 	ai_chance = {
-# 		value = -1000
-# 	}
-# }
+	possible = {
+		is_subject = no
+		has_technology_researched = nationalism
+		c:CIR ?= {# Check to ensure they are involved with the Caucasian War
+			is_involved_in_journal_entry = je_mat_rossyia_caucasian_war
+		}
+	}
 
-# mat_rossyia_caucasian_war_declare_loyalty_button = {
-# 	name = "mat_rossyia_caucasian_war_declare_loyalty_button"
-# 	desc = "mat_rossyia_caucasian_war_declare_loyalty_button_desc"
+	effect = {
+		c:CIR ?= {
+			trigger_event = { id = caucasuswar.9 }
+		}
+		set_variable = mat_rossiya_circassia_rally_tribes_var
+	}
 
-# 	visible = {
-# 		is_player = yes
-# 		is_subject_of = c:RUS
-# 	}
-# 	selected = {
-# 		has_diplomatic_pact = {
-# 			who = c:RUS
-# 			type = russiafm_loyal_subject
-# 		}
-# 	}
-# 	possible = {
-# 		trigger_if = {
-# 			limit = {
-# 				NOT = {
-# 					has_diplomatic_pact = {
-# 						who = c:RUS
-# 						type = russiafm_loyal_subject
-# 					}
-# 				}
-# 			}
-# 			c:RUS.relations:root >= relations_threshold:cordial
-# 		}
-# 		custom_tooltip = {
-# 			text = mat_rossyia_caucasian_war_loyalty_button_cooldown_trigger
-# 			NOT = {
-# 				has_variable = mat_rossyia_caucasian_war_tension_button_cooldown_var
-# 			}
-# 		}
-# 	}
-# 	effect = {
-# 		if = {
-# 			limit = {
-# 				has_diplomatic_pact = {
-# 					who = c:RUS
-# 					type = russiafm_loyal_subject
-# 				}
-# 			}
-# 			remove_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_loyal_subject
-# 			}
-# 		}
-# 		else = {
-# 			create_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_loyal_subject
-# 			}
-# 			custom_tooltip = {
-# 				text = mat_rossyia_caucasian_war_loyalty_button_effect
-# 				set_variable = {
-# 					name = mat_rossyia_caucasian_war_tension_button_cooldown_var
-# 					years = 2
-# 				}
-# 			}
-# 		}
-# 		if = {
-# 			limit = {
-# 				has_diplomatic_pact = {
-# 					who = c:RUS
-# 					type = russiafm_disloyal_subject
-# 				}
-# 			}
-# 			remove_diplomatic_pact = {
-# 				country = c:RUS
-# 				type = russiafm_disloyal_subject
-# 			}
-# 		}
-# 	}
-# 	ai_chance = {
-# 		value = -1000
-# 	}
-# }
+	ai_chance = {
+		value = 15
+	}
+}
+### Imamate Buttons
+mat_rossiya_imamate_dispatch_muhammad_amin = {
+	name = "imamate_dispatch_muhammad_amin"
+	desc = "imamate_dispatch_muhammad_amin_desc"
+	visible = {
+		c:CHC ?= this # Got to be the Imamate
+		exists = c:CIR
+		is_subject = no
+		c:CIR ?= {# Check to ensure they are involved with the Caucasian War
+			is_involved_in_journal_entry = je_mat_rossyia_caucasian_war
+		}
+		NOT = {# can't have sent Muhammad Amin already
+			has_variable = sent_muhammad_amin_var
+		}
+	}
+
+	possible = {
+		is_subject = no
+		c:CIR ?= {# Check to ensure they are involved with the Caucasian War
+			is_involved_in_journal_entry = je_mat_rossyia_caucasian_war
+		}
+		custom_tooltip = {
+			text = muhammad_amin_possible
+			c:CIR ?= {
+				ruler = {
+					NOT = {
+						OR = {
+							has_variable = ismail_var
+							has_variable = hawduqo_var
+						}
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = circassia_muhammad_amin_tt
+		}
+		c:CIR ?= {
+			trigger_event = { id = caucasuswar.9 }
+		}
+		set_variable = sent_muhammad_amin_var
+	}
+
+	ai_chance = {
+		value = 15
+		if = {
+			limit = {
+				c:CIR.relations:root < relations_threshold:neutral
+			}
+			add = -30
+		}
+	}
+}
+### Subject Buttons
+mat_rossiya_caucasian_disloyalty_button = {
+	name = "mat_rossiya_caucasian_loyalty_button"
+	desc = "mat_rossiya_caucasian_loyalty_button_desc"
+
+	visible = {
+		is_player = yes
+		is_subject_of = c:RUS
+		capital ?= { region = sr:region_caucasus }
+	}
+	selected = {
+		has_diplomatic_pact = {
+			who = c:RUS
+			type = mat_rossiya_disloyal_subject
+		}
+	}
+	possible = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = c:RUS
+						type = mat_rossiya_disloyal_subject
+					}
+				}
+			}
+			c:RUS.relations:root <= relations_threshold:poor
+		}
+		custom_tooltip = {
+			text = mat_rossiya_caucasian_loyalty_button_cooldown_trigger
+			NOT = {
+				has_variable = mat_rossiya_caucasian_loyalty_button_cooldown_var
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:RUS
+					type = mat_rossiya_disloyal_subject
+				}
+			}
+			remove_diplomatic_pact = {
+				country = c:RUS
+				type = mat_rossiya_disloyal_subject
+			}
+		}
+		else = {
+			create_diplomatic_pact = {
+				country = c:RUS
+				type = mat_rossiya_disloyal_subject
+			}
+			custom_tooltip = {
+				text = mat_rossiya_caucasian_loyalty_button_effect
+				set_variable = {
+					name = mat_rossiya_caucasian_button_cooldown_var
+					years = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:RUS
+					type = mat_rossiya_loyal_subject
+				}
+			}
+			remove_diplomatic_pact = {
+				country = c:RUS
+				type = mat_rossiya_loyal_subject
+			}
+		}
+	}
+	ai_chance = {
+		value = -1000
+	}
+}
+mat_rossiya_caucasian_loyalty_button = {
+	name = "mat_rossiya_caucasian_loyalty_button"
+	desc = "mat_rossiya_caucasian_loyalty_button_desc"
+
+	visible = {
+		is_player = yes
+		is_subject_of = c:RUS
+		capital ?= { region = sr:region_caucasus }
+	}
+	selected = {
+		has_diplomatic_pact = {
+			who = c:RUS
+			type = mat_rossiya_loyal_subject
+		}
+	}
+	possible = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					has_diplomatic_pact = {
+						who = c:RUS
+						type = mat_rossiya_loyal_subject
+					}
+				}
+			}
+			c:RUS.relations:root >= relations_threshold:cordial
+		}
+		custom_tooltip = {
+			text = mat_rossiya_caucasian_loyalty_button_cooldown_trigger
+			NOT = {
+				has_variable = mat_rossiya_caucasian_button_cooldown_var
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:RUS
+					type = mat_rossiya_loyal_subject
+				}
+			}
+			remove_diplomatic_pact = {
+				country = c:RUS
+				type = mat_rossiya_loyal_subject
+			}
+		}
+		else = {
+			create_diplomatic_pact = {
+				country = c:RUS
+				type = mat_rossiya_loyal_subject
+			}
+			custom_tooltip = {
+				text = mat_rossiya_caucasian_loyalty_button_effect
+				set_variable = {
+					name = mat_rossiya_caucasian_button_cooldown_var
+					years = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_diplomatic_pact = {
+					who = c:RUS
+					type = mat_rossiya_disloyal_subject
+				}
+			}
+			remove_diplomatic_pact = {
+				country = c:RUS
+				type = mat_rossiya_disloyal_subject
+			}
+		}
+	}
+	ai_chance = {
+		value = -1000
+	}
+}
+### Caucasian Polities Buttons
+
+
+
+
 
