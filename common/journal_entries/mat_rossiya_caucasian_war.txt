@@ -3,7 +3,6 @@
 
 	group = je_group_global_international_situations
 
-	scripted_progress_bar = je_mat_rossyia_caucasian_war_progressbar
 
 	should_be_involved = {
 		mat_rossyia_caucasian_war_should_be_involved_trigger = yes
@@ -78,11 +77,27 @@
 	}
 
 
-	on_monthly_pulse = {
-		effect = {
+    on_monthly_pulse = {
+        effect = {
 
-		}
-	}
+        }
+        random_events = {
+            100 = 0
+            30 = mat_rossyia_caucasian_war.070
+            10 = mat_rossyia_caucasian_war.072
+        }
+    }
+
+    on_yearly_pulse = {
+        random_events = {
+            90 = 0
+            10 = mat_rossyia_caucasian_war.100
+            10 = mat_rossyia_caucasian_war.101
+            10 = mat_rossyia_caucasian_war.102
+            10 = mat_rossyia_caucasian_war.103
+            50 = mat_rossyia_caucasian_war.104
+        }
+    }
 
     scripted_button = mat_rossiya_russia_escalate_caucasian_war # revamped from vanilla
 	scripted_button = mat_rossiya_circassia_rally_tribes # Encouraging Circassian tribes to support Circassia
@@ -234,6 +249,24 @@
 
 	on_fail = {
 		c:RUS = { trigger_event = { id = mat_rossyia_caucasian_war.011 } }
+		if = {# Honor and Life!
+            limit = {
+				AND = {
+					exists = c:CIR 
+					has_dlc_feature = ep1_content
+				} 
+			}
+			c:CIR = { trigger_event = { id = caucasuswar_end.2 } }
+        }
+		if = {# if the Imamate is around then they can get the holy peace
+            limit = { 
+				AND = {
+					exists = c:CHC 
+					has_dlc_feature = ep1_content
+				} 
+			}
+			c:CHC = { trigger_event = { id = caucasuswar_end.5 } }
+        }		
 	}
 
 	on_fail_all_involved = {
@@ -249,5 +282,6 @@
 	weight = 10000
 
 	should_be_pinned_by_default = yes
+
 }
 

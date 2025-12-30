@@ -9,7 +9,6 @@ namespace = mat_rossyia_caucasian_war
 #########################################
 #	       Starting Events 				#
 #########################################
-
 mat_rossyia_caucasian_war.001 = {# Conquering the Caucasus
 	type = country_event
 	placement = root
@@ -146,11 +145,9 @@ mat_rossyia_caucasian_war.004 = {# The Caucasian Conflict
 		default_option = yes
 	}
 }
-
 #########################################
 #	       Ending Events 				#
 #########################################
-
 mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 	type = country_event
 	placement = root
@@ -171,12 +168,9 @@ mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 
 	duration = 3
 
-	
-
 	trigger = {
 		
 	}
-
 	immediate = {
 	}
 
@@ -184,6 +178,79 @@ mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 		name = mat_rossyia_caucasian_war.010.a
 		default_option = yes
 	}
+
+	after = {
+		hidden_effect = {
+			if = {# If Abkhazia is loyal and is player they get rewarded
+				limit = {
+					c:ABK = {
+						is_player = yes
+						has_diplomatic_pact = {
+							who = c:RUS
+							type = mat_rossiya_loyal_subject
+						}
+					}
+				}
+				c:ABK ?= { trigger_event = { id = mat_rossyia_caucasian_war.014 } }
+			}
+			else_if = {
+				annex = c:ABK
+			}
+			if = {# If Mingalia has never betrayed Russia and is player they get rewarded
+				limit = {
+					c:GEO_MIN = {
+						is_player = yes
+						has_diplomatic_pact = {
+							who = c:RUS
+							type = mat_rossiya_loyal_subject
+						}
+					}
+				}
+				c:GEO_MIN ?= { trigger_event = { id = mat_rossyia_caucasian_war.014 } }
+			}
+			else_if = {
+				annex = c:GEO_MIN
+			}
+			if = {# If Svanti has never betrayed Russia and is player they get rewarded
+				limit = {
+					c:GEO_SVA = {
+						is_player = yes
+						has_diplomatic_pact = {
+							who = c:RUS
+							type = mat_rossiya_loyal_subject
+						}
+					}
+				}
+				c:GEO_SVA ?= { trigger_event = { id = mat_rossyia_caucasian_war.014 } }
+			}
+			else_if = {
+				annex = c:GEO_SVA
+			}
+			if = {# If Tarki has never betrayed Russia and is player they get rewarded
+				limit = {
+					c:DAG_TAR = {
+						is_player = yes
+						has_diplomatic_pact = {
+							who = c:RUS
+							type = mat_rossiya_loyal_subject
+						}
+					}
+				}
+				c:DAG_TAR ?= { trigger_event = { id = mat_rossyia_caucasian_war.014 } }
+			}
+			else_if = {
+				annex = c:DAG_TAR
+			}
+			if = {# Let other players know
+				limit = {
+					is_player = yes
+					NOT = { c:RUS ?= this }
+				}
+				trigger_event = { id = mat_rossyia_caucasian_war.013 }
+			}
+		}
+	}
+	
 }
 mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
 	type = country_event
@@ -282,6 +349,7 @@ mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
 	option = {# Militarize the garrisons
 		name = caucasuswar_end.4.a
 		default_option = yes
+		set_global_variable = mat_rossiya_caucasia_lost_militerize
 		add_loyalists = {
 			value = medium_radicals
 			pop_type = officers
@@ -331,6 +399,7 @@ mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
 		name = caucasuswar_end.4.b
 		custom_tooltip = {
 			text = mat_rossyia_caucasian_war_011b_tt
+			set_global_variable = mat_rossiya_caucasia_lost_warlords
 			if = {# The Georgian Principalities come back!
 				limit = {
 					any_scope_state = {
@@ -590,6 +659,7 @@ mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
 		}
 		custom_tooltip = {
 			text = mat_rossyia_caucasian_war_011c_tt
+			set_global_variable = mat_rossiya_caucasia_lost_nations
 			if = {# Georgia - if no principalities exist
 				limit = {
 					any_scope_state = {
@@ -835,366 +905,1227 @@ mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
 			}
 		}
 	}
-	option = {# Abandon the mountains to Intelligentsia
-		name = caucasuswar_end.4.e
-		trigger = {
-			has_technology_researched = pan-nationalism
-			AND = {
-				owns_entire_state_region = STATE_GREATER_CAUCASUS
-				owns_entire_state_region = STATE_AZERBAIJAN
-				owns_entire_state_region = STATE_ARMENIA
-			}
-		}
-		custom_tooltip = {
-			text = mat_rossyia_caucasian_war_011e_tt
-			create_country = {
-				tag = CAU
-				origin = this
-				state = scope:georgia_state
-				on_created = {
-					if = {
-						limit = {
-							any_state = {
-								state_region = s:STATE_ARMENIA
-								owner ?= c:RUS
-							}
-						}
-						random_state = {
-							limit = {
-								owner ?= c:RUS
-								state_region = s:STATE_ARMENIA
-							}
-							set_state_owner = c:CAU
-						}
-					}
-					if = {
-						limit = {
-							any_state = {
-								state_region = s:STATE_AZERBAIJAN
-								owner ?= c:RUS
-							}
-						}
-						random_state = {
-							limit = {
-								owner ?= c:RUS
-								state_region = s:STATE_AZERBAIJAN
-							}
-							set_state_owner = c:CAU
-						}
-					}
-					if = {
-						limit = {
-							any_state = {
-								state_region = s:STATE_ELIZAVETPOL
-								owner ?= c:RUS
-							}
-						}
-						random_state = {
-							limit = {
-								owner ?= c:RUS
-								state_region = s:STATE_ELIZAVETPOL
-							}
-							set_state_owner = c:CAU
-						}
-					}
-					if = {
-						limit = {
-							any_state = {
-								state_region = s:STATE_KARS
-								owner ?= c:RUS
-							}
-						}
-						random_state = {
-							limit = {
-								owner ?= c:RUS
-								state_region = s:STATE_KARS
-							}
-							set_state_owner = c:CAU
-						}
-					}
-					activate_law = law_type:law_presidential_republic
-					set_ruling_interest_groups = { ig_intelligentsia }
+
+	after = {
+		hidden_effect = {
+			if = {# Let other players know
+				limit = {
+					is_player = yes
+					NOT = { c:RUS ?= this }
 				}
+				trigger_event = { id = mat_rossyia_caucasian_war.012 }
 			}
 		}
 	}
 }
+mat_rossyia_caucasian_war.012 = {# Caucausus Lost - Other View
+	type = country_event
+	placement = root
+	title = mat_rossyia_caucasian_war.012.t
+	desc = {
+		first_valid = {# Chose to militerize the provinces
+			triggered_desc = {
+				desc = mat_rossyia_caucasian_war.012.d1
+				trigger = {	has_global_variable = mat_rossiya_caucasia_lost_militerize }
+			}
+			triggered_desc = {# Chose to leave it to warlords
+				desc = mat_rossyia_caucasian_war.012.d2
+				trigger = {	has_global_variable = mat_rossiya_caucasia_lost_warlords }
+			}
+			triggered_desc = {# Chose to leave it to nations
+				desc = mat_rossyia_caucasian_war.012.d3
+				trigger = {	has_global_variable = mat_rossiya_caucasia_lost_nations }
+			}
+		}
+	}
 
+	flavor = mat_rossyia_caucasian_war.012.f
 
-# mat_rossyia_caucasian_war.012 = {# Dominion Over the Caucasus - Other views
-# 	type = country_event
-# 	placement = root
+	gui_window = event_window_widescreen_newspaper
 
-# 	title = mat_rossyia_caucasian_war.010.t
-# 	desc = mat_rossyia_caucasian_war.010.d
-# 	flavor = mat_rossyia_caucasian_war.010.f
+	event_image = {
+		video = "gfx/event_pictures/ep1_cossacks.bk2"
+	}
 
-# 	gui_window = event_window_widescreen_newspaper
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-# 	event_image = {
-# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
-# 	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-# 	duration = 3
-
-	
-
-# 	trigger = {
-		
-# 	}
-
-# 	immediate = {
-# 	}
-
-# 	option = {
-# 		name = mat_rossyia_caucasian_war.010.a
-# 		default_option = yes
-# 	}
-# }
-# mat_rossyia_caucasian_war.013 = {# Caucausus Lost - Other View
-# 	type = country_event
-# 	placement = root
-
-# 	title = mat_rossyia_caucasian_war.010.t
-# 	desc = mat_rossyia_caucasian_war.010.d
-# 	flavor = mat_rossyia_caucasian_war.010.f
-
-# 	gui_window = event_window_widescreen_newspaper
-
-# 	event_image = {
-# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
-# 	}
-
-# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-# 	duration = 3
+	duration = 3
 
 	
 
-# 	trigger = {
+	trigger = {
 		
-# 	}
+	}
 
-# 	immediate = {
-# 	}
+	immediate = {
+	}
 
-# 	option = {
-# 		name = mat_rossyia_caucasian_war.010.a
-# 		default_option = yes
-# 	}
-# }
-# mat_rossyia_caucasian_war.014 = {# Rewarding Elisu(Player Reward)
-# 	type = country_event
-# 	placement = root
+	option = {
+		name = mat_rossyia_caucasian_war.012.a
+		default_option = yes
+	}
+}
+mat_rossyia_caucasian_war.013 = {# Dominion Over the Caucasus - Other views
+	type = country_event
+	placement = root
 
-# 	title = mat_rossyia_caucasian_war.010.t
-# 	desc = mat_rossyia_caucasian_war.010.d
-# 	flavor = mat_rossyia_caucasian_war.010.f
+	title = mat_rossyia_caucasian_war.010.t
+	desc = mat_rossyia_caucasian_war.010.d
+	flavor = mat_rossyia_caucasian_war.010.f
 
-# 	gui_window = event_window_widescreen_newspaper
+	gui_window = event_window_widescreen_newspaper
 
-# 	event_image = {
-# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
-# 	}
+	event_image = {
+		video = "gfx/event_pictures/ep1_cossacks.bk2"
+	}
 
-# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-# 	duration = 3
+	duration = 3
 
 	
 
-# 	trigger = {
+	trigger = {
 		
-# 	}
+	}
 
-# 	immediate = {
-# 	}
+	immediate = {
+	}
 
-# 	option = {
-# 		name = mat_rossyia_caucasian_war.010.a
-# 		default_option = yes
-# 	}
-# }
-# mat_rossyia_caucasian_war.015 = {# Rewarding Georgia(Player Reward)
-# 	type = country_event
-# 	placement = root
+	option = {
+		name = mat_rossyia_caucasian_war.010.a
+		default_option = yes
+	}
+}
+mat_rossyia_caucasian_war.014 = {# Rewarding the Player(puppet state)
+	type = country_event
+	placement = root
 
-# 	title = mat_rossyia_caucasian_war.010.t
-# 	desc = mat_rossyia_caucasian_war.010.d
-# 	flavor = mat_rossyia_caucasian_war.010.f
+	title = mat_rossyia_caucasian_war.014.t
+	desc = {
+		first_valid = {# Chose to militerize the provinces
+			triggered_desc = {# The sultanate of Elisu
+				desc = mat_rossyia_caucasian_war.014.d1
+				trigger = {	
+					c:AZB_ELI ?= this
+				}
+			}
+			triggered_desc = {# The Georgian Grand duchy
+				desc = mat_rossyia_caucasian_war.014.d2
+				trigger = {	
+					OR = {# Got to be a georgian Principality
+						c:ABK ?= this
+						c:GEO_MIN ?= this
+						c:GEO_SVA ?= this
+					}
+				}
+			}
+			triggered_desc = {# The Shamkhalate of Tarki
+				desc = mat_rossyia_caucasian_war.014.d3
+				trigger = {	
+					c:DAG_TAR ?= this
+				}
+			}
+		}
+	}
 
-# 	gui_window = event_window_widescreen_newspaper
+	flavor = mat_rossyia_caucasian_war.014.f
 
-# 	event_image = {
-# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
-# 	}
+	gui_window = event_window_widescreen_newspaper
 
-# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	event_image = {
+		video = "gfx/event_pictures/ep1_cossacks.bk2"
+	}
 
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-# 	duration = 3
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	
+	duration = 3
 
-# 	trigger = {
+	trigger = {
 		
-# 	}
+	}
 
-# 	immediate = {
-# 	}
+	immediate = {
+		c:RUS = {
+			ruler = { save_scope_as = emperor_of_russia }
+		}
+	}
 
-# 	option = {
-# 		name = mat_rossyia_caucasian_war.010.a
-# 		default_option = yes
-# 	}
-# }
-# mat_rossyia_caucasian_war.016 = {# Rewarding Tarki(Player Reward)
-# 	type = country_event
-# 	placement = root
+	option = {# You are now the Grand Prince of Azerbaijan
+		name = mat_rossyia_caucasian_war.014.a
+		trigger = {
+			is_player = yes
+			c:AZB_ELI ?= this
+		}
+		c:AZB_ELI ?= { change_tag = AZB	}
+		c:AZB = { set_capital = STATE_AZERBAIJAN }
+		random_state = {
+			limit = {
+				owner ?= c:RUS
+				state_region = s:STATE_AZERBAIJAN
+			}
+			set_state_owner = c:AZB
+		}
+		random_state = {
+			limit = {
+				owner ?= c:RUS
+				state_region = s:STATE_ELIZAVETPOL
+			}
+			set_state_owner = c:AZB
+		}		
+	}
+	option = {# You are now the Grand Duke of Georgia
+		name = mat_rossyia_caucasian_war.014.b
+		trigger = {
+			is_player = yes
+			OR = {# Got to be a georgian Principality
+				c:ABK ?= this
+				c:GEO_MIN ?= this
+				c:GEO_SVA ?= this
+			}
+		}
+		default_option = yes
+		if = {# if Svanati is player make it Georgia
+			limit = {
+				exists = c:GEO_SVA 
+				c:GEO_SVA ?= {
+					is_player = yes
+				}
+			}
+			c:GEO_SVA ?= { change_tag = GEO	}
+			c:GEO ?= {
+				annex_with_incorporation = c:GEO_MIN
+				annex_with_incorporation = c:ABK
+			}
+			random_state = {
+				limit = {
+					owner ?= c:RUS
+					state_region = s:STATE_GREATER_CAUCASUS
+				}
+				set_state_owner = c:GEO
+			}										
+		}
+		if = {# if Mingalia is player make it Georgia
+			limit = {
+				exists = c:GEO_MIN 
+				c:GEO_MIN ?= {
+					is_player = yes
+				}
+			}
+			c:GEO_MIN ?= { change_tag = GEO	}
+			c:GEO ?= {
+				annex_with_incorporation = c:GEO_SVA
+				annex_with_incorporation = c:ABK
+			}					
+			random_state = {
+				limit = {
+					owner ?= c:RUS
+					state_region = s:STATE_GREATER_CAUCASUS
+				}
+				set_state_owner = c:GEO
+			}					
+		}
+		if = {# if Abkhazia is player make it Georgia
+			limit = {
+				exists = c:ABK 
+				c:ABK ?= {
+					is_player = yes
+				}
+			}
+			c:ABK ?= { change_tag = GEO	}
+			c:GEO ?= {
+				annex_with_incorporation = c:GEO_MIN
+				annex_with_incorporation = c:GEO_SVA
+			}
+			random_state = {
+				limit = {
+					owner ?= c:RUS
+					state_region = s:STATE_GREATER_CAUCASUS
+				}
+				set_state_owner = c:GEO
+			}					
 
-# 	title = mat_rossyia_caucasian_war.010.t
-# 	desc = mat_rossyia_caucasian_war.010.d
-# 	flavor = mat_rossyia_caucasian_war.010.f
+		}		
+	}
+	option = {# Shamkhalate of Tarki gains Dageistan
+		name = mat_rossyia_caucasian_war.014.c
+		trigger = {
+			is_player = yes
+			c:DAG_TAR ?= this
+		}
+		random_state = {
+			limit = {
+				owner ?= c:RUS
+				state_region = s:STATE_DAGESTAN
+			}
+			set_state_owner = c:DAG_TAR
+		}
+	}
 
-# 	gui_window = event_window_widescreen_newspaper
-
-# 	event_image = {
-# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
-# 	}
-
-# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-# 	duration = 3
-
-	
-
-# 	trigger = {
-		
-# 	}
-
-# 	immediate = {
-# 	}
-
-# 	option = {
-# 		name = mat_rossyia_caucasian_war.010.a
-# 		default_option = yes
-# 	}
-# }
-
-#########################################
-#	       Historical Events			#
-#########################################
-# mat_rossyia_caucasian_war.020 = {# The Tsar visits the front
-# 	type = country_event
-# 	placement = root
-
-# 	title = mat_rossyia_caucasian_war.020.t
-# 	desc = mat_rossyia_caucasian_war.020.d
-# 	flavor = mat_rossyia_caucasian_war.020.f
-
-# 	gui_window = event_window_widescreen_newspaper
-
-# 	event_image = {
-# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
-# 	}
-
-# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-# 	duration = 3
-
-# 	trigger = {
-		
-# 	}
-
-# 	immediate = {
-# 	}
-
-# 	option = {# replace the General
-# 		name = mat_rossyia_caucasian_war.020.a
-# 		default_option = yes
-# 	}
-# }
-# mat_rossyia_caucasian_war.021 = {# The Kangaroo Expedition
-# 	type = country_event
-# 	placement = root
-
-# 	title = mat_rossyia_caucasian_war.001.t
-# 	desc = mat_rossyia_caucasian_war.001.d
-# 	flavor = mat_rossyia_caucasian_war.001.f
-
-# 	event_image = {
-# 		video = "gfx/event_pictures/ep1_redcoats.bk2"
-# 	}
-
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-# 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
-# 	duration = 3
-
-
-# 	option = {
-# 		name = mat_rossyia_caucasian_war.001.a
-# 		default_option = yes
-# 	}
-# }
-# mat_rossyia_caucasian_war.022 = {# The Milyutin Memorandum
-# 	type = country_event
-# 	placement = root
-
-# 	title = mat_rossyia_caucasian_war.001.t
-# 	desc = mat_rossyia_caucasian_war.001.d
-# 	flavor = mat_rossyia_caucasian_war.001.f
-
-# 	gui_window = event_window_widescreen_newspaper
-
-# 	event_image = {
-# 		video = "gfx/event_pictures/ep1_cossacks.bk2"
-# 	}
-
-# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-# 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-# 	duration = 3
-
-	
-
-# 	trigger = {
-		
-# 	}
-
-# 	immediate = {
-# 	}
-
-# 	option = {
-# 		name = mat_rossyia_caucasian_war.001.a
-# 		default_option = yes
-# 	}
-# }
+}
 #########################################
 #	       Scripted Events				#
+#########################################
+mat_rossyia_caucasian_war.030 = { #Muhammad Amin's arrival
+	type = country_event
+	placement = ROOT
+
+	title = mat_rossyia_caucasian_war.030.t
+	desc = mat_rossyia_caucasian_war.030.d
+	flavor = mat_rossyia_caucasian_war.030.f
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_islam.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+		c:CHC ?= {
+			save_scope_as = imamate_scope
+		}
+		ig:ig_devout ?= {
+			save_scope_as = devout_scope
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.030.a
+		default_option = yes
+		custom_tooltip = muhammad_amin_ruler_tt
+		create_character = {
+			template = CIR_Muhammad_Amin_Asiyalav
+		}
+		ig:ig_devout ?= {
+			add_modifier = {
+				name = modifier_accepted_muhammad_amin
+				days = long_modifier_time
+			}
+		}
+		change_relations = {
+			country = c:CHC
+			value = 50
+		}
+		create_treaty = {
+			first_country = root
+			second_country = c:CHC
+
+			is_draft = no
+			binding_period = { years = 5 }
+
+			articles_to_create = {
+				{
+					article = alliance
+				}
+			}
+		}
+		create_diplomatic_catalyst = {
+			type = catalyst_event_positive
+			target = root
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.030.b
+		ig:ig_devout ?= {
+			add_modifier = {
+				name = modifier_repudiated_muhammad_amin
+				days = long_modifier_time
+			}
+		}
+		change_relations = {
+			country = c:CHC
+			value = -25
+		}
+	}
+}
+#########################################
+#	       Historical Events			#
 #########################################
 
 #########################################
 #	       Monthly Events 				#
 #########################################
+mat_rossyia_caucasian_war.070 = { #Parliament of Independence
+	type = country_event
+	placement = ROOT
 
+	title = mat_rossyia_caucasian_war.070.t
+	desc = mat_rossyia_caucasian_war.070.d
+	flavor = mat_rossyia_caucasian_war.070.f
+
+	dlc = dlc010
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		c:CIR ?= this
+		NOT = {
+			has_truce_with = c:RUS
+		}
+	}
+
+	immediate = {
+		c:RUS ?= {
+			save_scope_as = russia_scope
+		}
+		capital = {
+			save_scope_as = capital_scope
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.070.a
+		default_option = yes
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_professional_army
+				}
+			}
+			activate_law = law_type:law_professional_army
+		}
+		if = {
+			limit = {
+				NOT = {
+					country_has_primary_culture = cu:north_caucasian
+				}
+			}
+			add_primary_culture = cu:north_caucasian
+		}
+		add_modifier = {
+			name = modifier_circassian_last_stand
+			days = normal_modifier_time
+		}
+		create_character = {
+			# Qerandiqo Berzeg
+			first_name = Qerandiqo
+			last_name = Berzeg
+			birth_date = 1804.6.1 #Only year known
+			ruler = yes
+			hq = region_caucasus
+			is_general = yes
+			commander_rank = commander_rank_3
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				persistent
+				brave
+				forest_commander
+			}
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.070.b
+		if = {
+			limit = {
+				NOT = {
+					country_has_primary_culture = cu:north_caucasian
+				}
+			}
+			add_primary_culture = cu:north_caucasian
+		}
+		create_character = {
+			# Qerandiqo Berzeg
+			first_name = Qerandiqo
+			last_name = Berzeg
+			birth_date = 1804.6.1 #Only year known
+			ruler = yes
+			hq = region_caucasus
+			is_general = yes
+			commander_rank = commander_rank_3
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+				persistent
+				brave
+				forest_commander
+			}
+		}
+		add_modifier = {
+			name = modifier_circassian_diplomacy
+			days = normal_modifier_time
+		}
+		every_country = {
+			limit = {
+				country_rank >= rank_value:major_power
+				has_interest_marker_in_region = region_caucasus
+				NOT = {
+					c:RUS ?= THIS
+				}
+			}
+			trigger_event = { id = mat_rossyia_caucasian_war.071 }
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.070.c
+		trigger = {
+			ruler.interest_group = {
+				is_interest_group_type = ig_devout
+			}
+			exists = c:CHC
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_scope_treaty = {
+						binds = c:CHC
+						any_scope_article = {
+							has_type = alliance
+						}
+					}
+				}
+			}
+			create_treaty = {
+				first_country = root
+				second_country = c:CHC
+
+				is_draft = no
+				binding_period = { years = 5 }
+
+				articles_to_create = {
+					{
+						article = alliance
+					}
+				}
+			}
+		}
+		add_modifier = {
+			name = modifier_circassian_joint_struggle
+			days = normal_modifier_time
+		}
+		c:CHC ?= {
+			add_modifier = {
+				name = modifier_circassian_joint_struggle
+				days = normal_modifier_time
+			}
+		}
+		c:TUR ?= {
+			trigger_event = { id = mat_rossyia_caucasian_war.071 }
+		}
+	}
+}
+mat_rossyia_caucasian_war.071 = { #Message to GPs
+	type = country_event
+	placement = ROOT
+
+	title = mat_rossyia_caucasian_war.071.t
+	desc = mat_rossyia_caucasian_war.071.d
+	flavor = mat_rossyia_caucasian_war.071.f
+
+	dlc = dlc010
+
+	event_image = {
+		video = "gfx/event_pictures/ep1_ca_mountain_pass_military.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+		c:CIR ?= {
+			save_scope_as = circassia_scope
+		}
+		c:RUS ?= {
+			save_scope_as = russia_scope
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.071.a
+		default_option = yes
+		custom_tooltip = circassia_decision_tt
+		set_variable = circassia_recognition_seeking
+		change_relations = {
+			country = c:CIR
+			value = 20
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.071.b
+		change_relations = {
+			country = c:CIR
+			value = -10
+		}
+	}
+}
+mat_rossyia_caucasian_war.072 = { #Teofil Lapinski's volunteers
+	type = country_event
+	placement = ROOT
+
+	title = mat_rossyia_caucasian_war.072.t
+	desc = mat_rossyia_caucasian_war.072.d
+	flavor = mat_rossyia_caucasian_war.072.f
+
+	dlc = dlc010
+
+	event_image = {
+		video = "gfx/event_pictures/ep1_redcoats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		c:CIR ?= this
+		NOT = {
+			has_truce_with = c:RUS
+		}
+		game_date > 1855.1.1
+		NOT = {
+			has_variable = lapinski_variable
+		}
+	}
+
+	immediate = {
+		cu:polish = {
+			save_scope_as = polish_culture
+		}
+		cu:hungarian = {
+			save_scope_as = hungarian_culture
+		}
+		ordered_state = {
+			limit = {
+				state_region = s:STATE_WEST_GALICIA
+			}
+			order_by = state_population
+			position = 0
+			check_range_bounds = no
+			save_scope_as = galicia_scope
+			owner = {
+				save_scope_as = austria_scope
+			}
+		}
+		c:RUS ?= {
+			save_scope_as = russia_scope
+		}
+		set_variable = lapinski_variable
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.072.a
+		default_option = yes
+		create_character = {
+			is_general = yes
+			first_name = Teofil
+			last_name = Lapinski
+			culture = cu:polish
+			historical = yes
+			birth_date = 1827.12.19
+			hq = region_caucasus
+			ideology = ideology_radical
+			interest_group = ig_armed_forces
+			commander_rank = commander_rank_1
+			traits = {
+				persistent
+				explorer
+				celebrity_commander
+			}
+		}
+		capital = {
+			random_scope_building = {
+				limit = {
+					is_building_type = building_barrack
+				}
+				add_modifier = {
+					name = modifier_lapinski_expedition
+					days = short_modifier_time
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.072.b
+		add_modifier = {
+			name = modifier_lapinski_training
+			days = normal_modifier_time
+		}
+	}
+}
 #########################################
 #	       Yearly Events 				#
 #########################################
+mat_rossyia_caucasian_war.100 = {
+	type = country_event
+	placement = scope:invasion_base_state
 
+	title = mat_rossyia_caucasian_war.100.t
+	desc = mat_rossyia_caucasian_war.100.d
+	flavor = mat_rossyia_caucasian_war.100.f
+
+	dlc = dlc010
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_sick_in_hospital.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	cooldown = { days = short_modifier_time }
+
+	trigger = {
+		c:RUS ?= this
+		OR = {
+			exists = c:CIR
+			exists = c:CHC
+		}
+	}
+
+	immediate = {
+		root = {
+			save_scope_as = russia_scope
+		}
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_DAGESTAN
+					state_region = s:STATE_KUBAN
+					state_region = s:STATE_NORTH_CAUCASUS
+				}
+				is_split_state = yes
+			}
+			save_scope_as = invasion_base_state
+		}
+		scope:invasion_base_state = {
+			this.state_region = {
+				random_scope_state = {
+					limit = {
+						NOT = {
+							c:RUS ?= owner
+						}
+						OR = {
+							c:CHC ?= owner
+							c:CIR ?= owner
+						}
+					}
+					owner = {
+						save_scope_as = adversary_scope
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.100.a
+		default_option = yes
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_failed_incursion
+				days = short_modifier_time
+			}
+			this.state_region = {
+				add_devastation = 15
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				culture = cu:circassian
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = caucasus_russian_failed_attack_notification
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.100.b
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_failed_incursion
+				days = short_modifier_time
+			}
+			this.state_region = {
+				add_devastation = 5
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				pop_type = officers
+				culture = cu:russian
+			}
+			this.region = {
+				random_scope_state = {
+					limit = {
+						owner = c:RUS
+						any_scope_building = {
+							is_building_type = building_barrack
+						}
+					}
+					add_radicals_in_state = {
+						value = small_radicals
+						pop_type = officers
+						culture = cu:russian
+					}
+				}
+			}
+		}
+		ig:ig_armed_forces ?= {
+			add_modifier = {
+				name = modifier_failed_to_cover_incursion
+				months = 13
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = caucasus_russian_failed_attack_notification
+		}
+	}
+}
+mat_rossyia_caucasian_war.101 = {
+	type = country_event
+	placement = scope:invasion_base_state
+
+	title = mat_rossyia_caucasian_war.101.t
+	desc = mat_rossyia_caucasian_war.101.d
+	flavor = mat_rossyia_caucasian_war.101.f
+
+	dlc = dlc010
+
+	event_image = {
+		video = "gfx/event_pictures/ep1_cossacks.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	duration = 3
+
+	cooldown = { days = short_modifier_time }
+
+	trigger = {
+		c:RUS ?= this
+		OR = {
+			exists = c:CIR
+			exists = c:CHC
+		}
+	}
+
+	immediate = {
+		root = {
+			save_scope_as = russia_scope
+		}
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_DAGESTAN
+					state_region = s:STATE_KUBAN
+					state_region = s:STATE_NORTH_CAUCASUS
+				}
+				is_split_state = yes
+			}
+			save_scope_as = invasion_base_state
+		}
+		scope:invasion_base_state = {
+			this.state_region = {
+				random_scope_state = {
+					limit = {
+						NOT = {
+							c:RUS ?= owner
+						}
+						OR = {
+							c:CHC ?= owner
+							c:CIR ?= owner
+						}
+					}
+					owner = {
+						save_scope_as = adversary_scope
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.101.a
+		default_option = yes
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_attacked_supply_train
+				months = 13
+			}
+			this.state_region = {
+				add_devastation = 10
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = caucasus_russian_supply_convoy_notification
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.101.b
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_attacked_supply_train
+				months = 13
+				multiplier = 1.5
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = caucasus_russian_supply_convoy_notification
+		}
+	}
+}
+mat_rossyia_caucasian_war.102 = {
+	type = country_event
+	placement = scope:invasion_state
+
+	title = mat_rossyia_caucasian_war.102.t
+	desc = mat_rossyia_caucasian_war.102.d
+	flavor = mat_rossyia_caucasian_war.102.f
+
+	dlc = dlc010
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_fire.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	cooldown = { days = short_modifier_time }
+
+	trigger = {
+		c:RUS ?= this
+		OR = {
+			exists = c:CIR
+			exists = c:CHC
+		}
+	}
+
+	immediate = {
+		root = {
+			save_scope_as = russia_scope
+		}
+		random_state = {
+			limit = {
+				OR = {
+					c:CHC ?= owner
+					c:CIR ?= owner
+				}
+				is_split_state = yes
+			}
+			save_scope_as = invasion_state
+		}
+		scope:invasion_state = {
+			owner = {
+				save_scope_as = adversary_scope
+			}
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.102.a
+		default_option = yes
+		scope:adversary_scope = {
+			scope:invasion_state = {
+				add_modifier = {
+					name = modifier_villages_burned
+					months = 13
+					multiplier = 1.5
+				}
+			}
+		}
+		scope:invasion_state = {
+			state_region = {
+				add_devastation = 15
+			}
+		}
+		random_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+					this = scope:invasion_state
+				}
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = caucasus_russian_village_burned_notification
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.102.b
+		scope:adversary_scope = {
+			scope:invasion_state = {
+				add_modifier = {
+					name = modifier_villages_burned
+					months = 13
+				}
+			}
+		}
+		scope:invasion_state = {
+			state_region = {
+				add_devastation = 5
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = caucasus_russian_village_burned_notification
+		}
+	}
+}
+mat_rossyia_caucasian_war.103 = {
+	type = country_event
+	placement = scope:invasion_state
+
+	title = mat_rossyia_caucasian_war.103.t
+	desc = mat_rossyia_caucasian_war.103.d
+	flavor = mat_rossyia_caucasian_war.103.f
+
+	dlc = dlc010
+
+	event_image = {
+		video = "gfx/event_pictures/ep1_ca_mountain_pass_civilian.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 3
+
+	cooldown = { days = short_modifier_time }
+
+	trigger = {
+		c:RUS ?= this
+		OR = {
+			c:CIR ?= {
+				NOT = {
+					has_truce_with = c:RUS
+				}
+			}
+			c:CHC ?= {
+				NOT = {
+					has_truce_with = c:RUS
+				}
+			}
+		}
+	}
+
+	immediate = {
+		root = {
+			save_scope_as = russia_scope
+		}
+		random_state = {
+			limit = {
+				OR = {
+					c:CHC ?= owner
+					c:CIR ?= owner
+				}
+				is_split_state = yes
+			}
+			save_scope_as = invasion_state
+		}
+		scope:invasion_state = {
+			owner = {
+				save_scope_as = adversary_scope
+			}
+		}
+		scope:adversary_scope = {
+			random_primary_culture = {
+				save_scope_as = defector_culture
+			}
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.103.a
+		default_option = yes
+		scope:adversary_scope = {
+			add_modifier = {
+				name = modifier_betrayal_of_tribe
+				days = short_modifier_time
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = caucasus_tribe_defection_notification
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.103.b
+		scope:adversary_scope = {
+			add_modifier = {
+				name = modifier_betrayal_of_tribe
+				days = short_modifier_time
+			}
+		}
+		random_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+					this = scope:invasion_state
+				}
+			}
+			add_culture_standard_of_living_modifier = {
+				culture = scope:defector_culture
+				multiplier = 2
+				days = short_modifier_time
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				pop_type = officers
+				culture = cu:russian
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = caucasus_tribe_defection_notification
+		}
+	}
+}
+mat_rossyia_caucasian_war.104 = {
+	type = country_event
+	placement = scope:invasion_base_state
+
+	title = mat_rossyia_caucasian_war.104.t
+	desc = mat_rossyia_caucasian_war.104.d
+	flavor = mat_rossyia_caucasian_war.104.f
+
+	event_image = {
+		video = "gfx/event_pictures/ep1_ca_mountain_pass_military.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	duration = 3
+
+	cooldown = { days = short_modifier_time }
+
+	trigger = {
+		c:RUS ?= this
+		exists = c:CHC
+	}
+
+	immediate = {
+		root = {
+			save_scope_as = russia_scope
+		}
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_KUBAN
+					state_region = s:STATE_NORTH_CAUCASUS
+				}
+				is_split_state = yes
+			}
+			save_scope_as = invasion_base_state
+		}
+		c:CHC ?= {
+			save_scope_as = adversary_scope
+			ruler = {
+				save_scope_as = shamil_scope
+			}
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.104.a
+		default_option = yes
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_soldiers_deserted
+				days = short_modifier_time
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+				pop_type = soldiers
+			}
+			add_culture_standard_of_living_modifier = {
+				culture = cu:avar
+				multiplier = -2
+				days = short_modifier_time
+			}
+			add_culture_standard_of_living_modifier = {
+				culture = cu:chechen
+				multiplier = -1
+				days = short_modifier_time
+			}
+		}
+		c:CHC ?= {
+			add_modifier = {
+				name = modifier_receiving_russian_deserters
+				days = short_modifier_time
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = caucasus_russian_soldiers_defection_notification
+		}
+	}
+
+	option = {
+		name = mat_rossyia_caucasian_war.104.b
+		scope:invasion_base_state = {
+			add_modifier = {
+				name = modifier_soldiers_deserted
+				days = short_modifier_time
+			}
+		}
+		c:CHC ?= {
+			add_modifier = {
+				name = modifier_receiving_russian_deserters
+				days = short_modifier_time
+			}
+		}
+		ig:ig_armed_forces ?= {
+			add_modifier = {
+				name = modifier_rampant_desertions
+				days = short_modifier_time
+			}
+		}
+		scope:adversary_scope = {
+			post_notification = caucasus_russian_soldiers_defection_notification
+		}
+	}
+}
 #########################################
 #	       Other Events 				#
 #########################################

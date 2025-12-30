@@ -21,7 +21,7 @@
     mat_rossyia_caucasian_war.004.f: ""In the village, on their doorsteps, Circassians are sitting idle. The sons of the Caucasus say About abusive, disastrous alarms, On the beauty of their horses, About enjoying the wild bliss; Remembers the old days compelling raids, Artful deceptions Uzdenov, Beats checkers their cruel, And Accuracy inevitable arrows, And the ashes of ruined villages, And caresses prisoners chernookih""
     mat_rossyia_caucasian_war.004.a: "What shall become of the Caucausus?"
   
-# Ending Events
+  # Ending Events
     mat_rossyia_caucasian_war.010.t: "Dominion Over the Caucasus"
     mat_rossyia_caucasian_war.010.d: "Despite the immense challenges in the Caucasus, and a bandit holy man declaring a holy war on Russia. The forces of [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] have succeeded in destroying and subduing tribal warlords who would oppose the Russian Empire. "
     mat_rossyia_caucasian_war.010.f: ""So Muse, easy one Dreams, For Asia the limits of flying And plucked the wreath itself Caucasian wild flowers. Her outfit captivated harsh tribes, increased during the war, And often in this new clothes""
@@ -38,5 +38,142 @@
     mat_rossyia_caucasian_war_011b_tt: "The #bold Caucasus#! will be split between various claimants to the legacy of its historical kingdoms."
     mat_rossyia_caucasian_war_011c_tt: "The national aspirations of the #bold Caucasian#! peoples will be realized, as separate states."
     mat_rossyia_caucasian_war_011e_tt: "The #bold Caucasian#! peoples will seize independence from [ROOT.GetCountry.GetName] as a unified #bold Transcaucasian#! states."
+
+    mat_rossyia_caucasian_war.012.t: "Russia has lost the Caucasus"
+    mat_rossyia_caucasian_war.012.d1: "The Russian empire has lost control of the Caucasus, now it seeks to hold onto its remaining holdings and has militarized its frontier. How much this grip can hold is everyone's guess."
+    mat_rossyia_caucasian_war.012.d2: "The Russian empire has lost control of the Caucasus, and in its wake a host of warlords waving banners of principalities, khanates, tribes, and clans that were destroyed in the conquest of the Caucasus has risen up taking advantage of the chaos."
+    mat_rossyia_caucasian_war.012.d3: "There is nothing left for us in these forsaken mountains but to be trapped between the Turks and the highlanders. Nothing is with us, any longer - God is high above, and the Tsar is far away."
+    mat_rossyia_caucasian_war.012.f: ""So Muse, easy one Dreams, For Asia the limits of flying And plucked the wreath itself Caucasian wild flowers. Her outfit captivated harsh tribes, increased during the war, And often in this new clothes""
+    mat_rossyia_caucasian_war.012.a: "Interesting"
+
+    mat_rossyia_caucasian_war.013.t: "Russian Dominion Over the Caucasus"
+    mat_rossyia_caucasian_war.013.d: "Despite the bravery of the various tribes and their generals that rose to fight the Russian Empire, the Russians have managed to secure a hold onto power in the Caucasus and they have crushed their enemies. With this victory Russian domination over the region is now secured."
+    mat_rossyia_caucasian_war.013.f: ""So Muse, easy one Dreams, For Asia the limits of flying And plucked the wreath itself Caucasian wild flowers. Her outfit captivated harsh tribes, increased during the war, And often in this new clothes""
+    mat_rossyia_caucasian_war.013.a: "Interesting"
+
+    mat_rossyia_caucasian_war.014.t: "Russian Praise and Honors"
+    mat_rossyia_caucasian_war.014.d1: "With the conflict in the Caucasus dying down, Emperor of Russia, Emperor [SCOPE.sCharacter('emperor_of_russia').GetFullNameNoFormatting], has invited [ROOT.GetCountry.GetRuler.GetFullNameNoFormatting] to Saint Petersburg. There he thanked us for our service and bravery in subduing the bandits and tribesmen. Because of our loyalty he has decided to elevate us from Sultan of Elisu to Grand Duke of Azerbaijan. We have sworn to the Emperor that we shall bring prosperity to the Grand Duchy and make it a prosperous part of the empire."
+    mat_rossyia_caucasian_war.014.d2: "With the conflict in the Caucasus dying down, Emperor of Russia, Emperor [SCOPE.sCharacter('emperor_of_russia').GetFullNameNoFormatting], has invited [ROOT.GetCountry.GetRuler.GetFullNameNoFormatting] to Saint Petersburg. There he thanked us for our service and bravery in subduing the bandits and tribesmen. Because of our loyalty he has decided to elevate us from Prince of [ROOT.GetCountry.GetName] to Grand Duke of Georgia. We have sworn to the Emperor that we shall bring prosperity to the Grand Duchy and make it a prosperous part of the empire."
+    mat_rossyia_caucasian_war.014.d3: "With the conflict in the Caucasus dying down, Emperor of Russia, Emperor  [SCOPE.sCharacter('emperor_of_russia').GetFullNameNoFormatting], has invited [ROOT.GetCountry.GetRuler.GetFullNameNoFormatting] to Saint Petersburg. There he thanked us for our service and bravery in subduing the bandits and tribesmen. Because of our loyalty he has decided to elevate us from Shamkhalate of Tarki to Grand Duke of Dagestan. We have sworn to the Emperor that we shall bring prosperity to the Grand Duchy and make it a prosperous part of the empire. "
+    mat_rossyia_caucasian_war.014.f: ""So Muse, easy one Dreams, For Asia the limits of flying And plucked the wreath itself Caucasian wild flowers. Her outfit captivated harsh tribes, increased during the war, And often in this new clothes""
+    mat_rossyia_caucasian_war.014.a: "Interesting"
+    mat_rossyia_caucasian_war.014.b: "Interesting"
+    mat_rossyia_caucasian_war.014.c: "Interesting"
+
+  # Scripted Events
+    mat_rossyia_caucasian_war.030.t: "The Imamate's Emissary"
+    mat_rossyia_caucasian_war.030.d: "With the death of our former [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] and on the request of many of the [SCOPE.gsInterestGroup('devout_scope').GetName], the [SCOPE.sCountry('imamate_scope').GetName] has dispatched a particularly distinguished naib to further ties between our nations, and lead [ROOT.GetCountry.GetName] in its struggle."
+    mat_rossyia_caucasian_war.030.f: "Upon the third month of hearing our calls to the East for a teacher to light our way, he arrived, his presence like a titan, and his will like a storm of fire."
+    mat_rossyia_caucasian_war.030.a: "We will be honored to unite with our brothers in Islam."
+    mat_rossyia_caucasian_war.030.b: "Our struggle is first and foremost a national one."
+
+  # Historical Events
+
+  # Monthly Events
+    mat_rossyia_caucasian_war.070.t: "The Parliament of Independence"
+    mat_rossyia_caucasian_war.070.d: "With full-scale invasion by the [SCOPE.sCountry('russia_scope').GetAdjective] state becoming a near certainty, a [ROOT.GetCountry.GetAdjective] national parliament has been assembled in [SCOPE.sState('capital_scope').GetFarmHubName], in order to elect a single ruler and coordinate the unified resistance of all Circassia."
+    mat_rossyia_caucasian_war.070.f: "Even if we lose many of our brave warriors, we have men and young boys to replace them! Worst case, we will be unable to use our rifles because we have no gunpowder and ammo. Even so, we will fight with swords and daggers in hand! We will never obey the enemies! Even if the whole world abandons us and we are cornered to the last point of our homeland, it will still be seen what the Adyghe are capable of. If necessary, we will have to mercifully take the lives of our women and children with our own hands so that they do not fall into the hands of the enemy and be met by various worse pains. And then, to avenge them, we too must perish."
+    mat_rossyia_caucasian_war.070.a: "It is by our spirit that we will resist to the end."
+    mat_rossyia_caucasian_war.070.b: "We must appeal to foreign powers to assist our struggle."
+    mat_rossyia_caucasian_war.070.c: "We will forever stand alongside our Eastern brothers!"
+
+    mat_rossyia_caucasian_war.071.t: "The Circassian Call"
+    mat_rossyia_caucasian_war.071.d: "The small Caucasian proto-state of [SCOPE.sCountry('circassia_scope').GetName], which has been embroiled in a long conflict with [SCOPE.sCountry('russia_scope').GetName], has sent a request for military aid to our nation. Promising recognition of their struggle could assist in weakening Russian control over the region."
+    mat_rossyia_caucasian_war.071.f: "These lands are ours, and we want to rule them with absolute justice. We strive to administer our country fairly, therefore we treat our people fairly and respect the lives and property of those who visit us."
+    mat_rossyia_caucasian_war.071.a: "We will regard this conflict with interest."
+    mat_rossyia_caucasian_war.071.b: "We have no reason to involve ourselves."
+
+    mat_rossyia_caucasian_war.072.t: "The Kangaroo Expedition"
+    mat_rossyia_caucasian_war.072.d: "A detachment of largely [SCOPE.sCulture('polish_culture').GetName] and [SCOPE.sCulture('hungarian_culture').GetName] volunteers from [SCOPE.sCountry('austria_scope').GetAdjective] [SCOPE.sState('galicia_scope').GetName] have traveled to [ROOT.GetCountry.GetName] aboard the steamship Kangaroo, seeking to aid in our struggle as volunteer soldiers against the [SCOPE.sCountry('russia_scope').GetAdjective] invaders."
+    mat_rossyia_caucasian_war.072.f: ""In a person's life there are some premonitions and desires, which, despite all their seeming improbability, sometimes come true. I experienced it first hand. When I emigrated in, I had an obsessive idea to go to the Caucasus. I was then not yet more than twenty-two years old, and the almost romantic legends of Shamil and the mountain heroes who resist the gigantic power of Russia in such small numbers made a deep impression on me. I was looking for means to connect with them, and wherever I was - in Germany, England or France, I tried to find an ally for this idea and arouse interest in it. I was considered a reckless dreamer and set up as an example to me some of my countrymen and a few desperate daredevils of the English...""
+    mat_rossyia_caucasian_war.072.a: "Grant their leader a role as commander, and send him to the front."
+    mat_rossyia_caucasian_war.072.b: "We would be well served by training in [SCOPE.sCountry('austria_scope').GetAdjective] tactics."
+
+  # Yearly Events
+    mat_rossyia_caucasian_war.100.t: "Failed Incursion into [SCOPE.sCountry('adversary_scope').GetName]"
+    mat_rossyia_caucasian_war.100.d: "An incursion we have launched from [SCOPE.sState('invasion_base_state').GetName] into the territory claimed by [SCOPE.sCountry('adversary_scope').GetName] has failed. The units dispatched have withdrawn, after suffering heavy losses amongst the rough Caucasian terrain."
+    mat_rossyia_caucasian_war.100.f: ""They were in the trees - they had to have been warned before we began. They waited for us to be engulfed in that damned forest, before opening fire on us... the Major fell first, and our horses were cut down. How are we to manage this, sir? How are we to take this land, when we cannot say we control any land outside that shadowed by our own feet?""
+    mat_rossyia_caucasian_war.100.a: "Cover the retreat with fire and cannon."
+    mat_rossyia_caucasian_war.100.b: "Withdraw the forces and quietly regroup."
+
+    mat_rossyia_caucasian_war.101.t: "Caucasian Supply Convoy Raided"
+    mat_rossyia_caucasian_war.101.d: "A convoy dispatched to provide needed ammunition and supplies to our forces in [SCOPE.sState('invasion_base_state').GetName] has been ambushed by the forces of [SCOPE.sCountry('adversary_scope').GetName]. In the struggle, much of its cargo was lost."
+    mat_rossyia_caucasian_war.101.f: "By the time the relief force had arrived, the bodies had already begun to rot. Men and horses were entangled where they had fallen, their belongings stripped and carried away by enterprising hands. As they lay there, the highway was no longer a territory of Russia, nor of any man at all - for its subjects were maggots, and its sovereign the Lord of the Flies."
+    mat_rossyia_caucasian_war.101.a: "Seize resources from the locals to make up the deficit."
+    mat_rossyia_caucasian_war.101.b: "Hold fast, and wait for a better-protected convoy."
+
+    mat_rossyia_caucasian_war.102.t: "Successful Incursion into [SCOPE.sCountry('adversary_scope').GetName]"
+    mat_rossyia_caucasian_war.102.d: "An incursion we have launched into the territory claimed by [SCOPE.sCountry('adversary_scope').GetName] has succeeded, with several villages controlled by the mountaineers burnt to the ground, and the enemy fleeing."
+    mat_rossyia_caucasian_war.102.f: "In the evening, the soldiers entered a town nestled between two mountains - humble, but prosperous, surrounded by fields of hardy crops.\n\nIn the morning, they left behind nothing but charred-black skeletons, surrounded by a desolate ring of ash."
+    mat_rossyia_caucasian_war.102.a: "Let none survive our scrutiny."
+    mat_rossyia_caucasian_war.102.b: "We have made them inclined enough to submit."
+
+    mat_rossyia_caucasian_war.103.t: "[SCOPE.sCulture('defector_culture').GetName] Tribe Swears Fealty"
+    mat_rossyia_caucasian_war.103.d: "Cowed by our forces and unwilling to fight any longer, a [SCOPE.sCulture('defector_culture').GetName] tribe formerly loyal to [SCOPE.sCountry('adversary_scope').GetName] has sworn fealty to [ROOT.GetCountry.GetName]."
+    mat_rossyia_caucasian_war.103.f: "I, the below named, promise and swear by Almighty God, on His Holy Gospels, that I am in awe of, and bound to his Imperial Majesty, my true and innate most gracious great sovereign Emperor [ROOT.GetCountry.GetRuler.GetFullNameNoFormatting], Autocrat of All the Russias, and to His Imperial Highness' lawful heir to the throne of All the Russias."
+    mat_rossyia_caucasian_war.103.a: "It is a pity that they did not decide this sooner."
+    mat_rossyia_caucasian_war.103.b: "Permit their settlement in our controlled territories."
+
+    mat_rossyia_caucasian_war.104.t: "Defections to the [SCOPE.sCountry('adversary_scope').GetName]"
+    mat_rossyia_caucasian_war.104.d: "The multi-national nature of [SCOPE.sCharacter('shamil_scope').GetFullName]'s imamate has proven irresistable to many of our subjects in [SCOPE.sState('invasion_base_state').GetName]. Officers and landowners alike have reported numerous defections to the Imamate."
+    mat_rossyia_caucasian_war.104.f: ""The mistreatment of our military deserters by the Chechens kept many unreliable soldiers, and especially the Poles, from running away; but if now they find out that Shamil gives freedom to deserters, then I'm afraid that the runs will increase. I would think to keep the soldiers from escaping the first captured deserters to be shot. I, together with this, ordered all private commanders to aggravate supervision of unreliable soldiers and report to me immediately about those who make an escape."\n\n— Melenty Yakovlevich Olshevsky"
+    mat_rossyia_caucasian_war.104.a: "Tighten security in the region, to avert further defections."
+    mat_rossyia_caucasian_war.104.b: "We will not build further bad will amongst the people."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

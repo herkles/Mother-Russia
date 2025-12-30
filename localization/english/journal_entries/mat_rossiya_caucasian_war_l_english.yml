@@ -19,9 +19,6 @@
     mat_rossiya_caucasian_loyalty_button_cooldown_trigger: "[ROOT.GetCountry.GetNameNoFlag] has not declared Loyalty nor Disloyalty within the last two years"
     mat_rossyia_caucasian_war_ongoing: "[ROOT.GetCountry.GetNameNoFlag] is involved in the $je_mat_rossyia_caucasian_war$"
 
-  # Scripted Progress Bars
-    je_mat_rossyia_caucasian_war_progressbar: "Home Rule"
-    je_mat_rossyia_caucasian_war_progressbar_desc: "Progress: #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/100)"
 
   # Scripted Buttons
     mat_rossiya_caucasian_disloyalty_button: "Declare Disloyalty Towards the Russian Empire"

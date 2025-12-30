@@ -44,7 +44,35 @@ gov_elisu_sultanate = {# Sultanate of Elisu
 		post_change_to_hereditary = yes
 	}
 }
+mat_rossiya_gov_khanate = {# for the khanates added
+	transfer_of_power = hereditary
 
+	male_ruler = "RULER_TITLE_KHAN"
+	female_ruler = "RULER_TITLE_KHATUN"
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
+
+	possible = {
+		has_law = law_type:law_monarchy
+		OR = {
+			AND = { exists = c:AZB_BAK c:AZB_BAK = ROOT }
+			AND = { exists = c:AZB_QUB c:AZB_QUB = ROOT }
+			AND = { exists = c:AZB_SHI c:AZB_SHI = ROOT }
+			AND = { exists = c:AZB_KAR c:AZB_KAR = ROOT }
+			AND = { exists = c:KAZ_BUK c:KAZ_BUK = ROOT }
+		}
+		NOT = { is_subject_type = subject_type_crown_land }
+		has_gov_regency = no
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
 #####################################
 # Theocracies
 #####################################

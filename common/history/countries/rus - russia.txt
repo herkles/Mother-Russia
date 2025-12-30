@@ -26,13 +26,6 @@
             set_interest_group_name = mat_rossiya_ig_most_holy_synod
         }
 
-		if = {
-			limit = {
-				has_dlc_feature = ep1_content
-			}
-			add_journal_entry = { type = je_caucasian_war }
-		}
-
 		add_modifier = {
 			name = modifier_polish_organic_statute
 			days = stupidly_long_modifier_time

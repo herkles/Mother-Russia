@@ -42,12 +42,6 @@ mat_rossiya_russia_escalate_caucasian_war = {
 		c:RUS ?= {# Russia must be a great power
 			country_rank >= rank_value:great_power
 		}
-		custom_tooltip = {# got to be in a particularly conflict time and not 
-			text = progressbar_above_50_tt
-			je:je_mat_rossyia_caucasian_war = {
-				"scripted_bar_progress(je_mat_rossyia_caucasian_war_progressbar)" >= 50
-			}
-		}
 		OR = {
 			s:STATE_KUBAN = {
 				any_scope_state = {
@@ -181,7 +175,7 @@ mat_rossiya_imamate_dispatch_muhammad_amin = {
 			text = circassia_muhammad_amin_tt
 		}
 		c:CIR ?= {
-			trigger_event = { id = caucasuswar.9 }
+			trigger_event = { id = mat_rossyia_caucasian_war.030 }
 		}
 		set_variable = sent_muhammad_amin_var
 	}
@@ -227,7 +221,7 @@ mat_rossiya_caucasian_disloyalty_button = {
 		custom_tooltip = {
 			text = mat_rossiya_caucasian_loyalty_button_cooldown_trigger
 			NOT = {
-				has_variable = mat_rossiya_caucasian_loyalty_button_cooldown_var
+				has_variable = mat_rossiya_caucasian_button_cooldown_var
 			}
 		}
 	}
