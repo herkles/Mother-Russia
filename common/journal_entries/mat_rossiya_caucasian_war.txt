@@ -100,7 +100,7 @@
     }
 
     scripted_button = mat_rossiya_russia_escalate_caucasian_war # revamped from vanilla
-	scripted_button = mat_rossiya_circassia_rally_tribes # Encouraging Circassian tribes to support Circassia
+	#scripted_button = mat_rossiya_circassia_rally_tribes # Encouraging Circassian tribes to support Circassia
     scripted_button = mat_rossiya_imamate_dispatch_muhammad_amin # Send emissary to Circassia
     scripted_button = mat_rossiya_caucasian_loyalty_button # Declare loyalty to the Emperor
     scripted_button = mat_rossiya_caucasian_disloyalty_button # plot disloyalty to the Emperor

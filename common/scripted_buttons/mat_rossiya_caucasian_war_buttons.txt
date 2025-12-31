@@ -101,39 +101,39 @@ mat_rossiya_russia_escalate_caucasian_war = {
 	}
 }
 ### Circassian Buttons
-mat_rossiya_circassia_rally_tribes = {
-	name = "mat_rossiya_circassia_rally_tribes"
-	desc = "mat_rossiya_circassia_rally_tribes_desc"
-	visible = {
-		c:CIR ?= this # Got to be Circassia
-		is_subject = no
-		c:CIR ?= {# Check to ensure they are involved with the Caucasian War
-			is_involved_in_journal_entry = je_mat_rossyia_caucasian_war
-		}
-		NOT = {# Can't have rallied the Tribes in a while
-			has_variable = sent_muhammad_amin_var
-		}
-	}
+# mat_rossiya_circassia_rally_tribes = {
+# 	name = "mat_rossiya_circassia_rally_tribes"
+# 	desc = "mat_rossiya_circassia_rally_tribes_desc"
+# 	visible = {
+# 		c:CIR ?= this # Got to be Circassia
+# 		is_subject = no
+# 		c:CIR ?= {# Check to ensure they are involved with the Caucasian War
+# 			is_involved_in_journal_entry = je_mat_rossyia_caucasian_war
+# 		}
+# 		NOT = {# Can't have rallied the Tribes in a while
+# 			has_variable = sent_muhammad_amin_var
+# 		}
+# 	}
 
-	possible = {
-		is_subject = no
-		has_technology_researched = nationalism
-		c:CIR ?= {# Check to ensure they are involved with the Caucasian War
-			is_involved_in_journal_entry = je_mat_rossyia_caucasian_war
-		}
-	}
+# 	possible = {
+# 		is_subject = no
+# 		has_technology_researched = nationalism
+# 		c:CIR ?= {# Check to ensure they are involved with the Caucasian War
+# 			is_involved_in_journal_entry = je_mat_rossyia_caucasian_war
+# 		}
+# 	}
 
-	effect = {
-		c:CIR ?= {
-			trigger_event = { id = caucasuswar.9 }
-		}
-		set_variable = mat_rossiya_circassia_rally_tribes_var
-	}
+# 	effect = {
+# 		c:CIR ?= {
+# 			trigger_event = { id = caucasuswar.9 }
+# 		}
+# 		set_variable = mat_rossiya_circassia_rally_tribes_var
+# 	}
 
-	ai_chance = {
-		value = 15
-	}
-}
+# 	ai_chance = {
+# 		value = 15
+# 	}
+# }
 ### Imamate Buttons
 mat_rossiya_imamate_dispatch_muhammad_amin = {
 	name = "imamate_dispatch_muhammad_amin"
