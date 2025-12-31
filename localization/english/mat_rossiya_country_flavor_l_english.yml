@@ -1,10 +1,27 @@
 ﻿l_english:
   # Georgian Principalities
+    GEO_SVA_FLAVOR_TEXT: "Only three years ago in 1833 Prince Tsioq was made prince of Svaneti, the ruler of the Higherlanders of Svaneti. The mountainous home of the principality has long been hard to conquer from outsiders. Now though with the Caucasian war raging, will it be conquered by an outside force or secure its own place in the region?"
+
+    ABK_FLAVOR_TEXT: "Following a manifesto made by Emperor Alexander the first of Russia, the Principality has become a protectorate of the Russian Empire. Now as one of the three remaining Georgian principalities it is involved in the Caucasian war. Will it support Russia and their ambitions or will they be crushed in the war?"
+
+    GEO_MIN_FLAVOR_TEXT: "Following a manifesto made by Emperor Alexander the first of Russia, the Principality has become a protectorate of the Russian Empire. Prince Levan has pledged loyalty to the Emperor and has proven to be a loyal if unattentive vassal, with his son David being far more energetic. How shall the principality survive the Caucasian War and its chaotic storm?"
 
   # Caucasian Polities
+    AZB_ELI_FLAVOR_TEXT: "It was only 6 years ago when an aborted attempt at resisting the Russians was done by the people around Elisu. Now with the war raging between the Caucasian Imamate and the Russian Empire, maybe Elisu will have its chance to become independent, perhaps allying with the Imamate will be best or perhaps remaining loyal to the Orthodox Emperor will be best?"
+
+    DAG_TAR_FLAVOR_TEXT: "The Shamkhalate claims to be one of the oldest polities in the region, older than the Russians who have now come here. Proud of their history, the Shamkhalate has had a fraught relationship with the Russians as of late, rebelling twice in the 1820s and in 1831. However the current Shamkhal Abumuslum has an even worse relationship with Imam Shamil, and raids into the Imamate and into the Shamkhalate are common. Shall they rebel once more or shall they put aside their hatred of the Russians to fight the Imamate?"
+
+    CIR_FLAVOR_TEXT: "In 1807 Qalebatuqo Hatuqay Shupago emerged as the leader who began to unite the Circassian Confederation in the face of the threat that the Russian Empire poses to us. Now the second leader Ismail Berzeg has managed to continue Shupago's work of uniting the Confederation. However, all around us are the Russians and their proxies. Will we be victorious in our struggle for independence or shall we go down fighting for honor and life?"
+
+    CHC_FLAVOR_TEXT: "Ismail Shamil is the third imam of the Caucasian Imamate. He leads a holy war against the Russian Empire that seeks to root out islam in the land. The Imamate is a fractious lot made up of people of multiple ethnicities, who speak different languages, all with their own customs but united in their belief in the Almighty. Shall the Imamate succeed in uniting the people and driving the Russians out of the land or shall the Russians succeed in conquering them?"
 
   # Other Russian protectorates
+    KAZ_BUK_FLAVOR_TEXT: "Jangir-Kerei was made Khan of the Bukey Horde in 1824. Since then the Khan has embarked on a grand ambitious plan to modernize the horde, including turning his capital into Saint Petersburg of the Steppe. The Khan is an energetic and reform minded Ruler but his reforms have also centralized a lot of power within the Khan itself. Which has created enemies. Shall the Khan succeed in his grand ambitions or shall he fail to achieve his dreams?"
 
   # Russian Crownland
+    POL_FLAVOR_TEXT: "The November uprising failure in creating an independent Poland brought the kingdom even firmer under the control of the Russian Emperor. The passage of the Organic Statute ensured that it is not an independent kingdom but part of Russia. However even though that rebellion failed, more might come. Shall Poland achieve her dreams of independence or is she destined to be part of Russia?"
 
+    UBD_FLAVOR_TEXT: "The three governorates of Estonia, Livonia, and Courland are technically three individual governorates but are all ruled by the same General-Governor. The loyalty of the three regions has ensured that the ancient rights and privileges of the aristocracy are protected by the Emperor. Shall the General-Governor manage to make the region a leading light in the empire, or shall a different path be taken?"
+
+    ALK_FLAVOR_TEXT: "Alaska in the 1830s is a far off distant part of the Russian Empire ruled by the Russian-American Company. Seeking to dominate the fur trade and other industries, the colony has struggled to make money but it still represents the Empire's influence in the Americas. Will it find a way to turn its fortunes around or shall Alaska be destined to be sold to the highest bidder?"
 
