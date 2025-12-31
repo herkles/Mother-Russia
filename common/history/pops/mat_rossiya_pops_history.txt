@@ -1,7 +1,4 @@
 ﻿POPS = {
-	
-
-
 	### Converting Pops ###
 	s:STATE_GREATER_CAUCASUS = {# First convert them
 		region_state:RUS = {
@@ -32,7 +29,35 @@
 			percent = 1
 		}
 	}
+	s:STATE_ALASKA = {# Killing pops in Russian Alaska so that it can be rebalanced
+		region_state:ALK = {
+			kill_population_percent_in_state = {
+				percent = 1
+			}
+		}
+	}
+
 	### Creating Pops ###
+	s:STATE_ALASKA = {# Fixing Russian Alaskan population
+		region_state:ALK = {
+			create_pop = {# Russians
+				culture = russian
+				size = 711
+			}
+			create_pop = {# Alaskan Creoles
+				culture = alyaskan
+				size = 1210
+			}
+			create_pop = {# Inuit - Kenai and Aleut
+				culture = inuit
+				size = 7462
+			}
+			create_pop = {# athabaskan - Chugach
+				culture = athabaskan
+				size = 1606
+			}									
+		}
+	}
 	# Dagestan - Tarki
 	s:STATE_DAGESTAN = {
 		region_state:DAG_TAR = {# Dagestan - Tarki

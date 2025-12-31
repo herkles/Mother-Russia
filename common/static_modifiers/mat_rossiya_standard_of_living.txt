@@ -211,7 +211,30 @@ nogai_fervor_target_modifier_negative = {
 	country_fervor_target_nogai_add = 1
 }
 
-
+alyaskan_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_alyaskan_standard_of_living_add = 1
+}
+alyaskan_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_alyaskan_standard_of_living_add = 1
+}
+alyaskan_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_alyaskan_cultural_acceptance_add = 1
+}
+alyaskan_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_alyaskan_cultural_acceptance_add = 1
+}
+alyaskan_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_alyaskan_add = 1
+}
+alyaskan_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_alyaskan_add = 1
+}
 
 
 

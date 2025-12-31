@@ -1104,3 +1104,192 @@ nogai = {# Nogais
 	}
 	graphics = european
 }
+###################################
+# Slavic Cultures 
+###################################
+alyaskan = {# Alaskan Creole
+	color= { 80 182 80 }
+	religion = orthodox 
+	heritage = heritage_circumpolar # To reflect their intermarriage with natives
+	language = language_east_slavic # They are russian Speakers
+
+	obsessions = {
+		liquor
+	}
+
+	traditions = { 
+		tradition_russosphere # They part of the Russian Culture
+	}
+	male_common_first_names = {
+		Aleksei
+		Alexandr
+		Andrei
+		Apolon
+		Chichilli
+		Danil
+		Evgeni
+		Feodor
+		Filat
+		Filip
+		Gavriil
+		Grigori
+		Ioann
+		Ilya
+		Iosif
+		Ivan
+		Leonti
+		Loren
+		Mikhail
+		Nikandr
+		Nikifor
+		Nikolai
+		Pavel
+		Petr
+		Platon
+		Porfiri
+		Pyotr
+		Roman
+		Sergei
+		Simeon
+		Stepan
+		Timofei
+		Vasili
+		Yakov
+		Zakhar
+	}
+	female_common_first_names = {
+		Agrafena
+		Aleksandra
+		Anastasia
+		Anisia
+		Anna
+		Aprosinya
+		Arina
+		Avdotia
+		Ekaterina
+		Elena
+		Elisaveta
+		Evlampia
+		Irina
+		Katerina
+		Malania
+		Marfa
+		Maria
+		Matrena
+		Matrona
+		Olga
+		Paraskeva
+		Paraskovia
+		Pelagia
+		Stefanida
+		Tatiana
+		Varvara
+		Vera
+	}
+	noble_last_names = {
+		Akliaiuk
+		Antipin
+		Bardahoev
+		Belonogov
+		Borodin
+		Budilov
+		Chechenev
+		Chevyihpak
+		Dediukhina
+		Druzhinin
+		Dyakanoff
+		Eremin
+		Fomin
+		Glazunov
+		Iakovlev
+		Ianov
+		Kavanskii
+		Kilyudinskiy
+		Klimovski
+		Korenev
+		Korolyov
+		Kotelnikov
+		Kulikalov
+		Larionov
+		Leman
+		Lukin
+		Lipatov
+		Netsvetov
+		Oskolkov
+		Ostrogin
+		Pavlov
+		Petuhov
+		Plotnitsyn
+		Popov
+		Potorochin
+		Rastorguev
+		Rybolov
+		Simakov
+		Siyazov
+		Sizykh
+		Stepanov
+		Titov
+		Truukhmanov
+		Ulitovskii
+		Viatkin
+		Zyrianov
+	}
+	common_last_names = {
+		Akliaiuk
+		Antipin
+		Bardahoev
+		Belonogov
+		Borodin
+		Budilov
+		Chechenev
+		Chevyihpak
+		Dediukhina
+		Druzhinin
+		Dyakanoff
+		Eremin
+		Fomin
+		Glazunov
+		Iakovlev
+		Ianov
+		Kavanskii
+		Kilyudinskiy
+		Klimovski
+		Korenev
+		Korolyov
+		Kotelnikov
+		Kulikalov
+		Larionov
+		Leman
+		Lukin
+		Lipatov
+		Netsvetov
+		Oskolkov
+		Ostrogin
+		Pavlov
+		Petuhov
+		Plotnitsyn
+		Popov
+		Potorochin
+		Rastorguev
+		Rybolov
+		Simakov
+		Siyazov
+		Sizykh
+		Stepanov
+		Titov
+		Truukhmanov
+		Ulitovskii
+		Viatkin
+		Zyrianov
+	}
+
+	ethnicities = {
+		1 = native_american # for the native alaskans; will be updated when there are more graphics for native americans.
+		1 = slavic
+	}
+	graphics = european
+}
+###################################
+# non-Russian Cultures 
+###################################
+

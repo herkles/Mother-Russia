@@ -56,7 +56,9 @@ STATES = {
 	# Ural States
 
 	# Siberian States
-
+	s:STATE_ALASKA = {# Alyaskans are obviously going to find their homeland in alaska
+		add_homeland = cu:alyaskan		
+	}
 	# Russian Core
 	s:STATE_TARTARIA = {
 		region_state:RUS = {

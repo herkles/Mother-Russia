@@ -182,14 +182,27 @@ state_nogai_standard_of_living_add={
 	}
 }
 
-
-
-
-
-
-
-
-
+country_fervor_target_alyaskan_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_alyaskan_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+state_alyaskan_standard_of_living_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
 
 
 
