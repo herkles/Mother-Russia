@@ -1,0 +1,110 @@
+﻿
+
+mat_rossiya_ideology_naradoism_disfavoured_laws = {
+	# Laws that naradoism likes the least.
+	# Maximum value = 7
+	value = 0
+	if = {# Narodist hate serfdom and tenet reform
+		limit = {
+			OR = {
+				has_law_or_variant = law_type:law_serfdom
+				has_law_or_variant = law_type:law_tenant_farmers
+			}
+		}
+		add = 1
+	}
+	if = {# They are socialists who thus strongly hate voting not being granted to them
+		limit = {
+			OR = {
+				has_law_or_variant = law_type:law_landed_voting
+				has_law_or_variant = law_type:law_oligarchy
+				has_law_or_variant = law_type:law_autocracy
+			}
+		}
+		add = 1
+	}
+	if = {# An economic system that hurts the peasants is what they oppose
+		limit = {
+			OR = {
+				has_law_or_variant = law_type:law_interventionism
+				has_law_or_variant = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_laissez_faire
+				has_law_or_variant = law_type:law_extraction_economy
+			}
+		}
+		add = 1
+	}
+	if = {# The peasants do not want to be conscripted to fight in wars
+		limit = {
+			OR = {
+				has_law_or_variant = law_type:law_peasant_levies
+				has_law_or_variant = law_type:law_mass_conscription
+			}
+		}
+		add = 1
+	}
+	if = {# Yea the hate not being able to speak their mind
+		limit = {
+			has_law_or_variant = law_type:law_outlawed_dissent
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_militarized_police
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			OR = {
+				has_law = law_type:law_monarchy
+				has_law_or_variant = law_type:law_corporate_state
+				has_law_or_variant = law_type:law_theocracy
+			}
+		}
+		add = 1
+	}
+}
+mat_rossiya_ideology_naradoism_favoured_laws = {
+	# Laws that ideology_anarchist likes the most.
+	# Maximum value = 7
+	value = 0
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_collectivized_agriculture
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_agrarianism
+			has_law_or_variant = law_type:law_cooperative_ownership
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_national_militia
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_protected_speech
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_no_police
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_council_republic
+		}
+		add = 1
+	}
+}

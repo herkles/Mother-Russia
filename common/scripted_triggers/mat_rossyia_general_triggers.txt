@@ -2,9 +2,16 @@
 
 #### Strategic Region Triggers
 
-
 #### Religion Triggers
 
+#### Ideology Triggers
+
+mat_rossiya_ideology_naradoism_valid_trigger = {
+	OR = {
+		is_interest_group_type = ig_rural_folk
+		is_interest_group_type = ig_intelligentsia
+	}
+}
 ## Culture Triggers
 
 ## Diplomacy Triggers
@@ -17,7 +24,6 @@ mat_rossiya_has_alliance_trigger = {
 		}
 	}
 }
-
 mat_rossiya_has_defensive_pact_trigger = {
 	any_scope_treaty = {
 		binds = root
@@ -27,7 +33,6 @@ mat_rossiya_has_defensive_pact_trigger = {
 		}
 	}
 }
-
 mat_rossiya_has_military_assistance_trigger = {
 	any_scope_treaty = {
 		binds = root
@@ -37,14 +42,12 @@ mat_rossiya_has_military_assistance_trigger = {
 		}
 	}
 }
-
 mat_rossiya_has_rivalry_trigger = {
 	has_diplomatic_pact = {
 		who = $country$
 		type = rivalry
 	}
 }
-
 mat_rossiya_has_embargo_trigger = {
 	has_diplomatic_pact = {
 		who = $country$
@@ -60,7 +63,6 @@ mat_rossiya_capital_is_in_state_region_trigger = {
 		}
 	}
 }
-
 mat_rossiya_capital_is_in_entire_state_region_trigger = {
 	capital ?= {
 		state_region = {
@@ -69,5 +71,3 @@ mat_rossiya_capital_is_in_entire_state_region_trigger = {
 		is_split_state = no
 	}
 }
-
-####----------- COA Triggers -----------####

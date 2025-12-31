@@ -1,0 +1,370 @@
+﻿mat_rossiya_ideology_naradoism = {# Agarian socialism
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_no_ideology.dds"
+	show_in_list = no
+	character_ideology = yes
+
+	# Laws
+	lawgroup_distribution_of_power = {
+		law_oligarchy = strongly_disapprove
+		law_autocracy = strongly_disapprove
+		law_anarchy = approve
+		law_universal_suffrage = strongly_approve
+		law_census_voting = disapprove
+		law_wealth_voting = strongly_disapprove
+		law_landed_voting = strongly_disapprove
+		law_technocracy = disapprove
+		law_single_party_state = disapprove # The left SRs did rise up against the Bolsheviks
+	}
+	lawgroup_governance_principles = {
+		law_monarchy = strongly_disapprove
+		law_presidential_republic = approve
+		law_parliamentary_republic = approve
+		law_corporate_state = strongly_disapprove
+		law_theocracy = strongly_disapprove
+		law_council_republic = strongly_approve
+	}
+	lawgroup_economic_system = {
+		law_command_economy = disapprove
+		law_cooperative_ownership = strongly_approve
+		law_interventionism = disapprove
+		law_agrarianism = approve
+		law_traditionalism = strongly_disapprove
+		law_laissez_faire = strongly_disapprove
+		law_industry_banned = disapprove
+		law_extraction_economy = strongly_disapprove
+	}
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_commercialized_agriculture = disapprove
+		law_tenant_farmers = strongly_disapprove
+		law_homesteading = approve
+		law_collectivized_agriculture = strongly_approve
+	}
+	lawgroup_army_model = {
+		law_mass_conscription = strongly_disapprove
+		law_professional_army = disapprove
+		law_national_militia = approve
+		law_peasant_levies = strongly_disapprove
+	}
+	lawgroup_policing = {
+		law_no_police = approve
+		law_local_police = disapprove
+		law_dedicated_police = disapprove
+		law_militarized_police = strongly_disapprove
+	}
+
+	# Triggers
+	country_trigger = {
+		c:RUS ?= this # Naradoism is Russia's form of Agrian Socialism so well got to be russia
+		has_technology_researched = socialism # Obviously got to have socialism
+	}
+	interest_group_leader_trigger = {
+		mat_rossiya_ideology_naradoism_valid_trigger = yes
+	}
+	non_interest_group_leader_trigger = {
+		# Agitator ideologies should disapprove of a current law
+		NAND = {
+			has_role = agitator
+			owner = {
+				has_law_or_variant = law_type:law_collectivized_agriculture
+				has_law_or_variant = law_type:law_council_republic
+				has_law_or_variant = law_type:law_worker_protections
+			}
+		}
+		# Monarchs cannot be republicans
+		NAND = {
+			owner = {
+				has_law = law_type:law_monarchy
+			}
+			OR = {
+				is_ruler = yes
+				is_heir = yes
+			}
+		}
+		interest_group = {
+			mat_rossiya_ideology_naradoism_valid_trigger = yes
+		}
+	}
+
+	# Weights
+	interest_group_leader_weight = {
+		value = 50
+		# More likely if people are angry
+		add = {
+			value = owner.radical_fraction
+			multiply = 100
+		}
+
+		# More likely if issues are relevant
+		if = {
+			limit = {
+				owner.ideology_communist_disfavoured_laws > 0
+			}
+			add = {
+				value = owner.ideology_communist_disfavoured_laws
+				multiply = 8
+			}
+		}
+
+		# Less likely if issues are not relevant
+		if = {
+			limit = {
+				owner.ideology_communist_favoured_laws > 0
+			}
+			subtract = {
+				value = owner.ideology_communist_favoured_laws
+				multiply = 8
+			}
+		}
+
+		# More likely for angry IG's outside of council republic
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_law_or_variant = law_type:law_council_republic }
+				}
+				NOT = { is_interest_group_type = ig_armed_forces }
+				ig_approval <= -5
+			}
+			subtract = {
+				value = ig_approval
+				multiply = 5
+			}
+		}
+		# More likely when SoL is low outside of council republic
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_law_or_variant = law_type:law_council_republic }
+					average_sol < average_expected_sol
+				}
+			}
+			add = 50
+		}
+		# Labour Association Laws
+		if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner = {
+					has_law_or_variant = law_type:law_factory_councils
+				}
+			}
+			add = 75
+		}
+		else_if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner = {
+					has_law_or_variant = law_type:law_combination_acts
+				}
+			}
+			add = 50
+		}
+		else_if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner = {
+					OR = {
+						has_law_or_variant = law_type:law_guild_system
+						has_law_or_variant = law_type:law_anti_strike_laws
+					}
+				}
+			}
+			add = 25
+		}
+		else_if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner = {
+					has_law_or_variant = law_type:law_right_to_associate
+				}
+			}
+			add = -25
+		}
+		else_if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner = {
+					has_law_or_variant = law_type:law_corporatized_unions
+				}
+			}
+			add = -50
+		}
+		if = {
+			limit = {
+				owner = { has_variable = election_communist_support }
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = { has_variable = communism_1_done }
+			}
+			add = 100
+		}
+		if = { #Armed Forces should not become communist too often outside CRs.
+			limit = {
+				owner = {
+					NOT = {
+						has_law_or_variant = law_type:law_council_republic
+					}
+				}
+				is_interest_group_type = ig_armed_forces
+			}
+			multiply = 0.3
+		}
+		# National Liberation Alliance
+		if = {
+			limit = {
+				owner = {
+					has_variable = national_liberation_alliance_variable
+					has_journal_entry = je_new_republic
+				}
+			}
+			multiply = 1.25
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+					has_variable = chose_ethno_nationalism
+				}
+			}
+			multiply = 0.1
+		}
+	}
+	non_interest_group_leader_weight = {
+		value = 50
+
+		# More likely if people are angry
+		add = {
+			value = owner.radical_fraction
+			multiply = 100
+		}
+
+		# More likely if issues are relevant
+		if = {
+			limit = {
+				owner.ideology_communist_disfavoured_laws > 0
+			}
+			add = {
+				value = owner.ideology_communist_disfavoured_laws
+				multiply = 8
+			}
+		}
+
+		# Less likely if issues are not relevant
+		if = {
+			limit = {
+				owner.ideology_communist_favoured_laws > 0
+			}
+			subtract = {
+				value = owner.ideology_communist_favoured_laws
+				multiply = 8
+			}
+		}
+
+		# More likely for angry IG's outside of council republic
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_law_or_variant = law_type:law_council_republic }
+				}
+				NOT = { is_interest_group_type = ig_armed_forces }
+				interest_group.ig_approval <= -5
+			}
+			add = {
+				value = interest_group.ig_approval
+				multiply = 5
+			}
+		}
+
+		# More likely when SoL is low outside of council republic
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_law_or_variant = law_type:law_council_republic }
+					average_sol < average_expected_sol
+				}
+			}
+			add = 50
+		}
+
+		# Labour Association Laws
+		if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner = {
+					has_law_or_variant = law_type:law_factory_councils
+				}
+			}
+			add = 75
+		}
+		else_if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner = {
+					has_law_or_variant = law_type:law_combination_acts
+				}
+			}
+			add = 50
+		}
+		else_if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner = {
+					OR = {
+						has_law_or_variant = law_type:law_guild_system
+						has_law_or_variant = law_type:law_anti_strike_laws
+					}
+				}
+			}
+			add = 25
+		}
+		else_if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner = {
+					has_law_or_variant = law_type:law_right_to_associate
+				}
+			}
+			add = -25
+		}
+		else_if = {
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				owner = {
+					has_law_or_variant = law_type:law_corporatized_unions
+				}
+			}
+			add = -50
+		}
+
+		if = { #Armed Forces should not become communist too often outside CRs.
+			limit = {
+				owner = {
+					NOT = {
+						has_law_or_variant = law_type:law_council_republic
+					}
+				}
+				is_interest_group_type = ig_armed_forces
+			}
+			multiply = 0.3
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_conservatism
+					has_variable = chose_fascism
+					has_variable = chose_ethno_nationalism
+				}
+			}
+			multiply = 0.1
+		}
+	}
+}
