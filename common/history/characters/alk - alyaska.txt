@@ -1,0 +1,33 @@
+﻿CHARACTERS = {
+	c:ALK ?= {
+		create_character = {
+			template = RUS_ivan_kupreyanov
+			on_created = {
+				set_variable = { name = colonial_governor_term value = 1 }
+			}
+		}
+		# IG Leaders
+		create_character = {
+			template = ALK_ioann_veniaminov
+		}
+		create_character = {
+			template = ALK_arvid_adolf_etholen
+		}		
+		create_character = {
+			template = ALK_nikolas_rosenburg
+		}
+		create_character = {
+			template = ALK_aleksander_rotchev
+		}
+		create_character = {
+			template = ALK_ivan_vasilievich_prokofiev
+		}
+		# Other Alaskan Characters
+		create_character = {
+			template = ALK_mikhail_tebenkov
+		}
+		create_character = {
+			template = ALK_jacob_netsvetov
+		}
+	}
+}

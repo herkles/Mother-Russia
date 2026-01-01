@@ -729,7 +729,10 @@
     jangir_keri: "Jangir-Keri"
     khan: "Khan"
 
+ 
   # Alysakan Male Names
+    Arvid_Adolf: "Arvid Adolf"
+    Nikolas: "Nikolas"
     Alexandr: "Alexandr"
     Apolon: "Apolon"
     Chichilli: "Chichilli"
@@ -745,6 +748,7 @@
     Platon: "Platon"
     Porfiri: "Porfiri"
     Timofei: "Timofei"
+  
   # Alyaskan Female Names
     Agrafena: "Agrafena"
     Anisia: "Anisia"
@@ -760,7 +764,13 @@
     Paraskeva: "Paraskeva"
     Paraskovia: "Paraskovia"
     Stefanida: "Stefanida"
+  
   # Alyaskan Surnames
+    Veniaminov: "Veniaminov"
+    Etholen: "Etholén"
+    Rotchev: "Rotchev"
+    Prokofiev: "Prokofiev"
+    Tebenkov: "Tebenkov"
     Akliaiuk: "Akliaiuk"
     Antipin: "Antipin"
     Bardahoev: "Bardahoev"
