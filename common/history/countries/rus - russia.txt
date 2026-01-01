@@ -22,10 +22,6 @@
 		
 		add_taxed_goods = g:liquor
 
-		ig:ig_devout = {# Most Holy Synod
-            set_interest_group_name = mat_rossiya_ig_most_holy_synod
-        }
-
 		add_modifier = {
 			name = modifier_polish_organic_statute
 			days = stupidly_long_modifier_time

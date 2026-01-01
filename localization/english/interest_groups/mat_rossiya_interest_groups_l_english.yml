@@ -1,8 +1,23 @@
 ﻿l_english:
 
   # Russian IGs
-  mat_rossiya_ig_most_holy_synod:0 "Most Holy Synod"
-  mat_rossiya_ig_most_holy_synod_desc:0 "The Most Holy Synod is the governing body of the Orthodox Church in Russia. Created by Emperor Peter the Great in 1721 with his church reforms that got rid of the Patriarch of Moscow. The Most Holy Synod is firmly under the control of the Emperor of Russia. "
+    mat_rossiya_ig_most_holy_synod: "Most Holy Synod"
+    mat_rossiya_ig_most_holy_synod_desc: "The Most Holy Synod is the governing body of the Orthodox Church in Russia. Created by Emperor Peter the Great in 1721 with his church reforms that got rid of the Patriarch of Moscow. The Most Holy Synod is firmly under the control of the Emperor of Russia. "
+
+
+
+    mat_rossiya_ig_meschane: "Meschane"
+    mat_rossiya_ig_meschane_desc: "Meschane refers to the urban lower class in Russia during the existence of its estates system. Compared to the Raznochintsy, another important urban strata, the Meschane tend to favor moderation and stability over revolutionary sentiment."
+
+    mat_rossiya_ig_obschina: "Obschina"
+    mat_rossiya_ig_obschina_desc: "The Obschina is a traditional form of communal self-organization of peasants, utilized by the Russian government to better administer the land. Responsible for taxation, conscription and rural policing, these relatively autonomous and somewhat informal governance units were also taking significant part in economic management of their respective local rural communities."
+
+    mat_rossiya_ig_raznochintsy: "Raznochintsy"
+    mat_rossiya_ig_raznochintsy_desc: "Raznochintsy is a group, composed primarily of urban dwellers, who for one reason or another are neither a foreigner while also existing outside of the Russian rigid estates system. Members of this group are known often for their revolutionary sentiment, harboring sympathies to the western, liberal ideas. As such, compared to Meschane, they tend to favor the more radical ideas in regards to Russia's future."
+
+  # Alaskan IGs
+    mat_rossiya_ig_russian_american_company: "Russian-American Company"
+    mat_rossiya_ig_russian_american_company_desc: "The Russian American Company is a private company tasked with ruling the Russian held territories in the name of the Russian Emperor. As a chartered company it does hold a commercial mandate to try and make a profit to its shareholders."
 
   # Polish IGs
   # Ukrainian IGs

@@ -1,0 +1,54 @@
+﻿GOVERNMENT_SETUP = {
+	c:ALK ?= {
+		ig:ig_devout = {
+			set_interest_group_name = mat_rossiya_ig_most_holy_synod
+			add_ideology = ideology_sovereignist # The orthodox Church in Alaska was much more keen to support native rights.
+		}
+		ig:ig_industrialists = {
+			set_interest_group_name = mat_rossiya_ig_russian_american_company
+			remove_ideology = ideology_individualist
+			remove_ideology = ideology_laissez_faire
+			remove_ideology = ideology_plutocratic
+			add_ideology = ideology_colonialist 
+			add_ideology = ideology_enclavist
+			add_ideology = ideology_malthusian 
+		}
+		ig:ig_intelligentsia = {
+			remove_ideology = ideology_republican
+			remove_ideology = ideology_anti_clerical
+			add_ideology = ideology_constitutionalist
+		}
+	}
+
+	c:RUS = {
+		ig:ig_armed_forces = {
+			
+		}
+		ig:ig_devout = {
+			set_interest_group_name = mat_rossiya_ig_most_holy_synod
+		}
+		ig:ig_industrialists = {
+
+		}
+		ig:ig_intelligentsia = {
+			remove_ideology = ideology_anti_clerical	
+			remove_ideology = ideology_republican	
+			add_ideology = ideology_constitutionalist
+
+		}
+		ig:ig_landowners = {
+			
+		}
+		ig:ig_petty_bourgeoisie = {
+			set_interest_group_name = mat_rossiya_ig_meschane
+		}
+		ig:ig_rural_folk = {
+			set_interest_group_name = mat_rossiya_ig_obschina
+		}
+		ig:ig_trade_unions = {
+			set_interest_group_name = mat_rossiya_ig_raznochintsy
+		}
+	}
+
+
+}
