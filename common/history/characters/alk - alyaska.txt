@@ -8,7 +8,7 @@
 		}
 		# IG Leaders
 		create_character = {
-			template = ALK_ioann_veniaminov
+			template = RUS_ivan_evseevich_popov-veniaminov
 		}
 		create_character = {
 			template = ALK_arvid_adolf_etholen
@@ -21,6 +21,9 @@
 		}
 		create_character = {
 			template = ALK_ivan_vasilievich_prokofiev
+		}
+		create_character = {
+			template = ALK_caubvick_atagotaaluk
 		}
 		# Other Alaskan Characters
 		create_character = {

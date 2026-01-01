@@ -1,5 +1,7 @@
 ﻿
-
+##################################
+#	    Russian Ideologies    	 #
+##################################
 mat_rossiya_ideology_naradoism_disfavoured_laws = {
 	# Laws that naradoism likes the least.
 	# Maximum value = 7
@@ -108,3 +110,6 @@ mat_rossiya_ideology_naradoism_favoured_laws = {
 		add = 1
 	}
 }
+##################################
+#	    Alaskan Ideologies    	 #
+##################################

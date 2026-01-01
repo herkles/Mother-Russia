@@ -25,23 +25,6 @@ RUS_christopher_stegeman = {# Christopher Osipovich Stegman
 
 
 # Starting IG Leaders for Alaska
-ALK_ioann_veniaminov = {# Devout
-	# St. Innocent of Alaska
-	first_name = Ioann
-	last_name = Veniaminov
-	historical = yes
-	culture = cu:russian
-	birth_date = 1797.9.6 # This is the Gregorian Calendar
-	ig_leader = yes
-	interest_group = ig_devout
-	ideology = ideology_reformer
-	traits = {
-		charismatic
-		pious
-		literary
-		explorer
-	}
-}
 ALK_arvid_adolf_etholen = {# Armed Forces
 	# Arvid Adolf Etholen, Finnish explorer and chief manager in the 1840s
 	first_name = Arvid_Adolf
@@ -101,6 +84,19 @@ ALK_ivan_vasilievich_prokofiev = {# Petty Bourgeoisie
 	traits = {
 		meticulous
 		experienced_entrepreneur
+	}
+}
+ALK_caubvick_atagotaaluk = {# Rural Folk
+	# Alaskan tribal chief but couldn't find one for 1836
+	first_name = Caubvick
+	last_name = Atagotaaluk
+	culture = cu:athabaskan #
+	birth_date = 1789.1.1 # Birth year is unknown 
+	ig_leader = yes
+	interest_group = ig_rural_folk
+	ideology = ideology_moderate
+	traits = {
+		elder
 	}
 }
 # Other Starting Alaskan Characters

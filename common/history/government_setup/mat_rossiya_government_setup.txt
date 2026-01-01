@@ -5,6 +5,7 @@
 			add_ideology = ideology_sovereignist # The orthodox Church in Alaska was much more keen to support native rights.
 		}
 		ig:ig_industrialists = {
+			add_ruling_interest_group = yes
 			set_interest_group_name = mat_rossiya_ig_russian_american_company
 			remove_ideology = ideology_individualist
 			remove_ideology = ideology_laissez_faire
@@ -18,6 +19,24 @@
 			remove_ideology = ideology_anti_clerical
 			add_ideology = ideology_constitutionalist
 		}
+		ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+			remove_ideology = ideology_reactionary
+			remove_ideology = ideology_meritocratic
+			add_ideology = ideology_plutocratic
+			add_ideology = ideology_colonialist
+		}
+		ig:ig_rural_folk = {
+			set_interest_group_name = mat_rossiya_ig_alaskan_tribes
+
+			remove_ideology = ideology_agrarian
+			remove_ideology = ideology_isolationist
+
+			add_ideology = mat_rossiya_ideology_native_alaskan_fishing
+			add_ideology = ideology_sovereignist
+			add_ideology = mat_rossiya_ideology_tribal_anti_colonialism
+		}
+
 	}
 
 	c:RUS = {
@@ -34,7 +53,6 @@
 			remove_ideology = ideology_anti_clerical	
 			remove_ideology = ideology_republican	
 			add_ideology = ideology_constitutionalist
-
 		}
 		ig:ig_landowners = {
 			
@@ -49,6 +67,4 @@
 			set_interest_group_name = mat_rossiya_ig_raznochintsy
 		}
 	}
-
-
 }

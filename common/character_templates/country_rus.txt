@@ -458,7 +458,7 @@ RUS_alexander_ageevich_abaza = {
     }
 }
 
-RUS_ivan_evseevich_popov-veniaminov = {
+RUS_ivan_evseevich_popov-veniaminov = {# modified to be the devout leader of Alyaska
     first_name = Ivan
     last_name = Popov-Veniaminov
     historical = yes
@@ -467,25 +467,13 @@ RUS_ivan_evseevich_popov-veniaminov = {
     religion = rel:orthodox
     ideology = ideology_reformer
     interest_group = ig_devout
+   	ig_leader = yes
     birth_date = 1797.8.28
     traits = {
         explorer
         basic_diplomat
         pious
-    }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:RUS
-            c:RUS ?= THIS
-			has_dlc_feature = ep1_content
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            is_interest_group_type = ig_devout
-        }
-        earliest_usage_date = 1865.1.1
-        latest_usage_date = 1880.1.1
-        chance = 50
+        literary
     }
 }
 

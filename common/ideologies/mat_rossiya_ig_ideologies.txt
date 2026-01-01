@@ -1,0 +1,46 @@
+﻿
+##################################
+#	    Alaskan Ideologies    	 #
+##################################
+mat_rossiya_ideology_native_alaskan_fishing = {# Alaskan Tribal economics
+	icon = "gfx/interface/icons/ideology_icons/mat_rossiya_ideology_native_alaskan_fishing.dds"
+
+
+	lawgroup_economic_system = {		
+		law_agrarianism = approve
+		law_industry_banned = approve
+		law_traditionalism = strongly_approve
+		law_interventionism = neutral
+		law_cooperative_ownership = neutral
+		law_laissez_faire = strongly_disapprove
+		law_command_economy = strongly_disapprove
+		law_extraction_economy = strongly_disapprove # if there was a worse opinion it would be here
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = disapprove
+		law_commercialized_agriculture = neutral
+		law_collectivized_agriculture = strongly_approve
+		law_homesteading = approve
+	}		
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = approve
+		law_per_capita_based_taxation = neutral
+		law_proportional_taxation = neutral
+		law_graduated_taxation = neutral
+		law_land_based_taxation = disapprove
+	}
+}
+mat_rossiya_ideology_tribal_anti_colonialism = {# Alaskan tribes don't like colonial 
+	icon = "gfx/interface/icons/ideology_icons/isolationist.dds"
+	lawgroup_colonization = {
+		law_colonial_exploitation = strongly_disapprove
+		law_no_colonial_affairs = strongly_approve
+		law_colonial_resettlement = disapprove
+		law_frontier_colonization = disapprove
+	}
+}
+
+

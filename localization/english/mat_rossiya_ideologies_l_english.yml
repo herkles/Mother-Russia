@@ -1,8 +1,14 @@
 ﻿l_english:
   # Russian Ideologies
-  mat_rossiya_ideology_naradoism: "Narodist"
-  mat_rossiya_ideology_naradoism_desc: "#lore Narodism, also known as Narodnichestvo, is a form of Agrarian socialism that emerged due to the conditions of Russian serfdom. They believe in the peasantry as a revolutionary class and view the peasant communes, the Mirs, as prototypes of the new society that they seek to create. #!"
+    mat_rossiya_ideology_naradoism: "Narodist"
+    mat_rossiya_ideology_naradoism_desc: "#lore Narodism, also known as Narodnichestvo, is a form of Agrarian socialism that emerged due to the conditions of Russian serfdom. They believe in the peasantry as a revolutionary class and view the peasant communes, the Mirs, as prototypes of the new society that they seek to create. #!"
 
+  # Alaskan Ideologies
+    mat_rossiya_ideology_native_alaskan_fishing: "Native Fishing"
+    mat_rossiya_ideology_native_alaskan_fishing_desc: "#lore This group supports the traditional modes of agriculture and fishing. #!"
+
+    mat_rossiya_ideology_tribal_anti_colonialism: "Anti-Colonialism"
+    mat_rossiya_ideology_tribal_anti_colonialism_desc: "#lore This group opposes colonial governance that oppresses their traditional way of life. #!"
 
 
 

@@ -4,8 +4,6 @@
     mat_rossiya_ig_most_holy_synod: "Most Holy Synod"
     mat_rossiya_ig_most_holy_synod_desc: "The Most Holy Synod is the governing body of the Orthodox Church in Russia. Created by Emperor Peter the Great in 1721 with his church reforms that got rid of the Patriarch of Moscow. The Most Holy Synod is firmly under the control of the Emperor of Russia. "
 
-
-
     mat_rossiya_ig_meschane: "Meschane"
     mat_rossiya_ig_meschane_desc: "Meschane refers to the urban lower class in Russia during the existence of its estates system. Compared to the Raznochintsy, another important urban strata, the Meschane tend to favor moderation and stability over revolutionary sentiment."
 
@@ -18,6 +16,9 @@
   # Alaskan IGs
     mat_rossiya_ig_russian_american_company: "Russian-American Company"
     mat_rossiya_ig_russian_american_company_desc: "The Russian American Company is a private company tasked with ruling the Russian held territories in the name of the Russian Emperor. As a chartered company it does hold a commercial mandate to try and make a profit to its shareholders."
+
+    mat_rossiya_ig_alaskan_tribes: "Alaskan Tribes"
+    mat_rossiya_ig_alaskan_tribes_desc: "The various native Alaskan tribes comprise a host of different cultures and people who wish to keep their traditional ways of life intact."
 
   # Polish IGs
   # Ukrainian IGs
