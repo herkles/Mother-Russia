@@ -21,7 +21,17 @@
     mat_rossiya_ig_alaskan_tribes_desc: "The various native Alaskan tribes comprise a host of different cultures and people who wish to keep their traditional ways of life intact."
 
   # Polish IGs
-  # Ukrainian IGs
+
+  # Baltic IGs
+
   # Georgian IGs
+
   # Circassian IGs
+
   # Imamate IGs
+    mat_rossiya_ig_khans: "Khans"
+    mat_rossiya_ig_khans_desc: "The various Khans and sultans and other tribal chiefs of the various polities of the Caucasus are the land owning elite who value their localism and their own tribe first and their ancient rights and powers. "
+
+    mat_rossiya_ig_naibs: "Naibs"
+    mat_rossiya_ig_naibss_desc: "The Naibs are the military-administrative officials who are appointed to govern various regions of the Imamate both as an administrative leader and as a military officer. "
+

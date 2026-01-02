@@ -1,5 +1,9 @@
-﻿mat_rossiya_ideology_naradoism = {# Agarian socialism
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_no_ideology.dds"
+﻿
+##################################
+#	    Russian Ideologies    	 #
+##################################
+mat_rossiya_ideology_naradoism = {# Agarian socialism
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/narodism_leader.dds"
 	show_in_list = no
 	character_ideology = yes
 
@@ -365,6 +369,138 @@
 				}
 			}
 			multiply = 0.1
+		}
+	}
+}
+##################################
+#	   Caucasian Ideologies    	 #
+##################################
+mat_rossiya_ideology_mauridism_leader = {# Mauridist 
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/mauridism_leader.dds"
+	show_in_list = no
+	character_ideology = yes
+
+	# Laws
+	lawgroup_governance_principles = { # preference for theocracy over monarchy
+		law_monarchy = approve
+		law_theocracy = strongly_approve
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_corporate_state = neutral
+		law_council_republic = strongly_disapprove
+	}
+	lawgroup_distribution_of_power = { # Strong theological emphasis on community endorsement of an imam means that extreme autocracy is begrudged by even the most reactionary clerics
+		law_single_party_state = disapprove
+		law_autocracy = strongly_disapprove
+		law_oligarchy = approve
+		law_technocracy = neutral
+		law_landed_voting = approve
+		law_wealth_voting = neutral
+		law_census_voting = neutral
+		law_universal_suffrage = disapprove # but otoh, are you really going to let /everyone/ have a say?
+		law_anarchy = strongly_disapprove
+	}
+	lawgroup_church_and_state = {
+		law_state_religion = strongly_approve
+		law_freedom_of_conscience = disapprove
+		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
+	}
+	lawgroup_bureaucracy = {
+		law_appointed_bureaucrats = approve
+		law_elected_bureaucrats = neutral
+		law_hereditary_bureaucrats = disapprove
+	}
+	lawgroup_citizenship = {
+		law_ethnostate = strongly_disapprove
+		law_subjecthood = approve
+		law_national_supremacy = disapprove
+		law_racial_segregation = neutral
+		law_cultural_exclusion = approve
+		law_multicultural = strongly_approve
+	}
+
+
+	# Triggers
+	country_trigger = {
+		c:CHC ?= this # Naradoism is Russia's form of Agrian Socialism so well got to be russia
+	}
+	interest_group_leader_trigger = {
+		ideology_traditionalist_valid_trigger = yes
+	}
+	non_interest_group_leader_trigger = {
+		ideology_traditionalist_valid_trigger = yes
+	}
+
+	# Weights
+	interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_people_of_the_book
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law_or_variant = law_type:law_total_separation
+						has_law_or_variant = law_type:law_state_atheism
+					}
+				}
+			}
+			add = 75
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.5
+		}
+	}
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_people_of_the_book
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law_or_variant = law_type:law_total_separation
+						has_law_or_variant = law_type:law_state_atheism
+					}
+				}
+			}
+			add = 75
+		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+					has_variable = chose_fascism
+				}
+			}
+			multiply = 0.5
 		}
 	}
 }

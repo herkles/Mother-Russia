@@ -76,7 +76,7 @@ CHC_Shamil_Murid = {
 	is_general = yes
 	commander_rank = commander_rank_2
 	interest_group = ig_devout
-	ideology = ideology_traditionalist
+	ideology = mat_rossiya_ideology_mauridism_leader 
 	traits = {
 		pious
 		ambitious

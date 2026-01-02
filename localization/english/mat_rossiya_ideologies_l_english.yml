@@ -10,5 +10,21 @@
     mat_rossiya_ideology_tribal_anti_colonialism: "Anti-Colonialism"
     mat_rossiya_ideology_tribal_anti_colonialism_desc: "#lore This group opposes colonial governance that oppresses their traditional way of life. #!"
 
+  # Imamate Ideologies
+    mat_rossiya_ideology_mauridism: "Mauridism"
+    mat_rossiya_ideology_mauridism_desc: "#lore The Imamate is led by a sufi imam of the Naqshbandi order and governance is to be subordinate to the imam as their religious teacher and political leader. #!"
 
+    mat_rossiya_ideology_mauridism_leader: "Mauridist"
+    mat_rossiya_ideology_mauridism_leader_desc: "#lore The Imamate is led by a sufi imam of the Naqshbandi order and governance is to be subordinate to the imam as their religious teacher and political leader. #!"
 
+    mat_rossiya_ideology_caucasian_sharia: "Sharia"
+    mat_rossiya_ideology_caucasian_sharia_desc: "#lore This group believes in implementing Sharia law as interpreted by Ismail Shamil and his teachers at the expense of the local khans. #!"
+
+    mat_rossiya_ideology_caucasian_ghazi: "Ghazism"
+    mat_rossiya_ideology_caucasian_ghazi_desc: "#lore The Fight against the Orthodox Russians that seek to oppress calls for holy wars to put aside tribal boundaries and fight for God. #!"
+
+    mat_rossiya_ideology_islamic_modernism: "Islamic Modernism"
+    mat_rossiya_ideology_islamic_modernism_desc: "#lore This group believes in modernizing according to islamic principles. Looking to the West and the Ottoman Empire while keeping an islamic character. #!"
+
+    mat_rossiya_ideology_imamate_shura: "Shura"
+    mat_rossiya_ideology_imamate_shura_desc: "#lore This group believes that good jurisprudence is based on the Islamic principle of #italic shura#!, consultation and collective decision-making, and that the foundation of any solid government relies on the support and deliberation of learned scholars and landowning notables.#!"

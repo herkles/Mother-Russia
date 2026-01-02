@@ -1,6 +1,6 @@
 ﻿### Russia character template file ###
 
-### Princes of Svantali
+### Shamkhalate of Tarki characters
 
 DAG_TAR_abumuslim_khan_tarkovsky = {# abumuslim khan tarkovsky
 	first_name = abumuslim_khan
@@ -23,3 +23,37 @@ DAG_TAR_abumuslim_khan_tarkovsky = {# abumuslim khan tarkovsky
 	}
 }
 
+### Circassian Characters
+
+### Imamate Characters
+CHC_akhberdil_muhammad = {# Armed Forces
+	first_name = Akhberdil
+	last_name = Muhammad
+	historical = yes
+	is_general = yes
+	culture = cu:avar # He was a bit vauge on culture but sources tend to say he was Kumyk, though some say he was chechen
+	birth_date = 1803.1.1
+	ig_leader = yes
+	interest_group = ig_armed_forces
+	ideology = ideology:mat_rossiya_ideology_mauridism_leader
+	traits = {
+		honorable # There are number of stories about him being an honorable general
+		surveyor		
+	}
+}
+CHC_jamaluddin_kazikumukshky = {# Devout
+	# Sheikh of the Naqshbandi Tariqa, teacher of Imam Shamil and part of his Diwan.
+	first_name = Jamaluddin
+	last_name = Kazikumkshky
+	historical = yes
+	culture = cu:avar # From a village where Laks and Avars mixed; need to add Laks
+	birth_date = 1788.1.1
+	ig_leader = yes
+	interest_group = ig_devout
+	ideology = ideology:mat_rossiya_ideology_mauridism_leader # a leading Maurid sufi
+	traits = {
+		pious # the man was known for his piety
+		inspirational_orator # he was a popular sheikh that people listened too
+		literary # He was rather knowledgable on islam
+	}
+}
