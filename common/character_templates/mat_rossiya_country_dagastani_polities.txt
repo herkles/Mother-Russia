@@ -1,4 +1,4 @@
-﻿### Russia character template file ###
+﻿### Caucasian character template file ###
 
 ### Shamkhalate of Tarki characters
 

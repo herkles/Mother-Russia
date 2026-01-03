@@ -10,6 +10,10 @@
     mat_rossiya_ideology_tribal_anti_colonialism: "Anti-Colonialism"
     mat_rossiya_ideology_tribal_anti_colonialism_desc: "#lore This group opposes colonial governance that oppresses their traditional way of life. #!"
 
+  # Circassian Ideologies
+    mat_rossiya_ideology_khazbism: "Khazbism"
+    mat_rossiya_ideology_khazbism_desc: "#lore Khabzism is the worldview and moral code of the Circassian people that has long guided the tribes of Circassia, and this group seeks to keep its ancient traditions and customs. Key to it is the tribal councils known as Khase. #!"
+
   # Imamate Ideologies
     mat_rossiya_ideology_mauridism: "Mauridism"
     mat_rossiya_ideology_mauridism_desc: "#lore The Imamate is led by a sufi imam of the Naqshbandi order and governance is to be subordinate to the imam as their religious teacher and political leader. #!"

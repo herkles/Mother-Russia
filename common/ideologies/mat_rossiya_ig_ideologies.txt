@@ -125,7 +125,6 @@ mat_rossiya_ideology_caucasian_ghazi = {# Fighting for the holy War
 		law_cultural_exclusion = approve
 		law_multicultural = strongly_approve
 	}
-
 	lawgroup_army_model = {
 		law_professional_army = strongly_approve
 		law_mass_conscription = approve
@@ -135,7 +134,13 @@ mat_rossiya_ideology_caucasian_ghazi = {# Fighting for the holy War
 
 }
 mat_rossiya_ideology_islamic_modernism = {# Islamic Modernization for a western islamic scholars
-	icon = "gfx/interface/icons/ideology_icons/ibadi_imamate.dds"
+	icon = "gfx/interface/icons/ideology_icons/islamic_modernism.dds"
+	lawgroup_church_and_state = {
+		law_state_religion = strongly_approve
+		law_freedom_of_conscience = approve
+		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
+	}
 	lawgroup_slavery = {
 		law_slavery_banned = neutral
 		law_legacy_slavery = disapprove
@@ -143,7 +148,6 @@ mat_rossiya_ideology_islamic_modernism = {# Islamic Modernization for a western 
 		law_debt_slavery = strongly_disapprove
 		law_slave_trade = strongly_disapprove
 	}
-
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
 		law_tenant_farmers = neutral
@@ -151,20 +155,17 @@ mat_rossiya_ideology_islamic_modernism = {# Islamic Modernization for a western 
 		law_collectivized_agriculture = neutral
 		law_commercialized_agriculture = neutral
 	}
-
 	lawgroup_trade_policy = {
 		law_protectionism = approve
 		law_isolationism = strongly_disapprove
 		law_mercantilism = disapprove
 		law_free_trade = neutral
 	}
-
 	lawgroup_childrens_rights = {
 		law_child_labor_allowed = disapprove
 		law_restricted_child_labor = neutral
 		law_compulsory_primary_school = approve
 	}
-
 	lawgroup_economic_system = {
 		law_extraction_economy = strongly_disapprove
 		law_cooperative_ownership = disapprove
@@ -176,8 +177,8 @@ mat_rossiya_ideology_islamic_modernism = {# Islamic Modernization for a western 
 		law_industry_banned = strongly_disapprove
 	}
 }
-mat_rossiya_ideology_imamate_shura = {# Shura for the Caucasian Imamate
-	icon = "gfx/interface/icons/ideology_icons/ibadi_imamate.dds"
+mat_rossiya_ideology_imamate_shura = {# Shura for the Caucasian polities
+	icon = "gfx/interface/icons/ideology_icons/moralist.dds"
 	lawgroup_distribution_of_power = { # Strong theological emphasis on community endorsement of an imam means that extreme autocracy is begrudged by even the most reactionary clerics
 		law_single_party_state = disapprove
 		law_autocracy = strongly_disapprove
@@ -189,13 +190,11 @@ mat_rossiya_ideology_imamate_shura = {# Shura for the Caucasian Imamate
 		law_universal_suffrage = disapprove # but otoh, are you really going to let /everyone/ have a say?
 		law_anarchy = strongly_disapprove
 	}
-
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = disapprove
 		law_appointed_bureaucrats = approve
 		law_hereditary_bureaucrats = disapprove
 	}
-
 	lawgroup_free_speech = {
 		law_outlawed_dissent = disapprove
 		law_censorship = neutral
@@ -203,5 +202,47 @@ mat_rossiya_ideology_imamate_shura = {# Shura for the Caucasian Imamate
 		law_protected_speech = neutral
 	}
 }
+mat_rossiya_ideology_khazbism = {# Circassian Confederationism support
+	icon = "gfx/interface/icons/ideology_icons/traditionalist.dds"
+	lawgroup_distribution_of_power = {
+		# They support elders having a say.
+		law_oligarchy = strongly_approve
+		law_landed_voting = strongly_approve
+		# They are neutral towards wealth and census voting. they don't like it but are willing towards.
+		law_wealth_voting = neutral
+		law_census_voting = neutral
+		# They don't care much for mass politics
+		law_technocracy = disapprove
+		law_single_party_state = disapprove
+		law_universal_suffrage = disapprove 
+		# They do not want a strong man or no government
+		law_autocracy = strongly_disapprove
+		law_anarchy = strongly_disapprove
+	}
+	lawgroup_governance_principles = {
+		# This strongly approves of local community councils, the Khase
+		law_parliamentary_republic = strongly_approve
+		# A presidential republic is not as good as the traditional Khase system but can be tolerated.
+		law_presidential_republic = approve
+		# While the concept of a corporate state doesn't exist in 1836 for them, they could tolerate it. Likewise theocracy as per shura could be tolerated
+		law_corporate_state = neutral
+		law_theocracy = neutral
+		# It opposses both monarchy and council republics.
+		law_monarchy = disapprove
+		law_council_republic = disapprove
+	}
+	lawgroup_citizenship = {
+		# Khase were tribal councils and inter-tribal councils for circassians
+		law_national_supremacy = strongly_approve
 
+		# They can tolerate other related tribes being granted honorary status for fighting for them and being good guests.
+		law_racial_segregation = approve
+		# they are neutral on these
+		law_ethnostate = neutral
+		law_subjecthood = neutral
+		law_cultural_exclusion = neutral
+		# They oppose multiculturalism
+		law_multicultural = disapprove
+	}
+}
 

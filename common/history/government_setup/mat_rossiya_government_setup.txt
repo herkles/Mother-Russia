@@ -66,7 +66,7 @@
 			set_interest_group_name = mat_rossiya_ig_raznochintsy
 		}
 	}
-	c:CHC = {
+	c:CHC ?= {
 		ig:ig_armed_forces = {
 			set_interest_group_name = mat_rossiya_ig_naibs
 			remove_ideology = ideology_jingoist
@@ -112,4 +112,38 @@
 			
 		}
 	}
+	c:CIR = {
+		ig:ig_armed_forces = {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_devout = {
+			# they are influenced by the Imamate
+			remove_ideology = ideology_moralist
+			remove_ideology = ideology_patriarchal
+			remove_ideology = ideology_pious
+
+			add_ideology = mat_rossiya_ideology_mauridism
+			add_ideology = mat_rossiya_ideology_imamate_shura
+			add_ideology = mat_rossiya_ideology_caucasian_ghazi
+		}
+		ig:ig_intelligentsia = {
+			remove_ideology = ideology_anti_clerical
+			remove_ideology = ideology_liberal
+			remove_ideology = ideology_republican
+
+			add_ideology = mat_rossiya_ideology_islamic_modernism
+			add_ideology = mat_rossiya_ideology_imamate_shura
+		}
+		ig:ig_landowners = {
+			remove_ideology = ideology_hierarchic
+			remove_ideology = ideology_paternalistic
+
+			add_ideology = mat_rossiya_ideology_khazbism
+			add_ideology = ideology_patriotic
+		}
+		ig:ig_rural_folk = {
+			
+		}
+	}
+
 }
