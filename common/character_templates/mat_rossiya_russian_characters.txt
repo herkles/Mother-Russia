@@ -132,7 +132,24 @@ ALK_jacob_netsvetov = {# Devout
 		inspirational_orator
 	}
 }
-
+# Polish Characters
+RUS_mikhail_gorchakov = {# Armed Forces
+	first_name = Mikhail
+	last_name = Gorchakov
+	historical = yes
+	is_general = yes
+	culture = cu:russian # He was a bit vauge on culture but sources tend to say he was Kumyk, though some say he was chechen
+	birth_date = 1793.2.8
+	ig_leader = yes
+	interest_group = ig_armed_forces
+	ideology = ideology:ideology_royalist
+	traits = {
+		basic_artillery_commander
+		honorable
+		brave
+				
+	}
+}
 
 
 

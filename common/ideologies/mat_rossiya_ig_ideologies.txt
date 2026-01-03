@@ -245,4 +245,72 @@ mat_rossiya_ideology_khazbism = {# Circassian Confederationism support
 		law_multicultural = disapprove
 	}
 }
-
+##################################
+#	   Russian Ideologies    	 #
+##################################
+mat_rossiya_ideology_commonwealth_nostologia = {# A nationalistic Nostolgia for the Commonwealth - this is for the elites
+	icon = "gfx/interface/icons/ideology_icons/commonwealth_nostologia.dds"
+	lawgroup_distribution_of_power = {
+		# They strongly support the restoration of the szlachta's ancient rights
+		law_landed_voting = strongly_approve
+		# they can support this
+		law_wealth_voting = approve
+		law_oligarchy = approve
+		# They are neutral towards wealth and census voting. they don't like it but are willing towards.
+		law_technocracy = neutral
+		# They don't care much for mass politics
+		law_census_voting = disapprove
+		law_single_party_state = disapprove
+		# They do not want a strong man or no government
+		law_universal_suffrage = strongly_approve 
+		law_autocracy = strongly_disapprove
+		law_anarchy = strongly_disapprove
+	}
+	lawgroup_governance_principles = {
+		# They strongly support the idea of a monarchy
+		law_monarchy = strongly_approve
+		# The term for commonwealth in polish can also mean republic, and so they could support an aristocratic republic
+		law_parliamentary_republic = approve
+		# While the concept of a corporate state doesn't exist in 1836 for them, they could tolerate it. Likewise parliament republic as per shura could be tolerated
+		law_presidential_republic = neutral
+		law_corporate_state = neutral
+		# It opposses both theocracy and council republics.
+		law_theocracy = disapprove
+		law_council_republic = strongly_disapprove
+	}
+	lawgroup_bureaucracy = {
+		# they don't like the governor-general appointing their own men, or a king doing the same, instead it should be the Szlachta by right and they can tolerate elected bureaucrats if it is they who are elected.
+		law_appointed_bureaucrats = disapprove
+		law_elected_bureaucrats = neutral
+		law_hereditary_bureaucrats = strongly_approve
+	}
+	lawgroup_free_speech = {
+		# They favor right of assembly, close to their own formation of confederation and old rights
+		law_outlawed_dissent = strongly_disapprove
+		law_censorship = neutral
+		law_right_of_assembly = strongly_approve
+		law_protected_speech = neutral
+	}
+}
+mat_rossiya_ideology_catholic_moralism = {# Catholic Moralism in Congress Poland who oppose russification.
+	icon = "gfx/interface/icons/ideology_icons/papal_moralist.dds"
+	lawgroup_governance_principles = {
+		law_theocracy = disapprove
+		law_monarchy = strongly_approve
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_corporate_state = neutral
+		law_council_republic = strongly_disapprove
+	}
+	lawgroup_church_and_state = {
+		law_state_religion = disapprove
+		law_freedom_of_conscience = approve
+		law_total_separation = strongly_approve
+		law_state_atheism = strongly_disapprove
+	}
+	lawgroup_bureaucracy = {
+		law_hereditary_bureaucrats = approve
+		law_appointed_bureaucrats = neutral
+		law_elected_bureaucrats = disapprove
+	}
+}

@@ -32,3 +32,26 @@
 
     mat_rossiya_ideology_imamate_shura: "Shura"
     mat_rossiya_ideology_imamate_shura_desc: "#lore This group believes that good jurisprudence is based on the Islamic principle of #italic shura#!, consultation and collective decision-making, and that the foundation of any solid government relies on the support and deliberation of learned scholars and landowning notables.#!"
+
+  # Polish Ideologies
+    mat_rossiya_ideology_commonwealth_nostologia: "Commonwealth Nostologia"
+    mat_rossiya_ideology_commonwealth_nostologia_desc: "#lore The Imamate is led by a sufi imam of the Naqshbandi order and governance is to be subordinate to the imam as their religious teacher and political leader. #!"
+
+    mat_rossiya_ideology_catholic_moralism: "Catholic Moralism (Russian)"
+    mat_rossiya_ideology_catholic_moralism_desc: "#lore The Imamate is led by a sufi imam of the Naqshbandi order and governance is to be subordinate to the imam as their religious teacher and political leader. #!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

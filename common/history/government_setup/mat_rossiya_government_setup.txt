@@ -145,5 +145,65 @@
 			
 		}
 	}
+	c:DAG_TAR = {
+		ig:ig_intelligentsia = {
+			remove_ideology = ideology_anti_clerical
+			remove_ideology = ideology_liberal
+			remove_ideology = ideology_republican
 
+			add_ideology = mat_rossiya_ideology_islamic_modernism
+			add_ideology = ideology_constitutionalist
+		}
+	}
+	c:AZB_ELI = {
+		ig:ig_intelligentsia = {
+			remove_ideology = ideology_anti_clerical
+			remove_ideology = ideology_liberal
+			remove_ideology = ideology_republican
+
+			add_ideology = mat_rossiya_ideology_islamic_modernism
+			add_ideology = mat_rossiya_ideology_imamate_shura
+		}
+	}
+	c:KAZ_BUK = {
+		ig:ig_intelligentsia = {
+			remove_ideology = ideology_anti_clerical
+			remove_ideology = ideology_liberal
+			remove_ideology = ideology_republican
+
+			add_ideology = mat_rossiya_ideology_islamic_modernism
+			add_ideology = ideology_constitutionalist
+		}
+	}	
+	c:POL = {# For Congress Poland
+		ig:ig_armed_forces = {
+			add_ruling_interest_group = yes
+			remove_ideology = ideology_patriotic
+			add_ideology = ideology_enclavist # Reflecting the Russian forces controlling the government
+		}
+		ig:ig_devout = {
+			remove_ruling_interest_group = yes
+			set_interest_group_name = mat_rossiya_ig_catholic_church
+			remove_ideology = ideology_moralist
+			add_ideology = mat_rossiya_ideology_catholic_moralism
+		}
+		ig:ig_industrialists = {
+			
+		}
+		ig:ig_intelligentsia = {
+			remove_ruling_interest_group = yes
+		}
+		ig:ig_landowners = {
+			remove_ruling_interest_group = yes
+			remove_ideology = ideology_paternalistic
+			add_ideology = mat_rossiya_ideology_commonwealth_nostologia
+		}
+		ig:ig_petty_bourgeoisie = {
+			remove_ruling_interest_group = yes
+
+		}
+		ig:ig_rural_folk = {
+			remove_ruling_interest_group = yes
+		}
+	}
 }

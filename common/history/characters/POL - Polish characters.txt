@@ -3,5 +3,8 @@
 		create_character = {# Ivan Paskevich is viceroyal of Poland
 			template = RUS_ivan_paskevich
 		}
+		create_character = {# Mikhail Gorchakov is his subordinate
+			template = RUS_mikhail_gorchakov
+		}
 	}
 }

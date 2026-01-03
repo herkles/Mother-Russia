@@ -1,0 +1,40 @@
+﻿##################################
+#	    Polish Amendments    	 #
+##################################
+mat_rossiya_amendment_polish_martial_law = {
+	parent = law_autocracy
+
+	allowed_laws = {
+		law_autocracy
+	}
+
+	modifier = {
+		country_polish_cultural_acceptance_add = -20
+		state_radicals_from_political_movements_mult = 0.25
+		country_officers_pol_str_mult = 0.10
+		country_legitimacy_base_add = 50
+		interest_group_ig_armed_forces_pol_str_mult = 2
+	}
+
+	possible = {
+		c:POL ?= this
+		has_law = law_type:law_autocracy # Not neo-absolutism
+	}
+
+	would_sponsor = {
+		always = no
+	}
+
+	ai_will_revoke = {
+		any_interest_group = {
+			is_in_government = yes
+			has_ideology = ideology:ideology_enclavist
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+
+	amendment_activism_multiplier = 0.50
+}
