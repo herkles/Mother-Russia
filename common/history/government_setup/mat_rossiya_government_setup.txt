@@ -1,5 +1,5 @@
 ﻿GOVERNMENT_SETUP = {
-	c:ALK ?= {
+	c:ALK ?= {# For Russian Alasaka
 		ig:ig_devout = {
 			set_interest_group_name = mat_rossiya_ig_most_holy_synod
 			add_ideology = ideology_sovereignist # The orthodox Church in Alaska was much more keen to support native rights.
@@ -38,7 +38,7 @@
 		}
 
 	}
-	c:RUS ?= {
+	c:RUS ?= {# For the Russian Empire
 		ig:ig_armed_forces = {
 			
 		}
@@ -49,7 +49,6 @@
 
 		}
 		ig:ig_intelligentsia = {
-			remove_ideology = ideology_anti_clerical	
 			remove_ideology = ideology_republican	
 			add_ideology = ideology_constitutionalist
 		}
@@ -66,7 +65,7 @@
 			set_interest_group_name = mat_rossiya_ig_raznochintsy
 		}
 	}
-	c:CHC ?= {
+	c:CHC ?= {# For the Imamate
 		ig:ig_armed_forces = {
 			set_interest_group_name = mat_rossiya_ig_naibs
 			remove_ideology = ideology_jingoist
@@ -112,7 +111,7 @@
 			
 		}
 	}
-	c:CIR = {
+	c:CIR = {# For Circassia
 		ig:ig_armed_forces = {
 			add_ruling_interest_group = yes
 		}
@@ -145,7 +144,7 @@
 			
 		}
 	}
-	c:DAG_TAR = {
+	c:DAG_TAR = {# For shamkhalate of Tarki
 		ig:ig_intelligentsia = {
 			remove_ideology = ideology_anti_clerical
 			remove_ideology = ideology_liberal
@@ -155,7 +154,7 @@
 			add_ideology = ideology_constitutionalist
 		}
 	}
-	c:AZB_ELI = {
+	c:AZB_ELI = {# For sultante of Elisu
 		ig:ig_intelligentsia = {
 			remove_ideology = ideology_anti_clerical
 			remove_ideology = ideology_liberal
@@ -165,7 +164,7 @@
 			add_ideology = mat_rossiya_ideology_imamate_shura
 		}
 	}
-	c:KAZ_BUK = {
+	c:KAZ_BUK = {# For Bukey Horde
 		ig:ig_intelligentsia = {
 			remove_ideology = ideology_anti_clerical
 			remove_ideology = ideology_liberal
@@ -206,4 +205,15 @@
 			remove_ruling_interest_group = yes
 		}
 	}
+	c:UBD = {# For Baltic Governates
+		ig:ig_intelligentsia = {
+			remove_ideology = ideology_republican
+			add_ideology = ideology_constitutionalist
+			
+		}
+	}
 }
+
+
+
+

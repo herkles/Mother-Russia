@@ -1,8 +1,10 @@
 ﻿### Russia character template file ###
 # This covers all new characters; country_rus covers pre-exisiting russian characters that vanilla has.
-
-### Generals
-
+###
+#####################################
+# Russian Characters
+#####################################
+# Generals
 RUS_christopher_stegeman = {# Christopher Osipovich Stegman
 	is_general = yes
 	first_name = Christopher
@@ -19,11 +21,9 @@ RUS_christopher_stegeman = {# Christopher Osipovich Stegman
 		plains_commander
 	}
 }
-
-
-
-
-
+#####################################
+# Alaskan Characters
+#####################################
 # Starting IG Leaders for Alaska
 ALK_arvid_adolf_etholen = {# Armed Forces
 	# Arvid Adolf Etholen, Finnish explorer and chief manager in the 1840s
@@ -132,7 +132,9 @@ ALK_jacob_netsvetov = {# Devout
 		inspirational_orator
 	}
 }
+#####################################
 # Polish Characters
+#####################################
 RUS_mikhail_gorchakov = {# Armed Forces
 	first_name = Mikhail
 	last_name = Gorchakov
@@ -150,9 +152,59 @@ RUS_mikhail_gorchakov = {# Armed Forces
 				
 	}
 }
-
-
-
-
-
-
+#####################################
+# Baltic Characters
+#####################################
+UBD_carl_magnus_von_der_pahlen = {# Armed Forces
+	first_name = Carl_Magnus
+	last_name = von_der_Pahlen
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	historical = yes
+	culture = cu:east_german
+	ruler = yes
+	is_general = yes
+	hq = region_baltic_states
+	commander_rank = commander_rank_3
+	birth_date = 1779.2.19
+	traits = {
+		traditionalist_commander
+		bigoted 
+		ambitious
+	}
+	on_created = {
+		set_variable = is_married
+	}
+}
+RUS_paul_von_tiesenhausen = {# Devout
+	# Paul von Tiesenhausen, priesident of the Evanglical Lutheran General Consistory
+	first_name = Paul
+	last_name = von_Tiesenhausen
+	historical = yes
+	culture = cu:east_german # Baltic Noble
+	birth_date = 1774.9.7
+	ig_leader = yes
+	interest_group = ig_devout
+	ideology = ideology_abolitionist # he helped to work towards the abolition of Serfdom in the Baltic governates
+	traits = {
+		meticulous
+		persistent
+		traditionalist_commander # served in the army
+	}
+}
+RUS_paul_friedrich_von_benckendorff = {# Landowners
+	# Paul Friedrich von Benckendorff Governor of Estonia till 1841
+	first_name = Paul_Friedrich
+	last_name = von_Benckendorff
+	historical = yes
+	culture = cu:east_german # Baltic German nobility
+	birth_date = 1786.12.7
+	ig_leader = yes
+	interest_group = ig_landowners
+	ideology = ideology:ideology_royalist
+	traits = {
+		charismatic
+		romantic
+		aesthete
+	}
+}

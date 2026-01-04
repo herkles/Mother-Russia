@@ -1,5 +1,5 @@
 ﻿##################################
-#	    Polish Amendments    	 #
+#	    Russian Amendments    	 #
 ##################################
 mat_rossiya_amendment_polish_martial_law = {
 	parent = law_autocracy

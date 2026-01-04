@@ -1,0 +1,15 @@
+﻿CHARACTERS = {
+	c:UBD ?= {
+		create_character = {
+			template = UBD_carl_magnus_von_der_pahlen
+		}
+		create_character = {
+			template = RUS_paul_friedrich_von_benckendorff
+		}
+		create_character = {
+			template = RUS_paul_von_tiesenhausen
+		}			
+		
+
+	}
+}

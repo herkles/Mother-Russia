@@ -1,0 +1,9 @@
+﻿# Injecting for compability
+INJECT:law_hereditary_bureaucrats = {
+	is_visible = {
+		NOT = { 
+			c:AUS ?= this # the United Baltic Duchy / Governates use landtag
+		}
+	}
+}
+
