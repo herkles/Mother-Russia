@@ -9,7 +9,7 @@
 	}
 
 	should_show_when_not_involved = {
-		mat_rossyia_caucasian_war_interloper_trigger = yes
+		always = no
 	}
 
 	immediate = {
