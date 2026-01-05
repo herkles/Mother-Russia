@@ -11,9 +11,9 @@ mat_rossiya_amendment_polish_martial_law = {
 	modifier = {
 		country_polish_cultural_acceptance_add = -20
 		state_radicals_from_political_movements_mult = 0.25
-		country_officers_pol_str_mult = 0.10
+		country_officers_pol_str_mult = 0.05
 		country_legitimacy_base_add = 50
-		interest_group_ig_armed_forces_pol_str_mult = 2
+		interest_group_ig_armed_forces_pol_str_mult = 1
 	}
 
 	possible = {

@@ -1,0 +1,127 @@
+﻿LOBBIES = {
+	# Russian Subjects
+	c:POL ?= {# Congress Poland
+		create_political_lobby = {# Poland hates being under Russian Control
+			type = lobby_anti_overlord
+			target = c:RUS
+			add_interest_group = ig:ig_rural_folk
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_intelligentsia
+			add_interest_group = ig:ig_petty_bourgeoisie
+		}
+		create_political_lobby = {# The Russian Armed forces in Poland are loyal to Russia
+			type = lobby_pro_overlord
+			target = c:RUS
+			add_interest_group = ig:ig_armed_forces
+		}
+	}
+	c:ALK ?= {# Russian - American Company
+		create_political_lobby = {# Those who involve in the company support Russia
+			type = lobby_pro_overlord
+			target = c:RUS
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_industrialists
+			add_interest_group = ig:ig_petty_bourgeoisie
+		}
+	}
+	c:UBD ?= {# The United Baltic Duchies
+		create_political_lobby = {# Those who involve in the company support Russia
+			type = lobby_pro_overlord
+			target = c:RUS
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_landowners
+		}
+	}	
+	c:FIN ?= {# Grand Duchy of Finland
+		create_political_lobby = {# The land 
+			type = lobby_pro_overlord
+			target = c:RUS
+			add_interest_group = ig:ig_landowners
+		}
+		create_political_lobby = {# The land 
+			type = lobby_pro_country
+			target = c:SWE
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_intelligentsia
+		}
+	}
+	# Caucasian polities
+
+	# Caucasian muslims are friendly with the Imamate
+	c:CIR ?= {
+		create_political_lobby = {
+			type = lobby_pro_country
+			target = c:CHC
+			add_interest_group = ig:ig_devout
+		}
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:RUS
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_rural_folk
+		}		
+	}
+	c:AZB_ELI ?= {
+		create_political_lobby = {
+			type = lobby_pro_country
+			target = c:CHC
+			add_interest_group = ig:ig_devout
+		}
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:RUS
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_rural_folk
+		}		
+	}
+	c:DAG_TAR ?= {
+		create_political_lobby = {
+			type = lobby_pro_country
+			target = c:CHC
+			add_interest_group = ig:ig_devout
+		}
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:RUS
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_rural_folk
+		}		
+	}
+	c:CHC = {
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:RUS
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_devout
+			add_interest_group = ig:ig_armed_forces
+			add_interest_group = ig:ig_rural_folk
+		}
+	}	
+	# Georgian Principalities landowners like Russia
+	c:GEO_MIN = {
+		create_political_lobby = {
+			type = lobby_pro_country
+			target = c:RUS
+			add_interest_group = ig:ig_landowners
+		}
+	}
+	c:GEO_SVA = {
+		create_political_lobby = {
+			type = lobby_pro_country
+			target = c:RUS
+			add_interest_group = ig:ig_landowners
+		}
+	}
+	c:ABK = {
+		create_political_lobby = {
+			type = lobby_pro_country
+			target = c:RUS
+			add_interest_group = ig:ig_landowners
+		}
+	}
+	# Kazakh Polities
+}

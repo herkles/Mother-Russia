@@ -22,3 +22,37 @@ KAZ_BUK_janger_khan = {# Jangir Keri Khan
 
 	}
 }
+
+### The Rebels
+KAZ_BUK_isatai_taimanuly = {
+	# 
+	first_name = Isatai
+	last_name = Taimanuly
+	historical = yes
+	culture = cu:kazak
+	birth_date = 1791.1.1 # Only Year is known
+	ig_leader = yes
+	interest_group = ig_rural_folk
+	ideology = ideology_land_reformer
+	traits = {
+		brave
+		inspirational_orator
+	}
+}
+KAZ_BUK_makhambet_otemisuly = {
+    first_name = Makhambet
+    last_name = Otemisuly
+    historical = yes
+    culture = cu:kazak
+    birth_date = 1804.1.1 # only year is known
+    is_agitator = yes
+    interest_group = ig_rural_folk
+    female = no
+    ideology = ideology_land_reformer
+    traits = {
+        literary
+		inspirational_orator     
+    }
+}
+
+

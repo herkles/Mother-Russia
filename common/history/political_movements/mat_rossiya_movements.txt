@@ -1,0 +1,27 @@
+﻿POLITICAL_MOVEMENTS = {
+	
+	# Polish movements
+	c:POL = {
+		create_political_movement = {# Polish cultural movement
+			type = movement_cultural_minority 
+			culture = cu:polish }
+		create_political_movement = {# Catholic movement
+			type = movement_religious_minority 
+			religion = rel:catholic 
+		}
+	}
+
+	# The brewing rebellions of 1837
+	c:KAZ_BUK ?= {
+		create_political_movement = { type = movement_land_reform }
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_land_reform
+			}
+			add_modifier = {
+				name = mat_rossiya_pastoral_fury
+				days = very_long_modifier_time
+			}
+		}
+	}
+}

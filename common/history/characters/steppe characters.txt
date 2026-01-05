@@ -3,5 +3,11 @@
 		create_character = {
 			template = KAZ_BUK_janger_khan
 		}
+		create_character = {
+			template = KAZ_BUK_makhambet_otemisuly
+		}		
+		create_character = {
+			template = KAZ_BUK_isatai_taimanuly
+		}
 	}
 }

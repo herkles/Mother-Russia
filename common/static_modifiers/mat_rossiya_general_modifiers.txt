@@ -1,4 +1,5 @@
-﻿modifier_russian_company_rule = {
+﻿
+modifier_russian_company_rule = {# Russian American Company
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	interest_group_ig_industrialists_pol_str_mult = 2
 	interest_group_ig_petty_bourgeoisie_pol_str_mult = -0.5
@@ -10,3 +11,10 @@
 	country_legitimacy_headofstate_add = 65
 	country_legitimacy_govt_size_add = 1
 }
+mat_rossiya_pastoral_fury = {# Peasant Fury at land rights in 
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_radicalism_add = 0.20
+	political_movement_pop_attraction_mult = 0.05
+}
+
+
