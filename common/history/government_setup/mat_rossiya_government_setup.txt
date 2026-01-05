@@ -76,7 +76,6 @@
 			add_ruling_interest_group = yes
 			remove_ideology = ideology_moralist
 			remove_ideology = ideology_patriarchal
-			remove_ideology = ideology_pious
 
 			add_ideology = mat_rossiya_ideology_mauridism
 			add_ideology = mat_rossiya_ideology_caucasian_sharia
@@ -88,11 +87,8 @@
 		ig:ig_intelligentsia = {# The Intelligentsia look to the Ottomans for how to modernize the region
 			remove_ideology = ideology_anti_clerical
 			remove_ideology = ideology_liberal
-			remove_ideology = ideology_anti_slavery
 			remove_ideology = ideology_republican
 
-			add_ideology = ideology_moralist
-			add_ideology = mat_rossiya_ideology_caucasian_sharia
 			add_ideology = mat_rossiya_ideology_imamate_shura
 			add_ideology = mat_rossiya_ideology_islamic_modernism
 

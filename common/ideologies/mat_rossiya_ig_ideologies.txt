@@ -78,28 +78,35 @@ mat_rossiya_ideology_mauridism = {# favoring religious teachers over a monarchy
 		law_elected_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
 	}
+	lawgroup_slavery = {
+		law_slavery_banned = strongly_approve
+		law_debt_slavery = strongly_disapprove
+		law_slave_trade = strongly_disapprove
+		law_colonial_slavery = disapprove
+		law_legacy_slavery = disapprove
+	}
 }
 mat_rossiya_ideology_caucasian_sharia = {# Ismail Shamil's religious teachings
 	icon = "gfx/interface/icons/ideology_icons/ibadi_imamate.dds"
-	
-	lawgroup_health_system = {
-		law_private_health_insurance = neutral
-		law_no_health_system = disapprove
-		law_charitable_health_system = approve
-		law_public_health_insurance = neutral
-	}
-	lawgroup_education_system = {
-		law_private_schools = neutral
-		law_public_schools = neutral
-		law_religious_schools = strongly_approve
-		law_no_schools = neutral
-	}
 	lawgroup_taxation = {# Ismail Shamil wanted the taxes to help the people, he stopped the taxes of the various khans and abolished them
 		law_consumption_based_taxation = neutral
 		law_land_based_taxation = approve
 		law_per_capita_based_taxation = disapprove
 		law_proportional_taxation = approve
 		law_graduated_taxation = approve
+	}
+	lawgroup_welfare = {# repersenting Zakat
+		law_poor_laws = approve
+		law_no_social_security = disapprove
+		law_wage_subsidies = neutral
+		law_old_age_pension = approve
+	}
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = disapprove
+		law_commercialized_agriculture = neutral
+		law_homesteading = approve
+		law_collectivized_agriculture = strongly_approve
 	}
 	lawgroup_rights_of_women = {
 		law_no_womens_rights = approve
@@ -141,40 +148,31 @@ mat_rossiya_ideology_islamic_modernism = {# Islamic Modernization for a western 
 		law_total_separation = strongly_disapprove
 		law_state_atheism = strongly_disapprove
 	}
-	lawgroup_slavery = {
-		law_slavery_banned = neutral
-		law_legacy_slavery = disapprove
-		law_colonial_slavery = disapprove
-		law_debt_slavery = strongly_disapprove
-		law_slave_trade = strongly_disapprove
+	lawgroup_taxation = {# Ismail Shamil wanted the taxes to help the people, he stopped the taxes of the various khans and abolished them
+		law_consumption_based_taxation = neutral
+		law_land_based_taxation = approve
+		law_per_capita_based_taxation = disapprove
+		law_proportional_taxation = approve
+		law_graduated_taxation = approve
+	}
+	lawgroup_welfare = {# repersenting Zakat
+		law_poor_laws = approve
+		law_no_social_security = disapprove
+		law_wage_subsidies = neutral
+		law_old_age_pension = approve
 	}
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
-		law_tenant_farmers = neutral
-		law_homesteading = neutral
-		law_collectivized_agriculture = neutral
+		law_tenant_farmers = disapprove
 		law_commercialized_agriculture = neutral
+		law_homesteading = approve
+		law_collectivized_agriculture = strongly_approve
 	}
-	lawgroup_trade_policy = {
-		law_protectionism = approve
-		law_isolationism = strongly_disapprove
-		law_mercantilism = disapprove
-		law_free_trade = neutral
-	}
-	lawgroup_childrens_rights = {
-		law_child_labor_allowed = disapprove
-		law_restricted_child_labor = neutral
-		law_compulsory_primary_school = approve
-	}
-	lawgroup_economic_system = {
-		law_extraction_economy = strongly_disapprove
-		law_cooperative_ownership = disapprove
-		law_command_economy = neutral
-		law_interventionism = approve
-		law_agrarianism = disapprove
-		law_traditionalism = strongly_disapprove
-		law_laissez_faire = neutral
-		law_industry_banned = strongly_disapprove
+	lawgroup_rights_of_women = {
+		law_no_womens_rights = neutral
+		law_women_own_property = approve # 
+		law_women_in_the_workplace = disapprove
+		law_womens_suffrage = strongly_disapprove
 	}
 }
 mat_rossiya_ideology_imamate_shura = {# Shura for the Caucasian polities
