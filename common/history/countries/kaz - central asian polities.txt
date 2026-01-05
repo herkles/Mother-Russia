@@ -1,19 +1,17 @@
 ﻿COUNTRIES = {
 	c:KAZ_BUK ?= {# Bukey Horde
-		effect_starting_technology_tier_3_tech = yes
-		set_state_religion = rel:sunni # they were a sunni polity
+		effect_starting_technology_tier_4_tech = yes
 
 		# Laws 
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_autocracy
-		activate_law = law_type:law_serfdom
+		activate_law = law_type:mat_rossiya_law_forced_seditization
 		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_hereditary_bureaucrats
 		activate_law = law_type:law_state_religion
 		activate_law = law_type:law_subjecthood
 		activate_law = law_type:law_traditionalism
-		activate_law = law_type:law_peasant_levies
-		activate_law = law_type:law_censorship
-		
+		activate_law = law_type:law_peasant_levies	
+		activate_law = law_type:law_right_of_assembly	
 	}
 }

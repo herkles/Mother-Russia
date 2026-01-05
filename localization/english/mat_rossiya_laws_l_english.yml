@@ -1,3 +1,9 @@
 ﻿l_english:
   mat_rossiya_law_baltic_landtag: "Baltic Landtag"
   mat_rossiya_law_baltic_landtag_desc: "Local governance is carried out by traditional assemblies elected from the ranks of the regional nobility."
+
+  mat_rossiya_law_forced_seditization: "Forced Sedentarization"
+  mat_rossiya_law_forced_seditization_desc: "The semi-nomadic way of life is not compatible with modern life. We are forcing them to settle down and integrate into sedentary life by any means including through force and violence."
+
+  mat_rossiya_law_steppe_pastoralism: "Steppe Pastoralism"
+  mat_rossiya_law_steppe_pastoralism_desc: "For as long as time has existed the people of the steppe have engaged in semi-nomadic pastoralism, free to travel the steppe with their families and herds."

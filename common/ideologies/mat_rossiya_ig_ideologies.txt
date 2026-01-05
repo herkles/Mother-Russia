@@ -69,7 +69,7 @@ mat_rossiya_ideology_mauridism = {# favoring religious teachers over a monarchy
 	}
 	lawgroup_church_and_state = {
 		law_state_religion = strongly_approve
-		law_freedom_of_conscience = neutral
+		law_freedom_of_conscience = disapprove
 		law_total_separation = strongly_disapprove
 		law_state_atheism = strongly_disapprove
 	}
@@ -137,7 +137,7 @@ mat_rossiya_ideology_islamic_modernism = {# Islamic Modernization for a western 
 	icon = "gfx/interface/icons/ideology_icons/islamic_modernism.dds"
 	lawgroup_church_and_state = {
 		law_state_religion = strongly_approve
-		law_freedom_of_conscience = approve
+		law_freedom_of_conscience = neutral
 		law_total_separation = strongly_disapprove
 		law_state_atheism = strongly_disapprove
 	}
@@ -314,3 +314,74 @@ mat_rossiya_ideology_catholic_moralism = {# Catholic Moralism in Congress Poland
 		law_elected_bureaucrats = disapprove
 	}
 }
+##################################
+#	   Kazakh Ideologies    	 #
+##################################
+mat_rossiya_ideology_steppe_freedom = {# varient of isolationist for the steppe; they don't want migration controls
+	icon = "gfx/interface/icons/ideology_icons/papal_moralist.dds"
+	lawgroup_colonization = {
+		law_frontier_colonization = strongly_approve
+		law_no_colonial_affairs = approve
+		law_colonial_resettlement = disapprove
+		law_colonial_exploitation = disapprove
+	}
+
+	lawgroup_migration = {
+		law_closed_borders = strongly_disapprove
+		law_migration_controls = disapprove
+		law_no_migration_controls = strongly_approve
+	}
+
+	lawgroup_trade_policy = {
+		law_isolationism = approve
+		law_protectionism = approve
+		law_mercantilism = neutral
+		law_free_trade = neutral
+	}
+
+	lawgroup_citizenship = {
+		law_ethnostate = disapprove
+		law_national_supremacy = neutral
+		law_subjecthood = approve
+		law_racial_segregation = approve
+		law_cultural_exclusion = approve
+		law_multicultural = strongly_disapprove
+	}
+
+
+}
+mat_rossiya_ideology_steppe_pastoralism = {# Steppe Pastoralism
+	icon = "gfx/interface/icons/ideology_icons/papal_moralist.dds"
+
+		lawgroup_economic_system = {
+		law_agrarianism = approve
+		law_industry_banned = approve
+		law_traditionalism = strongly_approve
+		law_interventionism = neutral
+		law_cooperative_ownership = disapprove
+		law_laissez_faire = strongly_disapprove
+		law_command_economy = strongly_disapprove
+		law_extraction_economy = strongly_disapprove
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = strongly_disapprove
+		law_commercialized_agriculture = disapprove
+		law_collectivized_agriculture = approve
+		law_homesteading = strongly_approve
+	}
+
+	lawgroup_taxation = {
+		law_consumption_based_taxation = approve
+		law_per_capita_based_taxation = neutral
+		law_proportional_taxation = neutral
+		law_graduated_taxation = neutral
+		law_land_based_taxation = disapprove
+	}
+
+
+}
+
+
+

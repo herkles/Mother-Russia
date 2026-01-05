@@ -165,15 +165,11 @@
 		}
 	}
 	c:KAZ_BUK = {# For Bukey Horde
-
 		ig:ig_armed_forces = {
-			
+
 		}
 		ig:ig_devout = {
 
-		}
-		ig:ig_industrialists = {
-			
 		}
 		ig:ig_intelligentsia = {
 			remove_ideology = ideology_anti_clerical
@@ -184,15 +180,17 @@
 			add_ideology = ideology_constitutionalist
 		}
 		ig:ig_landowners = {
-		}
-		ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
 
 		}
 		ig:ig_rural_folk = {
-
+			remove_ruling_interest_group = yes
+			remove_ideology = ideology_isolationist
+			remove_ideology = ideology_agrarian
+			
+			add_ideology = mat_rossiya_ideology_steppe_freedom
+			add_ideology = mat_rossiya_ideology_steppe_pastoralism
 		}
-
-
 	}	
 	c:POL = {# For Congress Poland
 		ig:ig_armed_forces = {
@@ -215,6 +213,7 @@
 		ig:ig_landowners = {
 			remove_ruling_interest_group = yes
 			remove_ideology = ideology_paternalistic
+			remove_ideology = ideology_magnatial 
 			add_ideology = mat_rossiya_ideology_commonwealth_nostologia
 		}
 		ig:ig_petty_bourgeoisie = {
@@ -228,6 +227,7 @@
 	c:UBD = {# For Baltic Governates
 		ig:ig_intelligentsia = {
 			remove_ideology = ideology_republican
+			remove_ideology = ideology_anti_clerical
 			add_ideology = ideology_constitutionalist
 			
 		}

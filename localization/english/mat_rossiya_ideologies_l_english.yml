@@ -35,13 +35,18 @@
 
   # Polish Ideologies
     mat_rossiya_ideology_commonwealth_nostologia: "Commonwealth Nostologia"
-    mat_rossiya_ideology_commonwealth_nostologia_desc: "#lore The Imamate is led by a sufi imam of the Naqshbandi order and governance is to be subordinate to the imam as their religious teacher and political leader. #!"
+    mat_rossiya_ideology_commonwealth_nostologia_desc: "#lore This group looks back to the days of the Commonwealth of Poland Lithuania, where the szlachta ruled their crowned republic and all the rights and freedoms that they had back then and seek to restore their ancient rights. #!"
 
     mat_rossiya_ideology_catholic_moralism: "Catholic Moralism (Russian)"
-    mat_rossiya_ideology_catholic_moralism_desc: "#lore The Imamate is led by a sufi imam of the Naqshbandi order and governance is to be subordinate to the imam as their religious teacher and political leader. #!"
+    mat_rossiya_ideology_catholic_moralism_desc: "#lore Facing russification in Poland, the Catholic church in Poland seeks to ensure that its rights and privileges are protected and that the imposition of Russian Orthodoxy is curtailed as much as possible.  #!"
+  
+  # Kazakh Ideologies
+    mat_rossiya_ideology_steppe_pastoralism: "Steppe Pastoralism"
+    mat_rossiya_ideology_steppe_pastoralism_desc: "#lore This group strongly believes in the semi-nomadic pastoral nomadicism that has long dominated the steppe, and seeks to preserve their rights and freedoms. #!"
 
 
-
+    mat_rossiya_ideology_steppe_freedom: "Steppe Freedom"
+    mat_rossiya_ideology_steppe_freedom_desc: "#lore This group believes that it has a right to travel where they see fit along the great eurasian steppe and resent control by governments in limiting where they can travel. #!"
 
 
 
