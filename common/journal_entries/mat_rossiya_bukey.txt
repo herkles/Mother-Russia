@@ -1,0 +1,77 @@
+﻿je_mat_rossiya_bukey_modernization = {
+	group = je_group_historical_content
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+	weight = 2000
+	
+	should_be_pinned_by_default = yes
+	can_revolution_inherit = yes
+	transferable = no
+
+	is_shown_in_lobby = {
+		c:KAZ_BUK ?= this
+	}
+	
+	scripted_button = mat_rossiya_visit_russia_button
+
+	immediate = {
+
+	}
+	
+	modifiers_while_active = {
+		modifier_mat_rossiya_tribal_administration
+	}
+
+	complete = {
+		OR = {
+			is_country_type = recognized
+			AND = {
+				NOR = {
+					has_law_or_variant = law_type:law_hereditary_bureaucrats
+					has_law_or_variant = law_type:law_consumption_based_taxation
+					has_law_or_variant = law_type:law_land_based_taxation
+				}
+				any_scope_building = {# need to have a university
+					is_building_type = building_university
+					NOR = {
+						has_active_production_method = pm_simple_organization
+						has_active_production_method = pm_religious_bureaucrats
+					}
+					occupancy > 0.9
+					level >= 5
+				}
+				any_scope_building = {
+					is_building_type = building_government_administration
+					NOR = {
+						has_active_production_method = pm_simple_organization
+						has_active_production_method = pm_religious_bureaucrats
+					}
+					occupancy >= 0.9
+				}
+				bureaucracy >= 0
+				approaching_bureaucracy_shortage = no
+			}
+		}
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = mat_rossiya_kazakh.004 # The Reforms suceed
+		}
+		set_variable = mat_rossiya_buk_modernization_completed
+	}
+
+	timeout = 10950 # 30 years
+
+	on_timeout = {
+		trigger_event = {
+			id = mat_rossiya_kazakh.003 # A Stagnant State
+		}
+		set_variable = mat_rossiya_buk_modernization_completed
+	}
+
+	invalid = {
+		has_variable = mat_rossiya_buk_modernization_completed
+	}
+}
+
+

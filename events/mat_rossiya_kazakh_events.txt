@@ -1,0 +1,160 @@
+﻿#########################################
+#										#	
+#	      	Kazakh Events			    #
+#										#
+#########################################
+
+namespace = mat_rossiya_kazakh
+
+###############################################
+# 	 The Modernization of the Bukey Horde    ##
+###############################################
+mat_rossiya_kazakh.001 = {# The Ambitions of the Khan
+	type = country_event
+	placement = root
+
+	title = mat_rossiya_kazakh.001.t
+	desc = mat_rossiya_kazakh.001.d
+	flavor = mat_rossiya_kazakh.001.f
+
+	event_image = {
+		video = "middleeast_engineer_blueprint"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_horse.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	trigger = {
+		# triggered from GLOBAL
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mat_rossiya_kazakh.001.a
+		default_option = yes
+		show_as_tooltip = {
+			add_modifier = {
+				name = modifier_mat_rossiya_tribal_administration
+			}
+		}
+	}
+
+}
+mat_rossiya_kazakh.002 = {# A Stately Reception
+	type = country_event
+	placement = scope:france_scope
+
+	title = mat_rossiya_kazakh.002.t
+	desc = mat_rossiya_kazakh.002.d
+	flavor = mat_rossiya_kazakh.002.f
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	
+
+	trigger = {
+		# triggered by turkfm_visit_france_button
+	}
+
+	immediate = {
+		c:RUS = {
+			save_scope_as = russia_scope
+		}
+	}
+
+	option = {
+		name = mat_rossiya_kazakh.002.a
+		default_option = yes
+		add_modifier = {
+			name = modifier_mat_rossiya_western_inspirations
+			months = mat_rossiya_duration_10_years
+		}
+	}
+
+}
+mat_rossiya_kazakh.003 = {# A Stagnant State
+	type = country_event
+	placement = root
+
+	title = mat_rossiya_kazakh.003.t
+	desc = mat_rossiya_kazakh.003.d
+	flavor = mat_rossiya_kazakh.003.f
+
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	
+
+	trigger = {
+		# triggered by je_turkfm_tun_modernization
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mat_rossiya_kazakh.003.a
+		default_option = yes
+		add_modifier = {
+			name = modifier_mat_rossiya_buk_failed_reforms
+			months = mat_rossiya_duration_10_years
+			is_decaying = yes
+		}
+		add_radicals = {
+			value = medium_radicals
+		}
+	}
+
+}
+mat_rossiya_kazakh.004 = {# The Kazakh Fundamental Pact
+	type = country_event
+	placement = root
+
+	title = mat_rossiya_kazakh.004.t
+	desc = mat_rossiya_kazakh.004.d
+	flavor = mat_rossiya_kazakh.004.f
+
+	event_image = {
+		video = "ep1_central_asian_city"
+	}
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+
+	trigger = {
+		# triggered by je_turkfm_tun_modernization
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mat_rossiya_kazakh.004.a
+		default_option = yes
+		add_modifier = {
+			name = modifier_mat_rossiya_modernized_state
+			months = 120
+		}
+	}
+
+}

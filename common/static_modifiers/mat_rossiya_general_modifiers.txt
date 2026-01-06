@@ -17,4 +17,40 @@ mat_rossiya_pastoral_fury = {# Peasant Fury at land rights in
 	political_movement_pop_attraction_mult = 0.05
 }
 
+###############################################
+# Kazakh Modifiers    
+###############################################
+modifier_mat_rossiya_tribal_administration = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_authority_mult = -0.10
+	country_influence_mult = -0.10
+	country_institution_size_change_speed_mult = -0.25
+	country_bureaucracy_investment_cost_factor_mult = 0.10
+}
+modifier_mat_rossiya_western_inspirations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_spread_mult = 0.10
+	country_weekly_innovation_mult = 0.05
+}
+modifier_mat_rossiya_buk_failed_reforms = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_prestige_mult = -0.05
+	country_authority_mult = -0.10
+	country_influence_mult = -0.10
+}
+modifier_mat_rossiya_modernized_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.10
+	country_influence_mult = 0.25
+	country_institution_size_change_speed_mult = 0.25
+}
+
+
+
+
+
+
+
+
+
 

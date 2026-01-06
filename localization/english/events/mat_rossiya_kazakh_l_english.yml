@@ -1,0 +1,24 @@
+﻿l_english:
+  # Modernization of the Bukey Horde
+    mat_rossiya_kazakh.001.t: "An Ambitious Khan"
+    mat_rossiya_kazakh.001.d: "Jangir Khan has embarked on a grand set of modernizations for the Bukey Horde. He seeks to imitate the Russian state in his grand ambitions. From trying to create Saint Petersburg on the steppe to Autocracy and forcing the peasants from a nomadic way of life to a sedentary way of life.  Through modernization, the Bukey Horde shall emerge as the strongest of the Kazakh Hordes."
+    mat_rossiya_kazakh.001.f: "While inexperienced, the young Khan has been gripped by the development of the West and is filled with an ambition to realize the modernization of the Khanate. Armed with a western education, he has been quick to declare the beginning of a era of reform."
+    mat_rossiya_kazakh.001.a: "[ROOT.GetCountry.GetName] will find its way."
+
+    mat_rossiya_kazakh.002.t: "A Stately Reception"
+    mat_rossiya_kazakh.002.d: "Following days of pomp and circumstance, the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]'s visit to the [SCOPE.sCountry('russia_scope').GetName] has been a resounding success. Carefully attended to by his hosts in [SCOPE.sCountry('russia_scope').GetCapital.GetCityHubName], [ROOT.GetCountry.GetRuler.GetFirstName] has returned to [ROOT.GetCountry.GetName] with a sense of deep awe and respect for the development of the west and plans to bring the enlightenment to the [ROOT.GetCountry.GetAdjectiveNoFormatting] people."
+    mat_rossiya_kazakh.002.f: "The [SCOPE.sCountry('russia_scope').GetAdjectiveNoFormatting] [SCOPE.sCountry('russia_scope').GetRuler.GetPrimaryRoleTitle] has greeted the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] with honors befitting a sovereign nation. "
+    mat_rossiya_kazakh.002.a: "The Emperor graced us when we arrived"
+
+    mat_rossiya_kazakh.003.t: "A Stagnant State"
+    mat_rossiya_kazakh.003.d: "Despite attempts at reform and modernization, it is clear that [ROOT.GetCountry.GetName] will be unable to achieve its lofty ambitions to equal the might of the West."
+    mat_rossiya_kazakh.003.f: "Despite the failure of attempts at rapid reform, many in court cling to the ideals of reform."
+    mat_rossiya_kazakh.003.a: "Is [ROOT.GetCountry.GetNameNoFormatting] doomed to stagnation?"
+    mat_rossiya_kazakh.003.b: "We will not give up our aspirations."
+
+    mat_rossiya_kazakh.004.t: "Jangir Khan Ascendant"
+    mat_rossiya_kazakh.004.d: "Jangir Khan has succeeded in his ambitions, a combination of luck, arrogance, and ambition has ensured his control over the Horde. This control has allowed him to bring his ambition of transforming the horde, for today it is no longer a backwards state."
+    mat_rossiya_kazakh.004.f: "Now the khan is the undisputed master of the Horde, he gazes out from his palace towards the east, to the other Kazakh Khanates."
+    mat_rossiya_kazakh.004.a: "This is a wonderful day for [ROOT.GetCountry.GetName]!"
+
+

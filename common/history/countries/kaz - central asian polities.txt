@@ -13,5 +13,15 @@
 		activate_law = law_type:law_traditionalism
 		activate_law = law_type:law_peasant_levies	
 		activate_law = law_type:law_right_of_assembly	
+		
+		add_journal_entry = {
+			type = je_mat_rossiya_bukey_modernization
+		}
+		trigger_event = {
+			id = mat_rossiya_kazakh.001 # The ambitious Khan
+		}
+
+
+
 	}
 }

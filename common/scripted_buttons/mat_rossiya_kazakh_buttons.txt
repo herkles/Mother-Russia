@@ -1,0 +1,45 @@
+﻿mat_rossiya_visit_russia_button = {
+	name = "mat_rossiya_visit_russia_button"
+	desc = "mat_rossiya_visit_russia_button_desc"
+
+	visible = {
+		NOT = {
+			has_variable = mat_rossiya_visited_russia
+		}
+		ruler = {
+			has_template = KAZ_BUK_janger_khan
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = mat_rossiya_jangir_dead_tt
+			ruler = {
+				NOT = {
+					has_template = KAZ_BUK_janger_khan
+				}
+			}
+		}
+		c:RUS ?= {
+			relations:root >= relations_threshold:amicable
+		}
+	}
+
+	effect = {
+		trigger_event = {
+			id = mat_rossiya_kazakh.002 # A Stately Reception
+			days = 30
+		}
+		show_as_tooltip = {
+			create_incident = {
+				country = c:RUS
+				value = 10
+			}
+		}
+		set_variable = mat_rossiya_visited_russia
+	}
+
+	ai_chance = {
+		value = 100
+	}
+}

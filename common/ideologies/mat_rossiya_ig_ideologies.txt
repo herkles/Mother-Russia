@@ -244,7 +244,7 @@ mat_rossiya_ideology_khazbism = {# Circassian Confederationism support
 	}
 }
 ##################################
-#	   Russian Ideologies    	 #
+#	   Polish Ideologies    	 #
 ##################################
 mat_rossiya_ideology_commonwealth_nostologia = {# A nationalistic Nostolgia for the Commonwealth - this is for the elites
 	icon = "gfx/interface/icons/ideology_icons/commonwealth_nostologia.dds"
@@ -316,7 +316,7 @@ mat_rossiya_ideology_catholic_moralism = {# Catholic Moralism in Congress Poland
 #	   Kazakh Ideologies    	 #
 ##################################
 mat_rossiya_ideology_steppe_freedom = {# varient of isolationist for the steppe; they don't want migration controls
-	icon = "gfx/interface/icons/ideology_icons/papal_moralist.dds"
+	icon = "gfx/interface/icons/ideology_icons/frontier_expansionist.dds"
 	lawgroup_colonization = {
 		law_frontier_colonization = strongly_approve
 		law_no_colonial_affairs = approve
@@ -349,7 +349,7 @@ mat_rossiya_ideology_steppe_freedom = {# varient of isolationist for the steppe;
 
 }
 mat_rossiya_ideology_steppe_pastoralism = {# Steppe Pastoralism
-	icon = "gfx/interface/icons/ideology_icons/papal_moralist.dds"
+	icon = "gfx/interface/icons/ideology_icons/land_reformer.dds"
 
 		lawgroup_economic_system = {
 		law_agrarianism = approve

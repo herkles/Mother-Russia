@@ -1,0 +1,24 @@
+﻿l_english:
+   # Journal Entries
+      je_mat_rossiya_bukey_modernization: "Jangir's Reforms"
+      je_mat_rossiya_bukey_modernization_reason: "The Khan has set out a grand and ambitious plan to modernize the Bukey horde in the model of the Russian Empire. To that pastoral nomadicism has to go with sedentary people taking its place. The khan should be an absolute autocrat like the emperor of Russia is. Further Jangir has declared that education particularly in disease and poetry are to be studied and learned from."
+   
+   # Modifiers
+      modifier_mat_rossiya_tribal_administration: "Tribal Administration"
+      modifier_mat_rossiya_western_inspirations: "Western Inspirations"
+      modifier_mat_rossiya_buk_failed_reforms: "Failed Reforms"
+      modifier_mat_rossiya_modernized_state: "Modernized State"
+
+   # Buttons
+      mat_rossiya_visit_russia_button: "Schedule Trip to Russia"
+      mat_rossiya_visit_russia_button_desc: "The Russian Empire has turned its gaze to the Steppe and its cities. This ascendency has raised some eyebrows in the [ROOT.GetCountry.GetAdjectiveNoFormatting] court. The Khan has been granted an offer to visit Russia and pay homage to the Emperor, and while there to visit the great universities of the Empire."
+
+   # Tooltips
+      mat_rossiya_jangir_dead_tt: "#yellow Jangir-Kerei Khan#! has died"
+
+
+
+
+
+
+
