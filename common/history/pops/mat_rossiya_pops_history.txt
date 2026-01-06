@@ -59,7 +59,7 @@
 		}
 	}
 	# Dagestan - Tarki
-	s:STATE_DAGESTAN = {
+	s:STATE_DAGESTAN = {# Dagestan
 		region_state:DAG_TAR = {# Dagestan - Tarki
 			create_pop = {# Avar
 				culture = avar
@@ -95,7 +95,6 @@
 			}
 		}
 	}
-	# Stavropol
 	s:STATE_STAVROPOL = {# Stavropol
 		region_state:RUS = {
 			create_pop = {# Avar
@@ -124,32 +123,40 @@
 			create_pop = {# Avar
 				culture = avar
 				size = 1374
-			}					
+			}
+			create_pop = {# Ossetian
+				culture = osetian
+				size = 88265
+			}
+			create_pop = {# Chchen
+				culture = chechen
+				size = 22568
+			}								
 		}
-		region_state:CIR = {# North Caucasus - Imamate
+		region_state:CHC = {# North Caucasus - Imamate
 			create_pop = {# Ingush
 				culture = ingush
 				size = 88265
 			}
+			create_pop = {# Chchen
+				culture = chechen
+				size = 67705
+			}			
 			create_pop = {# Kumyk
 				culture = kumyk
 				size = 4279
 			}
-			create_pop = {# Abkhazian
-				culture = abkhazian
-				size = 10370
-				religion = orthodox
-			}			
 		}
 		region_state:CIR = {# North Caucasus - Circassian
 			create_pop = {# Karachay
 				culture = karachay
 				size = 26867
 			}
-			create_pop = {# Ossetian
-				culture = osetian
-				size = 88265
-			}			
+			create_pop = {# Abkhazian
+				culture = abkhazian
+				size = 10370
+				religion = orthodox
+			}
 		}		
 	}
 	# Baku
@@ -178,31 +185,44 @@
 				size = 67517
 			}	
 		}
+		region_state:ABK = {# Principality of Abkhazia
+			create_pop = {# Abkhazian
+				culture = abkhazian
+				size = 31897
+				religion = orthodox
+			}	
+		}			
 	}
 	
 	### Moving Pops ###
-	s:STATE_GREATER_CAUCASUS = {# Moving Georgian pops into the Principality
+	s:STATE_GREATER_CAUCASUS = {# Moving non-Georgian pops into the Principalities
 		region_state:RUS = {
 			every_scope_pop = {
 				limit = {
-					has_pop_culture = georgian
+					NOR = { 
+						has_pop_culture = georgian 
+						has_pop_culture = abkhazian 
+					}
 				}
 				move_partial_pop = {
 					state = s:STATE_GREATER_CAUCASUS.region_state:GEO_MIN
-					population_ratio = 0.13
+					population_ratio = 0.01
 				}
 			}
 			every_scope_pop = {
 				limit = {
-					has_pop_culture = georgian
+					NOR = { 
+						has_pop_culture = georgian 
+						has_pop_culture = abkhazian 
+					}
 				}
 				move_partial_pop = {
-					state = s:STATE_GREATER_CAUCASUS.region_state:GEO_SVA
-					population_ratio = 0.05
+					state = s:STATE_GREATER_CAUCASUS.region_state:ABK
+					population_ratio = 0.01
 				}
-			}							
+			}										
 		}
-	}
+	}	
 	s:STATE_ELIZAVETPOL.region_state:RUS = {# Moving pops into Elisu
 		every_scope_pop = {
 			limit = { has_pop_culture = azerbaijani }
@@ -254,19 +274,18 @@
 			}
 			move_partial_pop = {
 				state = s:STATE_GREATER_CAUCASUS.region_state:GEO_MIN
-				population_ratio = 0.13
+				population_ratio = 0.25
 			}
 		}
-		every_scope_pop = {
+		every_scope_pop = {# Non - Abkhazian Pops
 			limit = {
-				AND = {
-					has_pop_culture = abkhazian
-					has_pop_religion = orthodox
+				NOT = {
+					has_pop_culture = georgian
 				}
 			}
 			move_partial_pop = {
 				state = s:STATE_GREATER_CAUCASUS.region_state:GEO_MIN
-				population_ratio = 0.6
+				population_ratio = 0.01
 			}
 		}
 	}	
@@ -280,6 +299,17 @@
 				population_ratio = 0.05
 			}
 		}
+		every_scope_pop = {# Non - Abkhazian Pops
+			limit = {
+				NOT = {
+					has_pop_culture = georgian
+				}
+			}
+			move_partial_pop = {
+				state = s:STATE_GREATER_CAUCASUS.region_state:GEO_SVA
+				population_ratio = 0.01
+			}
+		}		
 	}
 	s:STATE_GREATER_CAUCASUS.region_state:RUS = {# Moving Pops into Abkhazia
 		every_scope_pop = {# Abkhazian Pops
@@ -291,14 +321,13 @@
 			}
 			move_partial_pop = {
 				state = s:STATE_GREATER_CAUCASUS.region_state:ABK
-				population_ratio = 0.6
+				population_ratio = 0.8
 			}
 		}
 		every_scope_pop = {# Non - Abkhazian Pops
 			limit = {
 				NOT = {
 					has_pop_culture = abkhazian
-					has_pop_religion = orthodox
 				}
 			}
 			move_partial_pop = {

@@ -7,7 +7,10 @@ STATES = {
 	s:STATE_GREATER_CAUCASUS = {# Georgia Principalities
 		create_state = {# Principality of Abkhazia
 			country = c:ABK
-			owned_provinces = { x73A639 }
+			owned_provinces = { 
+				x73A639 
+				x40D001
+			}
 		}
 		create_state = {# Principality of Svantai
 			country = c:GEO_SVA
@@ -15,10 +18,13 @@ STATES = {
 		}
 		create_state = {# Principality of Mingalia
 			country = c:GEO_MIN
-			owned_provinces = { x40D001 }
+			owned_provinces = { 
+				x011141
+				xC9B445
+				xD65AC8 
+			}
 		}				
 		add_homeland = cu:abkhazian
-		# add_homeland = cu:armenian
 	}
 	s:STATE_ELIZAVETPOL = {
 		create_state = {# Sultanate of Elisu
@@ -30,9 +36,22 @@ STATES = {
 		create_state = {# Shamkhalate of Tarki
 			country = c:DAG_TAR
 			owned_provinces = { x72A1AB xDA5ABE x9F1D8F xBD38C5 }
-		}			
+		}
+		add_homeland = cu:nogai		
+		add_homeland = cu:avar		
+		add_homeland = cu:dargin		
+		add_homeland = cu:kumyk		
+		remove_homeland = cu:north_caucasian			
 	}
-
+	s:STATE_NORTH_CAUCASUS = {
+		add_homeland = cu:osetian		
+		add_homeland = cu:karachay		
+		add_homeland = cu:ingush		
+		remove_homeland = cu:north_caucasian			
+	}
+	s:STATE_STAVROPOL = {
+		add_homeland = cu:nogai		
+	}
 	# Central Asian States #
 	
 	s:STATE_URALSK = {

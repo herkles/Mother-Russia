@@ -2,7 +2,7 @@
 # Caucauses Cultures
 ###################################
 abkhazian = {# Abkhazian
-	color = { 219 200 74 }
+	color = { 223 255 0 }
 	religion = orthodox
 	heritage = heritage_north_caucasian
 	language = language_abkhaz
