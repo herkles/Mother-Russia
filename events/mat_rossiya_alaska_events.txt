@@ -4,7 +4,7 @@
 #       Events for Russian Alaska		#
 #########################################
 
-namespace = mat_rossyia_alaska
+namespace = mat_rossiya_alaska
 
 #########################################
 #	       Starting Events 				#

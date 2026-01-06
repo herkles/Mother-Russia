@@ -4,18 +4,18 @@
 #										#
 #########################################
 
-namespace = mat_rossyia_caucasian_war
+namespace = mat_rossiya_caucasian_war
 
 #########################################
 #	       Starting Events 				#
 #########################################
-mat_rossyia_caucasian_war.001 = {# Conquering the Caucasus
+mat_rossiya_caucasian_war.001 = {# Conquering the Caucasus
 	type = country_event
 	placement = root
 
-	title = mat_rossyia_caucasian_war.001.t
-	desc = mat_rossyia_caucasian_war.001.d
-	flavor = mat_rossyia_caucasian_war.001.f
+	title = mat_rossiya_caucasian_war.001.t
+	desc = mat_rossiya_caucasian_war.001.d
+	flavor = mat_rossiya_caucasian_war.001.f
 
 	gui_window = event_window_widescreen_newspaper
 
@@ -39,17 +39,17 @@ mat_rossyia_caucasian_war.001 = {# Conquering the Caucasus
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.001.a
+		name = mat_rossiya_caucasian_war.001.a
 		default_option = yes
 	}
 }
-mat_rossyia_caucasian_war.002 = {# The Russian Invansion
+mat_rossiya_caucasian_war.002 = {# The Russian Invansion
 	type = country_event
 	placement = root
 
-	title = mat_rossyia_caucasian_war.002.t
-	desc = mat_rossyia_caucasian_war.002.d
-	flavor = mat_rossyia_caucasian_war.002.f
+	title = mat_rossiya_caucasian_war.002.t
+	desc = mat_rossiya_caucasian_war.002.d
+	flavor = mat_rossiya_caucasian_war.002.f
 
 	gui_window = event_window_widescreen_newspaper
 
@@ -73,17 +73,17 @@ mat_rossyia_caucasian_war.002 = {# The Russian Invansion
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.002.a
+		name = mat_rossiya_caucasian_war.002.a
 		default_option = yes
 	}
 }
-mat_rossyia_caucasian_war.003 = {# The Imamate defense
+mat_rossiya_caucasian_war.003 = {# The Imamate defense
 	type = country_event
 	placement = root
 
-	title = mat_rossyia_caucasian_war.003.t
-	desc = mat_rossyia_caucasian_war.003.d
-	flavor = mat_rossyia_caucasian_war.003.f
+	title = mat_rossiya_caucasian_war.003.t
+	desc = mat_rossiya_caucasian_war.003.d
+	flavor = mat_rossiya_caucasian_war.003.f
 
 	gui_window = event_window_widescreen_newspaper
 
@@ -107,17 +107,17 @@ mat_rossyia_caucasian_war.003 = {# The Imamate defense
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.003.a
+		name = mat_rossiya_caucasian_war.003.a
 		default_option = yes
 	}
 }
-mat_rossyia_caucasian_war.004 = {# The Caucasian Conflict
+mat_rossiya_caucasian_war.004 = {# The Caucasian Conflict
 	type = country_event
 	placement = root
 
-	title = mat_rossyia_caucasian_war.004.t
-	desc = mat_rossyia_caucasian_war.004.d
-	flavor = mat_rossyia_caucasian_war.004.f
+	title = mat_rossiya_caucasian_war.004.t
+	desc = mat_rossiya_caucasian_war.004.d
+	flavor = mat_rossiya_caucasian_war.004.f
 
 	gui_window = event_window_widescreen_newspaper
 
@@ -141,20 +141,20 @@ mat_rossyia_caucasian_war.004 = {# The Caucasian Conflict
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.004.a
+		name = mat_rossiya_caucasian_war.004.a
 		default_option = yes
 	}
 }
 #########################################
 #	       Ending Events 				#
 #########################################
-mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
+mat_rossiya_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 	type = country_event
 	placement = root
 
-	title = mat_rossyia_caucasian_war.010.t
-	desc = mat_rossyia_caucasian_war.010.d
-	flavor = mat_rossyia_caucasian_war.010.f
+	title = mat_rossiya_caucasian_war.010.t
+	desc = mat_rossiya_caucasian_war.010.d
+	flavor = mat_rossiya_caucasian_war.010.f
 
 	gui_window = event_window_widescreen_newspaper
 
@@ -175,7 +175,7 @@ mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.010.a
+		name = mat_rossiya_caucasian_war.010.a
 		default_option = yes
 	}
 
@@ -191,7 +191,7 @@ mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 						}
 					}
 				}
-				c:ABK ?= { trigger_event = { id = mat_rossyia_caucasian_war.014 } }
+				c:ABK ?= { trigger_event = { id = mat_rossiya_caucasian_war.014 } }
 			}
 			else_if = {
 				annex = c:ABK
@@ -206,7 +206,7 @@ mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 						}
 					}
 				}
-				c:GEO_MIN ?= { trigger_event = { id = mat_rossyia_caucasian_war.014 } }
+				c:GEO_MIN ?= { trigger_event = { id = mat_rossiya_caucasian_war.014 } }
 			}
 			else_if = {
 				annex = c:GEO_MIN
@@ -221,7 +221,7 @@ mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 						}
 					}
 				}
-				c:GEO_SVA ?= { trigger_event = { id = mat_rossyia_caucasian_war.014 } }
+				c:GEO_SVA ?= { trigger_event = { id = mat_rossiya_caucasian_war.014 } }
 			}
 			else_if = {
 				annex = c:GEO_SVA
@@ -236,7 +236,7 @@ mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 						}
 					}
 				}
-				c:DAG_TAR ?= { trigger_event = { id = mat_rossyia_caucasian_war.014 } }
+				c:DAG_TAR ?= { trigger_event = { id = mat_rossiya_caucasian_war.014 } }
 			}
 			else_if = {
 				annex = c:DAG_TAR
@@ -246,19 +246,19 @@ mat_rossyia_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 					is_player = yes
 					NOT = { c:RUS ?= this }
 				}
-				trigger_event = { id = mat_rossyia_caucasian_war.013 }
+				trigger_event = { id = mat_rossiya_caucasian_war.013 }
 			}
 		}
 	}
 	
 }
-mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
+mat_rossiya_caucasian_war.011 = {# Caucausus Lost - Russia View
 	type = country_event
 	placement = scope:georgia_state
 
-	title = mat_rossyia_caucasian_war.011.t
-	desc = mat_rossyia_caucasian_war.011.d
-	flavor = mat_rossyia_caucasian_war.011.f
+	title = mat_rossiya_caucasian_war.011.t
+	desc = mat_rossiya_caucasian_war.011.d
+	flavor = mat_rossiya_caucasian_war.011.f
 
 	gui_window = event_window_widescreen_newspaper
 
@@ -398,7 +398,7 @@ mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
 	option = {# Leave the region to the locals
 		name = caucasuswar_end.4.b
 		custom_tooltip = {
-			text = mat_rossyia_caucasian_war_011b_tt
+			text = mat_rossiya_caucasian_war_011b_tt
 			set_global_variable = mat_rossiya_caucasia_lost_warlords
 			if = {# The Georgian Principalities come back!
 				limit = {
@@ -658,7 +658,7 @@ mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
 			has_technology_researched = nationalism
 		}
 		custom_tooltip = {
-			text = mat_rossyia_caucasian_war_011c_tt
+			text = mat_rossiya_caucasian_war_011c_tt
 			set_global_variable = mat_rossiya_caucasia_lost_nations
 			if = {# Georgia - if no principalities exist
 				limit = {
@@ -913,33 +913,33 @@ mat_rossyia_caucasian_war.011 = {# Caucausus Lost - Russia View
 					is_player = yes
 					NOT = { c:RUS ?= this }
 				}
-				trigger_event = { id = mat_rossyia_caucasian_war.012 }
+				trigger_event = { id = mat_rossiya_caucasian_war.012 }
 			}
 		}
 	}
 }
-mat_rossyia_caucasian_war.012 = {# Caucausus Lost - Other View
+mat_rossiya_caucasian_war.012 = {# Caucausus Lost - Other View
 	type = country_event
 	placement = root
-	title = mat_rossyia_caucasian_war.012.t
+	title = mat_rossiya_caucasian_war.012.t
 	desc = {
 		first_valid = {# Chose to militerize the provinces
 			triggered_desc = {
-				desc = mat_rossyia_caucasian_war.012.d1
+				desc = mat_rossiya_caucasian_war.012.d1
 				trigger = {	has_global_variable = mat_rossiya_caucasia_lost_militerize }
 			}
 			triggered_desc = {# Chose to leave it to warlords
-				desc = mat_rossyia_caucasian_war.012.d2
+				desc = mat_rossiya_caucasian_war.012.d2
 				trigger = {	has_global_variable = mat_rossiya_caucasia_lost_warlords }
 			}
 			triggered_desc = {# Chose to leave it to nations
-				desc = mat_rossyia_caucasian_war.012.d3
+				desc = mat_rossiya_caucasian_war.012.d3
 				trigger = {	has_global_variable = mat_rossiya_caucasia_lost_nations }
 			}
 		}
 	}
 
-	flavor = mat_rossyia_caucasian_war.012.f
+	flavor = mat_rossiya_caucasian_war.012.f
 
 	gui_window = event_window_widescreen_newspaper
 
@@ -963,17 +963,17 @@ mat_rossyia_caucasian_war.012 = {# Caucausus Lost - Other View
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.012.a
+		name = mat_rossiya_caucasian_war.012.a
 		default_option = yes
 	}
 }
-mat_rossyia_caucasian_war.013 = {# Dominion Over the Caucasus - Other views
+mat_rossiya_caucasian_war.013 = {# Dominion Over the Caucasus - Other views
 	type = country_event
 	placement = root
 
-	title = mat_rossyia_caucasian_war.010.t
-	desc = mat_rossyia_caucasian_war.010.d
-	flavor = mat_rossyia_caucasian_war.010.f
+	title = mat_rossiya_caucasian_war.010.t
+	desc = mat_rossiya_caucasian_war.010.d
+	flavor = mat_rossiya_caucasian_war.010.f
 
 	gui_window = event_window_widescreen_newspaper
 
@@ -997,25 +997,25 @@ mat_rossyia_caucasian_war.013 = {# Dominion Over the Caucasus - Other views
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.010.a
+		name = mat_rossiya_caucasian_war.010.a
 		default_option = yes
 	}
 }
-mat_rossyia_caucasian_war.014 = {# Rewarding the Player(puppet state)
+mat_rossiya_caucasian_war.014 = {# Rewarding the Player(puppet state)
 	type = country_event
 	placement = root
 
-	title = mat_rossyia_caucasian_war.014.t
+	title = mat_rossiya_caucasian_war.014.t
 	desc = {
 		first_valid = {# Chose to militerize the provinces
 			triggered_desc = {# The sultanate of Elisu
-				desc = mat_rossyia_caucasian_war.014.d1
+				desc = mat_rossiya_caucasian_war.014.d1
 				trigger = {	
 					c:AZB_ELI ?= this
 				}
 			}
 			triggered_desc = {# The Georgian Grand duchy
-				desc = mat_rossyia_caucasian_war.014.d2
+				desc = mat_rossiya_caucasian_war.014.d2
 				trigger = {	
 					OR = {# Got to be a georgian Principality
 						c:ABK ?= this
@@ -1025,7 +1025,7 @@ mat_rossyia_caucasian_war.014 = {# Rewarding the Player(puppet state)
 				}
 			}
 			triggered_desc = {# The Shamkhalate of Tarki
-				desc = mat_rossyia_caucasian_war.014.d3
+				desc = mat_rossiya_caucasian_war.014.d3
 				trigger = {	
 					c:DAG_TAR ?= this
 				}
@@ -1033,7 +1033,7 @@ mat_rossyia_caucasian_war.014 = {# Rewarding the Player(puppet state)
 		}
 	}
 
-	flavor = mat_rossyia_caucasian_war.014.f
+	flavor = mat_rossiya_caucasian_war.014.f
 
 	gui_window = event_window_widescreen_newspaper
 
@@ -1058,7 +1058,7 @@ mat_rossyia_caucasian_war.014 = {# Rewarding the Player(puppet state)
 	}
 
 	option = {# You are now the Grand Prince of Azerbaijan
-		name = mat_rossyia_caucasian_war.014.a
+		name = mat_rossiya_caucasian_war.014.a
 		trigger = {
 			is_player = yes
 			c:AZB_ELI ?= this
@@ -1081,7 +1081,7 @@ mat_rossyia_caucasian_war.014 = {# Rewarding the Player(puppet state)
 		}		
 	}
 	option = {# You are now the Grand Duke of Georgia
-		name = mat_rossyia_caucasian_war.014.b
+		name = mat_rossiya_caucasian_war.014.b
 		trigger = {
 			is_player = yes
 			OR = {# Got to be a georgian Principality
@@ -1154,7 +1154,7 @@ mat_rossyia_caucasian_war.014 = {# Rewarding the Player(puppet state)
 		}		
 	}
 	option = {# Shamkhalate of Tarki gains Dageistan
-		name = mat_rossyia_caucasian_war.014.c
+		name = mat_rossiya_caucasian_war.014.c
 		trigger = {
 			is_player = yes
 			c:DAG_TAR ?= this
@@ -1172,13 +1172,13 @@ mat_rossyia_caucasian_war.014 = {# Rewarding the Player(puppet state)
 #########################################
 #	       Scripted Events				#
 #########################################
-mat_rossyia_caucasian_war.030 = { #Muhammad Amin's arrival
+mat_rossiya_caucasian_war.030 = { #Muhammad Amin's arrival
 	type = country_event
 	placement = ROOT
 
-	title = mat_rossyia_caucasian_war.030.t
-	desc = mat_rossyia_caucasian_war.030.d
-	flavor = mat_rossyia_caucasian_war.030.f
+	title = mat_rossiya_caucasian_war.030.t
+	desc = mat_rossiya_caucasian_war.030.d
+	flavor = mat_rossiya_caucasian_war.030.f
 
 	event_image = {
 		video = "gfx/event_pictures/middleeast_islam.bk2"
@@ -1204,7 +1204,7 @@ mat_rossyia_caucasian_war.030 = { #Muhammad Amin's arrival
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.030.a
+		name = mat_rossiya_caucasian_war.030.a
 		default_option = yes
 		custom_tooltip = muhammad_amin_ruler_tt
 		create_character = {
@@ -1240,7 +1240,7 @@ mat_rossyia_caucasian_war.030 = { #Muhammad Amin's arrival
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.030.b
+		name = mat_rossiya_caucasian_war.030.b
 		ig:ig_devout ?= {
 			add_modifier = {
 				name = modifier_repudiated_muhammad_amin
@@ -1260,13 +1260,13 @@ mat_rossyia_caucasian_war.030 = { #Muhammad Amin's arrival
 #########################################
 #	       Monthly Events 				#
 #########################################
-mat_rossyia_caucasian_war.070 = { #Parliament of Independence
+mat_rossiya_caucasian_war.070 = { #Parliament of Independence
 	type = country_event
 	placement = ROOT
 
-	title = mat_rossyia_caucasian_war.070.t
-	desc = mat_rossyia_caucasian_war.070.d
-	flavor = mat_rossyia_caucasian_war.070.f
+	title = mat_rossiya_caucasian_war.070.t
+	desc = mat_rossiya_caucasian_war.070.d
+	flavor = mat_rossiya_caucasian_war.070.f
 
 	dlc = dlc010
 
@@ -1299,7 +1299,7 @@ mat_rossyia_caucasian_war.070 = { #Parliament of Independence
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.070.a
+		name = mat_rossiya_caucasian_war.070.a
 		default_option = yes
 		if = {
 			limit = {
@@ -1341,7 +1341,7 @@ mat_rossyia_caucasian_war.070 = { #Parliament of Independence
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.070.b
+		name = mat_rossiya_caucasian_war.070.b
 		if = {
 			limit = {
 				NOT = {
@@ -1379,12 +1379,12 @@ mat_rossyia_caucasian_war.070 = { #Parliament of Independence
 					c:RUS ?= THIS
 				}
 			}
-			trigger_event = { id = mat_rossyia_caucasian_war.071 }
+			trigger_event = { id = mat_rossiya_caucasian_war.071 }
 		}
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.070.c
+		name = mat_rossiya_caucasian_war.070.c
 		trigger = {
 			ruler.interest_group = {
 				is_interest_group_type = ig_devout
@@ -1427,17 +1427,17 @@ mat_rossyia_caucasian_war.070 = { #Parliament of Independence
 			}
 		}
 		c:TUR ?= {
-			trigger_event = { id = mat_rossyia_caucasian_war.071 }
+			trigger_event = { id = mat_rossiya_caucasian_war.071 }
 		}
 	}
 }
-mat_rossyia_caucasian_war.071 = { #Message to GPs
+mat_rossiya_caucasian_war.071 = { #Message to GPs
 	type = country_event
 	placement = ROOT
 
-	title = mat_rossyia_caucasian_war.071.t
-	desc = mat_rossyia_caucasian_war.071.d
-	flavor = mat_rossyia_caucasian_war.071.f
+	title = mat_rossiya_caucasian_war.071.t
+	desc = mat_rossiya_caucasian_war.071.d
+	flavor = mat_rossiya_caucasian_war.071.f
 
 	dlc = dlc010
 
@@ -1465,7 +1465,7 @@ mat_rossyia_caucasian_war.071 = { #Message to GPs
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.071.a
+		name = mat_rossiya_caucasian_war.071.a
 		default_option = yes
 		custom_tooltip = circassia_decision_tt
 		set_variable = circassia_recognition_seeking
@@ -1476,20 +1476,20 @@ mat_rossyia_caucasian_war.071 = { #Message to GPs
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.071.b
+		name = mat_rossiya_caucasian_war.071.b
 		change_relations = {
 			country = c:CIR
 			value = -10
 		}
 	}
 }
-mat_rossyia_caucasian_war.072 = { #Teofil Lapinski's volunteers
+mat_rossiya_caucasian_war.072 = { #Teofil Lapinski's volunteers
 	type = country_event
 	placement = ROOT
 
-	title = mat_rossyia_caucasian_war.072.t
-	desc = mat_rossyia_caucasian_war.072.d
-	flavor = mat_rossyia_caucasian_war.072.f
+	title = mat_rossiya_caucasian_war.072.t
+	desc = mat_rossiya_caucasian_war.072.d
+	flavor = mat_rossiya_caucasian_war.072.f
 
 	dlc = dlc010
 
@@ -1542,7 +1542,7 @@ mat_rossyia_caucasian_war.072 = { #Teofil Lapinski's volunteers
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.072.a
+		name = mat_rossiya_caucasian_war.072.a
 		default_option = yes
 		create_character = {
 			is_general = yes
@@ -1575,7 +1575,7 @@ mat_rossyia_caucasian_war.072 = { #Teofil Lapinski's volunteers
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.072.b
+		name = mat_rossiya_caucasian_war.072.b
 		add_modifier = {
 			name = modifier_lapinski_training
 			days = normal_modifier_time
@@ -1585,13 +1585,13 @@ mat_rossyia_caucasian_war.072 = { #Teofil Lapinski's volunteers
 #########################################
 #	       Yearly Events 				#
 #########################################
-mat_rossyia_caucasian_war.100 = {
+mat_rossiya_caucasian_war.100 = {
 	type = country_event
 	placement = scope:invasion_base_state
 
-	title = mat_rossyia_caucasian_war.100.t
-	desc = mat_rossyia_caucasian_war.100.d
-	flavor = mat_rossyia_caucasian_war.100.f
+	title = mat_rossiya_caucasian_war.100.t
+	desc = mat_rossiya_caucasian_war.100.d
+	flavor = mat_rossiya_caucasian_war.100.f
 
 	dlc = dlc010
 
@@ -1651,7 +1651,7 @@ mat_rossyia_caucasian_war.100 = {
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.100.a
+		name = mat_rossiya_caucasian_war.100.a
 		default_option = yes
 		scope:invasion_base_state = {
 			add_modifier = {
@@ -1672,7 +1672,7 @@ mat_rossyia_caucasian_war.100 = {
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.100.b
+		name = mat_rossiya_caucasian_war.100.b
 		scope:invasion_base_state = {
 			add_modifier = {
 				name = modifier_failed_incursion
@@ -1713,13 +1713,13 @@ mat_rossyia_caucasian_war.100 = {
 		}
 	}
 }
-mat_rossyia_caucasian_war.101 = {
+mat_rossiya_caucasian_war.101 = {
 	type = country_event
 	placement = scope:invasion_base_state
 
-	title = mat_rossyia_caucasian_war.101.t
-	desc = mat_rossyia_caucasian_war.101.d
-	flavor = mat_rossyia_caucasian_war.101.f
+	title = mat_rossiya_caucasian_war.101.t
+	desc = mat_rossiya_caucasian_war.101.d
+	flavor = mat_rossiya_caucasian_war.101.f
 
 	dlc = dlc010
 
@@ -1779,7 +1779,7 @@ mat_rossyia_caucasian_war.101 = {
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.101.a
+		name = mat_rossiya_caucasian_war.101.a
 		default_option = yes
 		scope:invasion_base_state = {
 			add_modifier = {
@@ -1796,7 +1796,7 @@ mat_rossyia_caucasian_war.101 = {
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.101.b
+		name = mat_rossiya_caucasian_war.101.b
 		scope:invasion_base_state = {
 			add_modifier = {
 				name = modifier_attacked_supply_train
@@ -1809,13 +1809,13 @@ mat_rossyia_caucasian_war.101 = {
 		}
 	}
 }
-mat_rossyia_caucasian_war.102 = {
+mat_rossiya_caucasian_war.102 = {
 	type = country_event
 	placement = scope:invasion_state
 
-	title = mat_rossyia_caucasian_war.102.t
-	desc = mat_rossyia_caucasian_war.102.d
-	flavor = mat_rossyia_caucasian_war.102.f
+	title = mat_rossiya_caucasian_war.102.t
+	desc = mat_rossiya_caucasian_war.102.d
+	flavor = mat_rossiya_caucasian_war.102.f
 
 	dlc = dlc010
 
@@ -1861,7 +1861,7 @@ mat_rossyia_caucasian_war.102 = {
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.102.a
+		name = mat_rossiya_caucasian_war.102.a
 		default_option = yes
 		scope:adversary_scope = {
 			scope:invasion_state = {
@@ -1893,7 +1893,7 @@ mat_rossyia_caucasian_war.102 = {
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.102.b
+		name = mat_rossiya_caucasian_war.102.b
 		scope:adversary_scope = {
 			scope:invasion_state = {
 				add_modifier = {
@@ -1912,13 +1912,13 @@ mat_rossyia_caucasian_war.102 = {
 		}
 	}
 }
-mat_rossyia_caucasian_war.103 = {
+mat_rossiya_caucasian_war.103 = {
 	type = country_event
 	placement = scope:invasion_state
 
-	title = mat_rossyia_caucasian_war.103.t
-	desc = mat_rossyia_caucasian_war.103.d
-	flavor = mat_rossyia_caucasian_war.103.f
+	title = mat_rossiya_caucasian_war.103.t
+	desc = mat_rossiya_caucasian_war.103.d
+	flavor = mat_rossiya_caucasian_war.103.f
 
 	dlc = dlc010
 
@@ -1977,7 +1977,7 @@ mat_rossyia_caucasian_war.103 = {
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.103.a
+		name = mat_rossiya_caucasian_war.103.a
 		default_option = yes
 		scope:adversary_scope = {
 			add_modifier = {
@@ -1991,7 +1991,7 @@ mat_rossyia_caucasian_war.103 = {
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.103.b
+		name = mat_rossiya_caucasian_war.103.b
 		scope:adversary_scope = {
 			add_modifier = {
 				name = modifier_betrayal_of_tribe
@@ -2020,13 +2020,13 @@ mat_rossyia_caucasian_war.103 = {
 		}
 	}
 }
-mat_rossyia_caucasian_war.104 = {
+mat_rossiya_caucasian_war.104 = {
 	type = country_event
 	placement = scope:invasion_base_state
 
-	title = mat_rossyia_caucasian_war.104.t
-	desc = mat_rossyia_caucasian_war.104.d
-	flavor = mat_rossyia_caucasian_war.104.f
+	title = mat_rossiya_caucasian_war.104.t
+	desc = mat_rossiya_caucasian_war.104.d
+	flavor = mat_rossiya_caucasian_war.104.f
 
 	event_image = {
 		video = "gfx/event_pictures/ep1_ca_mountain_pass_military.bk2"
@@ -2068,7 +2068,7 @@ mat_rossyia_caucasian_war.104 = {
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.104.a
+		name = mat_rossiya_caucasian_war.104.a
 		default_option = yes
 		scope:invasion_base_state = {
 			add_modifier = {
@@ -2102,7 +2102,7 @@ mat_rossyia_caucasian_war.104 = {
 	}
 
 	option = {
-		name = mat_rossyia_caucasian_war.104.b
+		name = mat_rossiya_caucasian_war.104.b
 		scope:invasion_base_state = {
 			add_modifier = {
 				name = modifier_soldiers_deserted

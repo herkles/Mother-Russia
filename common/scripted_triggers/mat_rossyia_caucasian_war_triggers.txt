@@ -1,6 +1,6 @@
-﻿mat_rossyia_caucasian_war_should_be_involved_trigger = {
+﻿mat_rossiya_caucasian_war_should_be_involved_trigger = {
 	custom_tooltip = {
-		text = mat_rossyia_caucasian_war_should_be_involved_trigger
+		text = mat_rossiya_caucasian_war_should_be_involved_trigger
 		OR = {
 			c:RUS ?= this
 			AND = {
@@ -30,10 +30,10 @@
 	}
 }
 
-mat_rossyia_caucasian_war_interloper_trigger = {
+mat_rossiya_caucasian_war_interloper_trigger = {
 	custom_tooltip = {
-		text = mat_rossyia_caucasian_war_interloper_trigger
-		mat_rossyia_caucasian_war_should_be_involved_trigger = no
+		text = mat_rossiya_caucasian_war_interloper_trigger
+		mat_rossiya_caucasian_war_should_be_involved_trigger = no
 		OR = {
 			has_diplomatic_relevance = c:RUS
 			any_scope_state = {

@@ -1,11 +1,11 @@
-﻿je_mat_rossyia_caucasian_war = {
+﻿je_mat_rossiya_caucasian_war = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	group = je_group_global_international_situations
 
 
 	should_be_involved = {
-		mat_rossyia_caucasian_war_should_be_involved_trigger = yes
+		mat_rossiya_caucasian_war_should_be_involved_trigger = yes
 	}
 
 	should_show_when_not_involved = {
@@ -46,7 +46,7 @@
 				c:RUS ?= this
 			}
 			trigger_event = {
-				id = mat_rossyia_caucasian_war.001 # Conquering the Caucasus
+				id = mat_rossiya_caucasian_war.001 # Conquering the Caucasus
 				days = 5
 			}
 		}
@@ -55,7 +55,7 @@
 				c:CIR ?= this
 			}
 			trigger_event = {
-				id = mat_rossyia_caucasian_war.002 # The Russian Invansion
+				id = mat_rossiya_caucasian_war.002 # The Russian Invansion
 				days = 5
 			}
 		}
@@ -64,13 +64,13 @@
 				c:CHC ?= this
 			}
 			trigger_event = {
-				id = mat_rossyia_caucasian_war.003 # The Peoples of the Empire
+				id = mat_rossiya_caucasian_war.003 # The Peoples of the Empire
 				days = 5
 			}
 		}                    
 		else = {
 			trigger_event = {
-				id = mat_rossyia_caucasian_war.004 # The Eastern Question
+				id = mat_rossiya_caucasian_war.004 # The Eastern Question
 				days = 5
 			}
 		}
@@ -83,19 +83,19 @@
         }
         random_events = {
             100 = 0
-            30 = mat_rossyia_caucasian_war.070
-            10 = mat_rossyia_caucasian_war.072
+            30 = mat_rossiya_caucasian_war.070
+            10 = mat_rossiya_caucasian_war.072
         }
     }
 
     on_yearly_pulse = {
         random_events = {
             90 = 0
-            10 = mat_rossyia_caucasian_war.100
-            10 = mat_rossyia_caucasian_war.101
-            10 = mat_rossyia_caucasian_war.102
-            10 = mat_rossyia_caucasian_war.103
-            50 = mat_rossyia_caucasian_war.104
+            10 = mat_rossiya_caucasian_war.100
+            10 = mat_rossiya_caucasian_war.101
+            10 = mat_rossiya_caucasian_war.102
+            10 = mat_rossiya_caucasian_war.103
+            50 = mat_rossiya_caucasian_war.104
         }
     }
 
@@ -145,7 +145,7 @@
         }
     }
 
-	custom_completion_header = je_mat_rossyia_caucasian_war_russian_victory
+	custom_completion_header = je_mat_rossiya_caucasian_war_russian_victory
 
 	complete = {
 		scope:journal_entry = { is_goal_complete = yes }
@@ -153,7 +153,7 @@
 			is_at_war = no
 		}
         custom_tooltip = {
-            text = je_mat_rossyia_caucasian_war_russian_victory_tt
+            text = je_mat_rossiya_caucasian_war_russian_victory_tt
             NOT = {
                 exists = c:CIR
                 exists = c:CHC
@@ -198,7 +198,7 @@
 		}
 	}
 
-	custom_on_completion_header = je_mat_rossyia_caucasian_war_on_russian_victory
+	custom_on_completion_header = je_mat_rossiya_caucasian_war_on_russian_victory
     on_complete = {
         set_global_variable = caucasus_consolidated_var
         if = {
@@ -217,14 +217,14 @@
             }
 			c:RUS = { trigger_event = { id = caucasuswar_end.1 } }
         }
-		c:RUS = { trigger_event = { id = mat_rossyia_caucasian_war.010 } }
+		c:RUS = { trigger_event = { id = mat_rossiya_caucasian_war.010 } }
     }
 
 	on_complete_all_involved = {
-		# mat_rossyia_caucasian_war_cleanup_effect = yes
+		# mat_rossiya_caucasian_war_cleanup_effect = yes
 	}
 
-	custom_failure_header = je_mat_rossyia_caucasian_war_rebel_victory
+	custom_failure_header = je_mat_rossiya_caucasian_war_rebel_victory
 
 	fail = {# Failure means Russia has lost control
         custom_tooltip = {
@@ -245,10 +245,10 @@
         }
 	}
 
-	custom_on_failure_header = je_mat_rossyia_caucasian_war_on_rebel_victory
+	custom_on_failure_header = je_mat_rossiya_caucasian_war_on_rebel_victory
 
 	on_fail = {
-		c:RUS = { trigger_event = { id = mat_rossyia_caucasian_war.011 } }
+		c:RUS = { trigger_event = { id = mat_rossiya_caucasian_war.011 } }
 		if = {# Honor and Life!
             limit = {
 				AND = {
@@ -270,7 +270,7 @@
 	}
 
 	on_fail_all_involved = {
-		# mat_rossyia_caucasian_war_cleanup_effect = yes
+		# mat_rossiya_caucasian_war_cleanup_effect = yes
 	}
 
 	invalid = {

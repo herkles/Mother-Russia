@@ -16,7 +16,7 @@ REPLACE:je_caucasian_war = {# The Russian one
 
 	invalid = {
 		NOT = {
-			has_journal_entry = je_mat_rossyia_caucasian_war
+			has_journal_entry = je_mat_rossiya_caucasian_war
 		}
 	}
 }
@@ -35,7 +35,7 @@ REPLACE:je_caucasian_war_circassia = {# The circassian one
 
 	invalid = {
 		NOT = {
-			has_journal_entry = je_mat_rossyia_caucasian_war
+			has_journal_entry = je_mat_rossiya_caucasian_war
 		}
 	}
 }
@@ -54,7 +54,7 @@ REPLACE:je_caucasian_war_imamate = {# The Imamate one
 
 	invalid = {
 		NOT = {
-			has_journal_entry = je_mat_rossyia_caucasian_war
+			has_journal_entry = je_mat_rossiya_caucasian_war
 		}
 	}
 }

@@ -35,9 +35,9 @@
 		requirement_to_maintain = {
 			trigger = {
 				custom_tooltip = {
-					text = mat_rossyia_caucasian_war_ongoing
+					text = mat_rossiya_caucasian_war_ongoing
 					scope:target_country = {
-						has_journal_entry = je_mat_rossyia_caucasian_war
+						has_journal_entry = je_mat_rossiya_caucasian_war
 					}
 				}
 			}
@@ -117,9 +117,9 @@ mat_rossiya_loyal_subject = {
 		requirement_to_maintain = {
 			trigger = {
 				custom_tooltip = {
-					text = mat_rossyia_caucasian_war_ongoing
+					text = mat_rossiya_caucasian_war_ongoing
 					scope:target_country = {
-						has_journal_entry = je_mat_rossyia_caucasian_war
+						has_journal_entry = je_mat_rossiya_caucasian_war
 					}
 				}
 			}
