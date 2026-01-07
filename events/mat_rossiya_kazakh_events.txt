@@ -87,7 +87,7 @@ mat_rossiya_kazakh.002 = {# A Stately Reception
 	}
 
 }
-mat_rossiya_kazakh.003 = {# A Stagnant State
+mat_rossiya_kazakh.003 = {# The Death of the Khan
 	type = country_event
 	placement = root
 
@@ -106,10 +106,8 @@ mat_rossiya_kazakh.003 = {# A Stagnant State
 
 	duration = 3
 
-	
-
 	trigger = {
-		# triggered by je_turkfm_tun_modernization
+		# triggered by je_mat_rossiya_bukey_modernization
 	}
 
 	immediate = {
@@ -123,13 +121,10 @@ mat_rossiya_kazakh.003 = {# A Stagnant State
 			months = mat_rossiya_duration_10_years
 			is_decaying = yes
 		}
-		add_radicals = {
-			value = medium_radicals
-		}
 	}
 
 }
-mat_rossiya_kazakh.004 = {# The Kazakh Fundamental Pact
+mat_rossiya_kazakh.004 = {# The Khan Ascedent
 	type = country_event
 	placement = root
 
@@ -146,10 +141,11 @@ mat_rossiya_kazakh.004 = {# The Kazakh Fundamental Pact
 	duration = 3
 
 	trigger = {
-		# triggered by je_turkfm_tun_modernization
+		# triggered by je_mat_rossiya_bukey_modernization
 	}
 
 	immediate = {
+		set_variable = mat_rossiya_buk_modernization_completed
 	}
 
 	option = {
