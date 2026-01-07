@@ -92,7 +92,7 @@ STATES = {
 			provinces = {
 				x40DF20 x4161A0 x44ACBB x46B950 x496950 x51A0E0 x9444C9 xAEB9A5 xB491B1 xE0BB00 xEB0783 
 			}
-		}	
+		}
 	}
 	s:STATE_GREATER_POLAND = {
 		set_owner_of_provinces = {# Congress Poland
@@ -109,6 +109,12 @@ STATES = {
 				x009F60 x1AA8FB x46B451 x4F022C x802161 x809F60 xC17590 xDC58D0 xE165F5 xF8C8F6  
 			}
 		}	
-	}	
+	}
+	s:STATE_MAZOVIA = {
+		region_state:POL = {
+			set_state_type = incorporated
+		}			
+	}
+
 }
 

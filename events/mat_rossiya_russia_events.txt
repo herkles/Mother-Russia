@@ -1,10 +1,10 @@
 ﻿#########################################
 #										#	
-#	      	Narodism Events			    #
+#	      	Russian Events			    #
 #										#
 #########################################
 
-namespace = mat_rossiya_narodism
+namespace = mat_rossiya_russia
 
 #########################################
 #	       Starting Events 				#

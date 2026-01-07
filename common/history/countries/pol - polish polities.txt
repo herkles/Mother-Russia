@@ -31,7 +31,9 @@
 				sponsor = PREV.ig:ig_armed_forces # martial law
 			}
 		}
-
+		trigger_event = {
+			id = mat_rossiya_poland.001
+		}
 
 	}
 }

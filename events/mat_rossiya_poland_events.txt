@@ -9,5 +9,38 @@ namespace = mat_rossiya_poland
 #########################################
 #	       Starting Events 				#
 #########################################
+mat_rossiya_poland.001 = {# The Martial Law
+	type = country_event
+	placement = root
 
+	title = mat_rossiya_poland.001.t
+	desc = mat_rossiya_poland.001.d
+	flavor = mat_rossiya_poland.001.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/ip3_policeraid.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	#dlc = mat_rossiya_icon
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mat_rossiya_poland.001.a
+		default_option = yes
+	}
+}
 

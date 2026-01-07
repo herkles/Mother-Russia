@@ -15,7 +15,6 @@
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_women_own_property
-		activate_law = law_type:law_colonial_exploitation
 
 		active_law:lawgroup_citizenship ?= { # Subjecthood
 			add_amendment = {
@@ -25,5 +24,6 @@
 		}
 		add_modifier = modifier_russian_company_rule
 		add_taxed_goods = g:liquor
+
 	}
 }
