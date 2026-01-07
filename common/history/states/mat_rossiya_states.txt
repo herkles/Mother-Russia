@@ -40,7 +40,8 @@ STATES = {
 		add_homeland = cu:nogai		
 		add_homeland = cu:avar		
 		add_homeland = cu:dargin		
-		add_homeland = cu:kumyk		
+		add_homeland = cu:kumyk	
+		add_homeland = cu:lak			
 		remove_homeland = cu:north_caucasian			
 	}
 	s:STATE_NORTH_CAUCASUS = {

@@ -2,13 +2,10 @@
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
 	state_old_believers_standard_of_living_add = 1
 }
-
 old_believers_standard_of_living_modifier_negative = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	state_old_believers_standard_of_living_add = 1
 }
-
-
 
 
 abkhazian_standard_of_living_modifier_positive = {
@@ -236,7 +233,30 @@ alyaskan_fervor_target_modifier_negative = {
 	country_fervor_target_alyaskan_add = 1
 }
 
-
+lak_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_lak_standard_of_living_add = 1
+}
+lak_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_lak_standard_of_living_add = 1
+}
+lak_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_lak_cultural_acceptance_add = 1
+}
+lak_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_lak_cultural_acceptance_add = 1
+}
+lak_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_lak_add = 1
+}
+lak_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_lak_add = 1
+}
 
 
 

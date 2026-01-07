@@ -4,7 +4,6 @@ language_abkhaz = {
 	type = language
 	trait_group = language_group_circassic
 }
-
 language_dargin = {
 	type = language
 	trait_group = language_group_caucasic
@@ -24,4 +23,8 @@ language_karachay = {
 language_nogai = {
 	type = language
 	trait_group = language_group_turkic
+}
+language_lak = {
+	type = language
+	trait_group = language_group_caucasic
 }

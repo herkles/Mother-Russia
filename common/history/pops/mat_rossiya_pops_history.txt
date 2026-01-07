@@ -76,7 +76,11 @@
 			create_pop = {# Nogai
 				culture = nogai
 				size = 5908
-			}					
+			}		
+			create_pop = {# Laks
+				culture = lak
+				size = 29292
+			}			
 		}
 		region_state:CHC = {# Dagestan - Imamate
 			create_pop = {# Avar
@@ -86,7 +90,11 @@
 			create_pop = {# Dargins
 				culture = dargin
 				size = 77556
-			}			
+			}		
+			create_pop = {# Laks
+				culture = lak
+				size = 38014
+			}	
 		}
 		region_state:RUS = {
 			create_pop = {# Nogai

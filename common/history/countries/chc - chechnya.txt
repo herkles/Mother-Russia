@@ -1,5 +1,8 @@
 ﻿COUNTRIES = {
 	c:CHC ?= {
+		remove_primary_culture = cu:north_caucasian
+		add_primary_culture = cu:avar # a lot of the leaders were Avar
+		
 		effect_starting_technology_tier_3_tech = yes
 
 		activate_law = law_type:law_theocracy

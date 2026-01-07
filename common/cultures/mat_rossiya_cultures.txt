@@ -1104,6 +1104,55 @@ nogai = {# Nogais
 	}
 	graphics = european
 }
+lak = {# Laks
+	color= { 232 45 101 }
+	religion = sunni
+	heritage = heritage_north_caucasian
+	language = language_lak
+	traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Aslan
+		Hamza
+		Jamal_al-Din
+		Mansur
+		Mohammad
+		Murad
+		Ruslan
+		Shamil
+		Soferbi
+		Zamudin
+	}
+	female_common_first_names = {
+		Albina
+		Irina
+		Jilfidan
+		Maria
+		Melek
+		Nadia
+		Svetlana
+		Tamara
+	}
+	noble_last_names = {
+		Cherkassky
+		Chetao
+		Dipsheu
+		Kuadzhe
+		Tkhaghapseu
+	}
+	common_last_names = {
+		Bek
+		Chemiakin
+		Guchev
+		Mollah
+		Nafash
+		Natkho
+		Shaaban
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = european
+}
 ###################################
 # Slavic Cultures 
 ###################################

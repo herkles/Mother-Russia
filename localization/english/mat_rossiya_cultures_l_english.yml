@@ -9,6 +9,7 @@
   kumyk: "Kumyk"
   karachay: "Karachay"
   nogai: "Nogai"
+  lak: "Lak"
 
   # Russian Cultures
   alyaskan: "Kreoly Alyaski"
@@ -21,6 +22,7 @@
   language_group_ossetian: "Ossetian"
   language_karachay: "Karachay"
   language_nogai: "Nogai"
+  language_lak: "Lak"
 
 
 
