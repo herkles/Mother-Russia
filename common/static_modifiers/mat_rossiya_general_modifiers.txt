@@ -12,6 +12,7 @@ modifier_russian_company_rule = {# Russian American Company
 	country_legitimacy_base_add = -50
 	country_legitimacy_headofstate_add = 65
 	country_legitimacy_govt_size_add = 1
+	state_migration_pull_mult = -0.8 # very few came to Alaska and so the population grew more about intermarriages
 }
 ###############################################
 # Kazakh Modifiers    

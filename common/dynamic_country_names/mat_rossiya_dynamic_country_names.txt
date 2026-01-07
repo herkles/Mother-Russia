@@ -1,0 +1,189 @@
+﻿#########################################
+#	       Russia Names 				#
+#########################################
+REPLACE:RUS = { # Russian Empire
+	dynamic_country_name = {
+		name = dyn_c_russian_empire
+		adjective = dyn_c_russian_empire_adj
+
+		is_main_tag_only = yes
+		priority = 0
+
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {# Russian Republic
+		name = dyn_c_russian_republic
+		adjective = dyn_c_russian_republic_adj
+
+		is_main_tag_only = yes
+		priority = 0
+
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {# Russian Socialist Federative Soviet Republic
+		name = dyn_c_rsfsr
+		adjective = dyn_c_rsfsr_adj
+
+		is_main_tag_only = yes
+		priority = 5
+
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {# Union of New People
+		name = dyn_c_union_of_new_people
+		adjective = dyn_c_union_of_new_people_adj
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			exists = c:RUS
+			coa_def_nihilist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {# Soviet Union
+		name = dyn_c_soviet_union
+		adjective = dyn_c_soviet_union_adj
+
+		is_main_tag_only = yes
+		priority = 25
+
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+			scope:actor ?= {
+				OR = {
+					any_scope_state = {
+						state_region = {
+							NOT = {
+								is_homeland = cu:russian
+							}
+						}
+						count >= 15
+					}
+				}
+			}
+		}
+	}
+}
+#########################################
+#	       Poland Names 				#
+#########################################
+REPLACE:POL = { # Poland
+	dynamic_country_name = {
+		name = dyn_c_congress_poland
+		adjective = dyn_c_congress_poland_adj
+
+		is_main_tag_only = yes
+		priority = 0
+
+		trigger = {
+			exists = c:RUS
+			c:RUS ?= {
+				OR = {
+					has_diplomatic_pact = {# puppet
+						who = c:POL
+						type = puppet
+						is_initiator = yes
+					}
+					has_diplomatic_pact = {# Personal Union
+						who = c:POL
+						type = personal_union
+						is_initiator = yes
+					}					
+					has_diplomatic_pact = {# Crown Land
+						who = c:POL
+						type = crown_land
+						is_initiator = yes
+					}
+				}
+			}
+		}
+	}
+}
+#########################################
+#	       Finland Names 				#
+#########################################
+
+#########################################
+#	       Ukraine Names 				#
+#########################################
+
+#########################################
+#	       Alaska Names 				#
+#########################################
+REPLACE:ALK = {
+	dynamic_country_name = {# Russian American Company
+		name = dyn_c_russian_american_company
+		adjective = dyn_c_russian_american_company_adj
+		use_overlord_prefix = yes
+
+		is_main_tag_only = yes
+		priority = 5
+
+		trigger = {
+			scope:actor ?= {
+				is_subject = yes
+				is_subject_type = subject_type_chartered_company
+			}
+		}
+	}
+	dynamic_country_name = {# Alyaska
+		name = dyn_c_alyaska
+		adjective = dyn_c_alyaska_adj
+
+		is_main_tag_only = yes
+		priority = 0
+
+		trigger = {
+			scope:actor ?= {
+				any_primary_culture = {
+					OR = {# either russian or Russian Creole
+						cu:alyaskan ?= this
+						cu:russian ?= this
+					}
+				}
+			}
+		}
+	}
+}
+#########################################
+#	       Baltic Names 				#
+#########################################
+REPLACE:UBD = { # Baltic
+	dynamic_country_name = {
+		name = dyn_c_baltic_governorate
+		adjective = dyn_c_baltic_governorate_adj
+
+		is_main_tag_only = yes
+		priority = 0
+
+		trigger = {
+			exists = c:RUS
+			c:RUS ?= {
+				OR = {
+					has_diplomatic_pact = {# puppet
+						who = c:POL
+						type = puppet
+						is_initiator = yes
+					}
+					has_diplomatic_pact = {# Personal Union
+						who = c:POL
+						type = personal_union
+						is_initiator = yes
+					}					
+					has_diplomatic_pact = {# Crown Land
+						who = c:POL
+						type = crown_land
+						is_initiator = yes
+					}
+				}
+			}
+		}
+	}
+}
