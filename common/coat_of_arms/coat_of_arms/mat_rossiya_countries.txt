@@ -90,25 +90,6 @@ GEO_IME = { # Principality of Imereti
 	}
 
 }
-GEO_GUR = { # Principality of Guria
-
-	pattern = "pattern_solid.tga"
-	color1 = "white"
-
-	colored_emblem = {
-		texture = "ce_stag.dds"
-		color1 = "yellow"
-		color2 = "black"
-		color3 = "yellow"
-		instance = { scale = { 0.7 0.7 } position = { 0.5 0.5 } }
-	}
-	colored_emblem = {
-		texture = "ce_circle.dds"
-		color1 = "red"
-		instance = { scale = { 0.25 0.25 } position = { 0.5 0.1 } }
-	}
-
-}
 GEO_KAK = { # Principality of Kakheti
 	# I couldn't find a flag for Kakheti-Kartali so just using Kakheti's flag
 	pattern = "pattern_solid.tga"

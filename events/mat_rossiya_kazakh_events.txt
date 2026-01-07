@@ -22,6 +22,7 @@ mat_rossiya_kazakh.001 = {# The Ambitions of the Khan
 	}
 
 	icon = "gfx/interface/icons/event_icons/event_horse.dds"
+	#dlc = mat_rossiya_icon
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -58,6 +59,7 @@ mat_rossiya_kazakh.002 = {# A Stately Reception
 	}
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	#dlc = mat_rossiya_icon
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -98,6 +100,7 @@ mat_rossiya_kazakh.003 = {# A Stagnant State
 	}
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	#dlc = mat_rossiya_icon
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -138,6 +141,7 @@ mat_rossiya_kazakh.004 = {# The Kazakh Fundamental Pact
 		video = "ep1_central_asian_city"
 	}
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	#dlc = mat_rossiya_icon
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	duration = 3
 

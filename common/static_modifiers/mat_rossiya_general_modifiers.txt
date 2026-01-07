@@ -1,4 +1,6 @@
-﻿
+﻿###############################################
+# Alaskan Modifiers    
+###############################################
 modifier_russian_company_rule = {# Russian American Company
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	interest_group_ig_industrialists_pol_str_mult = 2
@@ -11,15 +13,14 @@ modifier_russian_company_rule = {# Russian American Company
 	country_legitimacy_headofstate_add = 65
 	country_legitimacy_govt_size_add = 1
 }
+###############################################
+# Kazakh Modifiers    
+###############################################
 mat_rossiya_pastoral_fury = {# Peasant Fury at land rights in 
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
 	political_movement_radicalism_add = 0.20
 	political_movement_pop_attraction_mult = 0.05
 }
-
-###############################################
-# Kazakh Modifiers    
-###############################################
 modifier_mat_rossiya_tribal_administration = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	country_authority_mult = -0.10
@@ -44,7 +45,9 @@ modifier_mat_rossiya_modernized_state = {
 	country_influence_mult = 0.25
 	country_institution_size_change_speed_mult = 0.25
 }
-
+###############################################
+# Caucasian Modifiers    
+###############################################
 
 
 

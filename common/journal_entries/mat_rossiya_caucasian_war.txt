@@ -68,7 +68,14 @@
 				days = 5
 			}
 		}                    
-		else = {
+		if = {
+			limit = {
+				NOT = {
+					c:CHC ?= this
+					c:CIR ?= this
+					c:RUS ?= this
+				}
+			}
 			trigger_event = {
 				id = mat_rossiya_caucasian_war.004 # The Eastern Question
 				days = 5
@@ -83,6 +90,7 @@
         }
         random_events = {
             100 = 0
+			40 = mat_rossiya_caucasian_war.060
             30 = mat_rossiya_caucasian_war.070
             10 = mat_rossiya_caucasian_war.072
         }
@@ -159,9 +167,14 @@
                 exists = c:CHC
             }
         }
+		c:RUS = {
+			country_or_subject_owns_entire_state_region = STATE_KUBAN
+	        country_or_subject_owns_entire_state_region = STATE_DAGESTAN
+        	country_or_subject_owns_entire_state_region = STATE_NORTH_CAUCASUS
+        	country_or_subject_owns_entire_state_region = STATE_GREATER_CAUCASUS
+		}
 		s:STATE_KUBAN = {
 			trigger_if = {
-
 				limit = {
 					NOT = { c:RUS = { has_state_in_state_region = STATE_KUBAN } }
 				}
@@ -169,7 +182,6 @@
 			}
 			region_state:RUS ?= {
 				turmoil <= 0.25
-				is_split_state = no
 			}
 		}
 		s:STATE_DAGESTAN = {
@@ -181,7 +193,6 @@
 			}
 			region_state:RUS ?= {
 				turmoil <= 0.25
-				is_split_state = no
 			}
 		}
 		s:STATE_NORTH_CAUCASUS = {
@@ -193,7 +204,6 @@
 			}
 			region_state:RUS ?= {
 				turmoil <= 0.25
-				is_split_state = no
 			}
 		}
 	}

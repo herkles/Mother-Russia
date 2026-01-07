@@ -66,7 +66,32 @@
     mat_rossiya_caucasian_war.030.a: "We will be honored to unite with our brothers in Islam."
     mat_rossiya_caucasian_war.030.b: "Our struggle is first and foremost a national one."
 
-  # Historical Events
+  # The Case of the Vixen Events
+    mat_rossiya_caucasian_war.060.t: "The British Gun Smugglers"
+    mat_rossiya_caucasian_war.060.d: "The British have been sending gun smugglers into the Caucasus to stir up trouble with the bandits in Circassia who are fighting back against our soldiers. One of our brigs, the Ajax, seized the British schooner, the vixen. The vixen had weapons and gunpowder that they were planning to give to the rebels."
+    mat_rossiya_caucasian_war.060.f: ""For preservation of the Russian possessions from infection and to prevent the delivery of military supplies to the mountain people, military cruisers will permit foreign commercial vessels only to two points – Anapa and Redoute-Kale in which there is a quarantine and customs...""
+    mat_rossiya_caucasian_war.060.a: "Seize the ship!"
+    mat_rossiya_caucasian_war.060.b: "Lets not Cause an incident"
+
+    mat_rossiya_caucasian_war.061.t: "The Russians seized our Ship"
+    mat_rossiya_caucasian_war.061.d: "The Russians have seized our ship and a hearing in parliament has raised the issue, with some even suggesting that we go to war with Russia over the matter, but for now the warhawks could not convince parliament to vote in favor. Still it is an outrage that we are humiliated like this. "
+    mat_rossiya_caucasian_war.061.f: ""Why should the flag of England be less respected now than at that time? We are not less able to assert our rights now than we were then. Accounts had been received in town that day that the Vixen had been condemned, and that in the most revolting way to this country. The British flag was hoisted, then hauled down, and the Russian flag hoisted in its stead; and the captain and. crew were sent, not to London, but to Constantinople. In fact, everything had been done that could humble and insult this country.""
+    mat_rossiya_caucasian_war.061.a: "This is an outrage! "
+
+    mat_rossiya_caucasian_war.062.t: "The British are furious"
+    mat_rossiya_caucasian_war.062.d: "The British are furious that their ship was seized for trying to arm rebels and break our blockade against the rebels. Some have even threatened that the British should go to war because of the seizure. The gall of the British."
+    mat_rossiya_caucasian_war.062.f: ""For preservation of the Russian possessions from infection and to prevent the delivery of military supplies to the mountain people, military cruisers will permit foreign commercial vessels only to two points – Anapa and Redoute-Kale in which there is a quarantine and customs...""
+    mat_rossiya_caucasian_war.062.a: "The arrogance of them!"
+
+    mat_rossiya_caucasian_war.063.t: "The Russian Blockade continues"
+    mat_rossiya_caucasian_war.063.d: "Though the British tried to break the blockade, the Russians were able to stop their gun running to us, though the British men amongst us have said that they threatened war, for now it is just tension between the British and Russians. And that cursed blockade remains limiting the supplies we can get."
+    mat_rossiya_caucasian_war.063.f: ""For preservation of the Russian possessions from infection and to prevent the delivery of military supplies to the mountain people, military cruisers will permit foreign commercial vessels only to two points – Anapa and Redoute-Kale in which there is a quarantine and customs...""
+    mat_rossiya_caucasian_war.063.a: "May God curse the Russians!"
+
+    mat_rossiya_caucasian_war.064.t: "Breaks in the Blockade!"
+    mat_rossiya_caucasian_war.064.d: "The British have managed to break through the blockade and get us supplies. Though the blockade remains, we managed to get some supplies from the Vixen to help fund our fight against the Russians."
+    mat_rossiya_caucasian_war.064.f: ""Why should the flag of England be less respected now than at that time? We are not less able to assert our rights now than we were then. Accounts had been received in town that day that the Vixen had been condemned, and that in the most revolting way to this country. The British flag was hoisted, then hauled down, and the Russian flag hoisted in its stead; and the captain and. crew were sent, not to London, but to Constantinople. In fact, everything had been done that could humble and insult this country.""
+    mat_rossiya_caucasian_war.064.a: "We have some supplies"
 
   # Monthly Events
     mat_rossiya_caucasian_war.070.t: "The Parliament of Independence"

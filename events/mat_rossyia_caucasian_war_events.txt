@@ -29,7 +29,7 @@ mat_rossiya_caucasian_war.001 = {# Conquering the Caucasus
 
 	duration = 3
 
-	
+	#dlc = mat_rossiya_icon
 
 	trigger = {
 		
@@ -58,12 +58,10 @@ mat_rossiya_caucasian_war.002 = {# The Russian Invansion
 	}
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
+	#dlc = mat_rossiya_icon
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	duration = 3
-
-	
 
 	trigger = {
 		
@@ -92,6 +90,7 @@ mat_rossiya_caucasian_war.003 = {# The Imamate defense
 	}
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	#dlc = mat_rossiya_icon
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -126,12 +125,11 @@ mat_rossiya_caucasian_war.004 = {# The Caucasian Conflict
 	}
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	#dlc = mat_rossiya_icon
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	duration = 3
-
-	
+	duration = 3	
 
 	trigger = {
 		
@@ -163,6 +161,7 @@ mat_rossiya_caucasian_war.010 = {# Dominion Over the Caucasus - Russia View
 	}
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	#dlc = mat_rossiya_icon
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -267,6 +266,7 @@ mat_rossiya_caucasian_war.011 = {# Caucausus Lost - Russia View
 	}
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	#dlc = mat_rossiya_icon
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -409,14 +409,13 @@ mat_rossiya_caucasian_war.011 = {# Caucausus Lost - Russia View
 				create_country = {# Imereti!
 					tag = GEO_IME
 					origin = this
-					province = p:xD65AC8
+					province = p:x85DCE4
 					on_created = {
 						set_country_type = unrecognized
 						s:STATE_GREATER_CAUCASUS = {
 							set_owner_of_provinces = {
 								country = c:GEO_IME
 								provinces = { 
-									xD65AC8
 									x85DCE4
 									x801000
 									x74A861
@@ -424,22 +423,6 @@ mat_rossiya_caucasian_war.011 = {# Caucausus Lost - Russia View
 									xD15CBD
 									xD62036
 									xC0CF80
-								}
-							}
-						}
-					}
-				}
-				create_country = {# Guria
-					tag = GEO_GUR
-					origin = this
-					province = p:x011141
-					on_created = {
-						set_country_type = unrecognized
-						s:STATE_GREATER_CAUCASUS = {
-							set_owner_of_provinces = {
-								country = c:GEO_GUR
-								provinces = { 
-									xC9B445
 								}
 							}
 						}
@@ -948,6 +931,7 @@ mat_rossiya_caucasian_war.012 = {# Caucausus Lost - Other View
 	}
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	#dlc = mat_rossiya_icon
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -982,6 +966,7 @@ mat_rossiya_caucasian_war.013 = {# Dominion Over the Caucasus - Other views
 	}
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	#dlc = mat_rossiya_icon
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -1042,6 +1027,7 @@ mat_rossiya_caucasian_war.014 = {# Rewarding the Player(puppet state)
 	}
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	#dlc = mat_rossiya_icon
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
@@ -1172,7 +1158,7 @@ mat_rossiya_caucasian_war.014 = {# Rewarding the Player(puppet state)
 #########################################
 #	       Scripted Events				#
 #########################################
-mat_rossiya_caucasian_war.030 = { #Muhammad Amin's arrival
+mat_rossiya_caucasian_war.030 = {# Muhammad Amin's arrival
 	type = country_event
 	placement = ROOT
 
@@ -1187,6 +1173,7 @@ mat_rossiya_caucasian_war.030 = { #Muhammad Amin's arrival
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	#dlc = mat_rossiya_icon
 
 	duration = 3
 
@@ -1254,13 +1241,233 @@ mat_rossiya_caucasian_war.030 = { #Muhammad Amin's arrival
 	}
 }
 #########################################
-#	       Historical Events			#
+#	       The Vixen Case				#
 #########################################
+mat_rossiya_caucasian_war.060 = {# The Vixen Case Begins
+	type = country_event
+	placement = ROOT
 
+	title = mat_rossiya_caucasian_war.060.t
+	desc = mat_rossiya_caucasian_war.060.d
+	flavor = mat_rossiya_caucasian_war.060.f
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	#dlc = mat_rossiya_icon
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		c:RUS ?= this
+		game_date > 1836.11.1 # To have it happen roughly in the same historical time period
+	}
+
+	immediate = {
+
+	}
+
+	option = {# Seize the ship!
+		name = mat_rossiya_caucasian_war.060.a
+		default_option = yes
+		hidden_effect = {
+			c:GBR = {# let the british know
+				trigger_event = { id = mat_rossiya_caucasian_war.061 days = 7 popup = yes }
+			}
+		}
+	}
+	option = {# Its probably nothing
+		name = mat_rossiya_caucasian_war.060.b
+		hidden_effect = {
+			c:CIR = {
+				trigger_event = { id = mat_rossiya_caucasian_war.064 days = 7 popup = yes }
+			}
+		}
+	}	
+}
+mat_rossiya_caucasian_war.061 = {# The British Reaction
+	type = country_event
+	placement = ROOT
+
+	title = mat_rossiya_caucasian_war.061.t
+	desc = mat_rossiya_caucasian_war.061.d
+	flavor = mat_rossiya_caucasian_war.061.f
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	#dlc = mat_rossiya_icon
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		# Triggered via event
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = mat_rossiya_caucasian_war.061.a
+		default_option = yes
+		change_relations = {
+			value = -50
+			country = c:RUS
+		}
+		create_incident = {
+			value = 10
+			country = c:RUS
+		}
+		create_diplomatic_catalyst = {
+			type = catalyst_event_negative
+			target = c:RUS
+		}
+		hidden_effect = {
+			c:RUS = {# let the Russians know
+				trigger_event = { id = mat_rossiya_caucasian_war.062 days = 7 popup = yes }
+			}
+		}
+	}
+}
+mat_rossiya_caucasian_war.062 = {# The Russian reaction to the British's Reaction
+	type = country_event
+	placement = ROOT
+
+	title = mat_rossiya_caucasian_war.062.t
+	desc = mat_rossiya_caucasian_war.062.d
+	flavor = mat_rossiya_caucasian_war.062.f
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	#dlc = mat_rossiya_icon
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = mat_rossiya_caucasian_war.062.a
+		default_option = yes
+		hidden_effect = {
+			c:CIR = {# let the Russians know
+				trigger_event = { id = mat_rossiya_caucasian_war.063 days = 7 popup = yes }
+			}
+		}
+	}
+}
+mat_rossiya_caucasian_war.063 = {# Russians continue to blockade us!
+	type = country_event
+	placement = ROOT
+
+	title = mat_rossiya_caucasian_war.063.t
+	desc = mat_rossiya_caucasian_war.063.d
+	flavor = mat_rossiya_caucasian_war.063.f
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	#dlc = mat_rossiya_icon
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		c:CIR ?= this
+		NOT = {
+			has_truce_with = c:RUS
+		}
+	}
+
+	immediate = {
+		c:RUS ?= {
+			save_scope_as = russia_scope
+		}
+		capital = {
+			save_scope_as = capital_scope
+		}
+	}
+
+	option = {
+		name = mat_rossiya_caucasian_war.063.a
+		default_option = yes
+	}
+}
+mat_rossiya_caucasian_war.064 = {# Breaks in the Blockade!
+	type = country_event
+	placement = ROOT
+
+	title = mat_rossiya_caucasian_war.064.t
+	desc = mat_rossiya_caucasian_war.064.d
+	flavor = mat_rossiya_caucasian_war.064.f
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	#dlc = mat_rossiya_icon
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	cooldown = { days = very_long_modifier_time }
+
+	trigger = {
+		c:CIR ?= this
+		NOT = {
+			has_truce_with = c:RUS
+		}
+	}
+
+	immediate = {
+		c:RUS ?= {
+			save_scope_as = russia_scope
+		}
+		capital = {
+			save_scope_as = capital_scope
+		}
+	}
+
+	option = {
+		name = mat_rossiya_caucasian_war.064.a
+		default_option = yes
+	}
+}
 #########################################
 #	       Monthly Events 				#
 #########################################
-mat_rossiya_caucasian_war.070 = { #Parliament of Independence
+mat_rossiya_caucasian_war.070 = {# Parliament of Independence
 	type = country_event
 	placement = ROOT
 
@@ -1268,14 +1475,11 @@ mat_rossiya_caucasian_war.070 = { #Parliament of Independence
 	desc = mat_rossiya_caucasian_war.070.d
 	flavor = mat_rossiya_caucasian_war.070.f
 
-	dlc = dlc010
-
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
-
+	#dlc = mat_rossiya_icon
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+		video = "gfx/event_pictures/africa_leader_arguing.bk2"
 	}
-
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	duration = 3
@@ -1431,7 +1635,7 @@ mat_rossiya_caucasian_war.070 = { #Parliament of Independence
 		}
 	}
 }
-mat_rossiya_caucasian_war.071 = { #Message to GPs
+mat_rossiya_caucasian_war.071 = {# Message to GPs
 	type = country_event
 	placement = ROOT
 
@@ -1439,15 +1643,12 @@ mat_rossiya_caucasian_war.071 = { #Message to GPs
 	desc = mat_rossiya_caucasian_war.071.d
 	flavor = mat_rossiya_caucasian_war.071.f
 
-	dlc = dlc010
-
 	event_image = {
 		video = "gfx/event_pictures/ep1_ca_mountain_pass_military.bk2"
 	}
-
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	#dlc = mat_rossiya_icon
 
 	duration = 3
 
@@ -1483,23 +1684,21 @@ mat_rossiya_caucasian_war.071 = { #Message to GPs
 		}
 	}
 }
-mat_rossiya_caucasian_war.072 = { #Teofil Lapinski's volunteers
+mat_rossiya_caucasian_war.072 = {# Teofil Lapinski's volunteers
 	type = country_event
 	placement = ROOT
 
 	title = mat_rossiya_caucasian_war.072.t
 	desc = mat_rossiya_caucasian_war.072.d
-	flavor = mat_rossiya_caucasian_war.072.f
-
-	dlc = dlc010
+	flavor = mat_rossiya_caucasian_war.072.f	
 
 	event_image = {
 		video = "gfx/event_pictures/ep1_redcoats.bk2"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	#dlc = mat_rossiya_icon
 
 	duration = 3
 
@@ -1585,15 +1784,13 @@ mat_rossiya_caucasian_war.072 = { #Teofil Lapinski's volunteers
 #########################################
 #	       Yearly Events 				#
 #########################################
-mat_rossiya_caucasian_war.100 = {
+mat_rossiya_caucasian_war.100 = {# Failed Incursion
 	type = country_event
 	placement = scope:invasion_base_state
 
 	title = mat_rossiya_caucasian_war.100.t
 	desc = mat_rossiya_caucasian_war.100.d
 	flavor = mat_rossiya_caucasian_war.100.f
-
-	dlc = dlc010
 
 	event_image = {
 		video = "gfx/event_pictures/unspecific_sick_in_hospital.bk2"
@@ -1602,6 +1799,7 @@ mat_rossiya_caucasian_war.100 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	#dlc = mat_rossiya_icon
 
 	duration = 3
 
@@ -1713,15 +1911,13 @@ mat_rossiya_caucasian_war.100 = {
 		}
 	}
 }
-mat_rossiya_caucasian_war.101 = {
+mat_rossiya_caucasian_war.101 = {# Caucasian Supply Convoy Raided
 	type = country_event
 	placement = scope:invasion_base_state
 
 	title = mat_rossiya_caucasian_war.101.t
 	desc = mat_rossiya_caucasian_war.101.d
 	flavor = mat_rossiya_caucasian_war.101.f
-
-	dlc = dlc010
 
 	event_image = {
 		video = "gfx/event_pictures/ep1_cossacks.bk2"
@@ -1730,6 +1926,7 @@ mat_rossiya_caucasian_war.101 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	#dlc = mat_rossiya_icon
 
 	duration = 3
 
@@ -1809,16 +2006,13 @@ mat_rossiya_caucasian_war.101 = {
 		}
 	}
 }
-mat_rossiya_caucasian_war.102 = {
+mat_rossiya_caucasian_war.102 = {# Successful Incursion
 	type = country_event
 	placement = scope:invasion_state
 
 	title = mat_rossiya_caucasian_war.102.t
 	desc = mat_rossiya_caucasian_war.102.d
 	flavor = mat_rossiya_caucasian_war.102.f
-
-	dlc = dlc010
-
 	event_image = {
 		video = "gfx/event_pictures/unspecific_fire.bk2"
 	}
@@ -1826,6 +2020,7 @@ mat_rossiya_caucasian_war.102 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	#dlc = mat_rossiya_icon
 
 	duration = 3
 
@@ -1912,15 +2107,13 @@ mat_rossiya_caucasian_war.102 = {
 		}
 	}
 }
-mat_rossiya_caucasian_war.103 = {
+mat_rossiya_caucasian_war.103 = {# Tribe Swears Fealty
 	type = country_event
 	placement = scope:invasion_state
 
 	title = mat_rossiya_caucasian_war.103.t
 	desc = mat_rossiya_caucasian_war.103.d
 	flavor = mat_rossiya_caucasian_war.103.f
-
-	dlc = dlc010
 
 	event_image = {
 		video = "gfx/event_pictures/ep1_ca_mountain_pass_civilian.bk2"
@@ -1929,6 +2122,7 @@ mat_rossiya_caucasian_war.103 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	#dlc = mat_rossiya_icon
 
 	duration = 3
 
@@ -2020,7 +2214,7 @@ mat_rossiya_caucasian_war.103 = {
 		}
 	}
 }
-mat_rossiya_caucasian_war.104 = {
+mat_rossiya_caucasian_war.104 = {# Defections
 	type = country_event
 	placement = scope:invasion_base_state
 
@@ -2035,6 +2229,7 @@ mat_rossiya_caucasian_war.104 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	#dlc = mat_rossiya_icon
 
 	duration = 3
 
