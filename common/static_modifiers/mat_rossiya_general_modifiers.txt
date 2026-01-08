@@ -47,9 +47,12 @@ modifier_mat_rossiya_modernized_state = {
 	country_institution_size_change_speed_mult = 0.25
 }
 ###############################################
-# Caucasian Modifiers    
+# Russian Modifiers    
 ###############################################
-
+mat_rossiya_rebuilding_winter_palace = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	country_expenses_add = 4
+}
 
 
 

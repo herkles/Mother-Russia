@@ -7,7 +7,55 @@
 namespace = mat_rossiya_russia
 
 #########################################
-#	       Starting Events 				#
+#	     The Reign of Nicholas I		#
 #########################################
+mat_rossiya_russia.001 = {# The Winter Palace Fire
+	type = country_event
+	placement = root
 
+	title = mat_rossiya_russia.001.t
+	desc = mat_rossiya_russia.001.d
+	flavor = mat_rossiya_russia.001.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_fire.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+
+	trigger = {
+		game_date >= 1837.1.1
+		owns_entire_state_region = STATE_INGRIA # got to own Saint Petersburg
+	}
+	immediate = {
+
+	}
+
+	option = {# We must rebuild it! 
+		name = mat_rossiya_russia.001.a
+		default_option = yes
+		add_modifier = {
+			name = mat_rossiya_rebuilding_winter_palace
+			multiplier = money_amount_multiplier_small
+			days = mat_rossiya_duration_3_years
+		}
+	}
+	option = {# Its too expensive
+		name = mat_rossiya_russia.001.a
+		ai_chance = {
+			base = 0
+		}
+		add_radicals = {
+			value = medium_radicals
+			pop_type = aristocrats
+		}
+	}	
+}
 

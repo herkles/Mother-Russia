@@ -1,0 +1,14 @@
+﻿
+on_monthly_pulse_country = {
+	on_actions = {
+		mat_rossiya_russia_monthly_pulse # Russian Flavor events
+	}
+}
+
+mat_rossiya_russia_monthly_pulse = {
+	# These events are monitored from all scopes
+	random_events = {
+		chance_to_happen = 30
+		30 = mat_rossiya_russia.001 # Winter Festival
+	}
+}
