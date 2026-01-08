@@ -1,0 +1,129 @@
+﻿je_mat_rossiya_murid_revolution = {
+	group = je_group_historical_content
+	icon = "gfx/interface/icons/event_icons/event_islamic.dds"
+	weight = 2000
+	
+	should_be_pinned_by_default = yes
+	can_revolution_inherit = no # you are already revolutionary!
+	transferable = no
+
+	is_shown_in_lobby = {
+		c:CHC ?= this
+	}
+	
+	# scripted_button = mat_rossiya_enforce_sharia
+	# scripted_button = mat_rossiya_promote_arabic
+
+	immediate = {
+		c:CHC ?= {
+			save_scope_as = imamate_scope
+		}
+	}
+	
+	modifiers_while_active = {
+		# modifier_mat_rossiya_tribal_administration
+	}
+
+	complete = {
+		NOT = { is_involved_in_journal_entry = je_mat_rossiya_caucasian_war }
+		bureaucracy >= 0
+		approaching_bureaucracy_shortage = no
+		NOT = {# This is a revolution
+			has_law = law_type:law_hereditary_bureaucrats
+			has_law = law_type:law_no_health_system
+			has_law = law_type:law_no_schools
+			has_law = law_type:law_no_social_security
+			has_law = law_type:law_no_home_affairs
+			has_law = law_type:law_no_police
+		} 
+		has_law = law_type:law_homesteading
+		OR = {# Islam before Tribe
+			has_law = law_type:law_cultural_exclusion
+			has_law = law_type:law_multicultural
+		}
+	}
+
+	on_complete = {
+		show_as_tooltip = {
+			trigger_event = { id = mat_rossiya_caucasian_war.150 popup = yes }
+			custom_tooltip = mat_rossiya_north_caucasian_on_complete_tt
+			custom_tooltip = all_caucasian_states_become_north_caucasian_tt
+			custom_tooltip = 25_percent_assimilate_north_caucasian_tt
+			custom_tooltip = mat_rossiya_islam_unites_tribes
+		}
+		hidden_effect = {
+			# The cultures of the Caucauses will unite behind Islam
+			cu:avar = { add_tradition_trait = tradition_caucasian }
+			cu:dargin = { add_tradition_trait = tradition_caucasian }
+			cu:ingush = { add_tradition_trait = tradition_caucasian }
+			cu:kumyk = { add_tradition_trait = tradition_caucasian }
+			cu:karachay = { add_tradition_trait = tradition_caucasian }
+			cu:nogai = { add_tradition_trait = tradition_caucasian }
+			cu:lak = { add_tradition_trait = tradition_caucasian }
+			cu:chechen = { add_tradition_trait = tradition_caucasian }
+			if = {# If you own Azerbaijain then the revolution spreads there
+				limit = {
+					OR = {
+						country_or_subject_owns_entire_state_region = STATE_AZERBAIJAN
+						country_or_subject_owns_entire_state_region = STATE_ELIZAVETPOL
+					}
+				}
+				cu:azerbaijani = { add_tradition_trait = tradition_caucasian }
+				s:STATE_AZERBAIJAN = { add_homeland = cu:north_caucasian }
+			}
+			if = {# if the Circassians has embraced Muridism in their event, then they also get the tradition
+				limit = {
+					c:CIR = { has_variable = mat_rossiya_circassia_embraces_muridism }
+				}
+				cu:circassian = { add_tradition_trait = tradition_caucasian }
+				s:STATE_KUBAN = { add_homeland = cu:north_caucasian }
+			}
+			c:CHC = {
+				trigger_event = { id = mat_rossiya_caucasian_war.150 }
+				# We remove primary cultures of the Imamate to embrace North Caucasian
+				remove_primary_culture = cu:chechen
+				remove_primary_culture = cu:avar
+				add_primary_culture = cu:north_caucasian
+				custom_tooltip = {# Add the homelands
+					text = all_caucasian_states_become_north_caucasian_tt
+					s:STATE_NORTH_CAUCASUS = { add_homeland = cu:north_caucasian }
+					s:STATE_DAGESTAN = { add_homeland = cu:north_caucasian }
+				}
+				custom_tooltip = {# Clergy, officers, Academics, and Bureaucrats embrace North Caucasian
+					text = 25_percent_assimilate_north_caucasian_tt
+					every_scope_pop = {
+						limit = {
+							OR = {
+								is_pop_type = bureaucrats
+								is_pop_type = academics
+								is_pop_type = clergymen
+							}
+						}
+						change_pop_culture = {
+							target = cu:north_caucasian
+							value = 0.25
+						}
+					}
+				}
+				ruler = {# Change culture of ruler
+					change_character_culture = cu:north_caucasian
+				}
+				ig:ig_devout.leader = {# The devout embraces north caucasian
+					change_character_culture = cu:north_caucasian
+				}
+			}
+		}
+	}
+
+	fail = {
+		AND = {
+			NOT = { has_law_or_variant = law_type:law_state_religion }
+			NOT = { has_law = law_type:law_theocracy }
+		}
+
+	}
+
+	invalid = {
+		NOT = { has_law = law_type:law_theocracy }
+	}
+}

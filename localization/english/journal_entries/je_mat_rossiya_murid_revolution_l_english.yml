@@ -1,0 +1,22 @@
+﻿l_english:
+  # Journal Entries
+    je_mat_rossiya_murid_revolution: "The Murid Revolution"
+    je_mat_rossiya_murid_revolution_reason: "Ever since the Imams have came to power in the Caucasus, the movement known as Muridism has been sweeping the valleys and hills like wildfire. Muridism seeks to destroy the old tribal order of local khans and sultans, and to put aside people's tribal identity for Islam. Much still needs to be done in order to ensure that the Murid Revolution succeeds in restoring the true teaching of Islam to the people of the Caucasus."
+   
+  # Modifiers
+    mat_rossiya_murid_revolution_leader_success: "Murdist Ulema"
+    mat_rossiya_murid_islamic_success: "Murdist Officers"
+
+  # Buttons
+
+  # Tooltips
+    all_caucasian_states_become_north_caucasian_tt: "All [Concept('concept_state','$concept_states$')] in [GetStrategicRegion('region_caucasus').GetName] will become [GetCulture('north_caucasian').GetName] [Concept('concept_homeland','$concept_homelands$')]"
+    25_percent_assimilate_north_caucasian_tt: "#v 25%#! of [GetPopType('bureaucrats').GetName], and [GetPopType('clergymen').GetName] and [GetPopType('academics').GetName] [Concept('concept_pop', '$concept_pops$')] will assimilate into the [GetCulture('north_caucasian').GetName] [concept_culture]"
+    mat_rossiya_north_caucasian_on_complete_tt: "Upon completing this [concept_journal_entry], [GetCulture('north_caucasian').GetName] will become a [Concept('concept_primary_cultures','$concept_primary_culture$')] of [SelectLocalization(SCOPE.sCountry('imamate_scope').IsValid, SCOPE.sCountry('imamate_scope').GetName, 'CHC')] "
+    mat_rossiya_islam_unites_tribes: "All #bold Islamic Caucasian#! [Concept('concept_culture', '$concept_cultures$')] with [Concept('concept_homeland','$concept_homelands$')] in our [Concept('concept_state', '$concept_states$')] in the [GetStrategicRegion('region_caucasus').GetName] [Concept('concept_strategic_region','$concept_strategic_regions$')] will adopt the #b Caucasian#! [concept_tradition_trait]"
+
+
+
+
+
+

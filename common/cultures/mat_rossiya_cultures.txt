@@ -11,7 +11,6 @@ abkhazian = {# Abkhazian
 		wine
 	}
 
-	traditions = { tradition_caucasian }
 	male_common_first_names = {
 		Abga
 		Adamer
@@ -217,7 +216,7 @@ avar = {# Avar
 	religion = sunni
 	heritage = heritage_north_caucasian
 	language = language_avaric
-	traditions = { tradition_caucasian }
+	# traditions = { tradition_caucasian }
 	male_common_first_names = {
 		Aslan
 		Hamza
@@ -266,7 +265,7 @@ dargin = {# Dargin
 	religion = sunni
 	heritage = heritage_north_caucasian
 	language = language_dargin
-	traditions = { tradition_caucasian }
+	# traditions = { tradition_caucasian }
 	male_common_first_names = {
 		Abdusalam
 		Ahmadkhan
@@ -346,7 +345,7 @@ osetian = {# Ossetian
 	religion = orthodox
 	heritage = heritage_north_caucasian
 	language = language_ossetian
-	traditions = { tradition_caucasian }
+	# traditions = { tradition_caucasian }
 	male_common_first_names = {
 		Abrek
 		Afako
@@ -530,7 +529,7 @@ ingush = {# Ingush
 	religion = sunni
 	heritage = heritage_north_caucasian
 	language = language_vainakh
-	traditions = { tradition_caucasian }
+	# traditions = { tradition_caucasian }
 	male_common_first_names = {
 		Abdula
 		Abdulkhamid
@@ -650,7 +649,7 @@ kumyk = {# Kumayks
 	religion = sunni
 	heritage = heritage_north_caucasian
 	language = language_kumyk
-	traditions = { tradition_caucasian }
+	# traditions = { tradition_caucasian }
 	male_common_first_names = {
 		Abdula
 		Abdulatip
@@ -732,7 +731,7 @@ karachay = {# Karachay
 	heritage = heritage_north_caucasian
 	language = language_karachay
 
-	traditions = { tradition_caucasian }
+	# traditions = { tradition_caucasian }
 	male_common_first_names = {
 		Alibek
 		Aliy
@@ -1056,7 +1055,7 @@ nogai = {# Nogais
 	religion = sunni
 	heritage = heritage_north_caucasian
 	language = language_nogai
-	traditions = { tradition_caucasian }
+	# traditions = { tradition_caucasian }
 	male_common_first_names = {
 		Asaf
 		Baqi
@@ -1109,6 +1108,536 @@ lak = {# Laks
 	religion = sunni
 	heritage = heritage_north_caucasian
 	language = language_lak
+	# # traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Aslan
+		Hamza
+		Jamal_al-Din
+		Mansur
+		Mohammad
+		Murad
+		Ruslan
+		Shamil
+		Soferbi
+		Zamudin
+	}
+	female_common_first_names = {
+		Albina
+		Irina
+		Jilfidan
+		Maria
+		Melek
+		Nadia
+		Svetlana
+		Tamara
+	}
+	noble_last_names = {
+		Cherkassky
+		Chetao
+		Dipsheu
+		Kuadzhe
+		Tkhaghapseu
+	}
+	common_last_names = {
+		Bek
+		Chemiakin
+		Guchev
+		Mollah
+		Nafash
+		Natkho
+		Shaaban
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = european
+}
+# Caucauses Cultures - Removing the Caucasian tradition from vanilla caucasian groups
+REPLACE:georgian= {
+	color= hsv{ 0.33 0.26 0.43 }
+	religion = orthodox
+	heritage = heritage_georgian
+	language = language_georgian
+
+	obsessions = {
+		wine
+	}
+
+	# traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Akaki
+		Alexander
+		Andria
+		Bagrat
+		Besarion
+		David
+		Dimitri
+		Eduard
+		Ekvtime
+		Evgeni
+		Filipp
+		Galaktion
+		Georgi
+		German
+		Givi
+		Grigol
+		Ilia
+		Ioseb
+		Irakli
+		Ivane
+		Jansung
+		Jemal
+		Kaikhosro
+		Konstantine
+		Leo
+		Levan
+		Luka
+		Meliton
+		Mikheil
+		Murman
+		Nikoloz
+		Noe
+		Otar
+		Polikarp
+		Radish
+		Revaz
+		Sargis
+		Sergo
+		Shalva
+		Solomon
+		Sulkhan
+		Teimuraz
+		Tingiz
+		Vakhtang
+		Valerian
+		Vasil
+		Vladimer
+		Zakharia
+		Zurab
+		Zviad
+	}
+	female_common_first_names = {
+		Ana
+		Anastasia
+		Aneta
+		Babilina
+		Darejan
+		Dominika
+		Ekaterine
+		Eleonora
+		Esma
+		Ketevan
+		Mariam
+		Nino
+		Olga
+		Rusudan
+		Tekle
+		Vera
+	}
+	noble_last_names = {
+		Abashidze
+		Dadeshkeliani
+		Dadiani
+		Guramishvili
+		Melikishvili
+		Nikoladze
+		Orbeliani
+		Tumanishvili
+		Tsereteli
+		Tsitsishvili
+	}
+	common_last_names = {
+		Abkhazi
+		Amilakhvari
+		Avalishvili
+		Bagratuni
+		Bakradze
+		Balanchivadze
+		Barakadze
+		Chabukiani
+		Chavchanadze
+		Chkhubianashvili
+		Cholokashvili
+		Chubinashvili
+		Dodashvili
+		Eliava
+		Gabashvili
+		Gokhieli
+		Gordeli
+		Javakhisvili
+		Jugashvili
+		Jugheli
+		Kakabadze
+		Kandelaki
+		Kartvelishvili
+		Kavtaradze
+		Kereselidze
+		Khelaia
+		Khvitia
+		Kvinitadze
+		Leselidze
+		Maglakelidze
+		Makharadze
+		Mazniashvili
+		Mikeladze
+		Muskhelishvili
+		Nioradze
+		Nutsubideze
+		Otskheli
+		Ramishvili
+		Razikashvili
+		Sabinin
+		Shanidze
+		Sukhisvili
+		Tabidze
+		Takaishvili
+		Tsereteli
+		Tsintsadze
+		Uznadze
+		Zhordania
+	}
+	ethnicities = {
+		1 = slavic
+	}
+	graphics = european
+}
+REPLACE:armenian= {
+	color= hsv{ 0.15 0.55 0.52 }
+	religion = oriental_orthodox
+	heritage = heritage_armenian
+	language = language_armenian
+
+	obsessions = {
+		tobacco
+	}
+
+	# traditions = { tradition_caucasian }
+	male_common_first_names = {
+		Alexander Arakel Aram Aramais Arsen Artashes Artavazd Artem Ashot Assadour Atom Andranik Avetis
+		Barsegh Benyamin Boghos
+		Deran Drastamat
+		Eduard
+		Gevorg Gor Gurgen
+		Hamazasp Hayk Hovhannes Hovsep Hrant
+		Isahak
+		Karapet Kevork
+		Levon
+		Mkrtich Murad Martiros
+		Nubad
+		Papken
+		Rouben
+		Sarkis Sergei Sevan Smbat Soghomon Souren Spiru
+		Tadevos Taniel Tovmas
+		Vahan Vahe Vahram Vano Vartan Vazrik Vilen
+		Yegishe Yervand
+		Zaven
+	}
+	female_common_first_names = {
+		Anna Arshaluys
+		Diana
+		Hripsime Horom
+		Mari
+		Perchuhi
+		Satenik Shushanik Sophia
+		Takuhi
+		Virginia
+		Zabel Zardar
+	}
+	noble_last_names = {
+		Abamelik Agadzhanian Atabekian
+		Melik-Aghamalian Melikyan
+	}
+	common_last_names = {
+		Afeyan Arakelian Asdvadzadrian Asriyan Avakian Aydinian Azatian Aharonian Amirkhanyan
+		Babadzhanian Bogosian Bounyatian Bagramyan
+		Chakheltian
+		Dombalagian Dndesian
+		Egoyan Erznvian Ephrikian
+		Ghakarian Ghehanian Ghorghanian Guediguian Ganatchian Galanderian Gazarossian
+		Hannessoghlian Hasratian Hovsepian Hagopian
+		Izmirlian Isahakyan
+		Kaloian Kamalian Khachaturian Khakhanyan Khatchaturiants Konstandyan Konstanian Kechekjan Khrimian
+		Mamikonian Mardvian Matinian Mirakian Mkhitarian Mussiniants Melkonyan
+		Nazarbekian Nahashbedian
+		Ozanian Ormanian
+		Pahlevanian Peleshyan
+		Safrazpekian Sahakiam Sarksyan Sekoyan Shadunts Shahsuvarian Silikyan Sassouni Shaumian Soghomonian Srvandztian
+		Tavakyalian Tchartichian Tcholakhian Ter-Sarkayan Terzian Tigraniants Tigranov Toshian Tashjian Tumacan Tourian
+		Varapetian Vartanian
+	}
+	ethnicities = {
+		1 = slavic
+	}
+	graphics = european
+}
+REPLACE:azerbaijani= {
+	color= hsv{ 0.67 0.38 0.41 }
+	religion = shiite
+	heritage = heritage_anatolian
+	language = language_oghuz
+	traditions = { tradition_persianate }
+	male_common_first_names = {
+		Ahmad
+		Ali
+		Aliagha
+		Bahram
+		Elbay
+		Farhad
+		Firudin
+		Hamid
+		Hasan
+		Heydar
+		Huseyin
+		Ibrahim
+		Ismayil
+		Jalil
+		Mahmud
+		Malik
+		Mehdi
+		Mohammad
+		Murad
+		Samad
+		Tahir
+		Zahid
+	}
+	female_common_first_names = {
+		Alaviyya
+		Amaliya
+		Aziza
+		Hagigat
+		Hamida
+		Heyran
+		Izzet
+		Maryam
+		Munavvar
+		Nasiba
+		Nesrin
+		Nuriyya
+		Sakina
+		Shargiyya
+		Shirin
+	}
+	noble_last_names = {
+		Akhundzade
+		Ashurbeyov
+		Bahmani-Qajar
+		Bakikhanov
+		Kazembek
+		Kengerli
+		Ibrahimbek
+		Javanshir
+		Kalantarli
+		Mammadbeyov
+		Mehmandarov
+		Nakhchivanski
+		Narimanbekov
+		Qasimbek
+		Topchubashi
+	}
+	common_last_names = {
+		Ahmadbek
+		Ahmadzade
+		Akbarzade
+		Edigar
+		Ganjavi
+		Ildyrym
+		Mehmandar
+		Nakhchivani
+		Qasimzade
+		Rasulzade
+		Tahirzade
+		Talishkhan
+		Zardabi
+	}
+	ethnicities = {
+		1 = arab
+	}
+	graphics = arabic
+}
+REPLACE:circassian = {
+	color= rgb{ 62 86 55 }
+	religion = sunni
+	heritage = heritage_north_caucasian
+	language = language_adyghe
+	# traditions = { tradition_caucasian }
+
+	male_common_first_names = {
+		Aidamir
+		Aliy
+		Amirkhan
+		Azik
+		Qerandiqo
+		Hatajuq
+		Ismail
+		Shuwpagwe
+		Sefer
+		Qarabatir
+		Ibrahim
+		Hasan
+		Muhammad
+		Inarmas
+		Aksak
+		Kudenet
+		Dokshuka
+		Khizir
+		Kuba
+		Mukhadin
+		Nalbi
+		Nedighe
+		Petrezok
+		Shumaf
+		Anfoko
+		Tlepsh
+		Zalimkhan
+		Aleguko
+		Zawirbiy
+		Ziramikw
+	}
+	female_common_first_names = {
+		Adiyiku
+		Ayshet
+		Bzcho
+		Elmeskhan
+		Fatme
+		Fayzet
+		Fyzh
+		Gupse
+		Gwaschemasche
+		Lashyn
+		Madiyne
+		Mariyne
+		Marzet
+		Naghwe
+		Nakihat
+		Pizchine
+		Sakinat
+		Sataney
+		Temare
+		Zahret
+		Xwzchpagwe
+		Zhanwise
+		Zulima
+	}
+	noble_last_names = {
+		Berzeg
+		Zaneqo
+		Qalawebateqo
+		Aublaa
+		Diman
+		Shogenukov
+		Atazhuko
+		Boletoqo
+		Shirikhuqo
+		Akhedjaqo
+		Khirtsizhiqo
+	}
+	common_last_names = {
+		Achazh
+		Baga
+		Bzish
+		Berqa
+		Jarem
+		Yamezagh
+		Yarghuzh
+		Qakhw
+		Malish
+		Mafawud
+		Natkho
+		Namilhaqu
+		Watah
+		Sakhut
+		Thaqwakho
+		Tiqo
+		Tiw
+		Hapiy
+		Hatkh
+		Hatuw
+		Shiwmizh
+		Chemso
+		Abir
+		Bzac
+		Candar
+		Khapaye
+		Yiwnih
+		Qalebate
+		Khabatir
+		Tughuzhuqo
+	}
+
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = european
+}
+REPLACE:chechen ={
+	color= rgb{ 12 61 45 }
+	religion = sunni
+	heritage = heritage_north_caucasian
+	language = language_vainakh
+	# traditions = { tradition_caucasian }
+	male_common_first_names={
+		Abdul-Muslim Ali Akhmad Abdulla Alibek-Khadzhi Albir-Murza Abdurakhman
+		Dziyaudin Dzhabrail Dzhamal Dzhokhar
+		Elmurza
+		Gubash
+		Iznaur Ibragim Islambek Ismail
+		Khamid Khota Khoza Khasan
+		Magoma Mamad Mavlid Mokhmad
+		Nurdi
+		Shahid Shamil Salambek
+		Tamerlan Timur
+		Yahya
+		Zaur Zaurbek Zelim
+	}
+	female_common_first_names = {
+		Aimani Aishat
+		Fariza
+		Khava
+		Lidia
+		Malika Madina
+		Zainap
+	}
+	noble_last_names = {
+	}
+	common_last_names={
+		Albury Ammigler Akhmadgyer Aybulat
+		Dudigyer
+		Islamgyer
+		Khamidgler Klushagger
+		Lorisgler
+		Musigyer Morgigier Mokhmadgyer Mavlidgler
+		Salmangier
+
+		# Chechen teips
+
+		Achalo Allaroy Anastoy
+		Buni Belgatoy Benoy Biltoy
+		Chartoy Chermoy Chantiy Chinkhoy
+		Dishni
+		Elistanzhkhoy Engnoy Ersenoy
+		Gendargenoy Gordaloy Gunoy Galai Ghoandaloy
+		Keloy Kharachoy Khaikharoy Khindkhoy Kalkhoy
+		Makazhoy Merzhoy Marshaloy Mulkoy
+		Nizhaloy Nokhchmakhkakhoy Nashkhoy
+		Orstkhoy
+		Peshkhoy
+		Rigakhoy
+		Sharoy Shotoy Shonoy Satoy
+		Tsontaroy Tsechoy Turkoy  Terloy
+		Varandoy
+		Yalkhoy Yalkharoy
+		Zandkhoy Zumsoy Zurzaqoy
+	}
+	ethnicities = {
+		1 = north_caucasian
+	}
+	graphics = arabic
+}
+REPLACE:north_caucasian= {# Rewarding culture for completing the islamic Revolution
+	color= hsv{ 0.17 0.26 0.99 }
+	religion = sunni
+	heritage = heritage_north_caucasian
+	language = language_arabic # Arabic unites the cultures
 	traditions = { tradition_caucasian }
 	male_common_first_names = {
 		Aslan

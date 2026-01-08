@@ -1224,6 +1224,9 @@ mat_rossiya_caucasian_war.030 = {# Muhammad Amin's arrival
 			type = catalyst_event_positive
 			target = root
 		}
+		hidden_effect = {
+			set_variable = mat_rossiya_circassia_embraces_muridism
+		}
 	}
 
 	option = {
@@ -2322,7 +2325,70 @@ mat_rossiya_caucasian_war.104 = {# Defections
 	}
 }
 #########################################
-#	       Other Events 				#
+#	   	The Murid Revolution 			#
 #########################################
+mat_rossiya_caucasian_war.150 = {# The Revolution succeeds!
+	type = country_event
+	placement = root
 
+	title = mat_rossiya_caucasian_war.150.t
+	desc = mat_rossiya_caucasian_war.150.d
+	flavor = mat_rossiya_caucasian_war.150.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_islam.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_islamic.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	#dlc = mat_rossiya_icon
+
+	trigger = {
+		# Triggered via event
+	}
+
+	immediate = {
+
+	}
+
+	option = {# Praise the Imam! - leader gains popularity and IG attraction
+		name = mat_rossiya_caucasian_war.150.a
+		ruler = {
+			add_modifier = {
+				name = mat_rossiya_murid_revolution_leader_success
+				days = long_modifier_time
+			}
+		}
+		ig:ig_devout ?= {
+			leader = {
+		    	add_modifier = {
+					name = mat_rossiya_murid_revolution_leader_success
+					days = long_modifier_time
+				}
+       		}
+		}
+	}
+	option = {# Allah Akbar! - Loyalty and support to the people
+		name = mat_rossiya_caucasian_war.150.b
+		default_option = yes
+		add_modifier = {
+			name = mat_rossiya_murid_islamic_success
+			days = very_long_modifier_time
+		}
+		add_loyalists = {
+			value = large_radicals
+			pop_type = officers
+		}	
+		add_loyalists = {
+			value = large_radicals
+			pop_type = bureaucrats
+		}			
+	}	
+}
 

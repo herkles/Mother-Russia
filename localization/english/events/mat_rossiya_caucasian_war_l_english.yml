@@ -144,7 +144,12 @@
     mat_rossiya_caucasian_war.104.a: "Tighten security in the region, to avert further defections."
     mat_rossiya_caucasian_war.104.b: "We will not build further bad will amongst the people."
 
-
+  # Murid Islamic Revolution Events
+    mat_rossiya_caucasian_war.150.t: "Muridism Triumphant!"
+    mat_rossiya_caucasian_war.150.d: "The Muridist teachings have triumphed. The power of the Khans and the Russians both have been broken. The Green flag of Islam has triumphed over the petty squabbles of clan and tribe. A new day is now upon us in the Caucasus."
+    mat_rossiya_caucasian_war.150.f: ""Amid the horrors of battle, do not weaken in spirit for a single minute. Be steadfast in the face of danger, death does not come before the hour appointed by the will of the Almighty""
+    mat_rossiya_caucasian_war.150.a: "Glory to God and his Ulema!"
+    mat_rossiya_caucasian_war.150.b: "Glory to God and his People!"
 
 
 

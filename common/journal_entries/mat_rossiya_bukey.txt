@@ -73,5 +73,3 @@
 		has_variable = mat_rossiya_buk_modernization_completed
 	}
 }
-
-
