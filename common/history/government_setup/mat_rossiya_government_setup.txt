@@ -81,9 +81,6 @@
 			add_ideology = mat_rossiya_ideology_caucasian_sharia
 			add_ideology = mat_rossiya_ideology_caucasian_ghazi
 		}
-		ig:ig_industrialists = {
-			
-		}
 		ig:ig_intelligentsia = {# The Intelligentsia look to the Ottomans for how to modernize the region
 			remove_ideology = ideology_anti_clerical
 			remove_ideology = ideology_liberal
@@ -97,13 +94,7 @@
 			set_interest_group_name = mat_rossiya_ig_khans
 			remove_ruling_interest_group = yes
 		}
-		ig:ig_petty_bourgeoisie = {
-			
-		}
 		ig:ig_rural_folk = {
-			
-		}
-		ig:ig_trade_unions = {
 			
 		}
 	}

@@ -1784,6 +1784,54 @@ mat_rossiya_caucasian_war.072 = {# Teofil Lapinski's volunteers
 		}
 	}
 }
+
+mat_rossiya_caucasian_war.073 = {# The Quba Uprising
+	type = country_event
+	placement = root
+	event_image = {
+		video = "ep1_cossacks"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	title = mat_rossiya_caucasian_war.073.t
+	desc = mat_rossiya_caucasian_war.073.d
+	flavor = mat_rossiya_caucasian_war.073.f
+
+	duration = 3
+
+	immediate = {
+		mat_rossiya_quba_revolt_effects = yes
+	}
+
+	trigger = {
+		game_date > 1837.1.1
+		game_date < 1840.1.1
+	}
+
+	option = {# Fight the rebels
+		name = mat_rossiya_caucasian_war.073.a
+		default_option = yes
+	}
+	option = {# Fight for freedom!
+		name = mat_rossiya_caucasian_war.073.b
+		if = {# if you are a player you can swap to Quba to fight for freedom! Good Luck!
+			limit = { is_player = yes}
+			play_as = c:AZB_QUB
+		}
+		
+	}
+
+	after = {
+		# hidden_effect = {
+		# 	c:AZB_ELI ?= { trigger_event = { id = mat_rossiya_caucasian_war.014 } }
+		# 	c:CHC ?= { trigger_event = { id = mat_rossiya_caucasian_war.014 } }
+		# }
+	}
+}
+
+
 #########################################
 #	       Yearly Events 				#
 #########################################

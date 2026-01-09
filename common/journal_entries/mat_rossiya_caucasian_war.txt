@@ -93,6 +93,7 @@
 			40 = mat_rossiya_caucasian_war.060
             30 = mat_rossiya_caucasian_war.070
             10 = mat_rossiya_caucasian_war.072
+			10 = mat_rossiya_caucasian_war.073
         }
     }
 

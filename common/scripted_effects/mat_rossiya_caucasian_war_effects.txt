@@ -1,1 +1,108 @@
-﻿# ## General Situation Effects
+﻿
+
+
+# Revolts and Uprisings
+
+mat_rossiya_quba_revolt_effects = {# Quba Uprising
+	create_country = {# Quba
+		tag = AZB_QUB
+		origin = this
+		province = p:xBFD159
+		on_created = {
+			set_country_type = unrecognized
+			activate_law = law_type:law_monarchy
+			activate_law = law_type:law_autocracy
+			add_modifier = {
+				name = war_for_independence
+				days = normal_modifier_time
+			}
+			s:STATE_AZERBAIJAN = {
+				set_owner_of_provinces = {
+					country = c:AZB_QUB
+					provinces = {
+						xD77566
+						x69FE0D
+					}
+				}
+			}
+		}
+	}
+	s:STATE_AZERBAIJAN = { add_claim = c:AZB_QUB }	
+	c:AZB_QUB ?= {
+		set_state_religion = rel:sunni
+		create_diplomatic_play = {
+			name = annex_war
+			target_country = c:RUS
+			type = dp_return_state
+			target_state = s:STATE_AZERBAIJAN.region_state:RUS
+			escalation = 80
+			add_war_goal = { holder = c:RUS target_country = c:AZB_QUB type = annex_country }
+
+		}
+	}	
+	every_state = {
+		limit = {
+			owner = c:AZB_QUB
+		}
+		add_modifier = {
+			name = modifier_taiping_hiring_bonus # Temporary bonus to fill their barracks
+			months = 6
+		}
+	}
+	random_state = {
+			limit = {
+				c:AZB_QUB ?= owner
+			}
+			save_scope_as = quba_uprising_state
+		}
+	c:AZB_QUB = {
+		create_military_formation = {# Give them some men to fight back
+			type = army
+			hq_region = sr:region_caucasus
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_AZERBAIJAN
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_AZERBAIJAN
+				count = 5
+			}
+		}
+	}
+	c:AZB_QUB = {
+		# set politics for the Quban Revolt
+		ig:ig_armed_forces = {
+			remove_ideology = ideology_jingoist
+			add_ideology = mat_rossiya_ideology_caucasian_ghazi
+			add_ruling_interest_group = yes
+		}
+		ig:ig_devout = {
+			add_ruling_interest_group = yes
+			remove_ideology = ideology_moralist
+			remove_ideology = ideology_patriarchal
+
+			add_ideology = mat_rossiya_ideology_mauridism
+			add_ideology = mat_rossiya_ideology_caucasian_sharia
+			add_ideology = mat_rossiya_ideology_caucasian_ghazi
+		}
+		ig:ig_intelligentsia = {# The Intelligentsia look to the Ottomans for how to modernize the region
+			remove_ideology = ideology_anti_clerical
+			remove_ideology = ideology_liberal
+			remove_ideology = ideology_republican
+
+			add_ideology = mat_rossiya_ideology_imamate_shura
+			add_ideology = mat_rossiya_ideology_islamic_modernism
+
+		}
+		# Create the Quba Rebel commanders
+		create_character = { template = AZB_QUB_muhammad_khulukh }
+		create_character = { template = AZB_QUB_yarali_khyilivi }
+		create_character = { template = AZB_QUB_mahmud_magaramkentsky }
+
+	}
+	
+}
+
+

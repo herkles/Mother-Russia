@@ -1,6 +1,6 @@
 ﻿### Russia character template file ###
 
-### Princes of Svantali
+### Sultan of Elisu
 
 AZB_ELI_daniyal_bek = {# Daniyal Bek
 	first_name = Daniyal
@@ -22,4 +22,51 @@ AZB_ELI_daniyal_bek = {# Daniyal Bek
 
 	}
 }
+
+### Khanate of Quba
+
+AZB_QUB_muhammad_khulukh = {# Muhammad Khulukh - leader
+	first_name = Muhamed
+	last_name = Khulukh
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_devout
+	ideology = mat_rossiya_ideology_mauridism_leader
+	ruler = yes
+	birth_date = 1785.1.1
+	traits = {
+		pious  
+	}
+}
+AZB_QUB_yarali_khyilivi = {# Yarali Khyilivi - General Armed Forces
+	first_name = Yarali
+	last_name = Khyilivi
+	historical = yes
+	culture = primary_culture
+	ig_leader = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	is_general = yes
+	birth_date = 1802.1.1
+	traits = {
+		brave # he was known for his bravery
+	}
+}
+AZB_QUB_mahmud_magaramkentsky = {# Mahmud Magaramkentsky - Devout
+	first_name = Mahmud
+	last_name = Magaramkentsky
+	historical = yes
+	culture = primary_culture
+	interest_group = ig_devout
+	ideology = mat_rossiya_ideology_mauridism_leader
+	ig_leader = yes
+	ruler = yes
+	birth_date = 1795.1.1 # birth year is unknown
+	traits = {
+		pious # was an advocate of Sharia Law
+	}
+}
+
+
+
 

@@ -113,6 +113,19 @@
     mat_rossiya_caucasian_war.072.a: "Grant their leader a role as commander, and send him to the front."
     mat_rossiya_caucasian_war.072.b: "We would be well served by training in [SCOPE.sCountry('austria_scope').GetAdjective] tactics."
 
+    mat_rossiya_caucasian_war.073.t: "An Uprising in Quba"
+    mat_rossiya_caucasian_war.073.d: "In the region of Quba in Shirivan, highlanders and other tribal people have rallied to the vile bandit leader Shamil's banner and rose up in rebellion. They are marching south to try and capture Baku and other major cities in the region. "
+    mat_rossiya_caucasian_war.073.f: ""Praise be to Allah, we stand firm and have a significant force assembled, we have taken many prisoners and we hope to take the city soon.""
+    mat_rossiya_caucasian_war.073.a: "We shall crush them"
+    mat_rossiya_caucasian_war.073.b: "For Allah! for Freedom!"
+
+
+
+
+
+
+
+
   # Yearly Events
     mat_rossiya_caucasian_war.100.t: "Failed Incursion into [SCOPE.sCountry('adversary_scope').GetName]"
     mat_rossiya_caucasian_war.100.d: "An incursion we have launched from [SCOPE.sState('invasion_base_state').GetName] into the territory claimed by [SCOPE.sCountry('adversary_scope').GetName] has failed. The units dispatched have withdrawn, after suffering heavy losses amongst the rough Caucasian terrain."
