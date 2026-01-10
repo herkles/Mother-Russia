@@ -1784,7 +1784,6 @@ mat_rossiya_caucasian_war.072 = {# Teofil Lapinski's volunteers
 		}
 	}
 }
-
 mat_rossiya_caucasian_war.073 = {# The Quba Uprising
 	type = country_event
 	placement = root
@@ -1822,16 +1821,7 @@ mat_rossiya_caucasian_war.073 = {# The Quba Uprising
 		}
 		
 	}
-
-	after = {
-		# hidden_effect = {
-		# 	c:AZB_ELI ?= { trigger_event = { id = mat_rossiya_caucasian_war.014 } }
-		# 	c:CHC ?= { trigger_event = { id = mat_rossiya_caucasian_war.014 } }
-		# }
-	}
 }
-
-
 #########################################
 #	       Yearly Events 				#
 #########################################

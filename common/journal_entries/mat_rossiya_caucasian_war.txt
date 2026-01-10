@@ -28,6 +28,21 @@
 				add_modifier = caucasus_war_attacker	
 			}
 		}
+		s:STATE_AZERBAIJAN = {# Azerbaijan
+			region_state:RUS = {# Azerbaijan - Russian
+				add_modifier = caucasus_war_attacker	
+			}
+		}
+		s:STATE_GREATER_CAUCASUS = {# Greater Caucasus
+			region_state:RUS = {# Tifilis - Russian
+				add_modifier = caucasus_war_attacker	
+			}
+		}
+		s:STATE_ELIZAVETPOL = {# Elizavetpol
+			region_state:RUS = {# Elizavetpol - Russian
+				add_modifier = caucasus_war_attacker	
+			}
+		}
 		s:STATE_NORTH_CAUCASUS = {# Kuban
 			region_state:RUS = {# Kuban - Russian
 				add_modifier = caucasus_war_attacker	
@@ -163,10 +178,17 @@
 		}
         custom_tooltip = {
             text = je_mat_rossiya_caucasian_war_russian_victory_tt
-            NOT = {
+            NOT = {# Circassia and the Imamate are actively hostile
                 exists = c:CIR
                 exists = c:CHC
+				exists = c:AZB_QUB
             }
+			# the other states need to be controlled
+			c:GEO_MIN = { is_subject = yes }
+			c:GEO_SVA = { is_subject = yes }
+			c:ABK = { is_subject = yes }
+			c:DAG_TAR = { is_subject = yes }
+			c:AZB_ELI = { is_subject = yes }
         }
 		c:RUS = {
 			country_or_subject_owns_entire_state_region = STATE_KUBAN
@@ -175,6 +197,39 @@
         	country_or_subject_owns_entire_state_region = STATE_GREATER_CAUCASUS
 		}
 		s:STATE_KUBAN = {
+			trigger_if = {
+				limit = {
+					NOT = { c:RUS = { has_state_in_state_region = STATE_KUBAN } }
+				}
+				c:RUS = { has_state_in_state_region = STATE_KUBAN }
+			}
+			region_state:RUS ?= {
+				turmoil <= 0.25
+			}
+		}
+		s:STATE_GREATER_CAUCASUS = {
+			trigger_if = {
+				limit = {
+					NOT = { c:RUS = { has_state_in_state_region = STATE_KUBAN } }
+				}
+				c:RUS = { has_state_in_state_region = STATE_KUBAN }
+			}
+			region_state:RUS ?= {
+				turmoil <= 0.25
+			}
+		}
+		s:STATE_AZERBAIJAN = {
+			trigger_if = {
+				limit = {
+					NOT = { c:RUS = { has_state_in_state_region = STATE_KUBAN } }
+				}
+				c:RUS = { has_state_in_state_region = STATE_KUBAN }
+			}
+			region_state:RUS ?= {
+				turmoil <= 0.25
+			}
+		}
+		s:STATE_ELIZAVETPOL = {
 			trigger_if = {
 				limit = {
 					NOT = { c:RUS = { has_state_in_state_region = STATE_KUBAN } }
