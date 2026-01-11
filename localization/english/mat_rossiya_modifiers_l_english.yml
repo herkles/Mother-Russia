@@ -1,9 +1,17 @@
 ﻿l_english:
 
   modifier_russian_company_rule: "Company Rule"
+  modifier_russian_company_rule_desc: "The colony is ruled by the Russian-American Company"
+
   modifier_russian_rule_of_poland: "Russian Martial Law"
+  modifier_russian_rule_of_poland_desc: "Martial Law is in effect to ensure that the polish do not rise up against the russian Authorities"
+
   mat_rossiya_pastoral_fury: "Nomadic Fury"
+  mat_rossiya_pastoral_fury_desc: "Pastoral peasants are furious at being forced into a sedentary lifestyle"
+
   mat_rossiya_rebuilding_winter_palace: "Rebuilding the Winter Place"
+  mat_rossiya_rebuilding_winter_palace_desc: "Rebuilding the winter palace following a devestating fire."
 
-
+  mat_rossiya_swedish_court_language: "Swedish Court Language"
+  mat_rossiya_swedish_court_language_desc: "The Language of the Court is swedish"
 

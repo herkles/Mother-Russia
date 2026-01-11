@@ -31,6 +31,12 @@
 				sponsor = PREV.ig:ig_armed_forces # martial law
 			}
 		}
+		active_law:lawgroup_citizenship = {# Subjecthood
+			add_amendment = {
+				type = mat_rossiya_amendment_polish_organic_statute
+				sponsor = PREV.ig:ig_armed_forces # martial law
+			}
+		}		
 		trigger_event = {
 			id = mat_rossiya_poland.001
 		}

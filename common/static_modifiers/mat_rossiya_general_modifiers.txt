@@ -54,6 +54,15 @@ mat_rossiya_rebuilding_winter_palace = {
 	country_expenses_add = 4
 }
 ###############################################
+# Finnish Modifiers    
+###############################################
+mat_rossiya_swedish_court_language = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_prestige_mult = -0.1
+	state_assimilation_mult = -0.1
+	country_legitimacy_base_add = -5
+}
+###############################################
 # Caucasian Modifiers    
 ###############################################
 mat_rossiya_murid_revolution_leader_success = {
