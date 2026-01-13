@@ -1,0 +1,67 @@
+﻿
+on_heir_born = {
+	on_actions = {
+		mat_rossiya_validate_heir_dynasty
+	}
+}
+
+mat_rossiya_validate_heir_dynasty = {
+	trigger = {
+		owner = {
+			OR = {
+				c:GEO ?= this
+			}
+			has_law = law_type:law_monarchy
+		}
+	}
+	effect = {
+		if = {# House Dadiani
+			limit = {
+				owner.ruler ?= {
+					has_variable = house_dadiani
+				}
+			}
+			owner = {
+				heir ?= {
+					set_variable = house_dadiani
+				}
+			}
+		}
+		if = {# House Sharvashidze
+			limit = {
+				owner.ruler ?= {
+					has_variable = house_sharvashidze
+				}
+			}
+			owner = {
+				heir ?= {
+					set_variable = house_sharvashidze
+				}
+			}
+		}
+		if = {# House Dadeshkeliani
+			limit = {
+				owner.ruler ?= {
+					has_variable = house_dadeshkeliani
+				}
+			}
+			owner = {
+				heir ?= {
+					set_variable = house_dadeshkeliani
+				}
+			}
+		}
+		if = {# House Bagrationi
+			limit = {
+				owner.ruler ?= {
+					has_variable = house_bagrationi
+				}
+			}
+			owner = {
+				heir ?= {
+					set_variable = house_bagrationi
+				}
+			}
+		}
+	}
+}

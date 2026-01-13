@@ -17,6 +17,7 @@ GEO_SVA_mikheil_dadishkeliani = {# Mikheil Dadishkeliani
 	}
 	on_created = {
 		set_variable = is_married
+		set_variable = house_dadishkeliani
 	}
 	trait_generation = {
 
@@ -24,7 +25,6 @@ GEO_SVA_mikheil_dadishkeliani = {# Mikheil Dadishkeliani
 }
 
 ### Princes of Abkhazia
-
 GEO_ABK_mikheil_sharvashidze = {# Mikheil Sharvashidze
 	first_name = Mikheil
 	last_name = Sharvashidze
@@ -40,6 +40,7 @@ GEO_ABK_mikheil_sharvashidze = {# Mikheil Sharvashidze
 	}
 	on_created = {
 		set_variable = is_married
+		set_variable = house_sharvashidze
 	}
 	trait_generation = {
 
@@ -47,7 +48,6 @@ GEO_ABK_mikheil_sharvashidze = {# Mikheil Sharvashidze
 }
 
 ### Princes of Mingalia
-
 GEO_MIN_levan_v = {# Levan V
 	first_name = Levan
 	last_name = Dadiani
@@ -63,6 +63,7 @@ GEO_MIN_levan_v = {# Levan V
 	}
 	on_created = {
 		set_variable = is_married
+		set_variable = house_dadiani
 	}
 	trait_generation = {
 
@@ -83,7 +84,7 @@ GEO_MIN_david_dadiani = {# David Dadiani, Levan's eldest son who takes over in 1
         imperious # He was rather heavy handed in his reforms
     }
 	on_created = {
-
+		set_variable = house_dadiani
     }
 	trait_generation = {
 

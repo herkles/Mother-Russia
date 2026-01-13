@@ -1,11 +1,11 @@
 ﻿
-REPLACE:POL = { # Poland
-	flag_definition = {
+REPLACE:POL = {# Poland
+	flag_definition = {# Default
 		coa = POL
 		subject_canton = POL
 		priority = 1
 	}
-	flag_definition = {
+	flag_definition = {# Absolute Monarchy
 		coa = POL_absolute_monarchy
 		subject_canton = POL_absolute_monarchy
 		priority = 20
@@ -16,7 +16,7 @@ REPLACE:POL = { # Poland
 			}
 		}
 	}
-	flag_definition = {
+	flag_definition = {# Congress Poland
 		coa = POL_congress
 		subject_canton = POL_congress
 		priority = 20
@@ -24,7 +24,7 @@ REPLACE:POL = { # Poland
 			coa_def_russian_ensign_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# Republic
 		coa = POL_republic
 		subject_canton = POL_republic
 		priority = 10
@@ -32,7 +32,7 @@ REPLACE:POL = { # Poland
 			coa_def_republic_flag_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# Oligarchy
 		coa = POL_oligarchy
 		subject_canton = POL_oligarchy
 		priority = 25
@@ -40,7 +40,7 @@ REPLACE:POL = { # Poland
 			coa_def_oligarchy_flag_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# Fascist
 		coa = POL_fascist
 		subject_canton = POL_fascist
 		priority = 1500
@@ -48,7 +48,7 @@ REPLACE:POL = { # Poland
 			coa_def_fascist_flag_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# Dicatorship
 		coa = POL_dictatorship
 		subject_canton = POL_dictatorship
 		priority = 20
@@ -56,7 +56,7 @@ REPLACE:POL = { # Poland
 			coa_def_dictatorship_flag_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# Communist
 		coa = POL_republic
 		priority = 1500
 		trigger = {
@@ -64,15 +64,14 @@ REPLACE:POL = { # Poland
 		}
 	}
 }
-
-REPLACE:RUS = { # Russia
-	flag_definition = {
+REPLACE:RUS = {# Russia
+	flag_definition = {# Imperial Russia
 		coa = RUS_imperial
 		allow_overlord_canton = yes
 		subject_canton = RUS_imperial
 		priority = 1
 	}
-	flag_definition = {
+	flag_definition = {# Absolute Monarchy
 		coa = RUS_absolute_monarchy
 		subject_canton = RUS
 		priority = 20
@@ -80,7 +79,7 @@ REPLACE:RUS = { # Russia
 			coa_def_absolute_monarchy_flag_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# Republican Russia
 		coa = RUS_republic
 		subject_canton = RUS_republic
 		priority = 10
@@ -88,7 +87,7 @@ REPLACE:RUS = { # Russia
 			coa_def_republic_flag_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# dicatorship
 		coa = RUS_dictatorship
 		subject_canton = RUS_dictatorship
 		priority = 20
@@ -96,7 +95,7 @@ REPLACE:RUS = { # Russia
 			coa_def_dictatorship_flag_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# Oligarchy
 		coa = RUS_oligarchy
 		subject_canton = RUS_oligarchy
 		priority = 25
@@ -104,14 +103,14 @@ REPLACE:RUS = { # Russia
 			coa_def_oligarchy_flag_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# Soviet Union
 		coa = RUS_soviet_union
 		priority = 1500 # need to override the DEFAULT
 		trigger = {
 			coa_def_communist_flag_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# Soviet technocracy
 		coa = RUS_soviet_technocracy
 		priority = 1750 # need to override the DEFAULT
 		trigger = {
@@ -121,7 +120,7 @@ REPLACE:RUS = { # Russia
 			}
 		}
 	}
-	flag_definition = {
+	flag_definition = {# fascist
 		coa = RUS_fascist
 		subject_canton = RUS_fascist
 		priority = 1500
@@ -129,7 +128,7 @@ REPLACE:RUS = { # Russia
 			coa_def_fascist_flag_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# theocracy
 		coa = RUS_theocracy
 		subject_canton = RUS_theocracy
 		priority = 20
@@ -137,7 +136,7 @@ REPLACE:RUS = { # Russia
 			coa_def_theocracy_flag_trigger = yes
 		}
 	}
-	flag_definition = {
+	flag_definition = {# Nihilist
 		coa = RUS_nihilist
 		priority = 1500 # need to override the DEFAULT
 		trigger = {
@@ -145,13 +144,13 @@ REPLACE:RUS = { # Russia
 		}
 	}
 }
-REPLACE:UBD = { # United Baltic
-	flag_definition = {
+REPLACE:UBD = {# United Baltic
+	flag_definition = {# default
 		coa = UBD
 		subject_canton = UBD
 		priority = 1
 	}
-	flag_definition = {
+	flag_definition = {# Governorates
 		coa = UBD_governorate
 		priority = 5
 		trigger = {
@@ -159,3 +158,201 @@ REPLACE:UBD = { # United Baltic
 		}
 	}
 }
+REPLACE:GEO = {# Georgia
+	flag_definition = {# Default
+		coa = GEO
+		allow_overlord_canton = yes
+		subject_canton = GEO
+		priority = 1
+	}
+	flag_definition = {# Theocracy
+		coa = GEO_theocracy
+		subject_canton = GEO_theocracy
+		priority = 20
+		trigger = {
+			OR = {
+				coa_def_theocracy_flag_trigger = yes
+				AND = {
+					scope:actor ?= {
+						is_country_type = unrecognized
+						NOT = {
+							has_technology_researched = nationalism
+						}
+					}
+				}
+			}
+		}
+	}
+	flag_definition = {# communist
+		coa = GEO_communist
+		priority = 1500
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {# House Sharvashidze
+		coa = GEO_monarchy_sharvashidze
+		subject_canton = GEO_monarchy_sharvashidze
+		allow_overlord_canton = no
+		priority = 7
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			coa_def_sharvashidze_trigger = yes
+		}
+	}
+	flag_definition = {# House Dadeshkeliani
+		coa = GEO_monarchy_dadeshkeliani
+		subject_canton = GEO_monarchy_dadeshkeliani
+		allow_overlord_canton = no
+		priority = 7
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			coa_def_dadeshkeliani_trigger = yes
+		}
+	}
+	flag_definition = {# House Dadiani
+		coa = GEO_monarchy_dadiani
+		subject_canton = GEO_monarchy_dadiani
+		allow_overlord_canton = no
+		priority = 7
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			coa_def_dadiani_trigger = yes
+		}
+	}
+	flag_definition = {# House Bagrationi
+		coa = GEO_monarchy_bagrationi
+		subject_canton = GEO_monarchy_bagrationi
+		allow_overlord_canton = no
+		priority = 7
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			coa_def_bagrationi_trigger = yes
+		}
+	}
+	flag_definition = {# Georgia Cross flag for republics
+		coa = GEO_cross
+		subject_canton = GEO_cross
+		allow_overlord_canton = no
+		priority = 11
+		trigger = {
+			scope:actor ?= {
+				has_variable = georgia_republic_2
+			}
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {# Georgia Cross flag for Monarchies
+		coa = GEO_cross
+		subject_canton = GEO_cross
+		allow_overlord_canton = no
+		priority = 5
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			NOR = {
+				coa_def_sharvashidze_trigger = yes
+				coa_def_dadeshkeliani_trigger = yes
+				coa_def_dadiani_trigger = yes
+				coa_def_bagrationi_trigger = yes
+			}
+		}
+	}
+}
+REPLACE:PLC = {# Poland-Lithuania
+	flag_definition = {# Default - also used as monarchy flag
+		coa = PLC
+		subject_canton = PLC
+		priority = 1
+	}
+	flag_definition = {# Monarchy if you have east slavic cultures
+		coa = PLC_monarchy_ruthenia
+		subject_canton = PLC_monarchy_ruthenia
+		priority = 20
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					country_has_primary_culture = cu:ukrainian
+					country_has_primary_culture = cu:byelorussian
+				}
+			}
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {# Republican Flag if you have east slavic cultures
+		coa = PLC_tricolor_horizontal
+		subject_canton = PLC_tricolor_horizontal
+		priority = 20
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					country_has_primary_culture = cu:ukrainian
+					country_has_primary_culture = cu:byelorussian
+				}
+			}
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {# Republican Flag if you have east slavic cultures
+		coa = PLC_ruthenia_communist
+		subject_canton = PLC_ruthenia_communist
+		priority = 20
+		trigger = {
+			scope:actor ?= {
+				OR = {
+					country_has_primary_culture = cu:ukrainian
+					country_has_primary_culture = cu:byelorussian
+				}
+			}
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {# Republican Flag if you do not have east slavic cultures
+		coa = PLC_communist
+		subject_canton = PLC_communist
+		priority = 20
+		trigger = {
+			scope:actor ?= {
+				NOT = {
+					country_has_primary_culture = cu:ukrainian
+					country_has_primary_culture = cu:byelorussian
+				}
+			}
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+REPLACE:UKR = {# Ukraine
+	flag_definition = {# default
+		coa = UKR
+		allow_overlord_canton = yes
+		subject_canton = UKR
+		priority = 1
+	}
+	flag_definition = {# communist
+		coa = UKR_communist
+		priority = 1500
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {# free State
+		coa = UKR_free_state
+		priority = 1600
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law_or_variant = law_type:law_council_republic
+				has_law_or_variant = law_type:law_anarchy
+			}
+		}
+	}
+	flag_definition = {# fascist
+		coa = UKR_fascist
+		priority = 1500
+		trigger = {
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+}
+
+

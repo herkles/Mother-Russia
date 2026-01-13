@@ -1,0 +1,6 @@
+﻿l_english:
+  mat_rossiya_georgian.001.t: "The Banner of the Republic"
+  mat_rossiya_georgian.001.d: "The fall of the monarchy and proclamation of a [ROOT.GetCountry.GetName] has raised the question of which flag the Republic shall adopt. Some have proposed that we should adopt the old kingdom of Georgia's flag with four crosses in each corner and a cross in the center. While others suggest we adopt the flag with the black and white canton on a red field."
+  mat_rossiya_georgian.001.f: ""The Democratic Republic of Georgia wishes to establish good-neighborly relations with all members of the international community, especially with neighboring states and nations. The Democratic Republic of Georgia shall equally ensure the civil and political rights of all citizens within its borders, regardless of nationality, religion, social status, and gender. The Democratic Republic of Georgia will open a free arena for development to the people inhabiting its territory."\n\n—Declaration of Independence, 1918"
+  mat_rossiya_georgian.001.a: "The flag of the republic shall be a red flag with the canton having a black and white bicolor."
+  mat_rossiya_georgian.001.b: "The flag of the republic shall be the ancient kingdom of Georgia flag, 4 crosses in each corner and one center cross."

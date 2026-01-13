@@ -12,3 +12,9 @@ mat_rossiya_russia_monthly_pulse = {
 		30 = mat_rossiya_russia.001 # Winter Festival
 	}
 }
+
+on_yearly_pulse_country = {
+	events = {
+		mat_rossiya_georgian.001
+	}
+}

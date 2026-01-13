@@ -247,55 +247,6 @@ KAZ_BUK = {# Based on their coat of arms went with the Black bow, arrow and axe 
 	}
 }
 # Flags of Poland
-REPLACE:POL = {# defualt poland
-	pattern = "pattern_solid.tga"
-	color1 = "white"
-
-	colored_emblem = {
-		texture = "ce_bicolor_bottom.dds"
-		color1 = "red"
-		color2 = "red"
-	}
-	colored_emblem = {
-		texture = "ce_shield_accolade.dds"
-		color1 = "red"
-		color2 = "red"
-		instance = { scale = { 0.62 0.58 } position = { 0.5 0.24 } }
-	}
-
-	colored_emblem = {
-		texture = "ce_eagle_crown.dds"
-		color1 = "white"
-		color2 = "yellow"
-		color3 = "white"
-		instance = { scale = { 0.5 0.5 } position = { 0.5 0.24 } }
-	}
-}
-POL_congress = {
-
-	pattern = "pattern_solid.tga"
-	color1 = "white"
-	color2 = "black"
-
-    sub = {
-        parent = "sub_RUS_crown"
-        instance = { scale = { 0.4 0.4 } offset = { 0.3 0.05 } }
-    }
-    sub = {
-        parent = "sub_RUS_coa"
-        instance = { scale = { 0.9 0.9 } offset = { 0.05 0.075 } }
-    }
-	sub = {
-       parent = "sub_POL_congress_coa"
-        instance = { scale = { 0.28 0.27 } offset = { 0.36 0.38 } }
-    }
-	sub = {
-       parent = "sub_POL_congress_crown"
-        instance = { scale = { 0.28 0.27 } offset = { 0.365 0.27 } }
-    }
-}
-
-
 POL_tricolor_jan_verticle = {# January uprising flag verticle version
 	# Congress Poland flag
 	pattern = "pattern_solid.tga"
@@ -378,6 +329,7 @@ POL_tricolor_jan_horizontal = {# January uprising flag horizontal version
 		instance = { position = { 0.61 0.35 } scale = { 0.3 0.3 } rotation = 20 }
 	}
 }
+# Flags of Poland-Lithuania
 PLC_monarchy_ruthenia = {# Monarchy flag for if you have Ukranian culture
 	# Congress Poland flag
 	pattern = "pattern_solid.tga"
@@ -535,7 +487,7 @@ PLC_communist = {# default communist
 		instance = { scale = { 0.28 0.28 } position = { 0.5 0.53 } }
 	}
 }
-
+# Flags of Ukraine
 UKR_communist_variant_1 = {# communist flag with blue yellow canton
 	# Congress Poland flag
 	pattern = "pattern_solid.tga"
@@ -600,8 +552,8 @@ UKR_communist_variant_2 = {# Communist flag with letttering
 		instance = { scale = { 0.25 0.25 } position = { 0.4 0.25 } }
 	}
 }
-
-geo_cross = {# Kingdom / Moddern flag
+# Flags of Georgia
+GEO_cross = {# Kingdom / Moddern flag
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -621,7 +573,7 @@ geo_cross = {# Kingdom / Moddern flag
 		instance = { position = { 0.775 0.775 } scale = { 0.4 0.4 } }
 	}
 }
-geo_abkhazia_monarchy = {# if the Principality of Abkhazia united Georgia
+GEO_monarchy_sharvashidze = {# if the Principality of Abkhazia united Georgia
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -646,7 +598,6 @@ geo_abkhazia_monarchy = {# if the Principality of Abkhazia united Georgia
 		color2 = "black"
 		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
 	}
-
 	colored_emblem = {
 		texture = "pb_star_08.dds"
 		color1 = "yellow"
@@ -662,7 +613,7 @@ geo_abkhazia_monarchy = {# if the Principality of Abkhazia united Georgia
 		instance = { scale = { 0.3 0.3 } position = { 0.58 0.6 } }
 	}
 }
-geo_svanti_monarchy = {# if the principality of Svantei united Georgia
+GEO_monarchy_dadeshkeliani = {# if the principality of Svantei united Georgia
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -686,7 +637,7 @@ geo_svanti_monarchy = {# if the principality of Svantei united Georgia
 		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
 	}
 }
-geo_mingrelia_monarchy = {# if the principality of mingrelia united Georgia
+GEO_monarchy_dadiani = {# if the principality of mingrelia united Georgia
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -710,7 +661,7 @@ geo_mingrelia_monarchy = {# if the principality of mingrelia united Georgia
 		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
 	}
 }
-geo_bagrationi_monarchy = {# for the Bargationi ruled Georgia
+GEO_monarchy_bagrationi = {# for the Bargationi ruled Georgia
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -734,18 +685,38 @@ geo_bagrationi_monarchy = {# for the Bargationi ruled Georgia
 		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
 	}
 }
+# Flags of Finland
+FIN_wreath_coa = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
 
+	textured_emblem = {
+		texture = "te_coa_finland_1.dds"
+		instance = { scale = { 0.5 0.5 } position = { 0.51 0.6 } }
+	}
+	colored_emblem = {
+		texture = "ce_crown_st_edward.dds"
+		color1 = "yellow"
+		color2 = "red"
+		color3 = "white"
+		instance = { scale = { 0.4 0.4 } position = { 0.5 0.4 } }
+	}
+	colored_emblem = {
+		texture = "ce_wreath.dds"
+		color1 = "green"
+		color2 = "green"
+		color3 = "red"
+		instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }
+	}
+}
+FIN_cross = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
 
-
-
-
-
-
-
-
-
-
-
-
-
+	colored_emblem = {
+		texture = "ce_cross_england.dds"
+		color1 = "blue"
+		color2 = "blue"
+	}
+}
 

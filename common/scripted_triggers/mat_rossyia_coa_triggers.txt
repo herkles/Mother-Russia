@@ -1,0 +1,34 @@
+﻿#### Georgian Flag Triggers ###
+coa_def_sharvashidze_trigger = {
+	scope:actor ?= {
+		ruler ?= {
+			has_variable = house_sharvashidze
+		}
+	}
+}
+coa_def_dadeshkeliani_trigger = {
+	scope:actor ?= {
+		ruler ?= {
+			has_variable = house_dadishkeliani
+		}
+	}
+}
+coa_def_dadiani_trigger = {
+	scope:actor ?= {
+		ruler ?= {
+			has_variable = house_dadiani
+		}
+	}
+}
+coa_def_bagrationi_trigger = {
+	scope:actor ?= {
+		ruler ?= {
+			has_variable = house_bagrationi
+		}
+	}
+}
+#### Russian Flag Triggers ###
+
+#### Polish Flag Triggers ###
+
+#### Ukranian Flag Triggers ###

@@ -1,0 +1,56 @@
+﻿#########################################
+#										#	
+#	      	Georgian Events			    #
+#										#
+#########################################
+
+namespace = mat_rossiya_georgian
+
+#########################################
+#	       Starting Events 				#
+#########################################
+mat_rossiya_georgian.001 = { # The Republican Flag
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = mat_rossiya_georgian.001.t
+	desc = mat_rossiya_georgian.001.d
+	flavor = mat_rossiya_georgian.001.f
+
+    event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	trigger = {
+		c:GEO ?= this
+		OR = {
+			has_law_or_variant = law_type:law_parliamentary_republic
+			has_law_or_variant = law_type:law_presidential_republic
+		}
+	}
+
+	cancellation_trigger = {
+		NOR = {
+			has_law_or_variant = law_type:law_parliamentary_republic
+			has_law_or_variant = law_type:law_presidential_republic
+		}
+	}
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	option = {# Red and Black Canton
+		default_option = yes
+		name = mat_rossiya_georgian.001.a
+	}
+	option = {# Kingdom Flag
+		name = mat_rossiya_georgian.001.b
+		set_variable = georgia_republic_2
+	}
+}
+

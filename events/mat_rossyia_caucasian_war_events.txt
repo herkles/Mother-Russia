@@ -1783,7 +1783,7 @@ mat_rossiya_caucasian_war.072 = {# Teofil Lapinski's volunteers
 			days = normal_modifier_time
 		}
 	}
-}
+}1271
 mat_rossiya_caucasian_war.073 = {# The Quba Uprising
 	type = country_event
 	placement = root
