@@ -24,10 +24,7 @@ mat_rossiya_amendment_polish_martial_law = {# Martial Law
 	}
 
 	ai_will_revoke = {
-		any_interest_group = {
-			is_in_government = yes
-			has_ideology = ideology:ideology_enclavist
-		}
+		always = no
 	}
 
 	can_repeal = {
@@ -51,7 +48,7 @@ mat_rossiya_amendment_polish_organic_statute = {# the 1832 Organic Statute
 
 	possible = {
 		c:POL ?= this
-		has_law = law_type:law_autocracy # Not neo-absolutism
+		has_law = law_type:law_autocracy # Reflecting the fact that it is an autocratic government enforcing its will.
 	}
 
 	would_sponsor = {
@@ -59,10 +56,41 @@ mat_rossiya_amendment_polish_organic_statute = {# the 1832 Organic Statute
 	}
 
 	ai_will_revoke = {
-		any_interest_group = {
-			is_in_government = yes
-			has_ideology = ideology:ideology_enclavist
-		}
+		always = no
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+
+	amendment_activism_multiplier = 0.50
+}
+##################################
+#	    Finish Amendments    	 #
+##################################
+mat_rossiya_amendment_swedish_court_language = {# Swedish Court Language
+	parent = law_subjecthood
+
+	allowed_laws = {
+		law_subjecthood
+	}
+
+	modifier = {
+		state_assimilation_mult = -0.1
+		country_legitimacy_base_add = -5
+		country_swedish_cultural_acceptance_add = 20
+	}
+
+	possible = {
+		c:FIN ?= this
+	}
+
+	would_sponsor = {
+		always = no
+	}
+
+	ai_will_revoke = {
+		always = no # Will be removed via event / JE button
 	}
 
 	can_repeal = {

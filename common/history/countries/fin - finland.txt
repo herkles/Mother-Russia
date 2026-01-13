@@ -17,8 +17,11 @@
 			institution = institution_schools
 			level = 2
 		}
-		add_modifier = {# Swedish was the language of Court not Finish
-			name = mat_rossiya_swedish_court_language
+		active_law:lawgroup_citizenship = {# Subjecthood
+			add_amendment = {
+				type = mat_rossiya_amendment_swedish_court_language
+				sponsor = PREV.ig:ig_landowners # swedish court language
+			}
 		}
 		active_law:lawgroup_education_system ?= { # Public Schools
 			add_amendment = {
@@ -27,8 +30,6 @@
 			}
 		}
 
-		ig:ig_landowners ?= {
-			add_ruling_interest_group = yes
-		}
+
 	}
 }

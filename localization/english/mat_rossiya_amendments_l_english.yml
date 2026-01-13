@@ -5,3 +5,7 @@
 
     mat_rossiya_amendment_polish_organic_statute: "1832 Organic Statutes"
     mat_rossiya_amendment_polish_organic_statute_desc: "Since the November Uprising, a set of laws that have been implemented that are passed that strips from the Polish government and transfers it to the Russian authorities so that Poland is an integral part of the Russian Empire."
+
+  # Finnish Amendments
+    mat_rossiya_amendment_swedish_court_language: "Swedish Court Language"
+    mat_rossiya_amendment_swedish_court_language_desc: "The language of the Court of the Grand Duchy of Finland remains Swedish. Because of this we have to translate our numerous edicts into our own native language of Finnish so that the people can understand them. "

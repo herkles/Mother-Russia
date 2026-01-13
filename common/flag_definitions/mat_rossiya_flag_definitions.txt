@@ -64,6 +64,7 @@ REPLACE:POL = { # Poland
 		}
 	}
 }
+
 REPLACE:RUS = { # Russia
 	flag_definition = {
 		coa = RUS_imperial

@@ -71,7 +71,6 @@ GEO_MIN = { # Principality of Mingrelia
 	}
 
 }
-
 GEO_IME = { # Principality of Imereti
 
 	pattern = "pattern_solid.tga"
@@ -191,7 +190,7 @@ AZB_KAR = {# Khanate of Karabakh
 		instance = { scale = { 0.3 0.3 } rotation = 315 position = { 0.85 0.85 } }
 	}
 }
-
+# Armenia Polities
 ARM_monarchist_dragon = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -209,7 +208,6 @@ ARM_monarchist_dragon = {
         instance = { scale = { 0.4 0.4 } position = { 0.16 0.215 }  }
 	}
 }
-
 # Dagestani Polities
 DAG_TAR = {
 	pattern = "pattern_solid.tga"
@@ -248,6 +246,505 @@ KAZ_BUK = {# Based on their coat of arms went with the Black bow, arrow and axe 
         instance = { position = { 0.5 0.4 } rotation = -45 scale = { 0.7 0.7 } }
 	}
 }
+# Flags of Poland
+REPLACE:POL = {# defualt poland
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "red"
+		color2 = "red"
+	}
+	colored_emblem = {
+		texture = "ce_shield_accolade.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 0.62 0.58 } position = { 0.5 0.24 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_eagle_crown.dds"
+		color1 = "white"
+		color2 = "yellow"
+		color3 = "white"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.24 } }
+	}
+}
+POL_congress = {
+
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "black"
+
+    sub = {
+        parent = "sub_RUS_crown"
+        instance = { scale = { 0.4 0.4 } offset = { 0.3 0.05 } }
+    }
+    sub = {
+        parent = "sub_RUS_coa"
+        instance = { scale = { 0.9 0.9 } offset = { 0.05 0.075 } }
+    }
+	sub = {
+       parent = "sub_POL_congress_coa"
+        instance = { scale = { 0.28 0.27 } offset = { 0.36 0.38 } }
+    }
+	sub = {
+       parent = "sub_POL_congress_crown"
+        instance = { scale = { 0.28 0.27 } offset = { 0.365 0.27 } }
+    }
+}
+
+
+POL_tricolor_jan_verticle = {# January uprising flag verticle version
+	# Congress Poland flag
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "red"
+		color2 = "white"
+	}
+
+	textured_emblem = {
+		texture = "te_kiev_archangel.dds"
+		instance = { position = { 0.805 0.5 } scale = { 0.3 0.3 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_shield_accolade_03.dds"
+		color1 = "white"
+		color2 = "black"
+		instance = { scale = { 0.5 0.5 } position = { 0.805 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_shield_accolade_03.dds"
+		color1 = "red"
+		color2 = "black"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.3 } }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_crown.dds"
+		color1 = "white"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.3 } scale = { 0.35 0.35 } }
+	}
+	textured_emblem = {
+		texture = "te_vytis.dds"
+		instance = { position = { 0.18 0.5 } scale = { 0.3 0.3 } }
+	}
+	colored_emblem = {
+		texture = "ce_shield_accolade_03.dds"
+		color1 = "blue"
+		color2 = "black"
+		instance = { scale = { 0.5 0.5 } position = { 0.18 0.5 } }
+	}	
+}
+POL_tricolor_jan_horizontal = {# January uprising flag horizontal version
+	# Congress Poland flag
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "red"
+		color2 = "blue"
+	}
+	colored_emblem = {
+		texture = "ce_shield_accolade_03.dds"
+		color1 = "red"
+		color2 = "black"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_divider_plc_embowed.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.4 } scale = { 0.4 0.45 } }
+	}
+	textured_emblem = {
+		texture = "te_kiev_archangel.dds"
+		instance = { position = { 0.5 0.7 } scale = { 0.3 0.3 } }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_crown.dds"
+		color1 = "white"
+		color2 = "yellow"
+		instance = { position = { 0.39 0.35 } scale = { 0.3 0.3 } }
+	}
+	textured_emblem = {
+		texture = "te_vytis.dds"
+		instance = { position = { 0.61 0.35 } scale = { 0.3 0.3 } rotation = 20 }
+	}
+}
+PLC_monarchy_ruthenia = {# Monarchy flag for if you have Ukranian culture
+	# Congress Poland flag
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "red"
+		color2 = "blue"
+	}
+	colored_emblem = {
+		texture = "ce_collar_golden_fleece.dds"
+		color1 = "yellow"
+		color2 = "blue_light"
+		color3 = "red"
+		instance = { scale = { 0.85 0.85 } position = { 0.33 0.56 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "yellow_dark"
+		color2 = "yellow_dark"
+		instance = { scale = { 0.16 0.05 } position = { 0.33 0.235 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "brown"
+		color2 = "brown"
+		instance = { scale = { 0.16 0.05 } position = { 0.33 0.225 } }
+	}
+	colored_emblem = {
+		texture = "ce_shield_plc_ruthenia.dds"
+		color1 = "red"
+		color2 = "yellow"
+		instance = { scale = { 0.75 0.75 } position = { 0.33 0.46 } }
+	}
+	colored_emblem = {
+		texture = "ce_divider_plc_embowed.dds"
+		color1 = "yellow"
+		color2 = "white"
+		instance = { position = { 0.33 0.45 } scale = { 0.22 0.35 } }
+	}
+	textured_emblem = {
+		texture = "te_vytis.dds"
+		instance = { scale = { 0.18 0.18 } position = { 0.39 0.39 } }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_crown.dds"
+		color1 = "white"
+		color2 = "yellow"
+		instance = { scale = { 0.18 0.18 } position = { 0.275 0.39 } }
+	}
+	textured_emblem = {
+		texture = "te_kiev_archangel.dds"
+		instance = { scale = { 0.145 0.2 } position = { 0.33 0.58 } }
+	}	
+	textured_emblem = {
+		texture = "te_crown_cut.dds"
+		instance = { scale = { 0.35 0.35 } position = { 0.33 0.18 } }
+	}
+}
+PLC_tricolor_horizontal = {# non-monarchist tricolor for republics
+	# Congress Poland flag
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "red"
+		color2 = "blue"
+	}
+}
+PLC_ruthenia_communist = {# communist if you have ukranian and belarusian cultures
+	# Congress Poland flag
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "red"
+		color2 = "blue"
+	}
+	colored_emblem = {
+		texture = "ce_coa_frame_ddr.dds"
+		color1 = "yellow"
+		color2 = "black"
+		color3 = "red"
+		instance = { scale = { 0.60 0.60 } position = { 0.5 0.53 }  }
+	}
+	colored_emblem = {
+		texture = "ce_frame_ddr_flags_tricolour.dds"
+		color1 = "white"
+		color2 = "red"
+		color3 = "blue"
+		instance = { scale = { 0.60 0.60 } position = { 0.5 0.53 }  }
+	}
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.25 0.25 } position = { 0.5 0.3 } }
+	}
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 0.20 0.20 } position = { 0.5 0.3 } }
+	}
+	colored_emblem = {
+		texture = "ce_hammer_and_sickle.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.28 0.28 } position = { 0.5 0.53 } }
+	}
+}
+PLC_communist = {# default communist
+	# Congress Poland flag
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+	colored_emblem = {
+		texture = "ce_coa_frame_ddr.dds"
+		color1 = "yellow"
+		color2 = "black"
+		color3 = "red"
+		instance = { scale = { 0.60 0.60 } position = { 0.5 0.53 }  }
+	}
+	colored_emblem = {
+		texture = "ce_frame_ddr_flags_tricolour.dds"
+		color1 = "red"
+		color2 = "white"
+		color3 = "red"
+		instance = { scale = { 0.60 0.60 } position = { 0.5 0.53 }  }
+	}
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.25 0.25 } position = { 0.5 0.3 } }
+	}
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 0.20 0.20 } position = { 0.5 0.3 } }
+	}
+	colored_emblem = {
+		texture = "ce_hammer_and_sickle.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.28 0.28 } position = { 0.5 0.53 } }
+	}
+}
+
+UKR_communist_variant_1 = {# communist flag with blue yellow canton
+	# Congress Poland flag
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "black"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.5 0.5 } position = { 0.25 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "azure"
+		color2 = "azure"
+		instance = { scale = { 0.5 0.25 } position = { 0.25 0.125 } }
+	}
+
+
+}
+UKR_communist_variant_2 = {# Communist flag with letttering
+	# Congress Poland flag
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "black"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_border_soviet.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 0.5 0.5 } position = { 0.25 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_letter_u_cyrillic.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		color3 = "yellow"
+		instance = { scale = { 0.25 0.25 } position = { 0.095 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_letter_s_cyrillic.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		color3 = "yellow"
+		instance = { scale = { 0.25 0.25 } position = { 0.21 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_letter_s_cyrillic.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		color3 = "yellow"
+		instance = { scale = { 0.25 0.25 } position = { 0.31 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_letter_r_cyrillic.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		color3 = "yellow"
+		instance = { scale = { 0.25 0.25 } position = { 0.4 0.25 } }
+	}
+}
+
+geo_cross = {# Kingdom / Moddern flag
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross_england.dds"
+		color1 = "red"
+		color2 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_cross_patty.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.225 0.225 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.775 0.225 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.225 0.775 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.775 0.775 } scale = { 0.4 0.4 } }
+	}
+}
+geo_abkhazia_monarchy = {# if the Principality of Abkhazia united Georgia
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross_england.dds"
+		color1 = "red"
+		color2 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_cross_patty.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.225 0.225 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.775 0.225 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.225 0.775 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.775 0.775 } scale = { 0.4 0.4 } }
+	}
+	colored_emblem = {
+		texture = "ce_shield_accolade_02.dds"
+		color1 = "azure"
+		color2 = "black"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "pb_star_08.dds"
+		color1 = "yellow"
+		color2 = "black"
+		instance = { scale = { 0.3 0.3 } position = { 0.43 0.4 } }
+		instance = { scale = { 0.3 0.3 } position = { 0.58 0.4 } }
+	}
+	colored_emblem = {
+		texture = "ce_pilos.dds"
+		color1 = "yellow"
+		color2 = "black"
+		instance = { scale = { 0.3 0.3 } position = { 0.43 0.6 } }
+		instance = { scale = { 0.3 0.3 } position = { 0.58 0.6 } }
+	}
+}
+geo_svanti_monarchy = {# if the principality of Svantei united Georgia
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross_england.dds"
+		color1 = "red"
+		color2 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_cross_patty.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.225 0.225 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.775 0.225 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.225 0.775 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.775 0.775 } scale = { 0.4 0.4 } }
+	}
+	textured_emblem = {
+		texture = "te_coa_dadeshkeliani.dds"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
+	}
+}
+geo_mingrelia_monarchy = {# if the principality of mingrelia united Georgia
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross_england.dds"
+		color1 = "red"
+		color2 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_cross_patty.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.225 0.225 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.775 0.225 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.225 0.775 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.775 0.775 } scale = { 0.4 0.4 } }
+	}
+	textured_emblem = {
+		texture = "te_coa_dadiani.dds"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
+	}
+}
+geo_bagrationi_monarchy = {# for the Bargationi ruled Georgia
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross_england.dds"
+		color1 = "red"
+		color2 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_cross_patty.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.225 0.225 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.775 0.225 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.225 0.775 } scale = { 0.4 0.4 } }
+		instance = { position = { 0.775 0.775 } scale = { 0.4 0.4 } }
+	}
+	textured_emblem = {
+		texture = "te_coa_bagrationi.dds"
+		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
