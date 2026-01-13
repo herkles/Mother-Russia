@@ -1,0 +1,54 @@
+﻿#########################################
+#										#	
+#	      	Georgian Events			    #
+#										#
+#########################################
+
+namespace = mat_rossiya_ukraine
+
+#########################################
+#	       Starting Events 				#
+#########################################
+mat_rossiya_ukraine.001 = { # The People's Flag
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = mat_rossiya_ukraine.001.t
+	desc = mat_rossiya_ukraine.001.d
+	flavor = mat_rossiya_ukraine.001.f
+
+    event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	trigger = {
+		c:UKR ?= this
+		has_law_or_variant = law_type:law_council_republic
+	}
+
+	cancellation_trigger = {
+		NOT = { has_law_or_variant = law_type:law_council_republic }
+	}
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	option = {# Soviet Flag
+		name = mat_rossiya_ukraine.001.a
+	}
+	option = {# Yellow blue canton and red banner
+		name = mat_rossiya_ukraine.001.b
+		set_variable = ukraine_communist_flag_1
+	}
+	option = {# Red Banner with YCCP
+		name = mat_rossiya_ukraine.001.c
+		default_option = yes
+		set_variable = ukraine_communist_flag_2
+	}	
+}
+

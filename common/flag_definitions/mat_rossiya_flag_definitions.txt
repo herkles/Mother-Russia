@@ -335,6 +335,30 @@ REPLACE:UKR = {# Ukraine
 			coa_def_communist_flag_trigger = yes
 		}
 	}
+	flag_definition = {# Ukraine chooses blue and yellow canton flag
+		coa = UKR_communist_variant_1
+		subject_canton = UKR_communist_variant_1
+		allow_overlord_canton = no
+		priority = 1501
+		trigger = {
+			scope:actor ?= {
+				has_variable = ukraine_communist_flag_1
+			}
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {# Ukraine chooses the YSSR corner flag
+		coa = UKR_communist_variant_2
+		subject_canton = UKR_communist_variant_2
+		allow_overlord_canton = no
+		priority = 1501
+		trigger = {
+			scope:actor ?= {
+				has_variable = ukraine_communist_flag_2
+			}
+			coa_def_communist_flag_trigger = yes
+		}
+	}
 	flag_definition = {# free State
 		coa = UKR_free_state
 		priority = 1600
