@@ -1,0 +1,87 @@
+﻿getPolandUprisingMonthName = {
+	type = country
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 0
+		}
+		localization_key = JANUARY
+	}
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 1
+		}
+		localization_key = FEBRUARY
+	}
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 2
+		}
+		localization_key = MARCH
+	}
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 3
+		}
+		localization_key = APRIL
+	}
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 4
+		}
+		localization_key = May # Because Maya
+	}
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 5
+		}
+		localization_key = JUNE
+	}
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 6
+		}
+		localization_key = JULY
+	}
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 7
+		}
+		localization_key = AUGUST
+	}
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 8
+		}
+		localization_key = SEPTEMBER
+	}
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 9
+		}
+		localization_key = OCTOBER
+	}
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 10
+		}
+		localization_key = NOVEMBER
+	}
+	text = {
+		trigger = {
+			has_variable = poland_uprising_month
+			var:poland_uprising_month = 11
+		}
+		localization_key = DECEMBER
+	}
+}

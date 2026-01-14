@@ -63,6 +63,19 @@ REPLACE:POL = {# Poland
 			coa_def_communist_flag_trigger = yes
 		}
 	}
+	flag_definition = {# January Uprising flag
+		coa = POL_tricolor_jan_horizontal
+		subject_canton = POL_tricolor_jan_horizontal
+		allow_overlord_canton = no
+		priority = 30
+		trigger = {
+			scope:actor ?= {
+				has_variable = mat_rossiya_poland_january_uprising
+			}
+		}
+	}
+
+
 }
 REPLACE:RUS = {# Russia
 	flag_definition = {# Imperial Russia

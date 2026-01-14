@@ -1,0 +1,102 @@
+﻿
+
+
+# Revolts and Uprisings
+mat_rossiya_january_uprising_effects = {# january uprising
+	c:POL = {# set politics for the January Uprising
+		set_state_religion = rel:catholic
+		remove_primary_culture = cu:russian
+		add_primary_culture = cu:polish
+		set_variable = mat_rossiya_poland_january_uprising
+		# Power Structure Laws
+		activate_law = law_type:law_parliamentary_republic
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_mass_conscription
+		activate_law = law_type:law_national_guard
+		# Economic Laws
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_homesteading
+	
+
+		ig:ig_armed_forces = {
+			remove_ideology = ideology_enclavist
+			add_ideology = ideology_patriotic
+			add_ruling_interest_group = yes
+		}
+		ig:ig_devout = {
+			remove_ideology = mat_rossiya_ideology_catholic_moralism 
+			add_ideology = ideology_moralist
+		}
+		ig:ig_petty_bourgeoisie = {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_intelligentsia = {
+			add_ruling_interest_group = yes
+		}
+	}
+	c:RUS ?= {
+		create_diplomatic_play = {
+			name = january_uprising
+			type = dp_january_uprising
+			target_state = c:POL.capital
+
+			add_war_goal = {
+				holder = c:POL
+				type = independence
+				target_country = c:RUS
+				primary_demand = yes
+			}
+		}
+	}	
+	
+	every_state = {
+		limit = {
+			owner = c:POL
+		}
+		add_modifier = {
+			name = modifier_taiping_hiring_bonus # Temporary bonus to fill their barracks
+			months = 6
+		}
+	}
+	c:POL = {
+		create_military_formation = {# Give them some men to fight back
+			type = army
+			hq_region = sr:region_poland
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_LESSER_POLAND
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_LESSER_POLAND
+				count = 5
+			}
+		}
+	}
+	c:POL = {
+		random_interest_group = {
+			limit = {
+				leader = { has_culture = cu:polish }
+			}
+			leader = {
+				set_character_as_ruler = yes
+			}
+		}
+	}
+	c:POL = {
+		every_scope_character = {
+			limit = {
+				has_culture = cu:russian
+			}
+			transfer_character = c:RUS
+		}
+	}
+
+
+	
+}
+
+

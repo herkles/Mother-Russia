@@ -7,7 +7,7 @@
 namespace = mat_rossiya_poland
 
 #########################################
-#	       Starting Events 				#
+#	       Starting Event 				#
 #########################################
 mat_rossiya_poland.001 = {# The Martial Law
 	type = country_event
@@ -20,7 +20,7 @@ mat_rossiya_poland.001 = {# The Martial Law
 	gui_window = event_window_widescreen_newspaper
 
 	event_image = {
-		video = "gfx/event_pictures/ip3_policeraid.bk2"
+		video = "gfx/event_pictures/ip3_official_reading_dictate.bk2"
 	}
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
@@ -41,6 +41,92 @@ mat_rossiya_poland.001 = {# The Martial Law
 	option = {
 		name = mat_rossiya_poland.001.a
 		default_option = yes
+	}
+}
+#########################################
+#	       Martial law events			#
+#########################################
+
+#########################################
+#	     January Uprising Events		#
+#########################################
+mat_rossiya_poland.050 = {# The January Uprising
+	type = country_event
+	placement = root
+
+	title = mat_rossiya_poland.050.t
+	desc = mat_rossiya_poland.050.d
+	flavor = mat_rossiya_poland.050.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/votp_agitator_speaking.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	#dlc = mat_rossiya_icon
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		set_variable = { name = poland_uprising_month value = month }
+		mat_rossiya_january_uprising_effects = yes
+	}
+
+	option = {# For Polish freedom!
+		name = mat_rossiya_poland.050.a
+		default_option = yes
+	}
+}
+mat_rossiya_poland.051 = {# Organic Statute Implemented
+	type = country_event
+	placement = root
+
+	title = mat_rossiya_poland.051.t
+	desc = mat_rossiya_poland.051.d
+	flavor = mat_rossiya_poland.051.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/ip3_official_reading_dictate.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	#dlc = mat_rossiya_icon
+
+	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {# A step towards freedom
+		name = mat_rossiya_poland.051.a
+		default_option = yes
+		add_loyalists = {
+            value = medium_radicals
+			culture = cu:polish
+        }
+		create_diplomatic_pact = {
+			country = c:RUS
+			type = personal_union
+		}
 	}
 }
 

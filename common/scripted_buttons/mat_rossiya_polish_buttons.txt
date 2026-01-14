@@ -1,0 +1,54 @@
+﻿mat_rossiya_poland_end_martial_law = {
+	name = "mat_rossiya_poland_end_martial_law"
+	desc = "mat_rossiya_poland_end_martial_law_desc"
+
+	possible = {
+		active_law:lawgroup_distribution_of_power ?= {
+			has_amendment = amendment_type:mat_rossiya_amendment_polish_martial_law
+		}
+	}
+
+	effect = {
+		set_variable = mat_rossiya_ended_polish_martial_law
+		active_law:lawgroup_distribution_of_power ?= {# Removes Martial Law
+			random_scope_amendment = {
+				limit = {
+					type = amendment_type:mat_rossiya_amendment_polish_martial_law
+				}
+				remove_amendment = yes
+			}
+		}
+		activate_law = law_type:law_oligarchy
+	}
+
+	ai_chance = {
+		value = 100
+	}
+}
+mat_rossiya_restore_polish_rights = {
+	name = "mat_rossiya_restore_polish_rights"
+	desc = "mat_rossiya_restore_polish_rights_desc"
+
+	possible = {
+		NOT = {
+			country_has_primary_culture = cu:polish
+		}
+		NOT = {# got to remove Martial Law first
+			active_law:lawgroup_distribution_of_power ?= {
+				has_amendment = amendment_type:mat_rossiya_amendment_polish_martial_law
+			}
+		}
+	}
+
+	effect = {
+		set_variable = mat_rossiya_restored_polish_rights
+		add_primary_culture = cu:polish
+		cu:polish = {
+			add_fervor = 10
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+}

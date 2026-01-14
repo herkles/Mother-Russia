@@ -1,0 +1,21 @@
+﻿l_english:
+  # Journal Entries
+    je_mat_rossiya_great_reforms_poland: "Great Reforms - Poland"
+    je_mat_rossiya_great_reforms_poland_reason: "The emperor of Russia has grand ambitions for the whole empire, and Poland as an integral part of the empire is of no exception. To that end a grand and ambitious policy of modernizing poland and making the polish a loyal part of the empire."
+   
+  # Modifiers
+
+  # Buttons
+    mat_rossiya_poland_end_martial_law: "End Martial Law"
+    mat_rossiya_poland_end_martial_law_desc: "The emperor and his government have decreed that it is time to end the martial law in Poland. Rights and freedoms shall be restored to the Polish people as per the organic constitution agreed to by the emperor."
+
+    mat_rossiya_restore_polish_rights: "Restore Polish Rights"
+    mat_rossiya_restore_polish_rights_desc: "The organic statutes of Poland on paper grant rights to the Polish people, rights graciously bestowed upon them by the Russian emperor. However, once martial law is over those rights can be restored."
+
+  # Tooltips
+    mat_rossiya_january_uprising_tt: "If we fail to make Poland loyal to the empire, the clandestine Polish National Government will seize power and start a war to liberate Poland."
+
+
+
+
+

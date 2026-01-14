@@ -30,12 +30,6 @@
 			id = mat_rossiya_kazakh.002 # A Stately Reception
 			days = 30
 		}
-		show_as_tooltip = {
-			create_incident = {
-				country = c:RUS
-				value = 10
-			}
-		}
 		set_variable = mat_rossiya_visited_russia
 	}
 
