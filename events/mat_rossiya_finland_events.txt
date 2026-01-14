@@ -1,0 +1,89 @@
+﻿#########################################
+#										#	
+#	      	 Finland Events			    #
+#										#
+#########################################
+
+namespace = mat_rossiya_finaland
+
+#########################################
+#	       	Flag Events 				#
+#########################################
+mat_rossiya_finaland.001 = {# A banner for the Grand Duchy
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = mat_rossiya_finaland.001.t
+	desc = mat_rossiya_finaland.001.d
+	flavor = mat_rossiya_finaland.001.f
+
+    event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	trigger = {
+		c:RUS ?= this
+		c:FIN = { has_technology_researched = nationalism }
+		game_date > 1863.1.1 # This is around the time that the flag debate began
+	}
+
+	cooldown = { days = even_longer_modifier_time }
+
+	option = {# They can just use the Russian Flag as the rest of the empire. 
+		name = mat_rossiya_finaland.001.a
+		default_option = yes
+		c:FIN = { add_liberty_desire = 5 }
+	}
+	option = {# I don't see why not.
+		name = mat_rossiya_finaland.001.b
+		c:FIN = { add_liberty_desire = -5 }		
+		hidden_effect = {
+			c:FIN ?= { trigger_event = { id = mat_rossiya_finaland.002 } }
+		}
+	}
+	
+}
+mat_rossiya_finaland.002 = {# A banner for the Grand Duchy
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = mat_rossiya_finaland.002.t
+	desc = mat_rossiya_finaland.002.d
+	flavor = mat_rossiya_finaland.002.f
+
+    event_image = {
+		video = "ep1_transfer_of_authority"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	trigger = {
+		# Triggered by Russia allowing the debate to actually go
+	}
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	option = {# the 1920 maritime flag aka default flag
+		name = mat_rossiya_finaland.002.a
+		default_option = yes
+	}
+	option = {# white banner with the coat of arms
+		name = mat_rossiya_finaland.002.b
+		set_variable = finland_grand_duchy_flag_1
+	}
+	option = {# blue cross on a white field
+		name = mat_rossiya_finaland.002.c
+		set_variable = finland_grand_duchy_flag_2
+	}	
+}
+

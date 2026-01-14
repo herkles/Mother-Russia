@@ -247,6 +247,7 @@ KAZ_BUK = {# Based on their coat of arms went with the Black bow, arrow and axe 
 	}
 }
 # Flags of Poland
+
 POL_tricolor_jan_verticle = {# January uprising flag verticle version
 	# Congress Poland flag
 	pattern = "pattern_solid.tga"
@@ -719,4 +720,51 @@ FIN_cross = {
 		color2 = "blue"
 	}
 }
+FIN_monarchy = {# indepedent kingdom of Finland
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "blue"
 
+	colored_emblem = {
+		texture = "ce_cross_finland.dds"
+		color1 = color2
+		color2 = color2
+	}
+	textured_emblem = {
+		texture = "te_coa_finland_2.dds"
+		instance = { scale = { 0.74 0.74 } position = { 0.34 0.53 } }
+	}
+	colored_emblem = {
+		texture = "ce_crown_st_edward.dds"
+		color1 = "yellow"
+		color2 = "red"
+		color3 = "white"
+		instance = { scale = { 0.33 0.33 } position = { 0.335 0.26 } }
+	}
+}
+FIN_coa = {# Coat of arms flag, the historical flag
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_cross_finland.dds"
+		color1 = color2
+		color2 = color2
+	}
+	textured_emblem = {
+		texture = "te_coa_finland_2.dds"
+		instance = { scale = { 0.74 0.74 } position = { 0.34 0.53 } }
+	}
+}
+# Baltic Flags
+EST_nordic_cross = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross_tricolor.dds"
+		color1 = "black"
+		color2 = "azure"
+	}
+}

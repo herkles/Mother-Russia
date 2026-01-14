@@ -18,5 +18,7 @@ on_yearly_pulse_country = {
 		# Chosing a flag for countries
 		mat_rossiya_georgian.001 # Georgian Republican Flag
 		mat_rossiya_ukraine.001 # Ukrainian Communist Flag
+		mat_rossiya_finaland.001 # Flag debate for the Grand duchy of Finland
+
 	}
 }

@@ -378,5 +378,55 @@ REPLACE:UKR = {# Ukraine
 		}
 	}
 }
+REPLACE:FIN = { # Finland
+	flag_definition = {# Default Flag - Modern flag
+		coa = FIN
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = FIN_subject
+		subject_canton = FIN
+		priority = 1
+	}
+	flag_definition = {# 1820s Maritime flag
+		coa = FIN_subject_RUS
+		allow_overlord_canton = yes
+		subject_canton = FIN
+		priority = 2
+		trigger = {
+			coa_def_russian_ensign_trigger = yes
+		}
+	}
+	flag_definition = {# White banner with coat of arms
+		coa = FIN_wreath_coa
+		allow_overlord_canton = no
+		subject_canton = FIN
+		priority = 3
+		trigger = {
+			scope:actor ?= {
+				has_variable = finland_grand_duchy_flag_1
+			}
+			coa_def_russian_ensign_trigger = yes
+		}
+	}
+	flag_definition = {# Blue Cross on a white field
+		coa = FIN_cross
+		allow_overlord_canton = no
+		subject_canton = FIN
+		priority = 3
+		trigger = {
+			scope:actor ?= {
+				has_variable = finland_grand_duchy_flag_2
+			}			
+			coa_def_russian_ensign_trigger = yes
+		}
+	}		
+	flag_definition = {# Fascist flag
+		coa = FIN_fascist
+		subject_canton = FIN_fascist
+		priority = 10
+		trigger = {
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+}
 
 
