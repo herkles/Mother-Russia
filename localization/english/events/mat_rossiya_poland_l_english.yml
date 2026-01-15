@@ -1,10 +1,11 @@
 ﻿l_english:
+  # Martial Law
   mat_rossiya_poland.001.t: "Martial Law in Poland"
   mat_rossiya_poland.001.d: "The failure of the November Uprising has meant that the Russian Empire has implemented martial law to ensure that the people of Poland do not rebel against the Russian Empire. Harsh repression against those that think of rebelling against the Emperor. "
   mat_rossiya_poland.001.f: "considering that various individuals in our Kingdom of Poland were attempting to seduce residents with unwise rumors, they were attempting to renew the disturbances, and that such conduct, as contrary to order, was harmful to the country as a whole, and the safety of peaceful residents should not be compromised"
   mat_rossiya_poland.001.a: "The Polish will be brought in line"
 
-
+  # January uprising
   mat_rossiya_poland.050.t_dummy: "The [SCOPE.GetRootScope.GetCountry.GetCustom('getCurrentMonthName')] Uprising"
   mat_rossiya_poland.050.t: "The [SCOPE.GetRootScope.GetCountry.GetCustom('getPolandUprisingMonthName')] Uprising"
   mat_rossiya_poland.050.d: "For too long we have felt the oppressive shackles of the Russian yoke upon the Polish people. The cry for freedom though has not yet been extinguished! The Polish National Government has seized control of [ROOT.GetCountry.GetCapital.GetCityHubName] while other cities have been taken over by loyalists. The Russian Tsar is not going to take this rebellion lightly and we must prepare for war."
@@ -19,3 +20,45 @@
   mat_rossiya_poland.051.d: "While on paper the Organic Statute for the Kingdom of Poland was implemented in 1832. Ever since martial law was implemented right after it was promulgated, the rights and freedoms in the charter were never realized. Now that we have pleased the emperor with our modernization efforts at ensuring the loyalty of the Polish people, the organic statute is now being implemented in practice."
   mat_rossiya_poland.051.f: ""With our constant and persistent efforts for the good of the nations entrusted to our scepter by the highest providence, we have with particular attention considered the principles of the future organization of the Kingdom of Poland and, taking into account the true benefits and condition of this country, as well as the local needs and customs of the inhabitants, and the indispensable need to establish their peace and well-being through closer connections with the Russian state, we have prescribed and most graciously grant the Kingdom of Poland the following fundamental laws"\n\n—Organic Statute for the Kingdom of Poland 1832"
   mat_rossiya_poland.051.a: "Poland is not yet lost!"
+
+
+  # Other Polish Events
+  mat_rossiya_poland.100.t: "The Polish Governement"
+  mat_rossiya_poland.100.d: "After a long hard struggle, Poland is no longer under the yoke of the Russians. As we throw off the yoke of the Russians, we have taken control of the government. And in doing so we have sent the Russians who remain packing back to Russia."
+  mat_rossiya_poland.100.f: ""Poland has not yet succumbed.\nAs long as we remain,\nWhat the foe by force has seized,\nSword in hand we'll gain."\n\n—Polish National Anthem"
+  mat_rossiya_poland.100.a: "Poland is not yet lost!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

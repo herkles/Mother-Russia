@@ -7,7 +7,7 @@
 namespace = mat_rossiya_poland
 
 #########################################
-#	       Starting Event 				#
+#	       Martial law events			#
 #########################################
 mat_rossiya_poland.001 = {# The Martial Law
 	type = country_event
@@ -44,7 +44,7 @@ mat_rossiya_poland.001 = {# The Martial Law
 	}
 }
 #########################################
-#	       Martial law events			#
+#	       Great Reform Events			#
 #########################################
 
 #########################################
@@ -132,4 +132,87 @@ mat_rossiya_poland.051 = {# Organic Statute Implemented
 }
 
 
+#########################################
+#	     Other polish Events			#
+#########################################
+mat_rossiya_poland.100 = {# The January Uprising
+	type = country_event
+	placement = root
 
+	title = mat_rossiya_poland.100.t
+	desc = mat_rossiya_poland.100.d
+	flavor = mat_rossiya_poland.100.f
+
+	gui_window = event_window_widescreen_newspaper
+
+	event_image = {
+		video = "gfx/event_pictures/ip3_official_reading_dictate.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	#dlc = mat_rossiya_icon
+
+	trigger = {
+		c:POL ?= this # This is for Russia
+		NOT = { c:POL = { is_subject_of = c:RUS } } # Can't be a subject of Russia
+		c:POL = {
+			NOT = { has_variable = mat_rossiya_poland_january_uprising } # shouldn't happen if you are already rebelling against russia in the January uprising
+			NOT = { has_variable = mat_rossiya_polish_government_restored } # can't happen more then once
+			OR = {# checking if it is still under Russian influence
+				active_law:lawgroup_distribution_of_power ?= {
+					has_amendment = amendment_type:mat_rossiya_amendment_polish_martial_law
+				}
+				country_has_primary_culture = cu:russian
+				country_has_state_religion = rel:orthodox
+			}
+		}
+	}
+
+	immediate = {
+		set_variable = { name = mat_rossiya_polish_government_restored }
+	}
+
+	option = {# For Polish freedom!
+		name = mat_rossiya_poland.050.a
+		default_option = yes
+		c:POL = {# set politics for the January Uprising
+			set_state_religion = rel:catholic
+			remove_primary_culture = cu:russian
+			add_primary_culture = cu:polish
+			active_law:lawgroup_distribution_of_power ?= {# Removes Martial Law
+				random_scope_amendment = {
+					limit = {
+						type = amendment_type:mat_rossiya_amendment_polish_martial_law
+					}
+					remove_amendment = yes
+				}
+			}
+			ig:ig_armed_forces = {
+				remove_ideology = ideology_enclavist
+				add_ideology = ideology_patriotic
+			}
+			ig:ig_devout = {
+				remove_ideology = mat_rossiya_ideology_catholic_moralism 
+				add_ideology = ideology_moralist
+			}
+			random_interest_group = {
+				limit = {
+					leader = { has_culture = cu:polish }
+				}
+				leader = {
+					set_character_as_ruler = yes
+				}
+			}
+			every_scope_character = {
+				limit = { has_culture = cu:russian }
+				transfer_character = c:RUS
+			}
+		}
+	}
+
+}

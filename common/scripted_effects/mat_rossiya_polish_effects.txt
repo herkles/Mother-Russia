@@ -1,6 +1,4 @@
 ﻿
-
-
 # Revolts and Uprisings
 mat_rossiya_january_uprising_effects = {# january uprising
 	c:POL = {# set politics for the January Uprising
