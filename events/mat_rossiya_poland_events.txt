@@ -85,6 +85,7 @@ mat_rossiya_poland.050 = {# The January Uprising
 		name = mat_rossiya_poland.050.a
 		default_option = yes
 	}
+
 }
 mat_rossiya_poland.051 = {# Organic Statute Implemented
 	type = country_event
@@ -129,4 +130,6 @@ mat_rossiya_poland.051 = {# Organic Statute Implemented
 		}
 	}
 }
+
+
 

@@ -49,16 +49,58 @@ mat_rossiya_january_uprising_effects = {# january uprising
 				primary_demand = yes
 			}
 		}
-	}	
-	
-	every_state = {
+	}
+	random_diplomatic_play = {# Extent of the rebellion; so if they win they get their claims
 		limit = {
-			owner = c:POL
+			is_diplomatic_play_type = dp_january_uprising
+			target = {
+				c:POL ?= this
+			}
 		}
-		add_modifier = {
-			name = modifier_taiping_hiring_bonus # Temporary bonus to fill their barracks
-			months = 6
+		if = {
+			limit = { exists = s:STATE_KAUNAS.region_state:RUS }
+			add_war_goal = {
+				holder = c:POL
+				type = conquer_state
+				target_state = s:STATE_KAUNAS.region_state:RUS
+			}
 		}
+		if = {
+			limit = { exists = s:STATE_VILNIUS.region_state:RUS }
+			add_war_goal = {
+				holder = c:POL
+				type = conquer_state
+				target_state = s:STATE_VILNIUS.region_state:RUS
+			}
+		}
+		if = {
+			limit = { exists = s:STATE_BREST.region_state:RUS }
+			add_war_goal = {
+				holder = c:POL
+				type = conquer_state
+				target_state = s:STATE_BREST.region_state:RUS
+			}
+		}
+		if = {
+			limit = { exists = s:STATE_VOLHYNIA.region_state:RUS }
+			add_war_goal = {
+				holder = c:POL
+				type = conquer_state
+				target_state = s:STATE_VOLHYNIA.region_state:RUS
+			}
+		}
+	}
+	s:STATE_MAZOVIA = {# Liberation
+		set_owner_of_provinces = {# Congress Poland
+			country = c:POL
+			provinces = {
+				x4969E4
+				xC06121
+				x0087C9
+				x117AE1
+				xDE551D        
+			}
+		}	
 	}
 	c:POL = {
 		create_military_formation = {# Give them some men to fight back
